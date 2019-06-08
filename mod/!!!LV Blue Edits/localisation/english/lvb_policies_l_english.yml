@@ -1,0 +1,20 @@
+﻿l_english:
+
+ ########################
+ ###     Policies
+ ########################
+
+ policy_lvb_sex_trade_policy: "Sex Trade"
+ policy_lvb_sex_trade_policy_desc: "We understand the economics of the sex trade well enough to decide how much we'll tollarate within our empire."
+ lvb_sex_trade_policy_default_name: "Discouraged"
+ lvb_sex_trade_default: "Discouraged"
+ lvb_sex_trade_default_desc: "No jobs available for sex work."
+ lvb_sex_trade_policy_allowed_name: "Allowed"
+ lvb_sex_trade_allowed: "Allowed"
+ lvb_sex_trade_allowed_desc: "Replaces a £job_clerk£ §Y$job_clerk$§! with an £job_lv_escort£ §Y$job_lv_escort$§! in Commercial Zones and two to Commercial Megaplexes.\n$job_lv_escort_effect_desc$"
+ lvb_sex_trade_policy_encouraged_name: "Encouraged"
+ lvb_sex_trade_encouraged: "Encouraged"
+ lvb_sex_trade_encouraged_desc: "Replaces two £job_cleric£ §Y$job_clerics$§! with an £job_lv_escort£ §Y$job_lv_escort$§! and a £job_lv_whore£ §Y$job_lv_whore$§! Job in Commercial Zones, and four with two of each to Commercial Megaplexes.\n$job_lv_escort_effect_desc$\n$job_lv_whore_effect_desc$"
+ lvb_sex_trade_policy_mandatory_name: "Mandatory"
+ lvb_sex_trade_mandatory: "Mandatory"
+ lvb_sex_trade_mandatory_desc: "In additon to the effects of Encourage, adds more sex work jobs.\n$job_lv_streetwalker_effect_disc$\n$job_lv_call_girl_effect_desc$"

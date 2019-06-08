@@ -1,0 +1,1439 @@
+########################
+###     Pop Jobs     ###
+########################
+
+###################
+###     Sex     ###
+###################
+
+##########
+# Worker #
+##########
+
+lvb_streetwalker = {			# Streetwalker
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_residence
+	clothes_texture_index = 2
+
+	possible = {
+		IF = {
+			limit = {
+				OR = {
+					is_robot_pop = no
+					pop_has_trait = trait_lv_sex_bots
+					pop_has_trait = trait_lv_breast_attachments
+					pop_has_trait = trait_lv_synth_breasts
+					pop_has_trait = trait_lv_custom_fleshlight_slot
+					pop_has_trait = trait_lv_synth_vagina
+					pop_has_trait = trait_lv_custom_dildo_attachment
+					pop_has_trait = trait_lv_synth_penis
+					pop_has_trait = trait_lv_artificial_womb
+					pop_has_trait = trait_lv_advanced_artificial_womb
+					pop_has_trait = trait_lv_cybernetic_womb
+					pop_has_trait = trait_lv_synth_brood_breasts
+					pop_has_trait = trait_lv_biomechanical_breeder
+					pop_has_trait = trait_lv_synth_seeder
+				}
+			}
+			lv_worker_job_check_trigger = yes
+		}
+		else = { always = no }
+	}
+
+	resources = {
+        category = planet_lv_streetwalker
+		produces = {
+			trigger = {
+				has_trait = trait_lv_targeted_pheromones
+			}
+			sr_zro = 0.15
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_neuron_saliva
+			}
+			physics_research = 0.1
+			society_research = 0.1
+			engineering_research = 0.1
+		}
+        produces = {
+			trigger = {
+				has_trait = trait_lv_aphrodisiac_cum
+			}
+			sr_zro = 0.1
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_addictive_cum
+			}
+			sr_zro = 0.15
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_psychoactive_cum
+			}
+			sr_zro = 0.2
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_cybernetic_minifacturing_fabrication_womb
+			}
+			nanites = 0.15
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 2
+		trade_value_add = 2
+		planet_crime_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.5
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+			trade_value_add = 0.6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.1
+			trade_value_add = -0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.2
+			trade_value_add = -0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+			trade_value_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.5
+			trade_value_add = -0.5
+		}
+	}
+
+	weight = {
+        weight = @clerk_job_weight
+		modifier = {
+			factor = 0.25
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOR = {
+				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = trait_lv_sex_bots
+				has_trait = trait_lv_breast_attachments
+				has_trait = trait_lv_synth_breasts
+				has_trait = trait_lv_custom_fleshlight_slot
+				has_trait = trait_lv_synth_vagina
+				has_trait = trait_lv_custom_dildo_attachment
+				has_trait = trait_lv_synth_penis
+				has_trait = trait_lv_artificial_womb
+				has_trait = trait_lv_advanced_artificial_womb
+				has_trait = trait_lv_cybernetic_womb
+				has_trait = trait_lv_synth_brood_breasts
+				has_trait = trait_lv_biomechanical_breeder
+				has_trait = trait_lv_synth_seeder
+			}
+		}
+		modifier = {
+			factor = 0
+			is_robot_pop = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			factor = 2
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			factor = 3
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			factor = 4
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			factor = 5
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			factor = 6
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			factor = 0.9
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			factor = 0.8
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			factor = 0.6
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			factor = 0.5
+			lv_sex_jobs_neg_5 = yes
+		}
+    }
+}
+
+lvb_whore = {			# Whore
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_commercial_zone
+	clothes_texture_index = 2
+
+	possible = {
+		IF = {
+			limit = {
+				OR = {
+					is_robot_pop = no
+					pop_has_trait = trait_lv_sex_bots
+					pop_has_trait = trait_lv_breast_attachments
+					pop_has_trait = trait_lv_synth_breasts
+					pop_has_trait = trait_lv_custom_fleshlight_slot
+					pop_has_trait = trait_lv_synth_vagina
+					pop_has_trait = trait_lv_custom_dildo_attachment
+					pop_has_trait = trait_lv_synth_penis
+					pop_has_trait = trait_lv_artificial_womb
+					pop_has_trait = trait_lv_advanced_artificial_womb
+					pop_has_trait = trait_lv_cybernetic_womb
+					pop_has_trait = trait_lv_synth_brood_breasts
+					pop_has_trait = trait_lv_biomechanical_breeder
+					pop_has_trait = trait_lv_synth_seeder
+				}
+			}
+			lv_worker_job_check_trigger = yes
+		}
+		else = { always = no }
+	}
+
+	resources = {
+        category = planet_lv_whore
+		produces = {
+			trigger = {
+				has_trait = trait_lv_targeted_pheromones
+			}
+			sr_zro = 0.15
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_neuron_saliva
+			}
+			physics_research = 0.1
+			society_research = 0.1
+			engineering_research = 0.1
+		}
+        produces = {
+			trigger = {
+				has_trait = trait_lv_aphrodisiac_cum
+			}
+			sr_zro = 0.1
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_addictive_cum
+			}
+			sr_zro = 0.15
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_psychoactive_cum
+			}
+			sr_zro = 0.2
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_cybernetic_minifacturing_fabrication_womb
+			}
+			nanites = 0.15
+		}
+		upkeep = {
+			consumer_goods = 0.25
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 3
+		trade_value_add = 3
+		planet_crime_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.5
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+			trade_value_add = 0.6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.1
+			trade_value_add = -0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.2
+			trade_value_add = -0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+			trade_value_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.5
+			trade_value_add = -0.5
+		}
+	}
+
+	weight = {
+        weight = @clerk_job_weight
+		modifier = {
+			factor = 0.25
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOR = {
+				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = trait_lv_sex_bots
+				has_trait = trait_lv_breast_attachments
+				has_trait = trait_lv_synth_breasts
+				has_trait = trait_lv_custom_fleshlight_slot
+				has_trait = trait_lv_synth_vagina
+				has_trait = trait_lv_custom_dildo_attachment
+				has_trait = trait_lv_synth_penis
+				has_trait = trait_lv_artificial_womb
+				has_trait = trait_lv_advanced_artificial_womb
+				has_trait = trait_lv_cybernetic_womb
+				has_trait = trait_lv_synth_brood_breasts
+				has_trait = trait_lv_biomechanical_breeder
+				has_trait = trait_lv_synth_seeder
+			}
+		}
+		modifier = {
+			factor = 0
+			is_robot_pop = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			factor = 2
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			factor = 3
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			factor = 4
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			factor = 5
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			factor = 6
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			factor = 0.9
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			factor = 0.8
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			factor = 0.6
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			factor = 0.5
+			lv_sex_jobs_neg_5 = yes
+		}
+    }
+}
+
+##############
+# Specialist #
+##############
+
+lvb_call_girl = {			# Call Girl
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_residence
+	clothes_texture_index = 3
+
+	possible = {
+		IF = {
+			limit = {
+				OR = {
+					is_robot_pop = no
+					pop_has_trait = trait_lv_sex_bots
+					pop_has_trait = trait_lv_breast_attachments
+					pop_has_trait = trait_lv_synth_breasts
+					pop_has_trait = trait_lv_custom_fleshlight_slot
+					pop_has_trait = trait_lv_synth_vagina
+					pop_has_trait = trait_lv_custom_dildo_attachment
+					pop_has_trait = trait_lv_synth_penis
+					pop_has_trait = trait_lv_artificial_womb
+					pop_has_trait = trait_lv_advanced_artificial_womb
+					pop_has_trait = trait_lv_cybernetic_womb
+					pop_has_trait = trait_lv_synth_brood_breasts
+					pop_has_trait = trait_lv_biomechanical_breeder
+					pop_has_trait = trait_lv_synth_seeder
+				}
+			}
+			lv_specialist_job_check_trigger = yes
+		}
+		else_if = {
+			limit = {
+				has_job = lv_call_girl
+			}
+			always = yes
+		}
+		else = { always = no }
+	}
+
+	resources = {
+        category = planet_lv_call_girl
+		produces = {
+			trigger = {
+				has_trait = trait_lv_targeted_pheromones
+			}
+			sr_zro = 0.2
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_neuron_saliva
+			}
+			physics_research = 0.15
+			society_research = 0.15
+			engineering_research = 0.15
+		}
+        produces = {
+			trigger = {
+				has_trait = trait_lv_aphrodisiac_cum
+			}
+			sr_zro = 0.15
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_addictive_cum
+			}
+			sr_zro = 0.2
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_psychoactive_cum
+			}
+			sr_zro = 0.3
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_cybernetic_minifacturing_fabrication_womb
+			}
+			nanites = 0.2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 4
+		trade_value_add = 8
+		planet_crime_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -0.8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+			trade_value_add = 0.6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.8
+			trade_value_add = 0.8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = 1
+			trade_value_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			planet_amenities_add = 1.2
+			trade_value_add = 1.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.2
+			trade_value_add = -0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+			trade_value_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.8
+			trade_value_add = -0.8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = -1
+			trade_value_add = -1
+		}
+	}
+
+	weight = {
+        weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+			NOR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+				has_trait = trait_traditional
+				has_trait = trait_robot_propaganda_machines
+				has_trait = trait_brainslug
+				has_trait = trait_presapient_natural_intellectuals
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 0.25
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOR = {
+				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty
+			}
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = trait_lv_sex_bots
+				has_trait = trait_lv_breast_attachments
+				has_trait = trait_lv_synth_breasts
+				has_trait = trait_lv_custom_fleshlight_slot
+				has_trait = trait_lv_synth_vagina
+				has_trait = trait_lv_custom_dildo_attachment
+				has_trait = trait_lv_synth_penis
+				has_trait = trait_lv_artificial_womb
+				has_trait = trait_lv_advanced_artificial_womb
+				has_trait = trait_lv_cybernetic_womb
+				has_trait = trait_lv_synth_brood_breasts
+				has_trait = trait_lv_biomechanical_breeder
+				has_trait = trait_lv_synth_seeder
+			}
+		}
+		modifier = {
+			factor = 0
+			is_robot_pop = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_trait = trait_traditional
+				has_trait = trait_robot_propaganda_machines
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = trait_quarrelsome
+		}
+		modifier = {
+			factor = 1.5
+			has_job = entertainer
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			factor = 2
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			factor = 3
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			factor = 4
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			factor = 5
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			factor = 6
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			factor = 0.9
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			factor = 0.8
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			factor = 0.6
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			factor = 0.5
+			lv_sex_jobs_neg_5 = yes
+		}
+    }
+}
+
+lvb_escort = {			# Escort
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_commercial_zone
+	clothes_texture_index = 3
+
+	possible = {
+		IF = {
+			limit = {
+				OR = {
+					is_robot_pop = no
+					pop_has_trait = trait_lv_sex_bots
+					pop_has_trait = trait_lv_breast_attachments
+					pop_has_trait = trait_lv_synth_breasts
+					pop_has_trait = trait_lv_custom_fleshlight_slot
+					pop_has_trait = trait_lv_synth_vagina
+					pop_has_trait = trait_lv_custom_dildo_attachment
+					pop_has_trait = trait_lv_synth_penis
+					pop_has_trait = trait_lv_artificial_womb
+					pop_has_trait = trait_lv_advanced_artificial_womb
+					pop_has_trait = trait_lv_cybernetic_womb
+					pop_has_trait = trait_lv_synth_brood_breasts
+					pop_has_trait = trait_lv_biomechanical_breeder
+					pop_has_trait = trait_lv_synth_seeder
+				}
+			}
+			lv_specialist_job_check_trigger = yes
+		}
+		else_if = {
+			limit = {
+				has_job = lv_escort
+			}
+			always = yes
+		}
+		else = { always = no }
+	}
+
+	resources = {
+        category = planet_lv_escort
+		produces = {
+			unity = 1
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_targeted_pheromones
+			}
+			sr_zro = 0.2
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_neuron_saliva
+			}
+			physics_research = 0.15
+			society_research = 0.15
+			engineering_research = 0.15
+		}
+#		produces = {
+#			trigger = {
+#				has_trait = trait_lv_orgone_coalescence
+#			}
+#			sr_zro = 0.3
+#		}
+        produces = {
+			trigger = {
+				has_trait = trait_lv_aphrodisiac_cum
+			}
+			sr_zro = 0.15
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_addictive_cum
+			}
+			sr_zro = 0.2
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_psychoactive_cum
+			}
+			sr_zro = 0.3
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_lv_cybernetic_minifacturing_fabrication_womb
+			}
+			nanites = 0.2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 3
+		trade_value_add = 3
+		planet_crime_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+			trade_value_add = 0.6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = 0.8
+			trade_value_add = 0.8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = 1
+			trade_value_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			planet_amenities_add = 1.2
+			trade_value_add = 1.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.2
+			trade_value_add = -0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+			trade_value_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			planet_amenities_add = -0.8
+			trade_value_add = -0.8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			lv_sex_jobs_neg_5 = yes
+		}
+		modifier = {
+			planet_amenities_add = -1
+			trade_value_add = -1
+		}
+	}
+
+	weight = {
+        weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+			NOR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+				has_trait = trait_traditional
+				has_trait = trait_robot_propaganda_machines
+				has_trait = trait_brainslug
+				has_trait = trait_presapient_natural_intellectuals
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 0.25
+			is_enslaved = yes
+			can_take_servant_job = no
+			NOR = {
+				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty
+			}
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = trait_lv_sex_bots
+				has_trait = trait_lv_breast_attachments
+				has_trait = trait_lv_synth_breasts
+				has_trait = trait_lv_custom_fleshlight_slot
+				has_trait = trait_lv_synth_vagina
+				has_trait = trait_lv_custom_dildo_attachment
+				has_trait = trait_lv_synth_penis
+				has_trait = trait_lv_artificial_womb
+				has_trait = trait_lv_advanced_artificial_womb
+				has_trait = trait_lv_cybernetic_womb
+				has_trait = trait_lv_synth_brood_breasts
+				has_trait = trait_lv_biomechanical_breeder
+				has_trait = trait_lv_synth_seeder
+			}
+		}
+		modifier = {
+			factor = 0
+			is_robot_pop = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_nuumismatic_administration
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_thrifty
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_trait = trait_traditional
+				has_trait = trait_robot_propaganda_machines
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = trait_quarrelsome
+		}
+		modifier = {
+			factor = 1.5
+			has_job = entertainer
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1
+			lv_sex_jobs_pos_1 = yes
+		}
+		modifier = {
+			factor = 2
+			lv_sex_jobs_pos_2 = yes
+		}
+		modifier = {
+			factor = 3
+			lv_sex_jobs_pos_3 = yes
+		}
+		modifier = {
+			factor = 4
+			lv_sex_jobs_pos_4 = yes
+		}
+		modifier = {
+			factor = 5
+			lv_sex_jobs_pos_5 = yes
+		}
+		modifier = {
+			factor = 6
+			lv_sex_jobs_pos_6 = yes
+		}
+		modifier = {
+			factor = 0.9
+			lv_sex_jobs_neg_1 = yes
+		}
+		modifier = {
+			factor = 0.8
+			lv_sex_jobs_neg_2 = yes
+		}
+		modifier = {
+			factor = 0.6
+			lv_sex_jobs_neg_4 = yes
+		}
+		modifier = {
+			factor = 0.5
+			lv_sex_jobs_neg_5 = yes
+		}
+    }
+}
+
+###

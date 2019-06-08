@@ -1,0 +1,83 @@
+########################
+###	 Policies	 ###
+########################
+
+########
+# Jobs #
+########
+
+#Sex Trade
+lvb_sex_trade_policy = {
+	potential = {
+		has_technology = tech_lvb_sex_trade
+	}
+
+	option = {					  # No Specialization
+		name = "lvb_sex_trade_default"
+
+		policy_flags = {
+			lvb_sex_trade_policy_default
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {					  # Allowed
+		name = "lvb_sex_trade_allowed"
+
+		policy_flags = {
+			lvb_sex_trade_policy_allowed
+		}
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 10
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 1
+					}
+				}
+			}
+		}
+	}
+
+	option = {					  # Encouraged
+		name = "lvb_sex_trade_encouraged"
+
+		policy_flags = {
+			lvb_sex_trade_policy_encouraged
+		}
+
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {					  # Mandatory
+		name = lvb_sex_trade_mandatory
+
+		potential = {
+			has_technology = tech_lvb_sex_trade_2
+		}
+
+		policy_flags = {
+			lvb_sex_trade_policy_mandatory
+		}
+
+		modifier = {
+			job_lvb_streetwalker_per_pop = 0.04
+			job_lvb_call_girl_per_pop = 0.02
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+}
+
+###

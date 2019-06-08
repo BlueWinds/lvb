@@ -1,0 +1,13 @@
+﻿l_english:
+
+ ############################
+ ###     Technologies     ###
+ ############################
+
+ tech_lvb_sex_trade: "Sex Trade Policy"
+ tech_lvb_sex_trade_desc: "With advanced understanding of the forces that drive individuals to action, we can now mold the sex trade within our society to serve our needs as part of the normal economy."
+ tech_lvb_sex_trade_modifier_desc: "Unlocks: Sex Trade Policies."
+
+ tech_lvb_sex_trade_2: "Advanced Sex Trade Policy"
+ tech_lvb_sex_trade_2_desc: "Delving deeper into the forces which move individuals to action, we can now mandate that our citizens take part in this lucritive field without the social upheaval this would have caused in more primitive societies."
+ tech_lvb_sex_trade_2_modifier_desc: "Unlocks: Sex Trade Policy - Mandatory."

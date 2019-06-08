@@ -1,0 +1,55 @@
+﻿l_english:
+
+###################################
+###     Economic Categories     ###
+###################################
+
+planet_lvb_sex_jobs: "Sex Jobs"
+planet_lvb_streetwalker: "Streetwalker Jobs"
+planet_lvb_whore: "Whore Jobs"
+planet_lvb_call_girl: "Call Girl Jobs"
+planet_lvb_escort: "Escort Jobs"
+
+########################
+###     Pop Jobs     ###
+########################
+
+##########
+# Worker #
+##########
+
+# Sex #
+
+job_lvb_streetwalker: "Streetwalker"
+job_lvb_streetwalker_plural: "Streetwalkers"
+job_lvb_streetwalker_desc: "Those without opportunity or skill can still scrape out a modest living on the streets."
+job_lvb_streetwalker_effect_desc: "£job_lvb_streetwalker£ $job_lvb_streetwalker_plural$ sell their bodies for sex and pleasure, producing £amenities£ Amenities, £trade_value£ Trade Value and £crime£ Crime"
+mod_job_lvb_streetwalker_add: "$job_lvb_streetwalker$"
+mod_job_lvb_streetwalker_per_pop: "§G+1§! $job_lvb_streetwalker$ Job per $VALUE$ Pops"
+mod_job_lvb_streetwalker_per_pop_short: "\n§G+1§! £mod_job_lvb_streetwalker_add£ per $VALUE$ £pop£"
+
+job_lvb_whore: "Whore"
+job_lvb_whore_plural: "Whores"
+job_lvb_whore_desc: "A quick fuck to forget about life’s troubles, offered at a more than reasonable price."
+job_lvb_whore_effect_desc: "£job_lvb_whore£ $job_lvb_whore_plural$ sell their bodies for sex and pleasure, producing £amenities£ Amenities and £trade_value£ Trade Value"
+mod_job_lvb_whore_add: "$job_lvb_whore$"
+mod_job_lvb_whore_per_pop: "§G+1§! $job_lvb_whore$ Job per $VALUE$ Pops"
+mod_job_lvb_whore_per_pop_short: "\n§G+1§! £mod_job_lvb_whore_add£ per $VALUE$ £pop£"
+
+job_lvb_call_girl: "Call Girl"
+job_lvb_call_girl_plural: "Call Girls"
+job_lvb_call_girl_desc: "Skilled and beautiful, these professionals are worth every credit."
+job_lvb_call_girl_effect_desc: "£job_lvb_call_girl£ $job_lvb_call_girl_plural$ sell their bodies for sex and pleasure, producing £amenities£ Amenities and £trade_value£ Trade Value"
+mod_job_lvb_call_girl_add: "$job_lvb_call_girl$"
+mod_job_lvb_call_girl_per_pop: "§G+1§! $job_lvb_call_girl$ Job per $VALUE$ Pops"
+mod_job_lvb_call_girl_per_pop_short: "\n§G+1§! £mod_job_lvb_call_girl_add£ per $VALUE$ £pop£"
+
+job_lvb_escort: "Escort"
+job_lvb_escort_plural: "Escorts"
+job_lvb_escort_desc: "Escorts offer company and companionship for the lonely. A fuck, a hug, a headpat: whatever the buyer needs."
+job_lvb_escort_effect_desc: "£job_lvb_escort£ $job_lvb_escort_plural$ sell their bodies for sex and pleasure, producing £amenities£ Amenities and £trade_value£ Trade Value"
+mod_job_lvb_escort_add: "$job_lvb_escort$"
+mod_job_lvb_escort_per_pop: "§G+1§! $job_lvb_escort$ Job per $VALUE$ Pops"
+mod_job_lvb_escort_per_pop_short: "\n§G+1§! £mod_job_lvb_escort_add£ per $VALUE$ £pop£"
+
+###
