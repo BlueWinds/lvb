@@ -1,0 +1,51 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_arrow_right"
+		textureFile = "gfx/interface/traditions/arrow_right.dds"
+	}
+
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_lvb_sensuality"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_lvb_sensuality.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_lvb_sensuality"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_lvb_sensuality.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_lvb_sensuality"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_lvb_sensuality.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+# Tradition picks
+
+	spriteType = {
+		name = "GFX_tr_lvb_sensuality_hormonal_rebalancing"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sensuality_selective_conception"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sensuality_std_eradication"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sensuality_deviancy_normalization"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sensuality_public_use_ordinances"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_5.dds"
+	}
+}

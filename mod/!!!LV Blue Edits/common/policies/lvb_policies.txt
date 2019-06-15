@@ -57,27 +57,6 @@ lvb_sex_trade_policy = {
 			factor = 1
 		}
 	}
-
-	option = {					  # Mandatory
-		name = lvb_sex_trade_mandatory
-
-		potential = {
-			has_technology = tech_lvb_sex_trade_2
-		}
-
-		policy_flags = {
-			lvb_sex_trade_policy_mandatory
-		}
-
-		modifier = {
-			job_lvb_streetwalker_per_pop = 0.04
-			job_lvb_call_girl_per_pop = 0.02
-		}
-
-		AI_weight = {
-			factor = 1
-		}
-	}
 }
 
 ###

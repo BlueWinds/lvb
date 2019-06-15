@@ -1,0 +1,94 @@
+
+tr_lvb_sensuality_adopt = {
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			leader = {
+				has_trait = leader_trait_ruler_lv_lustful_body
+			}
+		}
+		modifier = {
+			factor = 3
+			leader = {
+				has_trait = leader_trait_ruler_lv_seductive
+			}
+		}
+		modifier = {
+			factor = 5
+			leader = {
+				has_trait = leader_trait_ruler_lv_shocking_fetish
+			}
+		}
+	}
+}
+
+tr_lvb_sensuality_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		pop_growth_from_immigration = 0.10
+		planet_immigration_pull_mult = 0.25
+	}
+}
+
+tr_lvb_sensuality_hormonal_rebalancing = {
+	modifier = {
+		planet_crime_mult = -0.1
+	}
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_lvb_sensuality_selective_conception = {
+	modifier = {
+		pop_growth_speed = -0.05
+		pop_happiness = 0.1
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_lvb_sensuality_std_eradication = {
+	modifier = {
+		pop_amenities_usage_mult = -0.15
+	}
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_lvb_sensuality_deviancy_normalization = {
+	possible = {
+		has_tradition = tr_lvb_sensuality_hormonal_rebalancing
+		has_tradition = tr_lvb_sensuality_selective_conception
+		has_tradition = tr_lvb_sensuality_std_eradication
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.15
+		planet_stability_add = 5
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_lvb_sensuality_public_use_ordinances = {
+	possible = {
+		has_tradition = tr_lvb_sensuality_deviancy_normalization
+	}
+	modifier = {
+		job_lvb_streetwalker_per_pop = 0.04
+		job_lvb_call_girl_per_pop = 0.02
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
