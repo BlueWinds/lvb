@@ -1,0 +1,562 @@
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_repugnant }
+		modifier = {
+			planet_amenities_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_nuumismatic_administration }
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_thrifty }
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_nudist }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_nutrient_extrusion }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_large_breasts }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_multiple_breasts }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_high_volume_lactation }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_highly_nutritious_milk }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_adorable }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_futanari }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_breast_attachments }
+		modifier = {
+			planet_amenities_add = 0.1
+			trade_value_add = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_sexual_pheromones }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_masochistic }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_soft }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_honey }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_spice_extrusion }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_long_tongues }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_neuron_saliva }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_erogenous_anus }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_huge_breasts }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_fizzy_milk }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_shapely_ass }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_large_penis }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_aphrodisiac_cum }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_lewd_mind }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_brood_parasite }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_opt_intercompatible_womb }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_opt_intercompatible_sperm }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_synth_breasts }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_custom_fleshlight_slot }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_trait = trait_lv_custom_dildo_attachment }
+		modifier = {
+			planet_amenities_add = 0.2
+			trade_value_add = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_targeted_pheromones
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_exhibitionist
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_sexually_gifted
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_spiced_honey
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_aphrodisiac_milk
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_drooling_vagina
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_superfetation
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_huge_penis
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_multiple_penises
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_addictive_cum
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_sex_crazed
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_cybernetic_minifacturing_fabrication_womb
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_synth_vagina
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_synth_penis
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_artificial_womb
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_biomechanical_breeder
+		}
+		modifier = {
+			planet_amenities_add = 0.3
+			trade_value_add = 0.3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_elastic_orifices
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_natural_anal_lube
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_fuckable_nipples
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_breeder_hips
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_litters
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_high_volume_ejaculations
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_psychoactive_cum
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_advanced_artificial_womb
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_synth_seeder
+		}
+		modifier = {
+			planet_amenities_add = 0.4
+			trade_value_add = 0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_incubator_breasts
+		}
+		modifier = {
+			planet_amenities_add = 0.5
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_cybernetic_womb
+		}
+		modifier = {
+			planet_amenities_add = 0.5
+			trade_value_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_sex_bots
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+			trade_value_add = 0.6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_synth_brood_breasts
+		}
+		modifier = {
+			planet_amenities_add = 0.6
+			trade_value_add = 0.6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_small_penis
+		}
+		modifier = {
+			planet_amenities_add = -0.1
+			trade_value_add = -0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_sadistic
+		}
+		modifier = {
+			planet_amenities_add = -0.2
+			trade_value_add = -0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_seasonal_breeders
+		}
+		modifier = {
+			planet_amenities_add = -0.2
+			trade_value_add = -0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_sexually_repressed
+		}
+		modifier = {
+			planet_amenities_add = -0.4
+			trade_value_add = -0.4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_lv_sexually_inept
+		}
+		modifier = {
+			planet_amenities_add = -0.5
+			trade_value_add = -0.5
+		}
+	}

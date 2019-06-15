@@ -4,6 +4,8 @@
 ###     Economic Categories     ###
 ###################################
 
+planet_lvb_dairy_jobs: "Dairy Jobs"
+planet_lvb_milk_cow: "Milk Cow Jobs"
 planet_lvb_sex_jobs: "Sex Jobs"
 planet_lvb_streetwalker: "Streetwalker Jobs"
 planet_lvb_whore: "Whore Jobs"
@@ -17,6 +19,14 @@ planet_lvb_escort: "Escort Jobs"
 ##########
 # Worker #
 ##########
+
+# Dairy #
+
+job_lvb_milk_cow: "Milk Cow"
+job_lvb_milk_cow_plural: "Milk Cows"
+job_lvb_milk_cow_desc: "Milk has uses both as food, and as a luxury item. Certain traits make MUCH more effective Milk Cows."
+job_lvb_milk_cow_effect_desc: "£job_lv_milk_cow£ $job_lv_milk_cow_plural$ turn breast milk and other fluids into fresh £food£ §Y$food$§! and usable £consumer_goods£ §Y$consumer_goods$§!"
+mod_job_lvb_milk_cow_add: "$job_lv_milk_cow$"
 
 # Sex #
 

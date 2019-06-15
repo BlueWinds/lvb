@@ -1,1 +1,3 @@
 *.zip
+mod/
+node_modules/

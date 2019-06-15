@@ -1,0 +1,25 @@
+		IF = {
+			limit = {
+				OR = {
+					is_robot_pop = no
+					pop_has_trait = trait_lv_sex_bots
+					pop_has_trait = trait_lv_breast_attachments
+					pop_has_trait = trait_lv_synth_breasts
+					pop_has_trait = trait_lv_custom_fleshlight_slot
+					pop_has_trait = trait_lv_synth_vagina
+					pop_has_trait = trait_lv_custom_dildo_attachment
+					pop_has_trait = trait_lv_synth_penis
+					pop_has_trait = trait_lv_artificial_womb
+					pop_has_trait = trait_lv_advanced_artificial_womb
+					pop_has_trait = trait_lv_cybernetic_womb
+					pop_has_trait = trait_lv_synth_brood_breasts
+					pop_has_trait = trait_lv_biomechanical_breeder
+					pop_has_trait = trait_lv_synth_seeder
+				}
+				OR = {
+					is_being_purged = no
+					has_purge_type = { type = purge_neutering }
+				}
+			}
+		}
+		else = { always = no }

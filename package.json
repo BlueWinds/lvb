@@ -1,0 +1,28 @@
+{
+  "name": "lvb",
+  "version": "1.0.0",
+  "description": "This is a patch-mod for Stellaris, updating the [Lustful Void|https://www.loverslab.com/topic/119724-mod-stellaris-lustful-void-wip] mod with some personal tweaks. All credit to Lithia<3, I claim none.",
+  "main": "src/fillTemplates.js",
+  "scripts": {
+    "start": "nodemon -e '*' -w './src'",
+    "build": "node src/fillTemplates.js",
+    "release": "rm '!!!LV Blue Edits.zip' || true && cd mod && zip -r '!!!LV Blue Edits.zip' '!!!LV Blue Edits' '!!!LV Blue Edits.mod' && mv '!!!LV Blue Edits.zip' .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueWinds/lvb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueWinds/lvb/issues"
+  },
+  "homepage": "https://github.com/BlueWinds/lvb#readme",
+  "devDependencies": {
+    "glob": "^7.1.4",
+    "mkdirp": "^0.5.1",
+    "mustache": "^3.0.1",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3"
+  }
+}
