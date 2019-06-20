@@ -36,3 +36,5 @@ for (const file of glob.sync('**/*.dds', {cwd: path.resolve(__dirname, 'template
   mkdirp.sync(path.dirname(outPath))
   fs.writeFileSync(outPath, image)
 }
+
+fs.copyFileSync(path.resolve('src/', '!!!LV Blue Edits.mod'), path.resolve(__dirname, '../mod/!!!LV Blue Edits.mod'))
