@@ -27,13 +27,12 @@ lvb_milk_cow = {			# Milk Cow
 				}
 				NOT = { pop_has_trait = trait_lv_all_male }
 			}
-			lv_worker_job_check_trigger = yes
 		}
 		else = { always = no }
 	}
 
 	resources = {
-        category = planet_lv_milk_cow
+        category = planet_lvb_milk_cow
         produces = {
             food = 2
 			consumer_goods = 2
@@ -58,8 +57,6 @@ lvb_milk_cow = {			# Milk Cow
 			}
 			consumer_goods = 4
 		}
-
-		{{> cow_trait_resources}}
 	}
 
 	triggered_planet_modifier = {
@@ -125,21 +122,6 @@ lvb_milk_cow = {			# Milk Cow
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 1.1
-			has_trait = trait_nerve_stapled
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_repugnant
-		}
-		modifier = {
 			weight = 3000
 			is_pop_category = worker
 			owner = {
@@ -158,6 +140,8 @@ lvb_milk_cow = {			# Milk Cow
 				is_ai = yes
 			}
 		}
+
+		{{> cow_trait_weight }}
     }
 }
 
@@ -168,63 +152,6 @@ lvb_milk_cow = {			# Milk Cow
 ##########
 # Worker #
 ##########
-
-lvb_streetwalker = {			# Streetwalker
-	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_residence
-	clothes_texture_index = 2
-
-	possible = {
-		{{> sex_work_possible }}
-	}
-
-	resources = {
-        category = planet_lv_streetwalker
-
-		{{> sex_work_trait_resources }}
-	}
-
-	planet_modifier = {
-		planet_amenities_add = 2
-		trade_value_add = 2
-		planet_crime_add = 2
-	}
-
-	{{> sex_work_trait_planet }}
-
-	weight = {
-        weight = @clerk_job_weight
-		modifier = {
-			factor = 0.25
-			is_enslaved = yes
-			can_take_servant_job = no
-			NOR = {
-				has_trait = trait_nuumismatic_administration
-				has_trait = trait_thrifty
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 10
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-
-		{{> sex_work_trait_weight }}
-    }
-}
 
 lvb_whore = {			# Whore
 	category = worker
@@ -237,22 +164,20 @@ lvb_whore = {			# Whore
 	}
 
 	resources = {
-        category = planet_lv_whore
+        category = planet_lvb_sex_work
 
-		upkeep = {
-			consumer_goods = 0.25
+		produces = {
+			unity = 1
 		}
-
-		{{> sex_work_trait_resources }}
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 3
-		trade_value_add = 3
+		planet_amenities_add = 2
+		trade_value_add = 2
 		planet_crime_add = 2
 	}
 
-	{{> sex_work_trait_planet }}
+	{{> sex_work_trait_planet base=2 }}
 
 	weight = {
         weight = @clerk_job_weight
@@ -298,22 +223,21 @@ lvb_call_girl = {			# Call Girl
 	}
 
 	resources = {
-        category = planet_lv_call_girl
+        category = planet_lvb_sex_work
 
 		upkeep = {
 			consumer_goods = 1
 		}
-
-        {{> sex_work_trait_resources }}
 	}
 
 	planet_modifier = {
 		planet_amenities_add = 4
-		trade_value_add = 8
-		planet_crime_add = 1
+		trade_value_add = 4
+		planet_crime_add = 2
 	}
 
-	{{> sex_work_trait_planet }}
+	# These modifiers are doubled, because call_girl is twice as valuable as whore
+	{{> sex_work_trait_planet base=4 }}
 
 	weight = {
         weight = @specialist_job_weight
@@ -359,15 +283,13 @@ lvb_escort = {			# Escort
 	}
 
 	resources = {
-        category = planet_lv_escort
+        category = planet_lvb_sex_work
 		produces = {
-			unity = 1
+			unity = 2
 		}
 		upkeep = {
 			consumer_goods = 1
 		}
-
-		{{> sex_work_trait_resources }}
 	}
 
 	planet_modifier = {
@@ -376,7 +298,7 @@ lvb_escort = {			# Escort
 		planet_crime_add = 1
 	}
 
-	{{> sex_work_trait_planet }}
+	{{> sex_work_trait_planet base=3 }}
 
 	weight = {
         weight = @specialist_job_weight

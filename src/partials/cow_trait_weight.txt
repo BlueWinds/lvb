@@ -1,71 +1,18 @@
 modifier = {
-	factor = 1
-	has_trait = trait_lv_superfetation
+	pop_has_trait = trait_nerve_stapled
+	factor = 1.1
 }
 modifier = {
-	factor = 1
-	has_trait = trait_lv_breast_attachments
+	OR = {
+		pop_has_trait = trait_robot_domestic_protocols
+		pop_has_trait = trait_charismatic
+	}
+	factor = 1.5
 }
+
+{{#each cow_bonus as |mult trait|}}
 modifier = {
-	factor = 2
-	has_trait = trait_lv_living_nacre
+	pop_has_trait = trait_lv_{{ trait }}
+	factor = {{ getWeight mult }}
 }
-modifier = {
-	factor = 2
-	has_trait = trait_lv_crystal_ivory
-}
-modifier = {
-	factor = 2
-	has_trait = trait_lv_neuron_saliva
-modifier = {
-	factor = 3
-	has_trait = trait_lv_spice_extrusion
-}
-modifier = {
-	factor = 3
-	has_trait = trait_lv_living_nacre
-}
-modifier = {
-	factor = 3
-	has_trait = trait_lv_crystal_ivory
-}
-modifier = {
-	factor = 3
-	has_trait = trait_lv_nutrient_extrusion
-}
-modifier = {
-	factor = 3
-	has_trait = trait_lv_aphrodisiac_milk
-}
-modifier = {
-	factor = 4
-	has_trait = trait_lv_honeypot
-}
-modifier = {
-	factor = 4
-	has_trait = trait_lv_incubator_breasts
-}
-modifier = {
-	factor = 4
-	has_trait = trait_lv_high_volume_lactation
-}
-modifier = {
-	factor = 5
-	has_trait = trait_lv_fizzy_milk
-}
-modifier = {
-	factor = 6
-	has_trait = trait_lv_highly_nutritious_milk
-}
-modifier = {
-	factor = 6
-	has_trait = trait_lv_synth_brood_breasts
-}
-modifier = {
-	factor = 0.7
-	has_trait = trait_lv_small_breasts
-}
-modifier = {
-	factor = 0.5
-	has_trait = trait_lv_watery_milk
-}
+{{/each}}

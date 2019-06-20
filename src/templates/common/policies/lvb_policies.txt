@@ -59,4 +59,146 @@ lvb_sex_trade_policy = {
 	}
 }
 
+#Milk Cows
+lv_milk_cows_policy = {			# Milk Cow Specialization
+
+	potential = {
+		has_technology = tech_lv_milk_cow_specialization
+	}
+
+	option = {			# No Specialization
+		name = "lv_milk_cows_policy_default"
+
+		policy_flags = {
+			lv_milk_cows_policy_default
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_global_flag = lv_events_hidden }
+						}
+						country_event = { id = lvb_event_popups.1000 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {			# Maximize Production
+		name = "lv_milk_cows_policy_max_milk"
+
+		policy_flags = {
+			lv_milk_cows_policy_max_milk
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_global_flag = lv_events_hidden }
+						}
+						country_event = { id = lvb_event_popups.1001 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+
+	option = {			# Free Use Cows
+		name = "lv_milk_cows_policy_free_use"
+
+		policy_flags = {
+			lv_milk_cows_policy_free_use
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_global_flag = lv_events_hidden }
+						}
+						country_event = { id = lvb_event_popups.1002 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {			# Milk Cow Renting
+		name = "lv_milk_cows_policy_paid_use"
+
+		policy_flags = {
+			lv_milk_cows_policy_paid_use
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_global_flag = lv_events_hidden }
+						}
+						country_event = { id = lvb_event_popups.1003 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 10
+				owner = {
+					has_monthly_income = {
+						resource = energy
+						value < 1
+					}
+				}
+			}
+		}
+	}
+
+	option = {			# Milk Cow Breeding
+		name = "lv_milk_cows_policy_breeders"
+
+		policy_flags = {
+			lv_milk_cows_policy_breeders
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_global_flag = lv_events_hidden }
+						}
+						country_event = { id = lvb_event_popups.1004 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
 ###

@@ -1,0 +1,16 @@
+planet_lvb_milk_cow = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+}
+
+planet_lvb_sex_work = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+	generate_add_modifiers = {
+		produces
+	}
+}

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/BlueWinds/lvb#readme",
   "devDependencies": {
     "glob": "^7.1.4",
+    "handlebars": "^4.1.2",
     "mkdirp": "^0.5.1",
     "mustache": "^3.0.1",
     "nodemon": "^1.19.1",

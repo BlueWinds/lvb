@@ -1,0 +1,38 @@
+##############################
+###     Event Pictures     ###
+##############################
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_evt_lvb_cow_no_specialization"
+		texturefile = "gfx/event_pictures/evt_lvb_cow_no_specialization.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_long_event_mask.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_cow_maximize"
+		texturefile = "gfx/event_pictures/evt_lvb_cow_maximize.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_cow_free_use"
+		texturefile = "gfx/event_pictures/evt_lvb_cow_free_use.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_cow_renting"
+		texturefile = "gfx/event_pictures/evt_lvb_cow_renting.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_long_event_mask.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_cow_breeding"
+		texturefile = "gfx/event_pictures/evt_lvb_cow_breeding.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_long_event_mask.dds"
+		allwaystransparent = yes
+	}
+}
+
+###

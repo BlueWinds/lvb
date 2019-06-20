@@ -7,22 +7,20 @@ tr_lvb_sensuality_adopt = {
 	ai_weight = {
 		factor = 10
 		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
 			factor = 2
-			leader = {
-				has_trait = leader_trait_ruler_lv_lustful_body
-			}
+			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
-			factor = 3
-			leader = {
-				has_trait = leader_trait_ruler_lv_seductive
-			}
+			factor = 1.5
+			has_ethic = ethic_xenophile
 		}
 		modifier = {
-			factor = 5
-			leader = {
-				has_trait = leader_trait_ruler_lv_shocking_fetish
-			}
+			factor = 2
+			has_ethic = ethic_fanatic_xenophile
 		}
 	}
 }
@@ -37,7 +35,7 @@ tr_lvb_sensuality_finish = {
 
 tr_lvb_sensuality_hormonal_rebalancing = {
 	modifier = {
-		planet_crime_mult = -0.1
+		planet_stability_add = 5
 	}
 	ai_weight = {
 		factor = 2000
@@ -71,7 +69,7 @@ tr_lvb_sensuality_deviancy_normalization = {
 	}
 	modifier = {
 		pop_government_ethic_attraction = 0.15
-		planet_stability_add = 5
+		planet_crime_add = -15
 	}
 
 	ai_weight = {
@@ -84,8 +82,8 @@ tr_lvb_sensuality_public_use_ordinances = {
 		has_tradition = tr_lvb_sensuality_deviancy_normalization
 	}
 	modifier = {
-		job_lvb_streetwalker_per_pop = 0.04
-		job_lvb_call_girl_per_pop = 0.02
+		job_lvb_whore_per_pop = 0.04
+		job_lvb_escort_per_pop = 0.02
 	}
 
 	ai_weight = {

@@ -7,55 +7,276 @@
 #########################
 
 tech_lvb_sex_trade = {          # Sex Trade Policy
-       cost = @lv_tech_cost_2
-       area = society
-       tier = 2
-       category = { statecraft }
-       prerequisites = { "tech_interplanetary_commerce" }
-       weight = @lv_tech_weight_2
+	cost = 4000
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_interplanetary_commerce" }
+	weight = 85
 
-       modifier = {
-               description = tech_lvb_sex_trade_modifier_desc
-       }
+	modifier = {
+		description = tech_lvb_sex_trade_modifier_desc
+	}
 
-       potential = {
-               NOT = { has_ethic = ethic_gestalt_consciousness }
-       }
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
 
-       weight_modifier = {
-               factor = 1.5
-               modifier = {
-                       factor = 1.25
-                       research_leader = {
-                               area = society
-                               has_trait = "leader_trait_expertise_statecraft"
-                       }
-               }
-               modifier = {
-                       factor = 2
-                       research_leader = {
-                               area = society
-                               has_trait = "leader_trait_scientist_lv_sexologist"
-                       }
-               }
-       }
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
 
-       ai_weight = {
-               modifier = {
-                       factor = 1.25
-                       research_leader = {
-                               area = society
-                               has_trait = "leader_trait_expertise_statecraft"
-                       }
-               }
-               modifier = {
-                       factor = 1.25
-                       research_leader = {
-                               area = society
-                               has_trait = "leader_trait_scientist_lv_sexologist"
-                       }
-               }
-       }
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+
+tech_lv_milk_cow_specialization = {		# Milk Cow Specialization
+	cost = 4000
+	area = society
+	tier = 2
+	category = { biology }
+	prerequisites = { "tech_eco_simulation" }
+	weight = 85
+
+	modifier = {
+		planet_jobs_food_produces_mult = 0.05
+		description = tech_lv_milk_cow_specialization_modifier_desc
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+			has_civic = civic_machine_servitor
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.01
+			is_machine_empire = yes
+			NOR = {
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_machine_assimilator
+				any_owned_planet = {
+					num_districts = { type = district_farming value > 0 }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+
+# Machine Empire Traits Unlock
+tech_lv_biological_mimicry = {		# Biological Mimicry
+	cost = 20000
+	area = engineering
+	tier = 4
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_robomodding_m" "tech_binary_motivators" }
+	weight = 45
+
+	modifier = {
+		ROBOT_species_trait_points_add = 6
+		MACHINE_species_trait_points_add = 6
+	}
+
+	potential = {
+		AND = {
+			has_authority = auth_machine_intelligence
+			NOT = { has_civic = civic_machine_terminator }
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+				has_level > 2
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+
+@lv_gene_tailoring_POINTS = 2
+tech_lv_transformation_candy = {		# Transformation Candy
+	cost = 20000
+	area = society
+	tier = 4
+	category = { biology }
+	is_rare = yes
+	prerequisites = { "tech_gene_tailoring" }
+	weight = 50
+
+	modifier = {
+		pop_happiness = 0.1
+		leader_age = 5
+		description = tech_lv_transformation_candy_modifier_desc
+		description_parameters = {
+			POINTS = @lv_gene_tailoring_POINTS
+		}
+		BIOLOGICAL_species_trait_points_add = @lv_gene_tailoring_POINTS
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+			has_civic = civic_machine_servitor
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_xenophile"
+		}
+		modifier = {
+			factor = 4
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_xenophile"
+		}
+		modifier = {
+			factor = 4
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_lv_transformation_candy_apple = {
+	area = society
+	cost = 50000
+	cost_per_level = 5000
+	tier = 5
+	category = { biology }
+	levels = -1
+	prerequisites = { "tech_lv_transformation_candy" }
+	weight = 30
+
+	weight_modifier = {
+		factor = 0.5
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = @lv_gene_tailoring_POINTS
+		description = tech_lv_transformation_candy_apple_modifier_desc
+		description_parameters = {
+			POINTS = @lv_gene_tailoring_POINTS
+		}
+	}
+}
+
+tech_lv_transformation_candy_strawberry = {
+	area = society
+	tier = 5
+	potential = { always = no }
+}
+
+tech_lv_transformation_candy_blueberry = {
+	area = society
+	tier = 5
+	potential = { always = no }
+}
+
+tech_lv_transformation_candy_orange = {
+	area = society
+	tier = 5
+	potential = { always = no }
 }
 
 ###

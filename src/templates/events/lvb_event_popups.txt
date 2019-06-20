@@ -1,0 +1,83 @@
+namespace = lvb_event_popups
+
+#############################
+###     Event Pop-ups     ###
+#############################
+
+############
+# Policies #
+############
+
+# Milk Cow Specialization #
+
+country_event = {		# No Specialization
+	id = lvb_event_popups.1000
+	title = "No Specialization"
+	desc = "lvb_cow_no_specialization.desc"
+	picture = GFX_evt_lvb_cow_no_specialization
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_acknowledged
+	}
+}
+
+country_event = {		# Maximize Production
+	id = lvb_event_popups.1001
+	title = "Maximize Production"
+	desc = "lvb_cow_maximize.desc"
+	picture = GFX_evt_lvb_cow_maximize
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_acknowledged
+	}
+}
+
+country_event = {		# Free Use Cows
+	id = lvb_event_popups.1002
+	title = "Free Use Cows"
+	desc = "lvb_cow_free_use.desc"
+	picture = GFX_evt_lvb_cow_free_use
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_acknowledged
+	}
+}
+
+country_event = {		# Milk Cow Renting
+	id = lvb_event_popups.1003
+	title = "Milk Cow Renting"
+	desc = "lvb_cow_renting.desc"
+	picture = GFX_evt_lvb_cow_renting
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_acknowledged
+	}
+}
+
+country_event = {		# Milk Cow Breeding
+	id = lvb_event_popups.1004
+	title = "Milk Cow Breeding"
+	desc = "lvb_cow_breeding.desc"
+	picture = GFX_evt_lvb_cow_breeding
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_acknowledged
+	}
+}
+
+###

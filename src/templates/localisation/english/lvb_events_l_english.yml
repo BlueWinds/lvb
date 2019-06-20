@@ -1,0 +1,13 @@
+﻿l_english:
+
+#########
+# Dairy #
+#########
+
+lvb_cow_no_specialization.desc: "Our milk cow policy is fine as is, we don't want to put too much strain on them..."
+lvb_cow_maximize.desc: "By keeping our milk cows constantly stimulated and their breasts injected with a steady stream of lactation drugs, we can increase milk production even more!"
+lvb_cow_free_use.desc: "Allowing the public to have sex with any milk cows they want will placate them a bit."
+lvb_cow_renting.desc: "By renting out the bodies of our milk cows, we can make quite a bit of extra credits."
+lvb_cow_breeding.desc: "Focusing on using our milk cows as breeders will help substantially with colonization or re-population efforts!"
+
+lvb_acknowledged: "Acknowledged."

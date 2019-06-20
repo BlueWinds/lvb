@@ -4,13 +4,11 @@
 ###     Economic Categories     ###
 ###################################
 
-planet_lvb_dairy_jobs: "Dairy Jobs"
-planet_lvb_milk_cow: "Milk Cow Jobs"
-planet_lvb_sex_jobs: "Sex Jobs"
-planet_lvb_streetwalker: "Streetwalker Jobs"
-planet_lvb_whore: "Whore Jobs"
-planet_lvb_call_girl: "Call Girl Jobs"
-planet_lvb_escort: "Escort Jobs"
+planet_lvb_milk_cow: "Milk Cow"
+mod_planet_lvb_milk_cow_produces_mult:1 "£job_lvb_milk_cow£ $job_lvb_milk_cow$ Output"
+
+planet_lvb_sex_work: "Sex Work"
+mod_planet_lvb_sex_work_produces_mult:1 "£amenities£ Amenities, £trade_value£ Trade Value and £unity£ Unity from Sex Work"
 
 ########################
 ###     Pop Jobs     ###
@@ -24,19 +22,11 @@ planet_lvb_escort: "Escort Jobs"
 
 job_lvb_milk_cow: "Milk Cow"
 job_lvb_milk_cow_plural: "Milk Cows"
-job_lvb_milk_cow_desc: "Milk has uses both as food, and as a luxury item. Certain traits make MUCH more effective Milk Cows."
+job_lvb_milk_cow_desc: "Milk has uses both as food and as a luxury item. Certain traits make MUCH more effective Milk Cows."
 job_lvb_milk_cow_effect_desc: "£job_lv_milk_cow£ $job_lv_milk_cow_plural$ turn breast milk and other fluids into fresh £food£ §Y$food$§! and usable £consumer_goods£ §Y$consumer_goods$§!"
 mod_job_lvb_milk_cow_add: "$job_lv_milk_cow$"
 
 # Sex #
-
-job_lvb_streetwalker: "Streetwalker"
-job_lvb_streetwalker_plural: "Streetwalkers"
-job_lvb_streetwalker_desc: "Those without opportunity or skill can still scrape out a modest living on the streets."
-job_lvb_streetwalker_effect_desc: "£job_lvb_streetwalker£ $job_lvb_streetwalker_plural$ sell their bodies for sex and pleasure, producing £amenities£ Amenities, £trade_value£ Trade Value and £crime£ Crime"
-mod_job_lvb_streetwalker_add: "$job_lvb_streetwalker$"
-mod_job_lvb_streetwalker_per_pop: "§G+1§! $job_lvb_streetwalker$ Job per $VALUE$ Pops"
-mod_job_lvb_streetwalker_per_pop_short: "\n§G+1§! £mod_job_lvb_streetwalker_add£ per $VALUE$ £pop£"
 
 job_lvb_whore: "Whore"
 job_lvb_whore_plural: "Whores"

@@ -1,0 +1,68 @@
+#################################
+###     Scripted Triggers     ###
+#################################
+
+#############
+# Buildings #
+#############
+
+lvb_unemployed = {
+	planet = {
+		any_owned_pop = {
+			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+			NOR = {
+				is_pop_category = specialist
+				is_pop_category = ruler
+			}
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
+		}
+	}
+}
+
+lvb_uses_food = {
+	OR = {
+		NOR = {
+			has_authority = auth_machine_intelligence
+			has_ascension_perk = ap_synthetic_evolution
+		}
+		has_valid_civic = civic_machine_servitor
+		has_valid_civic = civic_machine_assimilator
+	}
+}
+
+lvb_has_motes = {
+	exists = owner
+	owner = {
+		has_monthly_income = {
+			resource = volatile_motes
+			value >= 1
+		}
+	}
+}
+
+lvb_has_exotic_gases = {
+	exists = owner
+	owner = {
+		is_ai = yes
+		has_monthly_income = {
+			resource = exotic_gases
+			value >= 1
+		}
+	}
+}
+
+lvb_has_rare_crystals = {
+	exists = owner
+	owner = {
+		is_ai = yes
+		has_monthly_income = {
+			resource = rare_crystals
+			value >= 1
+		}
+	}
+}
+
+###
