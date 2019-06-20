@@ -81,11 +81,11 @@ guiTypes = {
 	positionType = { name = "tr_supremacy_great_game"                 	position = { x = 201 y = 125 } }
 
 # Plentiful Icons Start
-	positionType = { name = "tr_lvb_sensuality_hormonal_rebalancing" position = { x = 61 y = 55 } }
-	positionType = { name = "tr_lvb_sensuality_selective_conception" position = { x = 131 y = 55 } }
-	positionType = { name = "tr_lvb_sensuality_std_eradication" position = { x = 201 y = 55 } }
-	positionType = { name = "tr_lvb_sensuality_deviancy_normalization" position = { x = 131 y = 125 } }
-	positionType = { name = "tr_lvb_sensuality_public_use_ordinances" position = { x = 201 y = 125 } }
+	positionType = { name = "tr_lvb_sensuality_hormonal_rebalancing"	position = { x = 61 y = 55 } }
+	positionType = { name = "tr_lvb_sensuality_selective_conception"	position = { x = 131 y = 55 } }
+	positionType = { name = "tr_lvb_sensuality_std_eradication"			position = { x = 201 y = 55 } }
+	positionType = { name = "tr_lvb_sensuality_deviancy_normalization" 	position = { x = 131 y = 125 } }
+	positionType = { name = "tr_lvb_sensuality_public_use_ordinances"	position = { x = 201 y = 125 } }
 
 # Plentiful Icons End
 
@@ -93,6 +93,8 @@ guiTypes = {
 	# ASCENSION PERKS ENTRY POSITIONS
 	################################################################
 
+	# These defines are for compatibility with mods that add additional ascenscion perk slots.
+	# LVB does not itself modify the available number.
 	positionType = { name = "ap_0"	position = { x = 0 y = 2 } }
 	positionType = { name = "ap_1"	position = { x = 58 y = 2 } }
 	positionType = { name = "ap_2"	position = { x = 116 y = 2 } }
@@ -101,6 +103,16 @@ guiTypes = {
 	positionType = { name = "ap_5"	position = { x = 290 y = 2 } }
 	positionType = { name = "ap_6"	position = { x = 348 y = 2 } }
 	positionType = { name = "ap_7"	position = { x = 406 y = 2 } }
+	positionType = { name = "ap_8"	position = { x = 464 y = 2 } }
+	positionType = { name = "ap_9"	position = { x = 522 y = 2 } }
+	positionType = { name = "ap_10"	position = { x = 580 y = 2 } }
+	positionType = { name = "ap_11"	position = { x = 638 y = 2 } }
+	positionType = { name = "ap_12"	position = { x = 696 y = 2 } }
+	positionType = { name = "ap_13"	position = { x = 754 y = 2 } }
+	positionType = { name = "ap_14"	position = { x = 812 y = 2 } }
+	positionType = { name = "ap_15"	position = { x = 870 y = 2 } }
+	positionType = { name = "ap_16"	position = { x = 928 y = 2 } }
+	positionType = { name = "ap_17"	position = { x = 986 y = 2 } }
 
 	containerWindowType = {
 		name = "traditions_ascension_perk_entry"
@@ -1132,19 +1144,6 @@ guiTypes = {
 					spriteType = "GFX_hex_bg"
 					position = { x = -15 y = -15 }
 					alwaysTransparent = yes
-				}
-
-	#			instantTextBoxType = {
-	#				name = "ascension_perks_label"
-	#				font = "malgun_goth_24"
-	#				position = { x = 18 y = 4 }
-	#				text = "ASCENSION_PERKS_NEW"
-	#			}
-
-				containerWindowType = {
-					name = "tradition_box"
-					size = { width = 300 height = 200 }
-					position = { x = 15 y = 70 }
 				}
 			}
 		}
