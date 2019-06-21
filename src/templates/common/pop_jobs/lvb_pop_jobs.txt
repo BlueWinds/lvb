@@ -293,8 +293,8 @@ lvb_escort = {			# Escort
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 3
-		trade_value_add = 3
+		planet_amenities_add = 5
+		trade_value_add = 2
 		planet_crime_add = 1
 	}
 

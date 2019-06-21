@@ -101,12 +101,7 @@ building_lvb_dairy_farm = {		# Dairy Farm
 		}
 	}
 
-	triggered_desc = {
-        trigger = {
-            always = yes
-        }
-        text = job_lvb_milk_cow_effect_desc
-	}
+	{{> cow_triggered_desc }}
 
 	ai_weight = {
 		factor = 0
@@ -235,12 +230,7 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 		}
 	}
 
-	triggered_desc = {
-        trigger = {
-            always = yes
-        }
-        text = job_lvb_milk_cow_effect_desc
-	}
+	{{> cow_triggered_desc }}
 
 	ai_weight = {
 		weight = 1
@@ -344,12 +334,7 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 		}
 	}
 
-	triggered_desc = {
-        trigger = {
-            always = yes
-        }
-        text = job_lvb_milk_cow_effect_desc
-	}
+	{{> cow_triggered_desc }}
 
 	ai_weight = {
 		weight = 1

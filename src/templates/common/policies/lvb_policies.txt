@@ -52,7 +52,6 @@ lvb_sex_trade_policy = {
 			lvb_sex_trade_policy_encouraged
 		}
 
-
 		AI_weight = {
 			factor = 1
 		}

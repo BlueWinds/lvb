@@ -47,8 +47,7 @@ building_commercial_zone = {
 			}
 		}
 		modifier = {
-			job_lvb_whore_add = 1
-			job_lvb_call_girl_add = 1
+			job_lvb_whore_add = 2
 			job_clerk_add = -2
 		}
 	}
@@ -72,6 +71,21 @@ building_commercial_zone = {
 	}
 
 	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_policy_flag = lvb_sex_trade_policy_allowed }
+		}
+		text = building_lvb_commercial_zone_allowed_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_policy_flag = lvb_sex_trade_policy_encouraged }
+		}
+		text = building_lvb_commercial_zone_encouraged_desc
+	}
+
+	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
 
@@ -84,18 +98,6 @@ building_commercial_zone = {
 			}
 		}
 		text = job_lvb_whore_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR {
-					has_policy_flag = lvb_sex_trade_policy_encouraged
-				}
-			}
-		}
-		text = job_lvb_call_girl_effect_desc
 	}
 
 	upgrades = {
@@ -175,9 +177,8 @@ building_commercial_megaplex = {
 			}
 		}
 		modifier = {
-			job_lvb_whore_add = 2
-			job_lvb_call_girl_add = 2
-			job_clerk_add = -4
+			job_lvb_whore_add = 5
+			job_clerk_add = -5
 		}
 	}
 
@@ -202,32 +203,26 @@ building_commercial_megaplex = {
 	}
 
 	triggered_desc = {
-		text = job_clerk_effect_desc
-	}
-	triggered_desc = {
-		text = job_merchant_effect_desc
+		trigger = {
+			exists = owner
+			owner = { has_policy_flag = lvb_sex_trade_policy_allowed }
+		}
+		text = building_lvb_commercial_megaplex_allowed_desc
 	}
 
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_policy_flag = lvb_sex_trade_policy_allowed
-			}
+			owner = { has_policy_flag = lvb_sex_trade_policy_encouraged }
 		}
-		text = job_lvb_whore_effect_desc
+		text = building_lvb_commercial_megaplex_encouraged_desc
+	}
+
+	triggered_desc = {
+		text = job_clerk_effect_desc
 	}
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR {
-					has_policy_flag = lvb_sex_trade_policy_allowed
-					has_policy_flag = lvb_sex_trade_policy_encouraged
-				}
-			}
-		}
-		text = job_lvb_call_girl_effect_desc
+		text = job_merchant_effect_desc
 	}
 
 	ai_weight = {

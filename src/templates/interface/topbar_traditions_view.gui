@@ -80,14 +80,14 @@ guiTypes = {
 	positionType = { name = "tr_supremacy_overwhelming_force"         	position = { x = 201 y = 55 } }
 	positionType = { name = "tr_supremacy_great_game"                 	position = { x = 201 y = 125 } }
 
-# Plentiful Icons Start
+# LVB Icons Start
 	positionType = { name = "tr_lvb_sensuality_hormonal_rebalancing"	position = { x = 61 y = 55 } }
 	positionType = { name = "tr_lvb_sensuality_selective_conception"	position = { x = 131 y = 55 } }
 	positionType = { name = "tr_lvb_sensuality_std_eradication"			position = { x = 201 y = 55 } }
 	positionType = { name = "tr_lvb_sensuality_deviancy_normalization" 	position = { x = 131 y = 125 } }
 	positionType = { name = "tr_lvb_sensuality_public_use_ordinances"	position = { x = 201 y = 125 } }
 
-# Plentiful Icons End
+# LVB Icons End
 
 	################################################################
 	# ASCENSION PERKS ENTRY POSITIONS
@@ -1020,7 +1020,7 @@ guiTypes = {
 
 
 
-# Plentiful Traditions Start
+# LVB Traditions Start
 
 			################################################################
 			# TRADITION CATEGORY SENSUALITY
@@ -1121,7 +1121,7 @@ guiTypes = {
 			}
 		}
 
-# Plentiful Traditions End
+# LVB Traditions End
 
 
 			################################################################
