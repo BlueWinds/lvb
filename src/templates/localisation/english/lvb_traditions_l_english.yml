@@ -30,5 +30,5 @@ tr_lvb_sensuality_public_use_ordinances:0 "Public Use Ordinances"
 tr_lvb_sensuality_public_use_ordinances_desc:7 "Adds §Y1§! £job_lvb_whore£ §Y$job_lvb_whore$ Job§! per §Y25§! £pop£ Pops and §Y1§! £job_lvb_call_girl£ §Y$job_lvb_call_girl$ Job§! per §Y50§! £pop£ Pops.."
 tr_lvb_sensuality_public_use_ordinances_delayed:0 "We can allow, or require, our citizens to make themselves sexually available to the public, for a boost in both morale and as a replacement for the public services our people would otherwise require the state to provide."
 
-tr_lvb_sensuality_finish:0 "SexualityZ Traditions Finished"
+tr_lvb_sensuality_finish:0 "Sexuality Traditions Finished"
 tr_lvb_sensuality_finish_effect:4 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sensuality_adopt$ will increase §Y$MOD_PLANET_IMMIGRATION_PULL_MULT$§! by §G+25%§! and §Y$MOD_POP_GROWTH_FROM_IMMIGRATION$§! by §G+10%§! on all planets."
