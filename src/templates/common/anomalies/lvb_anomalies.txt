@@ -1,0 +1,18 @@
+lvb_tentacle_extinction_cat = {
+	picture = "GFX_evt_aggressive_flora"
+	level = 3
+
+	spawn_chance = {
+		modifier = {
+			add = 0.1
+			OR = {
+				is_planet_class = pc_gaia
+				is_planet_class = pc_continental
+				is_planet_class = pc_savannah
+				is_planet_class = pc_tropical
+				is_planet_class = pc_ocean
+			}
+		}
+	}
+	on_success = lvb.tentacle_extinction_found
+}

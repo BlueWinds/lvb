@@ -1,0 +1,51 @@
+# Intro Anomaly - Scientist kidnapped
+fleet_event = {
+	id = lvb.tentacle_extinction_found
+	title = llvb_tentacle_extinction_name
+	desc = lvb_tentacle_extinction_desc
+	picture = GFX_evt_baol_5
+	show_sound = event_dangerous_animals
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = akx.9011.a # This is horrible.
+		leader = {
+			save_global_event_target_as = lvb_tentacle_scientist
+			exile_leader_as = lvb_tentacle_kidnapped_scientist
+		}
+
+		from = {
+			add_modifier = { modifier = lvb_tentacle_covered }
+			create_archaeological_site = lvb_tentacle_extinction_dig
+		}
+	}
+}
+
+# Scientist kidnapped
+fleet_event = {
+	id = lvb.tentacle_extinction.1
+	title = lvb.tentacle_extinction.1.name
+	desc = lvb.tentacle_extinction.1.desc
+	picture = GFX_evt_baol_5
+	show_sound = event_dangerous_animals
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = akx.9011.a # This is horrible.
+		exile_leader_as = lvb_tentacle_kidnapped_scientist
+	}
+}

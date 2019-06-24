@@ -1,0 +1,50 @@
+lvb_tentacle_extinction_dig = {
+	desc = "lvb_tentacle_extinction_desc"
+	picture = GFX_evt_baol_5
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		country_event = { id = story.3 days = 30 }
+		country_event = { id = lvb.tentacle_extinction.0 days = 1 }
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_C1
+		event = lvb.tentacle_extinction.1
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_C2
+		event = lvb.tentacle_extinction.2
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C3
+		event = lvb.tentacle_extinction.3
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C4
+		event = lvb.tentacle_extinction.4
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C5
+		event = lvb.tentacle_extinction.5
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
