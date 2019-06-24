@@ -27,7 +27,7 @@ triggered_desc = {
 		exists = owner
 		owner = { has_policy_flag = lv_milk_cows_policy_paid_use }
 	}
-	text = lv_milk_cows_policy_paid_use_flavor_flavor
+	text = lv_milk_cows_policy_paid_use_flavor
 }
 
 triggered_desc = {

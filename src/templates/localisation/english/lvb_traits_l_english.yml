@@ -35,7 +35,7 @@ trait_lv_exhibitionist_desc: "§LSomething in this species' psychology gives the
 
 trait_lv_masochistic: "Masochistic"
 trait_lv_masochistic_desc: "§LThis species has evolved a strange enjoyment for a degree of pain. While mostly sexual, it also aids them in physically demanding fields.§!\n"
-trait_lv_masochistic_effect: "§WArmy Health: §G+10%§!§!\n§WSlave Jobs Multiplier: §G+5%§!§!\n§WEnergy Jobs Multiplier: §G+5%§!§!\n§WEnvironment Tolerance: §G+15%§!§!\n\n§GHas a moderate effect on Sex Jobs!§!\n\n§WHaving other pops with the §BSadistic§! trait will add an extra effect!§!\n"
+trait_lv_masochistic_effect: "§WArmy Health: §G+10%§!§!\n§WSlave Jobs Multiplier: §G+5%§!§!\n§WEnergy Jobs Multiplier: §G+5%§!§!\n§WEnvironment Tolerance: §G+10%§!§!\n\n§WHaving other pops with the §BSadistic§! trait will add an extra effect!§!\n"
 
 trait_lv_sexually_gifted: "Sexually Gifted"
 trait_lv_sexually_gifted_desc: "§LFrom warm up, to foreplay, to the sex itself, every part of this species mating rituals are elaborate and to most sensibilities, quite sultry.§!\n"

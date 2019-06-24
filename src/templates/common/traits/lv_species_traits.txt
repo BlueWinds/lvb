@@ -99,6 +99,11 @@ trait_lv_synth_brood_breasts = {
 	icon = "gfx/interface/icons/traits/removed.dds"
 }
 
+trait_lv_cybernetic_minifacturing_fabrication_womb = {
+	species_potential_add = { always = no }
+	icon = "gfx/interface/icons/traits/removed.dds"
+}
+
 ##########################
 ###     Bio Traits     ###
 ##########################
@@ -289,8 +294,7 @@ trait_lv_masochistic = {		# Masochistic
 		army_health = 0.1
 		planet_jobs_slave_produces_mult = 0.05
 		planet_jobs_energy_produces_mult = 0.05
-		pop_environment_tolerance = 0.15
-		planet_lvb_sex_work_produces_mult = {{ sex_bonus.masochistic }}
+		pop_environment_tolerance = 0.1
 	}
 	custom_tooltip = trait_lv_masochistic_effect
 	slave_cost = {
@@ -834,7 +838,6 @@ trait_lv_sadistic = {		# Sadistic
 		army_damage_mult = 0.3
 		planet_jobs_slave_produces_mult = -0.1
 		pop_ethic_militarist_attraction_mult = 0.1
-		planet_lvb_sex_work_produces_mult = {{ sex_bonus.sadistic }}
 	}
 	custom_tooltip = trait_lv_sadistic_effect
 	slave_cost = {
@@ -1209,37 +1212,6 @@ trait_lv_opt_intercompatible_sperm = {		# Optimized Intercompatible Sperm
 	}
 }
 
-trait_lv_cybernetic_minifacturing_fabrication_womb = {		# Cybernetic Minifacturing Fabrication Womb
-	cost = 0
-	opposites = {
-		trait_lv_sexually_inept
-		trait_lv_all_male
-	}
-	allowed_archetypes = { BIOLOGICAL }
-	species_potential_add = {
-		exists = from
-		from = {
-			OR = {
-				has_technology = tech_lv_biological_mimicry
-				AND = {
-					has_technology = tech_society_3
-					has_technology = tech_lv_transformation_candy_apple
-				}
-			}
-		}
-	}
-	modifier = {
-		pop_happiness = -0.15
-		pop_growth_speed = -0.25
-		planet_pops_organics_food_upkeep_mult = 0.4
-		planet_jobs_unity_produces_mult = -0.1
-		pop_ethic_materialist_attraction_mult = 0.2
-		planet_lvb_sex_work_nanites_produces_add = 0.15
-	}
-	slave_cost = {
-		energy = 300
-	}
-}
 
 ##############################
 ###     Robotic Traits     ###

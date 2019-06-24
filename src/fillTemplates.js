@@ -1,3 +1,4 @@
+const child_process = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
@@ -47,6 +48,13 @@ for (const file of glob.sync('**/*.dds', {cwd: path.resolve(__dirname, 'template
   const outPath = path.resolve(modFolder, file)
   mkdirp.sync(path.dirname(outPath))
   fs.writeFileSync(outPath, image)
+}
+
+// Convert png to dds files
+for (const file of glob.sync('**/*.png', {cwd: path.resolve(__dirname, 'templates')})) {
+  const outPath = path.resolve(modFolder, file.replace(/png$/, 'dds'))
+  mkdirp.sync(path.dirname(outPath))
+  child_process.spawnSync('convert', [path.resolve('src/templates', file), outPath])
 }
 
 fs.copyFileSync(path.resolve('src/', '!!!LV Blue Edits.mod'), modFolder + '.mod')

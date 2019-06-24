@@ -10,7 +10,4 @@ planet_lvb_sex_work = {
 	generate_mult_modifiers = {
 		produces
 	}
-	generate_add_modifiers = {
-		produces
-	}
 }
