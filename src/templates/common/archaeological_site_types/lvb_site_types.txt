@@ -1,7 +1,7 @@
 lvb_tentacle_extinction_dig = {
 	desc = "lvb_tentacle_extinction_desc"
 	picture = GFX_evt_baol_5
-	stages = 5
+	stages = 4
 	max_instances = 1
 	weight = 0
 	allow = {
@@ -9,6 +9,7 @@ lvb_tentacle_extinction_dig = {
 		leader = { leader_class = scientist }
 	}
 	visible = {
+		has_event_chain = tentacle_extinction_chain
 		default_site_visible_trigger = yes
 	}
 	on_visible = {
@@ -35,11 +36,6 @@ lvb_tentacle_extinction_dig = {
 		difficulty = 2
 		icon = GFX_archaeology_runes_C4
 		event = lvb.tentacle_extinction.4
-	}
-	stage = {
-		difficulty = 2
-		icon = GFX_archaeology_runes_C5
-		event = lvb.tentacle_extinction.5
 	}
 
 	on_roll_failed = {

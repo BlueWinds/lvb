@@ -1,0 +1,87 @@
+special_project = {
+	key = "tentacle_extinction_burn_out"
+	event_chain = "tentacle_extinction_chain"
+	cost = 0
+	days_to_research = 360
+	tech_department = society_technology
+	picture = GFX_evt_gas_giant
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 5
+	}
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = lvb.tentacle_extinction.finish_burn }
+		owner = { end_event_chain = "tentacle_extinction_chain" }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "tentacle_extinction_recruit"
+	event_chain = "tentacle_extinction_chain"
+	cost = 2000
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
+	picture = GFX_evt_archaeological_dig
+
+	same_option_group_as = { tentacle_extinction_burn_out }
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = lvb.tentacle_extinction.finish_recruit }
+		owner = { end_event_chain = "tentacle_extinction_chain" }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "tentacle_extinction_use_them"
+	event_chain = "tentacle_extinction_chain"
+	cost = 4000
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
+	picture = GFX_evt_archaeological_dig
+
+	same_option_group_as = { tentacle_extinction_burn_out }
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = lvb.tentacle_extinction.finish_use_them }
+		owner = { end_event_chain = "tentacle_extinction_chain" }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "tentacle_extinction_experiment"
+	event_chain = "tentacle_extinction_chain"
+	cost = 2000
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
+	picture = GFX_evt_archaeological_dig
+
+	same_option_group_as = { tentacle_extinction_burn_out }
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = lvb.tentacle_extinction.finish_experiment }
+		owner = { end_event_chain = "tentacle_extinction_chain" }
+	}
+
+	on_fail = {
+	}
+}

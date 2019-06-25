@@ -4,17 +4,34 @@
 # Tentacle Extinction #
 #######################
 
+tentacle_extinction_chain_title: "Tentacle Planet"
+tentacle_extinction_chain_desc: "A planet covered with tentacle monsters. Ancient ruins indicating [Root.GetName] once bore thriving civilization. A kidnapped scientist. We should attempt a rescue, and learn what's going on here at the same time."
+
 lvb_tentacle_extinction_name: "Kidnapped by tentacle monsters"
-lvb_tentacle_extinction_desc: "[lvb_tentacle_scientist.GetName] was leading an expedition to survey the seemingly idealic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_scientist]'s transponder indicates that [lvb_tentacle_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."
+lvb_tentacle_extinction_desc: "[lvb_tentacle_kidnapped_scientist.GetName] was leading an expedition to survey the seemingly idealic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_kidnapped_scientist.GetName]'s transponder indicates that [lvb_tentacle_kidnapped_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."
+lvb_tentacle_extinction_continue: "This is horrible!"
 
 lvb.tentacle_extinction.1.name: "Safe(?) landing"
 lvb.tentacle_extinction.1.desc: "The expedition finally made a breakthrough when one of the pilots running a low-altitude survey of the planet discovered that the monsters infesting every continent seemed to avoid certain species of trees. Isolating a pungent oil from the bark has allowed our scientists to land and begin learning more about this bizzare ecology. The oil only lasts a day - progress has been slowed by the fact that several explorers go missing every month when they're even a few minutes late reapplying the tentacle-repellent."
+lvb.tentacle_extinction.1.continue: "Press on."
 
-lvb.tentacle_extinction.3.name: "Under the jungle"
-lvb.tentacle_extinction.3.desc: "Beneath the jungles of [From.Planet.GetName], we've found something interesting - this planet was once home to a technological civilization. The fact that they mainly built with concrete and steel suggests that they hadn't yet reached the stars when they went extinct. Preliminary analysis suggests that they looked remarkably similar to [Root.Owner.GetSpeciesNamePlural], and many speculate that this is why the tentacle monsters find us so fascinating when they ignore other native animals."
+lvb.tentacle_extinction.2.name: "Under the jungle"
+lvb.tentacle_extinction.2.desc: "Beneath the jungles of [From.Planet.GetName], we've found something interesting - this planet was once home to a technological civilization. The fact that they mainly built with concrete and steel suggests that they hadn't yet reached the stars when they went extinct. Preliminary analysis suggests that they looked remarkably similar to [Root.Owner.GetSpeciesNamePlural], and many speculate that this is why the tentacle monsters find us so fascinating when they ignore other native animals."
+lvb.tentacle_extinction.1.continue: "What happened to them..."
+
+lvb.tentacle_extinction.3.name: "Genetics gone wrong"
+lvb.tentacle_extinction.3.desc: "The tentacle monsters are unable to procreate on their own. Our research team discovered this after security finaly managed to kill several of them as they broke into the fortified compound late at night, opening the door to genetic analysis. Though they seem able to use our species as mothers, left to their own devices they would go extinct within a generation. Given the ruins on the planet - dating back at least a thousand years - this raises horrifying possibilities."
+lvb.tentacle_extinction.3.continue: "Press on!"
 
 lvb.tentacle_extinction.4.name: "Tunnels"
-lvb.tentacle_extinction.4.desc: "Though it's been some time since [lvb_tentacle_scientist.GetName] disappeared, [lvb_tentacle_scientist.GetSheHe] have not been forgotten. Tracking [lvb_tentacle_scientist.GetHerHim] transponder has led the investigation below ground, to a series of tunnels seemingly covering most of the planets surface. These tunnels were fiercely defended, and even the tree oil isn't enough to repel the monsters when our teams attempt to enter them. We'll have to fight our way in if we want to find [lvb_tentacle_scientist] and other lost team members."
+lvb.tentacle_extinction.4.desc: "Though it's been some time since [lvb_tentacle_kidnapped_scientist.GetName] disappeared, [lvb_tentacle_kidnapped_scientist.GetSheHe] have not been forgotten. Tracking [lvb_tentacle_kidnapped_scientist.GetHerHim] transponder has led the investigation below ground, to a series of tunnels seemingly covering most of the planets surface. These tunnels were fiercely defended, and even the tree oil isn't enough to repel the monsters when our teams attempt to enter them. We'll have to fight our way in if we want to find [lvb_tentacle_kidnapped_scientist] and other lost team members."
+lvb.tentacle_extinction.3.continue: "[lvb_tentacle_kidnapped_scientist.GetName] still lives. Find [[lvb_tentacle_kidnapped_scientist.GetHerHim]."
 
 lvb.tentacle_extinction.5.name: "Breeding Chambers"
-lvb.tentacle_extinction.5.desc: "This excavation has taken on the tone of a military campaign more than an archaeological expedition. Fighting their way in, our troops finally managed to find their way to [lvb_tentacle_scientist]'s transponder, and what they found there horrified them. [lvb_tentacle_scientist.GetSheHeCap] has been half absorbed by a living wall, "
+lvb.tentacle_extinction.5.desc: "This excavation has taken on the tone of a military campaign more than an archaeological expedition. Fighting their way in, our troops finally managed to find their way to [lvb_tentacle_kidnapped_scientist]'s transponder, and what they found there horrified and arroused them. [lvb_tentacle_kidnapped_scientist.GetSheHeCap] has been half absorbed by a living wall, along with thousands of other people, forced to constantly play host to the beasts' broods.\n\nThough our forces freed [lvb_tentacle_kidnapped_scientist.GetName], [lvb_tentacle_kidnapped_scientist.GetSheHe] has been... changed. The experience seems to have nearly broken [lvb_tentacle_kidnapped_scientist.GetHerHim], but [lvb_tentacle_kidnapped_scientist.GetSheHe] is also younger, healthier, and somewhat more sex-crazed than the average [lvb_tentacle_kidnapped_scientist.GetSPeciesName]. The decision remains what to do with the rest of the monsters. A special project has been issued."
+lvb.tentacle_extinction.1.continue: "At least [lvb_tentacle_kidnapped_scientist.GetName] is home again."
+
+lvb.tentacle_extinction.finish_burn_out.name: "Burn them out"
+lvb.tentacle_extinction.recruit.name: "Use them as an army"
+lvb.tentacle_extinction.use_them.name: "Use them as breeders"
+lvb.tentacle_extinction.experiment.name: "Experiment on them"
