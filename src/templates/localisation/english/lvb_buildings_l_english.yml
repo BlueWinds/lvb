@@ -19,9 +19,8 @@ building_lvb_dairy_arcology_desc: "No space is wasted in these dairy capitals, w
 
 building_lvb_commercial_zone_allowed_desc: "These zones change character significantly once the sun goes down.\n\n"
 building_lvb_commercial_zone_encouraged_desc: "These zones have brothels on the ground floor and hookers on every corner.\n\n"
-
-building_lvb_commercial_megaplex_desc_allowed_desc: "These megaplexes change character significantly once the sun goes down.\n\n"
-building_lvb_commercial_megaplex_desc_encouraged_desc: "These megaplexes have brothels on the ground floor and hookers on every corner.\n\n"
+building_lvb_commercial_megaplex_allowed_desc: "These megaplexes change character significantly once the sun goes down.\n\n"
+building_lvb_commercial_megaplex_encouraged_desc: "These megaplexes have brothels on the ground floor and hookers on every corner.\n\n"
 
 building_lv_sex_market: "Removed"
 building_lv_sex_market_desc: "Removed"

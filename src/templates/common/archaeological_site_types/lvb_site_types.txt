@@ -1,7 +1,7 @@
 lvb_tentacle_extinction_dig = {
-	desc = "lvb_tentacle_extinction_desc"
-	picture = GFX_evt_baol_5
-	stages = 4
+	desc = "lvb_tentacle_extinction.1.desc"
+	picture = GFX_evt_overgrown_city
+	stages = 5
 	max_instances = 1
 	weight = 0
 	allow = {
@@ -14,28 +14,32 @@ lvb_tentacle_extinction_dig = {
 	}
 	on_visible = {
 		country_event = { id = story.3 days = 30 }
-		country_event = { id = lvb.tentacle_extinction.0 days = 1 }
 	}
 
 	stage = {
 		difficulty = 1
 		icon = GFX_archaeology_runes_C1
-		event = lvb.tentacle_extinction.1
+		event = lvb_tentacle_extinction.10
 	}
 	stage = {
 		difficulty = 1
 		icon = GFX_archaeology_runes_C2
-		event = lvb.tentacle_extinction.2
+		event = lvb_tentacle_extinction.11
 	}
 	stage = {
 		difficulty = 2
 		icon = GFX_archaeology_runes_C3
-		event = lvb.tentacle_extinction.3
+		event = lvb_tentacle_extinction.12
 	}
 	stage = {
 		difficulty = 2
 		icon = GFX_archaeology_runes_C4
-		event = lvb.tentacle_extinction.4
+		event = lvb_tentacle_extinction.13
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C4
+		event = lvb_tentacle_extinction.14
 	}
 
 	on_roll_failed = {

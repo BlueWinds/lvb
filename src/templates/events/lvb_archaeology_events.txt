@@ -1,23 +1,30 @@
+namespace = lvb_tentacle_extinction
+
 # Intro Anomaly - Scientist kidnapped
-fleet_event = {
-	id = lvb.tentacle_extinction_found
-	title = lvb_tentacle_extinction_name
-	desc = lvb_tentacle_extinction_desc
-	picture = GFX_evt_baol_5
+ship_event = {
+	id = lvb_tentacle_extinction.1
+	title = lvb_tentacle_extinction.1.name
+	desc = lvb_tentacle_extinction.1.desc
+	picture = GFX_evt_lvb_tentacle_recruit
 	show_sound = event_dangerous_animals
 	location = from
 
 	is_triggered_only = yes
 
-	option = {
-		name = lvb_tentacle_extinction_continue
+	immediate = {
 		leader = {
 			save_global_event_target_as = lvb_tentacle_scientist
 			exile_leader_as = lvb_tentacle_kidnapped_scientist
 		}
-
 		from = {
 			add_modifier = { modifier = lvb_tentacle_covered }
+		}
+	}
+
+	option = {
+		name = lvb_tentacle_extinction.1.continue
+
+		from = {
 			create_archaeological_site = lvb_tentacle_extinction_dig
 		}
 
@@ -30,15 +37,14 @@ fleet_event = {
 
 # Landing
 fleet_event = {
-	id = lvb.tentacle_extinction.1
-	title = lvb.tentacle_extinction.1.name
-	desc = lvb.tentacle_extinction.1.desc
-	picture = GFX_evt_baol_5
+	id = lvb_tentacle_extinction.10
+	title = lvb_tentacle_extinction.10.name
+	desc = lvb_tentacle_extinction.10.desc
+	picture = GFX_evt_lvb_tentacle_genetics
 	show_sound = event_dangerous_animals
 	location = from
 
 	archaeology = yes
-
 	is_triggered_only = yes
 
 	immediate = {
@@ -50,83 +56,21 @@ fleet_event = {
 	}
 
 	option = {
-		name = lvb.tentacle_extinction.1.continue # This is horrible.
-		small_artifact_reward = yes
-	}
-}
-
-# Landing
-fleet_event = {
-	id = lvb.tentacle_extinction.1
-	title = lvb.tentacle_extinction.1.name
-	desc = lvb.tentacle_extinction.1.desc
-	picture = GFX_evt_baol_5
-	show_sound = event_dangerous_animals
-	location = from
-
-	archaeology = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		from = { set_site_progress_locked = yes }
-	}
-
-	after = {
-		from = { set_site_progress_locked = no }
-	}
-
-	option = {
-		name = lvb.tentacle_extinction.1.continue
-		owner = {
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier3researchreward
-				min = @tier3researchmin
-				max = @tier3researchmax
-			}
-		}
-	}
-}
-
-# Under the jungle
-fleet_event = {
-	id = lvb.tentacle_extinction.2
-	title = lvb.tentacle_extinction.2.name
-	desc = lvb.tentacle_extinction.2.desc
-	picture = GFX_evt_baol_5
-	show_sound = event_dangerous_animals
-	location = from
-
-	archaeology = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		from = { set_site_progress_locked = yes }
-	}
-
-	after = {
-		from = { set_site_progress_locked = no }
-	}
-
-	option = {
-		name = lvb.tentacle_extinction.2.continue
+		name = lvb_tentacle_extinction.10.continue # This is horrible.
 		small_artifact_reward = yes
 	}
 }
 
 # Under the jungle
 fleet_event = {
-	id = lvb.tentacle_extinction.2
-	title = lvb.tentacle_extinction.2.name
-	desc = lvb.tentacle_extinction.2.desc
-	picture = GFX_evt_baol_5
+	id = lvb_tentacle_extinction.11
+	title = lvb_tentacle_extinction.11.name
+	desc = lvb_tentacle_extinction.11.desc
+	picture = GFX_evt_city_ruins
 	show_sound = event_dangerous_animals
 	location = from
 
 	archaeology = yes
-
 	is_triggered_only = yes
 
 	immediate = {
@@ -138,22 +82,21 @@ fleet_event = {
 	}
 
 	option = {
-		name = lvb.tentacle_extinction.2.continue
-		small_artifact_reward = yes
+		name = lvb_tentacle_extinction.11.continue
+		medium_artifact_reward = yes
 	}
 }
 
 # Genetics gone wrong
 fleet_event = {
-	id = lvb.tentacle_extinction.3
-	title = lvb.tentacle_extinction.3.name
-	desc = lvb.tentacle_extinction.3.desc
-	picture = GFX_evt_baol_5
+	id = lvb_tentacle_extinction.12
+	title = lvb_tentacle_extinction.12.name
+	desc = lvb_tentacle_extinction.12.desc
+	picture = GFX_evt_lvb_tentacle_genetics
 	show_sound = event_dangerous_animals
 	location = from
 
 	archaeology = yes
-
 	is_triggered_only = yes
 
 	immediate = {
@@ -165,22 +108,29 @@ fleet_event = {
 	}
 
 	option = {
-		name = lvb.tentacle_extinction.3.continue
-		small_artifact_reward = yes
+		name = lvb_tentacle_extinction.12.continue
+		medium_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
 	}
 }
 
 # Tunnels
 fleet_event = {
-	id = lvb.tentacle_extinction.4
-	title = lvb.tentacle_extinction.4.name
-	desc = lvb.tentacle_extinction.4.desc
-	picture = GFX_evt_baol_5
+	id = lvb_tentacle_extinction.13
+	title = lvb_tentacle_extinction.13.name
+	desc = lvb_tentacle_extinction.13.desc
+	picture = GFX_evt_lvb_tentacle_tunnels
 	show_sound = event_dangerous_animals
 	location = from
 
 	archaeology = yes
-
 	is_triggered_only = yes
 
 	immediate = {
@@ -192,22 +142,23 @@ fleet_event = {
 	}
 
 	option = {
-		name = lvb.tentacle_extinction.4.continue
-		add_resource = { influence = 60 }
+		name = lvb_tentacle_extinction.13.continue
+		owner = {
+			add_resource = { influence = 60 }
+		}
 	}
 }
 
 # Breeding Chambers
 fleet_event = {
-	id = lvb.tentacle_extinction.5
-	title = lvb.tentacle_extinction.5.name
-	desc = lvb.tentacle_extinction.5.desc
-	picture = GFX_evt_baol_5
+	id = lvb_tentacle_extinction.14
+	title = lvb_tentacle_extinction.14.name
+	desc = lvb_tentacle_extinction.14.desc
+	picture = GFX_evt_lvb_tentacle_breeding_chambers
 	show_sound = event_dangerous_animals
 	location = from
 
 	archaeology = yes
-
 	is_triggered_only = yes
 
 	immediate = {
@@ -219,9 +170,9 @@ fleet_event = {
 	}
 
 	option = {
-		name = lvb.tentacle_extinction.5.continue
-		clone_leader = {target = lvb_tentacle_kidnapped_scientist }
+		name = lvb_tentacle_extinction.14.continue
 		owner = {
+			clone_leader = {target = lvb_tentacle_kidnapped_scientist }
 			add_monthly_resource_mult = {
 				resource = society_research
 				value = @tier3researchreward
@@ -229,37 +180,34 @@ fleet_event = {
 				max = @tier3researchmax
 			}
 		}
-		# TODO: Trigger special projects
-	}
-}
-
-planet_event = {
-	id = lvb.tentacle_extinction.finish_burn
-	title = "lvb.tentacle_extinction.finish_burn.name"
-	desc = "lvb.tentacle_extinction.finish_burn.desc"
-	picture = GFX_evt_society_research
-	show_sound = event_construction
-	location = ROOT
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			remove_modifier = "lvb_tentacle_covered"
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_burn_out"
+			location = this
+			owner = root
+		}
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_recruit"
+			location = this
+			owner = root
+		}
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_use_them"
+			location = this
+			owner = root
+		}
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_recruit"
+			location = this
+			owner = root
 		}
 	}
-
-	option = {
-		name = EXCELLENT
-		# TODO: Spawn colony with freed pops
-	}
 }
 
 planet_event = {
-	id = lvb.tentacle_extinction.finish_recruit
-	title = "lvb.tentacle_extinction.finish_recruit.name"
-	desc = "lvb.tentacle_extinction.finish_recruit.desc"
-	picture = GFX_evt_society_research
+	id = lvb_tentacle_extinction.20
+	title = "lvb_tentacle_extinction_burn_out"
+	desc = "lvb_tentacle_extinction.20.desc"
+	picture = GFX_evt_victorious_army
 	show_sound = event_construction
 	location = ROOT
 
@@ -268,22 +216,7 @@ planet_event = {
 	immediate = {
 		hidden_effect = {
 			remove_modifier = "lvb_tentacle_covered"
-			create_army = {
-				owner = root
-				type = "xenomorph_army"
-			}
-			create_army = {
-				owner = root
-				type = "xenomorph_army"
-			}
-			create_army = {
-				owner = root
-				type = "xenomorph_army"
-			}
-			create_army = {
-				owner = root
-				type = "xenomorph_army"
-			}
+			add_modifier = { modifier = "atmospheric_aphrodisiac" }
 		}
 	}
 
@@ -293,10 +226,47 @@ planet_event = {
 }
 
 planet_event = {
-	id = lvb.tentacle_extinction.finish_use_them
-	title = "lvb.tentacle_extinction.finish_use_them.name"
-	desc = "lvb.tentacle_extinction.finish_use_them.desc"
-	picture = GFX_evt_society_research
+	id = lvb_tentacle_extinction.21
+	title = "lvb_tentacle_extinction_recruit"
+	desc = "lvb_tentacle_extinction.21.desc"
+	picture = GFX_evt_lvb_tentacle_recruit
+	show_sound = event_construction
+	location = ROOT
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_modifier = "lvb_tentacle_covered"
+			create_army = {
+				owner = root
+				type = "xenomorph_army"
+			}
+			create_army = {
+				owner = root
+				type = "xenomorph_army"
+			}
+			create_army = {
+				owner = root
+				type = "xenomorph_army"
+			}
+			create_army = {
+				owner = root
+				type = "xenomorph_army"
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+planet_event = {
+	id = lvb_tentacle_extinction.22
+	title = "lvb_tentacle_extinction_use_them"
+	desc = "lvb_tentacle_extinction.22.desc"
+	picture = GFX_evt_lvb_tentacle_breeding
 	show_sound = event_construction
 	location = ROOT
 
@@ -310,16 +280,15 @@ planet_event = {
 	}
 
 	option = {
-		name = EXCELLENT
-		# TODO: Spawn flesh pits
+		name = lvb_tentacle_extinction.22.continue
 	}
 }
 
 planet_event = {
-	id = lvb.tentacle_extinction.finish_experiment
-	title = "lvb.tentacle_extinction.finish_experiment.name"
-	desc = "lvb.tentacle_extinction.finish_experiment.desc"
-	picture = GFX_evt_society_research
+	id = lvb_tentacle_extinction.23
+	title = "lvb_tentacle_extinction_experiment"
+	desc = "lvb_tentacle_extinction.23.desc"
+	picture = GFX_evt_lvb_tentacle_research
 	show_sound = event_construction
 	location = ROOT
 
@@ -333,7 +302,55 @@ planet_event = {
 	}
 
 	option = {
+		name = lvb_tentacle_extinction.23.continue
+	}
+}
+
+planet_event = {
+	id = lvb_tentacle_extinction.24
+	title = "lvb_tentacle_extinction_rescue"
+	desc = "lvb_tentacle_extinction.24.desc"
+	picture = GFX_evt_victorious_army
+	show_sound = event_construction
+	location = ROOT
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_modifier = "lvb_tentacle_covered"
+		}
+
+		create_species = {
+			name = random
+			class = random
+			portrait = random
+			namelist = random
+			homeworld = root
+			traits = {
+				trait = "trait_lv_all_female"
+				trait = random_traits
+			}
+			effect = {
+				save_global_event_target_as = lvb_tentacle_survivors
+			}
+		}
+
+		create_colony = {
+			owner = root
+			species = event_target:lvb_tentacle_survivors
+			ethos = owner
+		}
+
+		while = {
+			count = 4
+			create_pop = {
+				species = event_target:lvb_tentacle_survivors
+			}
+		}
+	}
+
+	option = {
 		name = EXCELLENT
-		# TODO: Spawn flesh pits research
 	}
 }

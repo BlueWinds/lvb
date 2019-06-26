@@ -11,3 +11,7 @@ planet_lvb_sex_work = {
 		produces
 	}
 }
+
+planet_lvb_forced_breeding = {
+	parent = planet_jobs
+}

@@ -14,5 +14,5 @@ lvb_tentacle_extinction_cat = {
 			}
 		}
 	}
-	on_success = lvb.tentacle_extinction_found
+	on_success = lvb_tentacle_extinction.1
 }

@@ -321,4 +321,95 @@ lvb_escort = {			# Escort
     }
 }
 
-###
+#####################
+###     Event     ###
+#####################
+
+lvb_tentacle_breeders = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_hive_major_capital
+	clothes_texture_index = 2
+
+	possible = {
+		IF = {
+			limit = {
+				is_robot_pop = no
+				NOT = { pop_has_trait = trait_lv_all_male }
+			}
+		}
+		else = { always = no }
+	}
+
+	resources = {
+        category = planet_lvb_forced_breeding
+
+		upkeep = {
+			food = 4
+		}
+	}
+
+	pop_modifier = {
+		pop_happiness = -0.5
+		pop_political_power = -0.5
+	}
+
+	triggered_pop_modifier = {
+		potential = { is_xenophobe = true }
+		modifier = {
+			pop_happiness = -0.3
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = { is_xenophile = true }
+		modifier = {
+			pop_happiness = 0.25
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = { has_trait = lv_sex_crazed }
+		modifier = {
+			pop_happiness = 0.25
+		}
+	}
+
+	triggered_planet_modifier = {
+        potential = { always = yes }
+		pop_housing_usage_add = -1
+        modifier = {
+			pop_growth_speed = 0.15
+		}
+    }
+
+	weight = {
+        weight = @worker_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_agrarian
+		}
+		modifier = {
+			factor = 1.1
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+		}
+		modifier = {
+			factor = 0
+			is_robot_pop = yes
+		}
+		modifier = {
+			weight = 0
+			is_pop_category = worker
+			owner = {
+				has_monthly_income = {
+					resource = food
+					value < -1
+				}
+			}
+		}
+    }
+}

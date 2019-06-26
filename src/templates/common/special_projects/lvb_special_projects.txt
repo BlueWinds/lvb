@@ -1,10 +1,35 @@
 special_project = {
-	key = "tentacle_extinction_burn_out"
+	key = "lvb_tentacle_extinction_burn_out"
+	event_chain = "tentacle_extinction_chain"
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_victorious_army
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_transport = 3
+	}
+
+	event_scope = planet_event
+
+	on_success = {
+		planet_event = { id = lvb_tentacle_extinction.20 }
+		owner = { end_event_chain = "tentacle_extinction_chain" }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "lvb_tentacle_extinction_rescue"
 	event_chain = "tentacle_extinction_chain"
 	cost = 0
 	days_to_research = 360
 	tech_department = society_technology
-	picture = GFX_evt_gas_giant
+	picture = GFX_evt_victorious_army
 
 	event_scope = ship_event
 
@@ -15,7 +40,7 @@ special_project = {
 	event_scope = planet_event
 
 	on_success = {
-		planet_event = { id = lvb.tentacle_extinction.finish_burn }
+		planet_event = { id = lvb_tentacle_extinction.24 }
 		owner = { end_event_chain = "tentacle_extinction_chain" }
 	}
 
@@ -24,19 +49,18 @@ special_project = {
 }
 
 special_project = {
-	key = "tentacle_extinction_recruit"
+	key = "lvb_tentacle_extinction_recruit"
 	event_chain = "tentacle_extinction_chain"
 	cost = 2000
 	tech_department = society_technology
-	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
-	picture = GFX_evt_archaeological_dig
+	picture = GFX_evt_lvb_tentacle_recruit
 
 	same_option_group_as = { tentacle_extinction_burn_out }
 
 	event_scope = planet_event
 
 	on_success = {
-		planet_event = { id = lvb.tentacle_extinction.finish_recruit }
+		planet_event = { id = lvb_tentacle_extinction.21 }
 		owner = { end_event_chain = "tentacle_extinction_chain" }
 	}
 
@@ -45,19 +69,18 @@ special_project = {
 }
 
 special_project = {
-	key = "tentacle_extinction_use_them"
+	key = "lvb_tentacle_extinction_use_them"
 	event_chain = "tentacle_extinction_chain"
 	cost = 4000
 	tech_department = society_technology
-	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
-	picture = GFX_evt_archaeological_dig
+	picture = GFX_evt_lvb_tentacle_breeding
 
 	same_option_group_as = { tentacle_extinction_burn_out }
 
 	event_scope = planet_event
 
 	on_success = {
-		planet_event = { id = lvb.tentacle_extinction.finish_use_them }
+		planet_event = { id = lvb_tentacle_extinction.22 }
 		owner = { end_event_chain = "tentacle_extinction_chain" }
 	}
 
@@ -66,19 +89,18 @@ special_project = {
 }
 
 special_project = {
-	key = "tentacle_extinction_experiment"
+	key = "lvb_tentacle_extinction_experiment"
 	event_chain = "tentacle_extinction_chain"
 	cost = 2000
 	tech_department = engineering_technology
-	icon = "gfx/interface/icons/situation_log/situation_log_debris.dds"
-	picture = GFX_evt_archaeological_dig
+	picture = GFX_evt_lvb_tentacle_research
 
 	same_option_group_as = { tentacle_extinction_burn_out }
 
 	event_scope = planet_event
 
 	on_success = {
-		planet_event = { id = lvb.tentacle_extinction.finish_experiment }
+		planet_event = { id = lvb_tentacle_extinction.23 }
 		owner = { end_event_chain = "tentacle_extinction_chain" }
 	}
 
