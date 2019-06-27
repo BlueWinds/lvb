@@ -8,13 +8,13 @@ lvb_tentacle_extinction_cat: "A Lush Planet"
 lvb_tentacle_extinction_cat_desc: "[Root.GetName] is exceptionally green, and preliminary scans indicate that there might be several things of interest on the surface."
 
 lvb_tentacle_extinction_dig: "Kidnapped Scientist"
-lvb_tentacle_covered: "Tentacle Monster Covered"
+lvb_tentacle_covered: "Tentacle Infested"
 
 tentacle_extinction_chain_title: "Tentacle Planet"
 tentacle_extinction_chain_desc: "A planet covered with tentacle monsters. Ancient ruins indicating [Root.GetName] once bore thriving civilization. A kidnapped scientist. We should attempt a rescue, and learn what's going on here at the same time."
 
 lvb_tentacle_extinction.1.name: "Kidnapped by tentacle monsters"
-  lvb_tentacle_extinction.1.desc: "[lvb_tentacle_scientist.GetName] was leading an expedition to survey the seemingly idealic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_scientist.GetName]'s transponder indicates that [lvb_tentacle_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."
+lvb_tentacle_extinction.1.desc: "[lvb_tentacle_scientist.GetName] was leading an expedition to survey the seemingly idealic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_scientist.GetName]'s transponder indicates that [lvb_tentacle_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."
 lvb_tentacle_extinction.1.continue: "This is horrible!"
 
 lvb_tentacle_extinction.10.name: "Safe(?) landing"
@@ -22,7 +22,7 @@ lvb_tentacle_extinction.10.desc: "The expedition finally made a breakthrough whe
 lvb_tentacle_extinction.10.continue: "Press on."
 
 lvb_tentacle_extinction.11.name: "Under the jungle"
-lvb_tentacle_extinction.11.desc: "Beneath the jungles of [From.Planet.GetName], we've found something interesting - this planet was once home to a technological civilization. The fact that they mainly built with concrete and steel suggests that they hadn't yet reached the stars when they went extinct. Preliminary analysis suggests that they looked remarkably similar to [Root.Owner.GetSpeciesNamePlural], and many speculate that this is why the tentacle monsters find us so fascinating when they ignore other native animals."
+lvb_tentacle_extinction.11.desc: "Beneath the jungles of [From.Planet.GetName], we've found something interesting - this planet was once home to a technological civilization. The fact that they mainly built with concrete and steel suggests that they hadn't yet reached the stars when they went extinct. Preliminary analysis suggests that they had biology somewhat similar to [Root.Owner.GetSpeciesNamePlural], and many speculate that this is why the tentacle monsters find us so fascinating while they completely ignore other native animals."
 lvb_tentacle_extinction.11.continue: "What happened to them..."
 
 lvb_tentacle_extinction.12.name: "Genetics gone wrong"
@@ -30,29 +30,41 @@ lvb_tentacle_extinction.12.desc: "The tentacle monsters are unable to procreate 
 lvb_tentacle_extinction.12.continue: "Press on!"
 
 lvb_tentacle_extinction.13.name: "Tunnels"
-lvb_tentacle_extinction.13.desc: "Though it's been some time since [lvb_tentacle_scientist.GetName] disappeared, [lvb_tentacle_scientist.GetSheHe] have not been forgotten. Tracking [lvb_tentacle_scientist.GetHerHim] transponder has led the investigation below ground, to a series of tunnels seemingly covering most of the planets surface. These tunnels were fiercely defended, and even the tree oil isn't enough to repel the monsters when our teams attempt to enter them. We'll have to fight our way in if we want to find [lvb_tentacle_scientist] and other lost team members."
+lvb_tentacle_extinction.13.desc: "Though it's been some time since [lvb_tentacle_scientist.GetName] disappeared, [lvb_tentacle_scientist.GetSheHe] have not been forgotten. Tracking [lvb_tentacle_scientist.GetHerHim] transponder has led the investigation below ground, to a series of tunnels seemingly covering most of the planets surface. These tunnels were fiercely defended, and even the tree oil isn't enough to repel the monsters when our teams attempt to enter them. We'll have to fight our way in if we want to find [lvb_tentacle_scientist.GetName] and other lost team members."
 lvb_tentacle_extinction.13.continue: "[lvb_tentacle_scientist.GetName] still lives. Find [lvb_tentacle_scientist.GetHerHim]."
 
 lvb_tentacle_extinction.14.name: "Breeding Chambers"
-lvb_tentacle_extinction.14.desc: "This excavation has taken on the tone of a military campaign more than an archaeological expedition. Fighting their way in, our troops finally managed to find their way to [lvb_tentacle_scientist]'s transponder, and what they found there horrified and arroused them. [lvb_tentacle_scientist.GetSheHeCap] has been half absorbed by a living wall, along with thousands of other people, forced to constantly play host to the beasts' broods.\n\nThough our forces freed [lvb_tentacle_scientist.GetName], [lvb_tentacle_scientist.GetSheHe] has been... changed. The experience seems to have nearly broken [lvb_tentacle_scientist.GetHerHim], but [lvb_tentacle_scientist.GetSheHe] is also younger, healthier, and somewhat more sex-crazed than the average [lvb_tentacle_scientist.GetSpeciesName]. The decision remains what to do with the rest of the monsters. A special project has been issued."
+lvb_tentacle_extinction.14.desc: "This excavation has taken on the tone of a military campaign more than an archaeological expedition. Fighting their way in, our troops finally managed to find their way to [lvb_tentacle_scientist.GetName]'s transponder, and what they found there horrified and arroused them. [lvb_tentacle_scientist.GetSheHeCap] has been half absorbed by a living wall, along with thousands of other people, forced to constantly play host to the beasts' broods.\n\nThough our forces freed [lvb_tentacle_scientist.GetName], the experience has left [lvb_tentacle_scientist.GetHerHim] somewhat more sex-crazed than the normal. The decision remains what to do with the rest of the monsters."
 lvb_tentacle_extinction.14.continue: "At least [lvb_tentacle_scientist.GetName] is home again."
 
 lvb_tentacle_extinction_burn_out: "Burn them out"
-lvb_tentacle_extinction_burn_out_DESC: "TODO"
-lvb_tentacle_extinction.20.desc: "Cleansing this abominable planet with guns and fire has had the desired effect, exterminating the tentacle monsters that once called it home. It hasn't wiped out all traces of their existence, however - the atmosphere remains filled with pheromones, and any future settlers will likely experience extremely high fertility."
+lvb_tentacle_extinction_burn_out_DESC: "Cleanse this abominable planet with fire. Kill every last one of the monsters and let us never speak of this again."
+lvb_tentacle_extinction.20.desc: "Cleansing this abominable planet with guns and fire has had the desired effect, exterminating the tentacle monsters that once called it home. It hasn't wiped out all traces of their existence, however - the atmosphere remains filled with pheromones, and any future settlers will likely experience extremely high fertility. Let us never speak of the cause of said bonus again."
+lvb_tentacle_extinction.20.continue: "Clean at last"
 
 lvb_tentacle_extinction_recruit: "Use them as an army"
-lvb_tentacle_extinction_recruit_DESC: "TODO"
+lvb_tentacle_extinction_recruit_DESC: "Though rather hornier than traditional for invading armies, the tentacle monsters are extremely hard to kill, and would make excellent shock troops if we could figure out how to tame them."
 lvb_tentacle_extinction.21.desc: "Though rather hornier than traditional for invading armies, the tentacle monsters are extremely hard to kill, and make excellent shock troops now that we've mastered the ability to control them. Many in the scientific community suspect this is what they were originally designed for. Let any planet they're unleashed upon beware."
+lvb_tentacle_extinction.21.continue: "We will use them well"
+lvb_tentacle_extinction.21.tooltip: "Spawned 5 $xenomorph_army_plural$"
 
 lvb_tentacle_extinction_use_them: "Use them as breeders"
-lvb_tentacle_extinction_use_them_DESC: "TODO"
-lvb_tentacle_extinction.22.desc: ""
+lvb_tentacle_extinction_use_them_DESC: "Each subject in one of these flesh walls produces hundreds of tentacle monster offspring in their lives before their wombs wear out. There's no reason we couldn't force them to give birth to new citizens instead of monsters, once we tame these creatures."
+lvb_tentacle_extinction.22.desc: "Each subject in one of these flesh walls produces hundreds of tentacle monster offspring before their wombs and minds wear out from the constant orgasmic bliss. There's no reason we couldn't force them to give birth to new citizens instead of monsters. We have more volunteers than expected, as well as a rapidly growing population."
+lvb_tentacle_extinction.22.continue: "Their sacrifice is a worthy one."
 
 lvb_tentacle_extinction_experiment: "Experiment on them"
-lvb_tentacle_extinction_experiment_DESC: "TODO"
-lvb_tentacle_extinction.23.desc: ""
+lvb_tentacle_extinction_experiment_DESC: "Strong, fast and nearly indestructible, there is a great deal we could learn from these monsters. Let us tame them enough that we can settle this world, but not so thoroughly that we can no longer experiment on them."
+lvb_tentacle_extinction.23.desc: "Strong, fast and nearly indestructible, there is a great deal we can learn from these monsters. We've rendered the planet safe for habitation, and our scientists are eager to begin."
+lvb_tentacle_extinction.23.continue: "We'll waste no time."
 
-lvb_tentacle_extinction_rescue: "Rescue breeders"
-lvb_tentacle_extinction_rescue_DESC: "TODO"
-lvb_tentacle_extinction.24.desc: "The original species of [Root.GetName] is alive and well, thanks to the tireless efforts of our troops. The []"
+lvb_tentacle_extinction_rescue: "Rescue victims"
+lvb_tentacle_extinction_rescue_DESC: "The original species of [Root.GetName] is alive and well, kept capitive by the tentacle monsters for breeding purposes. Common decency requires that we attempt to help them."
+lvb_tentacle_extinction.24.desc: "The original species of [Root.GetName] is alive and well, kept capitive by the tentacle monsters for breeding purposes. Thanks to the tireless efforts of our troops, they're now free, and slowly regaining their sanity. Though their infrastructure is in ruins, they've eagerly joined our empire for protection against the hostile universe. Only one difficulty remains - no males survived the centuries of imprisonment and rape, and selective breeding by their captors has left them good for little other than breeding and sex. The planet is likely to be a popular target for immigration by males the galaxy over in the coming years."
+lvb_tentacle_extinction.24.continue: "A new colony"
+
+d_lvb_flesh_pits: "Flesh Pits"
+d_lvb_flesh_pits_desc: "Living walls of tentacles keep women constantly stimulated and pregnant, reshaping their bodies and minds to better support their roles as immobile wombs."
+
+d_lvb_flesh_pits_research: "Flesh Pit Laboratory"
+d_lvb_flesh_pits_research_desc: "Living walls of tentacles keep women constantly stimulated and pregnant while researches experiment on them to discover how their biology is being altered."

@@ -1,0 +1,485 @@
+#############################
+###     Leader Traits     ###
+#############################
+
+############
+# Positive #
+############
+
+#########
+# Ruler #
+#########
+
+leader_trait_ruler_lv_lustful_body = {		# Lustful Body
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_lustful_body.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_large_breasts" }
+			from = { has_trait = "trait_lv_huge_breasts" }
+			from = { has_trait = "trait_lv_multiple_breasts" }
+			from = { has_trait = "trait_lv_shapely_ass" }
+			from = { has_trait = "trait_lv_breeder_hips" }
+			from = { has_trait = "trait_lv_large_penis" }
+			from = { has_trait = "trait_lv_huge_penis" }
+			from = { has_trait = "trait_lv_multiple_penises" }
+		}
+	}
+	modifier = {
+		pop_happiness = 0.1
+		edicts_cost_mult = -0.2
+		country_trade_attractiveness = 0.1
+		pop_government_ethic_attraction = 0.05
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+
+leader_trait_ruler_lv_seductive = {		# Seductive
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_seductive.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_large_breasts" }
+			from = { has_trait = "trait_lv_huge_breasts" }
+			from = { has_trait = "trait_lv_multiple_breasts" }
+			from = { has_trait = "trait_lv_shapely_ass" }
+			from = { has_trait = "trait_lv_breeder_hips" }
+			from = { has_trait = "trait_lv_large_penis" }
+			from = { has_trait = "trait_lv_huge_penis" }
+			from = { has_trait = "trait_lv_multiple_penises" }
+			from = { has_trait = "trait_lv_sexual_pheromones" }
+			from = { has_trait = "trait_lv_targeted_pheromones" }
+			from = { has_trait = "trait_lv_exhibitionist" }
+			from = { has_trait = "trait_lv_sexually_gifted" }
+		}
+	}
+	modifier = {
+		country_border_friction_mult = -0.1
+		country_trade_attractiveness = 0.2
+		pop_government_ethic_attraction = 0.2
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+
+leader_trait_ruler_lv_family_oriented = {		# Family Oriented (harem)
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_family_oriented.dds"
+	leader_potential_add = {
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	modifier = {
+		pop_growth_speed = 0.05
+		country_unity_produces_mult = 0.1
+		country_influence_produces_mult = 0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+
+leader_trait_ruler_lv_frugal = {		# Frugal (les)
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_frugal.dds"
+	leader_potential_add = {
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+		planet_buildings_cost_mult = -0.1
+		planet_districts_cost_mult = -0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+
+############
+# Governor #
+############
+
+leader_trait_governor_lv_lustful_body = {		# Lustful Body
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_lustful_body.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_large_breasts" }
+			from = { has_trait = "trait_lv_huge_breasts" }
+			from = { has_trait = "trait_lv_multiple_breasts" }
+			from = { has_trait = "trait_lv_shapely_ass" }
+			from = { has_trait = "trait_lv_breeder_hips" }
+			from = { has_trait = "trait_lv_large_penis" }
+			from = { has_trait = "trait_lv_huge_penis" }
+			from = { has_trait = "trait_lv_multiple_penises" }
+		}
+	}
+	modifier = {
+		planet_buildings_cost_mult = -0.25
+		planet_districts_cost_mult = -0.25
+		planet_crime_add = 10
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+leader_trait_governor_lv_family_planner = {		# Family Planner (harem)
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_family_planner.dds"
+	leader_potential_add = {
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.05
+		pop_amenities_usage_mult = -0.05
+		planet_stability_add = 5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+leader_trait_governor_lv_tinkerer = {		# Tinkerer (les)
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_tinkerer.dds"
+	leader_potential_add = {
+		from = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOT = { has_policy_flag = robots_outlawed }
+			has_technology = tech_robotic_workers
+		}
+	}
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.25
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+leader_trait_governor_lv_rancher = {		# Rancher
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_rancher.dds"
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	modifier = {
+		planet_jobs_food_produces_mult = 0.15
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+#############
+# Scientist #
+#############
+
+leader_trait_scientist_lv_sadistic = {		# Sadistic
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_sadistic.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+		}
+	}
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.2
+		all_technology_research_speed = 0.05
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+}
+
+leader_trait_scientist_lv_sexologist = {		# Sexologist
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_sexologist.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { NOT = { has_authority = auth_machine_intelligence } }
+		}
+	}
+	modifier = {
+		category_psionics_research_speed_mult = 0.15
+		category_biology_research_speed_mult = 0.15
+		ship_anomaly_generation_chance_mult = 0.10
+		ship_archaeological_site_excavation_speed_mult = 100
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+}
+
+leader_trait_scientist_lv_zoophile = {		# Zoophile
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_zoophile.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { NOT = { has_authority = auth_machine_intelligence } }
+		}
+	}
+	modifier = {
+		category_new_worlds_research_speed_mult = 0.10
+		category_biology_research_speed_mult = 0.10
+		ship_anomaly_generation_chance_mult = 0.15
+		# Zoo events large bonus
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+}
+
+###########
+# Admiral #
+###########
+
+leader_trait_admiral_lv_sadistic = {		# Sadistic
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_sadistic.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+		}
+	}
+	modifier = {
+		ship_weapon_damage = 0.1
+		ship_fire_rate_mult = 0.1
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "leader_trait_admiral_lv_rapist" }
+}
+
+leader_trait_admiral_lv_rapist = {		# Rapist
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_rapist.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+		}
+	}
+	modifier = {
+		ship_evasion_mult = 0.1
+		ship_weapon_damage = 0.1
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "leader_trait_admiral_lv_sadistic" }
+}
+
+###########
+# General #
+###########
+
+leader_trait_general_lv_sadistic = {		# Sadistic
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_sadistic.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	opposites = { "leader_trait_general_lv_rapist" }
+}
+
+leader_trait_general_lv_rapist = {		# Rapist
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_rapist.dds"
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+		}
+	}
+	modifier = {
+		army_morale = 0.1
+		army_morale_damage_mult = 0.3
+		army_collateral_damage_mult = 0.33
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	opposites = { "leader_trait_general_lv_sadistic" }
+}
+
+############
+# Negative #
+############
+
+#########
+# Ruler #
+#########
+
+leader_trait_ruler_lv_shocking_fetish = {		# Shocking Fetish
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_shocking_fetish.dds"
+	self_modifier = {
+		species_leader_exp_gain = 0.1
+	}
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+			from = { has_trait = "trait_lv_masochistic" }
+			from = { has_trait = "trait_lv_lewd_mind" }
+			from = { has_trait = "trait_lv_sex_crazed" }
+		}
+	}
+	modifier = {
+		edicts_cost_mult = 0.05
+		country_influence_produces_mult = -0.05
+		pop_government_ethic_attraction = -0.05
+		trade_value_mult = 0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+
+leader_trait_ruler_lv_highly_submissive = {		# Highly Submissive
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_highly_submissive.dds"
+	self_modifier = {
+		species_leader_exp_gain = -0.1
+	}
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_submissive" }
+		}
+	}
+	modifier = {
+		edict_length_mult = -0.25
+		edicts_cost_mult = 0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	opposites = { "trait_ruler_warlike" "trait_ruler_deep_connections" }
+}
+
+############
+# Governor #
+############
+
+leader_trait_governor_lv_shocking_fetish = {		# Shocking Fetish
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_shocking_fetish.dds"
+	self_modifier = {
+		species_leader_exp_gain = 0.1
+	}
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_sadistic" }
+			from = { has_trait = "trait_lv_masochistic" }
+			from = { has_trait = "trait_lv_lewd_mind" }
+			from = { has_trait = "trait_lv_sex_crazed" }
+		}
+	}
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = -0.05
+		planet_stability_add = -5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+leader_trait_governor_lv_highly_submissive = {		# Highly Submissive
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_highly_submissive.dds"
+	self_modifier = {
+		species_leader_exp_gain = -0.1
+	}
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_submissive" }
+		}
+	}
+	modifier = {
+		planet_crime_add = 20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	opposites = { "leader_trait_iron_fist" }
+}
+
+###########
+# Admiral #
+###########
+
+leader_trait_admiral_lv_highly_submissive = {		# Highly Submissive
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_highly_submissive.dds"
+	self_modifier = {
+		species_leader_exp_gain = -0.25
+	}
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_submissive" }
+		}
+	}
+	modifier = {
+		ship_disengage_chance_mult = 0.25
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	opposites = { "leader_trait_aggressive" "leader_trait_unyielding" "leader_trait_admiral_lv_sadistic" "leader_trait_admiral_lv_rapist" }
+}
+
+###########
+# General #
+###########
+
+leader_trait_general_lv_highly_submissive = {		# Highly Submissive
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_lv_highly_submissive.dds"
+	self_modifier = {
+		species_leader_exp_gain = -0.25
+	}
+	leader_potential_add = {
+		OR = {
+			from = { has_trait = "trait_lv_sex_bots" }
+			from = { has_trait = "trait_lv_submissive" }
+		}
+	}
+	modifier = {
+		army_morale = -0.1
+		army_morale_damage_mult = -0.05
+		army_disengage_chance_mult = 0.1
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	opposites = { "leader_trait_glory_seeker" "leader_trait_butcher" "leader_trait_general_lv_sadistic" "leader_trait_general_lv_rapist" }
+}
+
+###

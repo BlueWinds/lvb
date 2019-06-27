@@ -31,6 +31,13 @@ tech_lvb_sex_trade = {          # Sex Trade Policy
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lv_sexologist"
+			}
+		}
 	}
 
 	ai_weight = {
@@ -39,6 +46,13 @@ tech_lvb_sex_trade = {          # Sex Trade Policy
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lv_sexologist"
 			}
 		}
 	}
@@ -80,17 +94,23 @@ tech_lv_milk_cow_specialization = {		# Milk Cow Specialization
 		}
 		modifier = {
 			factor = 1.25
-			has_ethic = ethic_pacifist
-		}
-		modifier = {
-			factor = 1.5
-			has_ethic = ethic_fanatic_pacifist
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
 		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
-				has_trait = "leader_trait_expertise_biology"
+				has_trait = "leader_trait_scientist_lv_sexologist"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lv_zoophile"
 			}
 		}
 	}
@@ -278,5 +298,3 @@ tech_lv_transformation_candy_orange = {
 	tier = 5
 	potential = { always = no }
 }
-
-###

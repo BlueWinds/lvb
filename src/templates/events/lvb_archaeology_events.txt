@@ -16,16 +16,15 @@ ship_event = {
 			save_global_event_target_as = lvb_tentacle_scientist
 			exile_leader_as = lvb_tentacle_kidnapped_scientist
 		}
-		from = {
-			add_modifier = { modifier = lvb_tentacle_covered }
-		}
 	}
 
 	option = {
 		name = lvb_tentacle_extinction.1.continue
 
 		from = {
+			add_modifier = { modifier = lvb_tentacle_covered }
 			create_archaeological_site = lvb_tentacle_extinction_dig
+			save_global_event_target_as = lvb_tentacle_extinction_planet
 		}
 
 		begin_event_chain = {
@@ -163,6 +162,7 @@ fleet_event = {
 
 	immediate = {
 		from = { set_site_progress_locked = yes }
+		set_leader = lvb_tentacle_kidnapped_scientist
 	}
 
 	after = {
@@ -171,186 +171,207 @@ fleet_event = {
 
 	option = {
 		name = lvb_tentacle_extinction.14.continue
-		owner = {
-			clone_leader = {target = lvb_tentacle_kidnapped_scientist }
-			add_monthly_resource_mult = {
-				resource = society_research
-				value = @tier3researchreward
-				min = @tier3researchmin
-				max = @tier3researchmax
+		leader = {
+			add_trait = leader_trait_scientist_lv_zoophile
+		}
+
+		medium_artifact_reward = yes
+		if = {
+			OR = {
+				owner = { is_xenophile = yes }
+				owner = { is_egalitarian = yes }
+			}
+			enable_special_project = {
+				name = "lvb_tentacle_extinction_rescue"
+				location = from
+				owner = root
+			}
+		}
+		if = {
+			AND = {
+				owner = { is_egalitarian = no }
+				owner = { is_xenophile = no }
+			}
+			enable_special_project = {
+				name = "lvb_tentacle_extinction_burn_out"
+				location = from
+				owner = root
 			}
 		}
 		enable_special_project = {
-			name = "lvb_tentacle_extinction_burn_out"
-			location = this
-			owner = root
-		}
-		enable_special_project = {
 			name = "lvb_tentacle_extinction_recruit"
-			location = this
+			location = from
 			owner = root
 		}
-		enable_special_project = {
-			name = "lvb_tentacle_extinction_use_them"
-			location = this
-			owner = root
+		if = {
+			OR = {
+				owner = { is_authoritarian = true }
+				owner = { is_xenophile = true }
+				owner = { is_hive_empire = true }
+			}
+			enable_special_project = {
+				name = "lvb_tentacle_extinction_use_them"
+				location = from
+				owner = root
+			}
 		}
 		enable_special_project = {
-			name = "lvb_tentacle_extinction_recruit"
-			location = this
+			name = "lvb_tentacle_extinction_experiment"
+			location = from
 			owner = root
 		}
 	}
 }
 
-planet_event = {
+country_event = {
 	id = lvb_tentacle_extinction.20
 	title = "lvb_tentacle_extinction_burn_out"
 	desc = "lvb_tentacle_extinction.20.desc"
 	picture = GFX_evt_victorious_army
-	show_sound = event_construction
-	location = ROOT
+	show_sound = event_dangerous_animals
+	location = event_target:lvb_tentacle_extinction_planet
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
+	option = {
+		name = lvb_tentacle_extinction.20.continue
+		event_target:lvb_tentacle_extinction_planet = {
 			remove_modifier = "lvb_tentacle_covered"
 			add_modifier = { modifier = "atmospheric_aphrodisiac" }
 		}
 	}
-
-	option = {
-		name = EXCELLENT
-	}
 }
 
-planet_event = {
+country_event = {
 	id = lvb_tentacle_extinction.21
 	title = "lvb_tentacle_extinction_recruit"
 	desc = "lvb_tentacle_extinction.21.desc"
 	picture = GFX_evt_lvb_tentacle_recruit
-	show_sound = event_construction
-	location = ROOT
+	show_sound = event_dangerous_animals
+	location = event_target:lvb_tentacle_extinction_planet
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
+	option = {
+		name = lvb_tentacle_extinction.21.continue
+		custom_tooltip = lvb_tentacle_extinction.21.tooltip
+		event_target:lvb_tentacle_extinction_planet = {
 			remove_modifier = "lvb_tentacle_covered"
 			create_army = {
-				owner = root
+				owner = space_owner
 				type = "xenomorph_army"
 			}
 			create_army = {
-				owner = root
+				owner = space_owner
 				type = "xenomorph_army"
 			}
 			create_army = {
-				owner = root
+				owner = space_owner
 				type = "xenomorph_army"
 			}
 			create_army = {
-				owner = root
+				owner = space_owner
+				type = "xenomorph_army"
+			}
+			create_army = {
+				owner = space_owner
 				type = "xenomorph_army"
 			}
 		}
 	}
-
-	option = {
-		name = EXCELLENT
-	}
 }
 
-planet_event = {
+country_event = {
 	id = lvb_tentacle_extinction.22
 	title = "lvb_tentacle_extinction_use_them"
 	desc = "lvb_tentacle_extinction.22.desc"
 	picture = GFX_evt_lvb_tentacle_breeding
-	show_sound = event_construction
-	location = ROOT
+	show_sound = event_dangerous_animals
+	location = event_target:lvb_tentacle_extinction_planet
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
+	option = {
+		name = lvb_tentacle_extinction.22.continue
+		event_target:lvb_tentacle_extinction_planet = {
 			remove_modifier = "lvb_tentacle_covered"
 			add_deposit = d_lvb_flesh_pits
 		}
 	}
-
-	option = {
-		name = lvb_tentacle_extinction.22.continue
-	}
 }
 
-planet_event = {
+country_event = {
 	id = lvb_tentacle_extinction.23
+
 	title = "lvb_tentacle_extinction_experiment"
 	desc = "lvb_tentacle_extinction.23.desc"
 	picture = GFX_evt_lvb_tentacle_research
-	show_sound = event_construction
-	location = ROOT
+	show_sound = event_dangerous_animals
+	location = event_target:lvb_tentacle_extinction_planet
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
+	option = {
+		name = lvb_tentacle_extinction.23.continue
+		event_target:lvb_tentacle_extinction_planet = {
 			remove_modifier = "lvb_tentacle_covered"
 			add_deposit = d_lvb_flesh_pits_research
 		}
 	}
-
-	option = {
-		name = lvb_tentacle_extinction.23.continue
-	}
 }
 
-planet_event = {
+country_event = {
 	id = lvb_tentacle_extinction.24
 	title = "lvb_tentacle_extinction_rescue"
 	desc = "lvb_tentacle_extinction.24.desc"
 	picture = GFX_evt_victorious_army
-	show_sound = event_construction
-	location = ROOT
+	show_sound = event_dangerous_animals
+	location = event_target:lvb_tentacle_extinction_planet
 
 	is_triggered_only = yes
 
 	immediate = {
-		hidden_effect = {
-			remove_modifier = "lvb_tentacle_covered"
-		}
-
 		create_species = {
 			name = random
-			class = random
+			class = random_non_machine
 			portrait = random
 			namelist = random
-			homeworld = root
+			homeworld = event_target:lvb_tentacle_extinction_planet
 			traits = {
-				trait = "trait_lv_all_female"
-				trait = random_traits
+				trait = trait_lv_all_female
+				trait = trait_lv_sex_crazed
+				trait = trait_lv_drooling_vagina
+				trait = trait_lv_natural_anal_lube
+				trait = trait_adaptable
 			}
 			effect = {
 				save_global_event_target_as = lvb_tentacle_survivors
 			}
 		}
+	}
 
-		create_colony = {
-			owner = root
-			species = event_target:lvb_tentacle_survivors
-			ethos = owner
-		}
+	option = {
+		name = lvb_tentacle_extinction.24.continue
+		event_target:lvb_tentacle_extinction_planet = {
+			remove_modifier = "lvb_tentacle_covered"
 
-		while = {
-			count = 4
+			create_colony = {
+				owner = root
+				species = event_target:lvb_tentacle_survivors
+				ethos = owner
+			}
+			create_pop = {
+				species = event_target:lvb_tentacle_survivors
+			}
+			create_pop = {
+				species = event_target:lvb_tentacle_survivors
+			}
+			create_pop = {
+				species = event_target:lvb_tentacle_survivors
+			}
 			create_pop = {
 				species = event_target:lvb_tentacle_survivors
 			}
 		}
-	}
-
-	option = {
-		name = EXCELLENT
 	}
 }

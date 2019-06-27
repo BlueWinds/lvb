@@ -17,27 +17,27 @@ lvb_tentacle_extinction_dig = {
 	}
 
 	stage = {
-		difficulty = 1
+		difficulty = -10
 		icon = GFX_archaeology_runes_C1
 		event = lvb_tentacle_extinction.10
 	}
 	stage = {
-		difficulty = 1
+		difficulty = -10
 		icon = GFX_archaeology_runes_C2
 		event = lvb_tentacle_extinction.11
 	}
 	stage = {
-		difficulty = 2
+		difficulty = -10
 		icon = GFX_archaeology_runes_C3
 		event = lvb_tentacle_extinction.12
 	}
 	stage = {
-		difficulty = 2
+		difficulty = -10
 		icon = GFX_archaeology_runes_C4
 		event = lvb_tentacle_extinction.13
 	}
 	stage = {
-		difficulty = 2
+		difficulty = -10
 		icon = GFX_archaeology_runes_C4
 		event = lvb_tentacle_extinction.14
 	}
