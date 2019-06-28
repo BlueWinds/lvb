@@ -158,6 +158,7 @@ leader_trait_governor_lv_tinkerer = {		# Tinkerer (les)
 	}
 	modifier = {
 		planet_pops_robotics_upkeep_mult = -0.25
+		ship_archaeological_site_excavation_speed_mult = 0.1
 	}
 	leader_trait = { governor }
 	leader_class = { governor }
@@ -213,7 +214,6 @@ leader_trait_scientist_lv_sexologist = {		# Sexologist
 		category_psionics_research_speed_mult = 0.15
 		category_biology_research_speed_mult = 0.15
 		ship_anomaly_generation_chance_mult = 0.10
-		ship_archaeological_site_excavation_speed_mult = 100
 	}
 	leader_trait = { scientist }
 	leader_class = { scientist }

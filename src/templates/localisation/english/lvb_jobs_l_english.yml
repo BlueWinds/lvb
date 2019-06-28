@@ -52,4 +52,6 @@ mod_job_lvb_escort_per_pop_short: "\n§G+1§! £mod_job_lvb_escort_add£ per $VA
 
 # Forced Breeding #
 job_lvb_tentacle_breeders: "Tentacle Fodder"
-job_lvb_tentacle_breeders_desc: "Kept constantly stimulated and helpless in a wall of living flesh, these women's pregnancies progress unnaturally fast to breed the next generation."
+job_lvb_tentacle_breeders_plural: "Tentacle Fodder"
+mod_job_lvb_tentacle_breeders_add: "$job_lvb_tentacle_breeders$"
+job_lvb_tentacle_breeders_desc: "Kept constantly stimulated and helpless in a wall of living flesh, these women's pregnancies progress unnaturally fast to give birth to the next generation."
