@@ -1,3 +1,40 @@
+# Overrides for lv buildings
+
+building_lv_sex_market = {
+	potential = { always = no }
+	icon = "removed"
+}
+
+building_lv_sex_city = {
+	potential = { always = no }
+	icon = "removed"
+}
+
+building_lv_brothel = {
+	potential = { always = no }
+	icon = "removed"
+}
+
+building_lv_bordello = {
+	potential = { always = no }
+	icon = "removed"
+}
+
+building_lv_dairy_farm = {
+	potential = { always = no }
+	icon = "removed"
+}
+
+building_lv_dairy_facility = {
+	potential = { always = no }
+	icon = "removed"
+}
+
+building_lv_dairy_arcology = {
+	potential = { always = no }
+	icon = "removed"
+}
+
 # Overrides for base-game buildings
 
 building_commercial_zone = {

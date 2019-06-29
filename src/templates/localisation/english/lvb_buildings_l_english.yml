@@ -4,10 +4,6 @@
 ###     Buildings     ###
 #########################
 
-#########
-# Dairy #
-#########
-
 building_lvb_dairy_farm: "Dairy Farm"
 building_lvb_dairy_farm_desc: "A large sector dedicated primarily to dairy farms, especially sapient cows. These farms are spacious but sparse. Dairy Farm"
 building_lvb_dairy_facility: "Dairy Facility"
@@ -15,12 +11,13 @@ building_lvb_dairy_facility_desc: "The dairies in this region enjoy highly moder
 building_lvb_dairy_arcology: "Dairy Arcology"
 building_lvb_dairy_arcology_desc: "No space is wasted in these dairy capitals, with clean milking stalls, hanging aeroponic gardens and cutting edge fluid processing facilities."
 
-###
-
 building_lvb_commercial_zone_allowed_desc: "These zones change character significantly once the sun goes down.\n\n"
 building_lvb_commercial_zone_encouraged_desc: "These zones have brothels on the ground floor and hookers on every corner.\n\n"
 building_lvb_commercial_megaplex_allowed_desc: "These megaplexes change character significantly once the sun goes down.\n\n"
 building_lvb_commercial_megaplex_encouraged_desc: "These megaplexes have brothels on the ground floor and hookers on every corner.\n\n"
+
+building_lvb_slave_brothel: "Slave Brothel"
+building_lvb_slave_brothel_desc: "This edifice to carnal desire turns slaves into whores, willing or otherwise. A Slave Brothel converts all enslaved pops on the planet into Sex Slaves.\n\n$job_lvb_forced_whore_effect_desc$"
 
 building_lv_sex_market: "Removed"
 building_lv_sex_market_desc: "Removed"

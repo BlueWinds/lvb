@@ -1,43 +1,8 @@
-building_lv_sex_market = {
-	potential = { always = no }
-	icon = "removed"
-}
-
-building_lv_sex_city = {
-	potential = { always = no }
-	icon = "removed"
-}
-
-building_lv_brothel = {
-	potential = { always = no }
-	icon = "removed"
-}
-
-building_lv_bordello = {
-	potential = { always = no }
-	icon = "removed"
-}
-
-building_lv_dairy_farm = {
-	potential = { always = no }
-	icon = "removed"
-}
-
-building_lv_dairy_facility = {
-	potential = { always = no }
-	icon = "removed"
-}
-
-building_lv_dairy_arcology = {
-	potential = { always = no }
-	icon = "removed"
-}
-
 #########
 # Dairy #
 #########
 
-building_lvb_dairy_farm = {		# Dairy Farm
+building_lvb_dairy_farm = {
 	base_buildtime = 180
 	category = resource
 
@@ -371,6 +336,56 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 			planet = {
 				owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 510 } }
 			}
+		}
+	}
+}
+
+###########
+# Brothel #
+###########
+
+building_lvb_slave_brothel = {
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		owner = { has_policy_flag = slavery_allowed }
+		any_owned_pop = { is_enslaved = yes }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = { # destroys if true
+		OR = {
+			owner = { is_regular_empire = no }
+			NOT = { owner = { has_policy_flag = slavery_allowed } }
+		}
+	}
+
+	planet_modifier = {}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = { energy = 2 }
+	}
+
+	prerequisites = {
+		"tech_lvb_sex_trade"
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			NOT = { any_owned_pop = { is_domestic_servant = yes } }
 		}
 	}
 }

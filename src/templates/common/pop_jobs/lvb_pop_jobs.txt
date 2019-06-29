@@ -177,7 +177,7 @@ lvb_whore = {			# Whore
 		planet_crime_add = 2
 	}
 
-	{{> sex_work_trait_planet base=2 }}
+	{{> sex_work_trait_planet amenities=2 trade=2 }}
 
 	weight = {
         weight = @clerk_job_weight
@@ -206,6 +206,39 @@ lvb_whore = {			# Whore
 
 		{{> sex_work_trait_weight }}
     }
+}
+
+lvb_forced_whore = {
+	category = worker
+	is_capped_by_modifier = no
+	building_icon = building_luxury_residence
+	clothes_texture_index = 2
+
+	possible = {
+		is_enslaved = yes
+		planet = { has_building = building_lvb_slave_brothel }
+	}
+
+	resources = {
+        category = planet_lvb_sex_work
+	}
+
+	triggered_pop_modifier = {
+		potential = { is_organic_species = yes }
+		pop_housing_usage_add = -0.5
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 1
+		trade_value_add = 4
+	}
+
+	{{> sex_work_trait_planet amenities=1 trade=4 }}
+
+	weight = {
+		# Equivelent to 'ruler', forces pretty much every slave on the planet into this job
+		weight = 1000
+	}
 }
 
 ##############
@@ -237,7 +270,7 @@ lvb_call_girl = {			# Call Girl
 	}
 
 	# These modifiers are doubled, because call_girl is twice as valuable as whore
-	{{> sex_work_trait_planet base=4 }}
+	{{> sex_work_trait_planet amenities=4 trade=4 }}
 
 	weight = {
         weight = @specialist_job_weight
@@ -298,7 +331,7 @@ lvb_escort = {			# Escort
 		planet_crime_add = 1
 	}
 
-	{{> sex_work_trait_planet base=3 }}
+	{{> sex_work_trait_planet amenities=2 trade=5 }}
 
 	weight = {
         weight = @specialist_job_weight

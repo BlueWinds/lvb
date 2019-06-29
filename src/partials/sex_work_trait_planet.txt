@@ -2,8 +2,8 @@
 triggered_planet_modifier = {
 	potential = { has_trait = trait_lv_{{@key}} }
 	modifier = {
-		planet_amenities_add = {{ multiply ../base this }}
-		trade_value_add = {{ multiply ../base this }}
+		planet_amenities_add = {{ multiply ../amenities this }}
+		trade_value_add = {{ multiply ../trade this }}
 	}
 }
 {{/each}}

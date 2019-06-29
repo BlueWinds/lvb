@@ -34,6 +34,11 @@ mod_job_lvb_whore_add: "$job_lvb_whore$"
 mod_job_lvb_whore_per_pop: "§G+1§! $job_lvb_whore$ Job per $VALUE$ Pops"
 mod_job_lvb_whore_per_pop_short: "\n§G+1§! £mod_job_lvb_whore_add£ per $VALUE$ £pop£"
 
+job_lvb_forced_whore: "Sex Slave"
+job_lvb_forced_whore_plural: "Sex Slaves"
+job_lvb_forced_whore_desc: "Holes for public use, pay by the hour. Report resistance to the proper authorities."
+job_lvb_forced_whore_effect_desc: "£job_lvb_forced_whore£ $job_lvb_forced_whore_plural$ have been reduced to sexual commodities, producing £trade_value£ Trade Value and a small amount of £amenities£ Amenities."
+
 job_lvb_call_girl: "Call Girl"
 job_lvb_call_girl_plural: "Call Girls"
 job_lvb_call_girl_desc: "Skilled and beautiful, these professionals are worth every credit."

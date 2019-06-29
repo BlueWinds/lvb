@@ -176,44 +176,25 @@ fleet_event = {
 		}
 
 		medium_artifact_reward = yes
-		if = {
-			OR = {
-				owner = { is_xenophile = yes }
-				owner = { is_egalitarian = yes }
-			}
-			enable_special_project = {
-				name = "lvb_tentacle_extinction_rescue"
-				location = from
-				owner = root
-			}
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_rescue"
+			location = from
+			owner = root
 		}
-		if = {
-			AND = {
-				owner = { is_egalitarian = no }
-				owner = { is_xenophile = no }
-			}
-			enable_special_project = {
-				name = "lvb_tentacle_extinction_burn_out"
-				location = from
-				owner = root
-			}
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_burn_out"
+			location = from
+			owner = root
 		}
 		enable_special_project = {
 			name = "lvb_tentacle_extinction_recruit"
 			location = from
 			owner = root
 		}
-		if = {
-			OR = {
-				owner = { is_authoritarian = true }
-				owner = { is_xenophile = true }
-				owner = { is_hive_empire = true }
-			}
-			enable_special_project = {
-				name = "lvb_tentacle_extinction_use_them"
-				location = from
-				owner = root
-			}
+		enable_special_project = {
+			name = "lvb_tentacle_extinction_use_them"
+			location = from
+			owner = root
 		}
 		enable_special_project = {
 			name = "lvb_tentacle_extinction_experiment"
@@ -342,7 +323,7 @@ country_event = {
 				trait = trait_lv_sex_crazed
 				trait = trait_lv_drooling_vagina
 				trait = trait_lv_natural_anal_lube
-				trait = trait_adaptable
+				trait = trait_adaptive
 			}
 			effect = {
 				save_global_event_target_as = lvb_tentacle_survivors
