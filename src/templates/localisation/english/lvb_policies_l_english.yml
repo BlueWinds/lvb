@@ -14,7 +14,7 @@ lvb_sex_trade_allowed: "Allowed"
 lvb_sex_trade_allowed_desc: "Replaces a £job_clerk£ §Y$job_clerk$§! with an £job_lvb_whore£ §Y$job_lvb_whore$§! in Commercial Zones and two to Commercial Megaplexes.\n$job_lvb_whore_effect_desc$"
 lvb_sex_trade_policy_encouraged_name: "Encouraged"
 lvb_sex_trade_encouraged: "Encouraged"
-lvb_sex_trade_encouraged_desc: "Replaces two £job_clerk£ §Y$job_clerk$§! with an £job_lvb_whore£ §Y$job_lvb_whore$§! in Commercial Zones and five to Commercial Megaplexes.\n$job_lvb_whore_effect_desc$"
+lvb_sex_trade_encouraged_desc: "Replaces two £job_clerk£ §Y$job_clerk$§! jobs with two £job_lvb_whore£ §Y$job_lvb_whore$§! in Commercial Zones and five to Commercial Megaplexes.\n$job_lvb_whore_effect_desc$"
 
 # Milk Cow Specialization #
 
