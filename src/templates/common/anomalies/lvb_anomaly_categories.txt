@@ -1,0 +1,13 @@
+lvb_tentacle_extinction_cat = {
+	picture = "GFX_evt_aggressive_flora"
+	level = 3
+
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_ai = no
+			habitable_planet = yes
+		}
+	}
+	on_success = lvb_tentacle_extinction.1
+}

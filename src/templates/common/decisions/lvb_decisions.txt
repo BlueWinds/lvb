@@ -1,0 +1,109 @@
+#########################
+###     Decisions     ###
+#########################
+
+decision_planet_lvb_gender_segregation = {
+	owned_planets_only = yes
+	sound = event_swarm_started
+	icon = decision_lv_mono_gender_conversion #TODO
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		any_pop = {
+			NOR = {
+				pop_has_trait = trait_lv_all_female
+				pop_has_trait = trait_lv_all_male
+				pop_has_trait = trait_lv_all_futanari
+				is_robot_pop = yes
+			}
+		}
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				num_pops < 10
+			}
+			influence = 20
+		}
+		cost = {
+			trigger = {
+				num_pops >= 10
+				num_pops < 20
+			}
+			influence = 40
+		}
+		cost = {
+			trigger = {
+				num_pops >= 20
+				num_pops < 30
+			}
+			influence = 60
+		}
+		cost = {
+			trigger = {
+				num_pops >= 30
+				num_pops < 40
+			}
+			influence = 80
+		}
+		cost = {
+			trigger = {
+				num_pops >= 40
+				num_pops < 50
+			}
+			influence = 100
+		}
+		cost = {
+			trigger = {
+				num_pops >= 50
+				num_pops < 60
+			}
+			influence = 120
+		}
+		cost = {
+			trigger = {
+				num_pops >= 60
+				num_pops < 70
+			}
+			influence = 140
+		}
+		cost = {
+			trigger = {
+				num_pops >= 70
+				num_pops < 85
+			}
+			influence = 160
+		}
+		cost = {
+			trigger = {
+				num_pops >= 85
+				num_pops < 100
+			}
+			influence = 180
+		}
+		cost = {
+			trigger = {
+				num_pops >= 100
+			}
+			influence = 200
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+	}
+
+	effect = {
+		custom_tooltip = decision_planet_lvb_gender_segregation
+		hidden_effect = {
+			planet_event = { id = lvb_event_popups.1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
