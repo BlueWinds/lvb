@@ -21,10 +21,6 @@ for (const file of glob.sync('**/*.*', {cwd: modFolder})) {
   fs.copyFileSync(path.resolve(modFolder, file), outPath)
 }
 
-rimraf.sync(path.resolve(modNoTradFolder, 'common/tradition_categories'))
-rimraf.sync(path.resolve(modNoTradFolder, 'common/traditions'))
 rimraf.sync(path.resolve(modNoTradFolder, 'interface/topbar_traditions_view.gui'))
-rimraf.sync(path.resolve(modNoTradFolder, 'gfx/interface/icons/traditions'))
-rimraf.sync(path.resolve(modNoTradFolder, 'gfx/interface/traditions'))
 
 fs.copyFileSync(path.resolve('src/', '!!!LVB Traditionless.mod'), modNoTradFolder + '.mod')
