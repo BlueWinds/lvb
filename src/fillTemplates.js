@@ -14,7 +14,7 @@ Handlebars.registerPartial('test_partial', "partial - {{parameter}}")
 Handlebars.registerHelper('getWeight', (mult) => nicePrint(1 + parseFloat(mult, 10)))
 Handlebars.registerHelper('multiply', (base, mult) => nicePrint(parseFloat(base, 10) * parseFloat(mult, 10)))
 
-const modFolder = path.resolve(__dirname, '../mod/!!!LV Blue Edits')
+const modFolder = path.resolve(__dirname, '../mod/!!!LVB')
 rimraf.sync(modFolder)
 
 // Read partial templates
@@ -57,4 +57,4 @@ for (const file of glob.sync('**/*.png', {cwd: path.resolve(__dirname, 'template
   child_process.spawnSync('convert', [path.resolve('src/templates', file), outPath])
 }
 
-fs.copyFileSync(path.resolve('src/', '!!!LV Blue Edits.mod'), modFolder + '.mod')
+fs.copyFileSync(path.resolve('src/', '!!!LVB.mod'), modFolder + '.mod')

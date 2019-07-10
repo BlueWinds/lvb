@@ -6,7 +6,11 @@
   "scripts": {
     "start": "nodemon -e '*' -w './src'",
     "build": "node src/fillTemplates.js",
-    "release": "npm run build && rm '!!!LV Blue Edits.zip' || true && cd mod && zip -r '!!!LV Blue Edits.zip' '!!!LV Blue Edits' '!!!LV Blue Edits.mod' && mv '!!!LV Blue Edits.zip' .."
+    "buildNoTrad": "node src/makeTraditionless.js",
+    "clean": "rm 'mod/!!!LVB.zip' 'mod/!!!LVB Traditionless.zip' || true",
+    "zip": "cd mod && zip -r '!!!LVB.zip' '!!!LVB' '!!!LVB.mod'",
+    "zipNoTrad": "cd mod && zip -r '!!!LVB Traditionless.zip' '!!!LVB Traditionless' '!!!LVB Traditionless.mod'",
+    "release": "npm run build && npm run buildNoTrad && npm run clean && npm run zip && npm run zipNoTrad"
   },
   "repository": {
     "type": "git",
