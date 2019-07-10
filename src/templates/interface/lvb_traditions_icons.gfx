@@ -5,6 +5,8 @@ spriteTypes = {
 		textureFile = "gfx/interface/traditions/arrow_right.dds"
 	}
 
+# Sensuality tradition
+
 	spriteType = {
 		name = "GFX_adopted_tradition_category_bg_lvb_sensuality"
 		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_lvb_sensuality.dds"
@@ -22,30 +24,72 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 
-# Tradition picks
-
 	spriteType = {
 		name = "GFX_tr_lvb_sensuality_hormonal_rebalancing"
-		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_1.dds"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_hormonal_rebalancing.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tr_lvb_sensuality_selective_conception"
-		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_2.dds"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_selective_conception.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tr_lvb_sensuality_std_eradication"
-		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_3.dds"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_std_eradication.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tr_lvb_sensuality_deviancy_normalization"
-		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_4.dds"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_deviancy_normalization.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_lvb_sensuality_public_use_ordinances"
-		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_5.dds"
+		name = "GFX_tr_lvb_sensuality_red_light_planet"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sensuality_red_light_planet.dds"
+	}
+
+# Sexualization tradition
+
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_lvb_sexualization"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_lvb_sexualization.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_lvb_sexualization"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_lvb_sexualization.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_lvb_sexualization"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_lvb_sexualization.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sexualization_public_service"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sexualization_public_service.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sexualization_xenotourism_bureau"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sexualization_xenotourism_bureau.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sexualization_public_use_ordinance"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sexualization_public_use_ordinance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sexualization_bioreactors"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sexualization_bioreactors.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_lvb_sexualization_hot_tanks"
+		textureFile = "gfx/interface/icons/traditions/tradition_lvb_sexualization_hot_tanks.dds"
 	}
 }

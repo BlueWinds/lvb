@@ -1,8 +1,18 @@
 ﻿l_english:
 
-#########
-# Dairy #
-#########
+decision_planet_lvb_red_light_planet: "Red Light Planet"
+decision_planet_lvb_red_light_planet_desc: "Replace much of the staff on this resort world with escorts, whores, and other sexual services. This will improve the attraction and boost happiness across our empire as our people dream of their next vacation and the pleasures that await them."
+
+lvb_red_light_colony: "Red Light Colony"
+lvb_red_light_colony_desc: "The allure of the exotic can add additional spice to our resort world, improving its desireability as a vacation destination. Exploitaition and sexual tourism? Yes please!"
+lvb_red_light_colony_effects: "Replaces half the £job_clerk£ $job_clerk$ Resort World jobs with £job_lvb_whore£ $job_lvb_whore_plural$ and £job_lvb_escort£ $job_lvb_escort_plural$.\n\nOther Empire Colonies:\n   $MOD_POP_HAPPINESS$: §G+5%§!"
+
+
+decision_planet_lvb_gender_segregation: "Gender Separation"
+decision_planet_lvb_gender_segregation_desc: "Bureaucratically reorganize all pops on the planet into all-male and all-female subspecies, so we can change their rights or genetically modify them independently."
+
+lvb_event_popups.1.title: "Gender Separation"
+lvb_event_popups.1.desc: "Authorities on [From.GetName] have completed a thorough counting and census of the populace under their jurisdiction. No action has been taken yet, but this opens the door for specialized treatment of the population based on gender."
 
 lvb_cow_no_specialization.desc: "Our milk cow policy is fine as is, we don't want to put too much strain on them..."
 lvb_cow_maximize.desc: "By keeping our milk cows constantly stimulated and their breasts injected with a steady stream of lactation drugs, we can increase milk production even more!"

@@ -7,3 +7,11 @@ triggered_planet_modifier = {
 	}
 }
 {{/each}}
+
+triggered_planet_modifier = {
+	potential = { owner = { has_tradition = tr_lvb_sexualization_finish } }
+	modifier = {
+		planet_amenities_add = {{ multiply amenities sex_bonus_sexualization_finish }}
+		trade_value_add = {{ multiply trade sex_bonus_sexualization_finish }}
+	}
+}

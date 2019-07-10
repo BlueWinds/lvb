@@ -6,6 +6,6 @@ tradition_lvb_sensuality = {
 		"tr_lvb_sensuality_selective_conception"
 		"tr_lvb_sensuality_std_eradication"
 		"tr_lvb_sensuality_deviancy_normalization"
-		"tr_lvb_sensuality_public_use_ordinances"
+		"tr_lvb_sensuality_red_light_planet"
 	}
 }

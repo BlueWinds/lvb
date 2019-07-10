@@ -7,8 +7,10 @@
 lvb_tentacle_extinction_cat: "A Lush Planet"
 lvb_tentacle_extinction_cat_desc: "[Root.GetName] is exceptionally green, and preliminary scans indicate that there might be several things of interest on the surface."
 
-lvb_tentacle_extinction_dig: "Kidnapped Scientist"
 lvb_tentacle_covered: "Tentacle Infested"
+lvb_tentacle_covered_desc: "Extremely aggressive and horny creatures infest this planet, making it dangerous to set foot on the surface."
+
+lvb_tentacle_extinction_dig: "Kidnapped Scientist"
 
 tentacle_extinction_chain_title: "Tentacle Planet"
 tentacle_extinction_chain_desc: "A planet covered with tentacle monsters. Ancient ruins indicating [Root.GetName] once bore thriving civilization. A kidnapped scientist. We should attempt a rescue, and learn what's going on here at the same time."

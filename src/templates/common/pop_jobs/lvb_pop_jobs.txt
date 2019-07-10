@@ -82,10 +82,7 @@ lvb_milk_cow = {			# Milk Cow
 		}
 	}
 
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
+	pop_modifier = {
 		pop_housing_usage_add = -1
 	}
 
@@ -100,11 +97,6 @@ lvb_milk_cow = {			# Milk Cow
 			owner = { has_valid_civic = civic_agrarian_idyll }
 		}
 		modifier = {
-			factor = 10
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
-		modifier = {
 			factor = 2
 			OR = {
 				has_trait = trait_lv_sex_bots
@@ -112,14 +104,6 @@ lvb_milk_cow = {			# Milk Cow
 				has_trait = trait_lv_synth_breasts
 				has_trait = trait_lv_synth_brood_breasts
 			}
-		}
-		modifier = {
-			factor = 0
-			is_robot_pop = yes
-		}
-		modifier = {
-			factor = 0.25
-			can_take_servant_job = yes
 		}
 		modifier = {
 			weight = 3000
@@ -131,19 +115,85 @@ lvb_milk_cow = {			# Milk Cow
 				}
 			}
 		}
-		modifier = {
-			weight = 500000
-			NOT = {
-				has_job = roboticist
-			}
-			owner = {
-				is_ai = yes
-			}
-		}
 
 		{{> cow_trait_weight }}
     }
 }
+
+lvb_bioreactor = {
+	category = worker
+	building_icon = building_clinic
+	clothes_texture_index = 2
+
+	possible = {
+		{{> sex_work_possible }}
+	}
+
+	triggered_pop_modifier = {
+		pop_happiness = -0.5
+	}
+
+	resources = {
+        category = planet_lvb_bioreactor
+		produces = {
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+		}
+
+		{{> cow_trait_weight }}
+	}
+}
+
+lvb_hot_tank = {
+	category = worker
+	building_icon = building_clinic
+	clothes_texture_index = 2
+
+	possible = {
+		{{> sex_work_possible }}
+	}
+
+	triggered_pop_modifier = {
+		pop_happiness = -0.5
+	}
+
+	resources = {
+        category = planet_lvb_bioreactor
+		produces = {
+			exotic_gases = 0.4
+			rare_crystals = 0.4
+			volatile_motes = 0.4
+		}
+		upkeep = {
+			food = 8
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+		}
+
+		{{> cow_trait_weight }}
+	}
+}
+
 
 ###################
 ###     Sex     ###
@@ -165,16 +215,13 @@ lvb_whore = {			# Whore
 
 	resources = {
         category = planet_lvb_sex_work
-
-		produces = {
-			unity = 1
-		}
+		produces = { unity = 1 }
 	}
 
 	planet_modifier = {
 		planet_amenities_add = 2
 		trade_value_add = 2
-		planet_crime_add = 2
+		planet_crime_add = 3
 	}
 
 	{{> sex_work_trait_planet amenities=2 trade=2 }}
@@ -258,9 +305,7 @@ lvb_call_girl = {			# Call Girl
 	resources = {
         category = planet_lvb_sex_work
 
-		upkeep = {
-			consumer_goods = 1
-		}
+		upkeep = { consumer_goods = 1 }
 	}
 
 	planet_modifier = {
@@ -286,13 +331,6 @@ lvb_call_girl = {			# Call Girl
 				has_trait = trait_brainslug
 				has_trait = trait_presapient_natural_intellectuals
 				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
 			}
 		}
 		modifier = {
@@ -382,6 +420,14 @@ lvb_tentacle_breeders = {
 		}
 	}
 
+	triggered_planet_modifier = {
+        potential = { always = yes }
+		pop_housing_usage_add = -1
+        modifier = {
+			pop_growth_speed = 0.15
+		}
+    }
+
 	pop_modifier = {
 		pop_happiness = -0.5
 		pop_political_power = -0.5
@@ -408,13 +454,6 @@ lvb_tentacle_breeders = {
 		}
 	}
 
-	triggered_planet_modifier = {
-        potential = { always = yes }
-		pop_housing_usage_add = -1
-        modifier = {
-			pop_growth_speed = 0.15
-		}
-    }
 
 	weight = {
         weight = @worker_job_weight

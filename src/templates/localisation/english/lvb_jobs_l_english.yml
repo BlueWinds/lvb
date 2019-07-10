@@ -5,10 +5,13 @@
 ###################################
 
 planet_lvb_milk_cow: "Milk Cow"
-mod_planet_lvb_milk_cow_produces_mult:1 "£job_lvb_milk_cow£ $job_lvb_milk_cow$ Output"
+mod_planet_lvb_milk_cow_produces_mult: "£job_lvb_milk_cow£ $job_lvb_milk_cow$ and £job_lvb_hot_tank£ $job_lvb_hot_tank$ Output"
+
+planet_lvb_bioreactor: "Bioreactor"
+mod_planet_lvb_bioreactor_produces_mult: "£job_lvb_hot_tank£ $job_lvb_hot_tank$ Output"
 
 planet_lvb_sex_work: "Sex Work"
-mod_planet_lvb_sex_work_produces_mult:1 "£amenities£ Amenities, £trade_value£ Trade Value and £unity£ Unity from Sex Work"
+mod_planet_lvb_sex_work_produces_mult: "$planet_lvb_sex_work$"
 
 planet_lvb_forced_breeding: "Forced Breeding"
 
@@ -23,6 +26,16 @@ job_lvb_milk_cow_plural: "Milk Cows"
 job_lvb_milk_cow_desc: "Milk has uses both as food and as a luxury item. Certain traits make MUCH more effective Milk Cows."
 job_lvb_milk_cow_effect_desc: "£job_lv_milk_cow£ $job_lv_milk_cow_plural$ turn breast milk and other fluids into fresh £food£ §Y$food$§! and usable £consumer_goods£ §Y$consumer_goods$§!"
 mod_job_lvb_milk_cow_add: "$job_lv_milk_cow$"
+
+job_lvb_bioreactor: "Research Bioreactor"
+job_lvb_bioreactor_plural: "Experimental Bioreactors"
+job_lvb_bioreactor_desc: "Restrained, naked and subjected to whatever experiments our researchers deem necessary, these subjects help us explore the darkest aspects of sexual psychology and biology."
+mod_job_lvb_bioreactor_add: "$job_lvb_bioreactor$"
+
+job_lvb_hot_tank: "Bioreactor"
+job_lvb_hot_tank_plural: "Production Bioreactors"
+job_lvb_hot_tank_desc: "These women have had their bodies modified to serve as biological reactors, producing industrially useful fluids. They are semi-permanently installed in their stalls, fed, managed and milked by a variety of machines."
+mod_job_lvb_hot_tank_add: "$job_lvb_hot_tank$"
 
 # Sex Work #
 
@@ -58,5 +71,5 @@ mod_job_lvb_escort_per_pop_short: "\n§G+1§! £mod_job_lvb_escort_add£ per $VA
 # Forced Breeding #
 job_lvb_tentacle_breeders: "Tentacle Fodder"
 job_lvb_tentacle_breeders_plural: "Tentacle Fodder"
-mod_job_lvb_tentacle_breeders_add: "$job_lvb_tentacle_breeders$"
 job_lvb_tentacle_breeders_desc: "Kept constantly stimulated and helpless in a wall of living flesh, these women's pregnancies progress unnaturally fast to give birth to the next generation."
+mod_job_lvb_tentacle_breeders_add: "$job_lvb_tentacle_breeders$"

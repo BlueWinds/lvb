@@ -5,6 +5,13 @@ planet_lvb_milk_cow = {
 	}
 }
 
+planet_lvb_bioreactor = {
+	parent = planet_lvb_milk_cow
+	generate_mult_modifiers = {
+		produces
+	}
+}
+
 planet_lvb_sex_work = {
 	parent = planet_jobs
 	generate_mult_modifiers = {

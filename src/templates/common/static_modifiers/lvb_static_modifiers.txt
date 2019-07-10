@@ -2,3 +2,25 @@ lvb_tentacle_covered = {
 	planet_colony_development_speed_mult = -10
 	icon = "gfx/interface/icons/planet_modifiers/lvb_tentacle_covered.dds"
 }
+
+lvb_red_light_colony = {
+	icon = "gfx/interface/icons/planet_modifiers/lvb_red_light_colony.dds"
+	icon_frame = 1
+
+	pop_environment_tolerance = 1
+	job_clerk_per_pop = -0.25
+	job_lvb_whore_per_pop = 0.125
+	job_lvb_escort_per_pop = 0.125
+
+	# Unlike resort_colony and similar, we hide the default tooltip so it
+	# doesn't show "1 clerk job per -4 pops"
+	custom_tooltip = lvb_red_light_colony_effects
+
+	apply_modifier_to_other_planets = red_light_colony_other_planets
+}
+
+lvb_red_light_colony_other_planets = {
+	icon = "gfx/interface/icons/planet_modifiers/lvb_red_light_colony.dds"
+	icon_frame = 1
+	pop_happiness = 0.05
+}

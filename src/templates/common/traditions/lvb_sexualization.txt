@@ -1,0 +1,76 @@
+tr_lvb_sexualization_adopt = {
+	modifier = {
+		pop_amenities_usage_mult = -0.10
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+}
+
+tr_lvb_sexualization_finish = {
+	# Also checked in partials/sex_work_trait_planet.txt
+
+	modifier = {
+		ascension_perks_add = 1
+		planet_lvb_sex_work_produces_mult = {{ sex_bonus_sexualization_finish }}
+	}
+}
+
+tr_lvb_sexualization_public_service = {
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.10
+	}
+	ai_weight = { factor = 3000 }
+}
+
+tr_lvb_sexualization_xenotourism_bureau = {
+	# Adds influence per month to commercial pacts in lvb_diplomacy_economy.txt
+	ai_weight = { factor =  2000 }
+}
+
+tr_lvb_sexualization_public_use_ordinance = {
+	possible = {
+		has_tradition = tr_lvb_sexualization_public_service
+		has_tradition = tr_lvb_sexualization_xenotourism_bureau
+	}
+
+	modifier = {
+		job_lvb_whore_per_pop = 0.04
+		job_lvb_escort_per_pop = 0.02
+	}
+
+	ai_weight = { factor = 1000 }
+}
+
+tr_lvb_sexualization_bioreactors = {
+	# Adds bioreactor jobs to gene clinics in lvb_override_buildings
+
+	ai_weight = { factor = 5000 }
+}
+
+tr_lvb_sexualization_hot_tanks = {
+	# Adds hot_tank jobs to dairy facilities / archologies in lvb_buildings
+
+	possible = {
+		has_tradition = tr_lvb_sexualization_bioreactors
+	}
+
+	ai_weight = { factor = 4000 }
+}

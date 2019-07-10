@@ -186,12 +186,19 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 		building_lvb_dairy_arcology
 	}
 
+	planet_modifier = {
+		job_lvb_milk_cow_add = 5
+	}
+
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			exists = owner
+			owner = {
+				has_tradition = tr_lvb_sexualization_hot_tanks
+			}
 		}
 		modifier = {
-			job_lvb_milk_cow_add = 5
+			job_lvb_hot_tank_add = 1
 		}
 	}
 
@@ -290,12 +297,19 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 		}
 	}
 
+	planet_modifier = {
+		job_lvb_milk_cow_add = 8
+	}
+
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			exists = owner
+			owner = {
+				has_tradition = tr_lvb_sexualization_hot_tanks
+			}
 		}
 		modifier = {
-			job_lvb_milk_cow_add = 8
+			job_lvb_hot_tank_add = 2
 		}
 	}
 

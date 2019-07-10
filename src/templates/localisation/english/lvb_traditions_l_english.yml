@@ -4,31 +4,64 @@
 # SENSUALITY
 ################################################################
 
-tradition_lvb_sensuality:0 "Sexuality"
-tradition_lvb_sensuality_desc:0 "We must understand and direct the powerful forces granting our species meaning and joy - love and lust."
-tr_lvb_sensuality_adopt:0 "Sexuality Traditions"
-tr_lvb_sensuality_adopt_desc:0 "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_effect$"
-tr_lvb_sensuality_adopt_effect:6 "§E$TRADITIONS_ADOPT$:§!\n£pops£ §Y$MOD_POP_GROWTH_SPEED$§! increased by §G+10%§!."
+tradition_lvb_sensuality: "Sensuality"
+tradition_lvb_sensuality_desc: "We must understand and direct the powerful forces granting our species meaning and joy - love and lust."
+tr_lvb_sensuality_adopt: "Sensuality Traditions"
+tr_lvb_sensuality_adopt_desc: "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_effect$"
+tr_lvb_sensuality_adopt_effect: "§E$TRADITIONS_ADOPT$:§!\n£pops£ §Y$MOD_POP_GROWTH_SPEED$§! increased by §G+10%§!."
 
-tr_lvb_sensuality_hormonal_rebalancing:0 "Hormonal Rebalancing"
-tr_lvb_sensuality_hormonal_rebalancing_desc:1 "§Y$MOD_PLANET_STABILITY_ADD$§! is increased by §G5%§! on all our planets."
-tr_lvb_sensuality_hormonal_rebalancing_delayed:0 "With increased understanding of the the chemical motivations behind actions, we can channel disruptive impulses in a sexual, rather than destructive, direction."
+tr_lvb_sensuality_hormonal_rebalancing: "Hormonal Rebalancing"
+tr_lvb_sensuality_hormonal_rebalancing_desc: "§Y$MOD_PLANET_STABILITY_ADD$§! is increased by §G5%§! on all our planets."
+tr_lvb_sensuality_hormonal_rebalancing_delayed: "With increased understanding of the the chemical motivations behind actions, we can channel disruptive impulses in a sexual, rather than destructive, direction."
 
-tr_lvb_sensuality_selective_conception:0 "Selective Conception"
-tr_lvb_sensuality_selective_conception_desc:3 "£pops£ §Y$MOD_POP_GROWTH_SPEED$§! decreased by §G-5%§!, but increase £happiness£ Pop Happiness by §G10%§!."
-tr_lvb_sensuality_selective_conception_delayed:0 "Reproduction has finally, completely and forever been brought under conscious control of the individual. No more fallible external devices or unpleasant surgery required."
+tr_lvb_sensuality_selective_conception: "Selective Conception"
+tr_lvb_sensuality_selective_conception_desc: "£pops£ §Y$MOD_POP_GROWTH_SPEED$§! decreased by §G-5%§!, but increase £happiness£ Pop Happiness by §G10%§!."
+tr_lvb_sensuality_selective_conception_delayed: "Reproduction has finally, completely and forever been brought under conscious control of the individual. No more fallible external devices or unpleasant surgery required."
 
-tr_lvb_sensuality_std_eradication:0 "STD Eradication"
-tr_lvb_sensuality_std_eradication_desc:4 "£mod_pop_amenities_usage_mult£ §Y$MOD_POP_AMENITIES_USAGE_MULT$§! reduced by §G15%§!."
-tr_lvb_sensuality_std_eradication_delayed:0 "All common sexually transmitted diseases have been erradicated from the populace, and we have developed cures for any that reemerge. Free love is now free of risk as well."
+tr_lvb_sensuality_std_eradication: "STD Eradication"
+tr_lvb_sensuality_std_eradication_desc: "£mod_pop_amenities_usage_mult£ §Y$MOD_POP_AMENITIES_USAGE_MULT$§! reduced by §G15%§!."
+tr_lvb_sensuality_std_eradication_delayed: "All common sexually transmitted diseases have been erradicated from the populace, and we have developed cures for any that reemerge. Free love is now free of risk as well."
 
-tr_lvb_sensuality_deviancy_normalization:0 "Deviancy Normalization"
-tr_lvb_sensuality_deviancy_normalization_desc:4 "§Y$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$§! increased by §G+15%§! and §Y$MOD_PLANET_CRIME_ADD$§! is reduced by §G15§! on all our planets."
-tr_lvb_sensuality_deviancy_normalization_delayed:0 "Sexual deviancy and extreme fetishes need not be a radicalizing force, if our society is suffiently tollerant of them."
+tr_lvb_sensuality_deviancy_normalization: "Deviancy Normalization"
+tr_lvb_sensuality_deviancy_normalization_desc: "§Y$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$§! increased by §G+15%§! and §Y$MOD_PLANET_CRIME_ADD$§! is reduced by §G15§! on all our planets."
+tr_lvb_sensuality_deviancy_normalization_delayed: "Sexual deviancy and extreme fetishes need not be a radicalizing force, if our society is suffiently tollerant of them."
 
-tr_lvb_sensuality_public_use_ordinances:0 "Public Use Ordinances"
-tr_lvb_sensuality_public_use_ordinances_desc:7 "Adds §Y1§! £job_lvb_whore£ §Y$job_lvb_whore$ Job§! per §Y25§! £pop£ Pops and §Y1§! £job_lvb_call_girl£ §Y$job_lvb_call_girl$ Job§! per §Y50§! £pop£ Pops.."
-tr_lvb_sensuality_public_use_ordinances_delayed:0 "We can allow, or require, our citizens to make themselves sexually available to the public, for a boost in both morale and as a replacement for the public services our people would otherwise require the state to provide."
+tr_lvb_sensuality_red_light_planet: "Red Light Planet"
+tr_lvb_sensuality_red_light_planet_desc: "§HUnlocks Decision:§! $decision_planet_lvb_red_light_planet$ on our $resort_colony$ (if we have one)."
+tr_lvb_sensuality_red_light_planet_delayed: "$lvb_red_light_colony_desc$"
 
-tr_lvb_sensuality_finish:0 "Sexuality Traditions Finished"
-tr_lvb_sensuality_finish_effect:4 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sensuality_adopt$ will increase §Y$MOD_PLANET_IMMIGRATION_PULL_MULT$§! by §G+25%§! and §Y$MOD_POP_GROWTH_FROM_IMMIGRATION$§! by §G+10%§! on all planets."
+tr_lvb_sensuality_finish: "Sexuality Traditions Finished"
+tr_lvb_sensuality_finish_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sensuality_adopt$ will increase §Y$MOD_PLANET_IMMIGRATION_PULL_MULT$§! by §G+25%§! and §Y$MOD_POP_GROWTH_FROM_IMMIGRATION$§! by §G+10%§! on all planets."
+
+################################################################
+# SEXUALIZATION
+################################################################
+
+tradition_lvb_sexualization: "Sexualization"
+tradition_lvb_sexualization_desc: "Traditionally the province of individuals, making sexuality the concern of the state can bring enormous benefits."
+tr_lvb_sexualization_adopt: "Sexualization Traditions"
+tr_lvb_sexualization_adopt_desc: "$tradition_lvb_sexualization_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_effect$"
+tr_lvb_sexualization_adopt_effect: "$MOD_POP_AMENITIES_USAGE_MULT$: §G-10%§!"
+
+tr_lvb_sexualization_public_use_ordinance: "Public Use Ordinance"
+tr_lvb_sexualization_public_use_ordinance_desc: "Adds §Y1§! £job_lvb_whore£ §Y$job_lvb_whore$ Job§! per §Y25§! £pop£ Pops and §Y1§! £job_lvb_call_girl£ §Y$job_lvb_call_girl$ Job§! per §Y50§! £pop£ Pops."
+tr_lvb_sexualization_public_use_ordinance_delayed: "We can allow, or require, our citizens to make themselves sexually available to the public, for a boost in both morale and as a replacement for the public services our people would otherwise require the state to provide."
+
+tr_lvb_sexualization_xenotourism_bureau: "Xeno Tourism Bureau"
+tr_lvb_sexualization_xenotourism_bureau_desc: "Each §YCommercial Pact§! will increase our £influence£ §Y$mod_country_influence_produces_add$§! by §Y0.125§!."
+tr_lvb_sexualization_xenotourism_bureau_delayed: "'Tourism' is a euphamism for those empires less open about sexuality than our own. By whoring out our citizens to those of foreign powers, we can gain great advantages on the galactic stage."
+
+tr_lvb_sexualization_public_service: "Public Service"
+tr_lvb_sexualization_public_service_desc: "$mod_planet_pops_consumer_goods_upkeep_mult$ §G-10%§!"
+tr_lvb_sexualization_public_service_delayed: "Two years of part-time public use is mandatory for all citizens upon reaching the age of majority, bringing our people closer together and ending the unhappiness of sexual isolation."
+
+tr_lvb_sexualization_bioreactors: "Bioreactor Experimentation"
+tr_lvb_sexualization_bioreactors_desc: "Add §Y1§! £job_lvb_bioreactor£ §Y$job_lvb_bioreactor$ Job§! to $building_clinic$ and two to $building_hospital$.\n\n$job_lvb_bioreactor_desc$"
+tr_lvb_sexualization_bioreactors_delayed: "Our research in the realms of pleasure, pain and reproduction can seriously benefit from experimenting on sentient subjects. Most of them learn to enjoy it, after a while."
+
+tr_lvb_sexualization_hot_tanks: "Chemistry Hot Tanks"
+tr_lvb_sexualization_hot_tanks_desc: "Add §Y1§! £job_lvb_hot_tank£ §Y$job_lvb_hot_tank$ Job§! to $building_lvb_dairy_facility$ and two to $building_lvb_dairy_arcology$.\n\n$job_lvb_hot_tank_desc$"
+tr_lvb_sexualization_hot_tanks_delayed: "It is possible to reduce some of our citizens to biological machines. Willing or not, they will serve our empire with their bodies."
+
+tr_lvb_sexualization_finish: "Sexuality Traditions Finished"
+tr_lvb_sexualization_finish_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sexuality_adopt$ will increase $mod_planet_lvb_sex_work_produces_mult$ by §G+{{ multiply 100 sex_bonus_sexualization_finish }}%§!."

@@ -1,0 +1,17 @@
+per_relation = {
+	# scope: this = current country, FROM : other country in the relation
+
+	commercial_pact = {
+		trigger = {
+			has_commercial_pact = FROM
+			has_tradition = tr_lvb_sexualization_xenotourism_bureau
+		}
+
+		resources = {
+			category = commercial_pacts
+			produces = {
+				influence = 0.125
+			}
+		}
+	}
+}

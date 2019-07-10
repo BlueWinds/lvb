@@ -10,9 +10,9 @@ namespace = lvb_event_popups
 
 planet_event = { # Gender Segregation
 	id = lvb_event_popups.1
-	title = lvb_event_popups.1.title # TODO
-	desc = lvb_event_popups.1.desc # TODO
-	picture = GFX_evt_lvb_cow_no_specialization # TODO
+	title = lvb_event_popups.1.title
+	desc = lvb_event_popups.1.desc
+	picture = GFX_evt_alien_propaganda
 	show_sound = event_administrative_work
 
 	is_triggered_only = yes
