@@ -1,7 +1,7 @@
 {
   "name": "lvb",
   "version": "1.0.0",
-  "description": "This is a patch-mod for Stellaris, updating the [Lustful Void|https://www.loverslab.com/topic/119724-mod-stellaris-lustful-void-wip] mod with some personal tweaks. All credit to Lithia<3, I claim none.",
+  "description": "This is an adult mod for Stellaris, adding all sorts of adult-themed content. It was originally based on [Lustful Void|https://www.loverslab.com/topic/119724-mod-stellaris-lustful-void-wip], but has since expanded greatly. It stil includes come content from Lithia<3 and other previous modders that she coppied from, and is designed with compatibility for Lustful Void in mind.",
   "main": "src/fillTemplates.js",
   "scripts": {
     "start": "nodemon -e '*' -w './src'",
