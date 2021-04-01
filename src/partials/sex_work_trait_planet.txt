@@ -1,6 +1,6 @@
 {{#each sex_bonus}}
 triggered_planet_modifier = {
-	potential = { has_trait = trait_lv_{{@key}} }
+	potential = { has_trait = trait_lvb_{{@key}} }
 	modifier = {
 		planet_amenities_add = {{ multiply ../amenities this }}
 		trade_value_add = {{ multiply ../trade this }}

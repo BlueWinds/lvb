@@ -1,6 +1,6 @@
 {{#each sex_bonus}}
 modifier = {
-	pop_has_trait = trait_lv_{{@key}}
+	pop_has_trait = trait_lvb_{{@key}}
 	factor = {{ getWeight this }}
 }
 {{/each}}

@@ -1,5 +1,5 @@
-name="!!!Lustful Void Blue"
-path="mod/!!!LVB"
+name="Lustful Void Blue (no Traditions)"
+path="LVB Traditionless"
 
 tags={
 	"Consensual"
@@ -8,4 +8,4 @@ tags={
 	"Bestiality"
 	"If this is on Steam it's Stolen!"
 }
-supported_version="2.3.*"
+supported_version="2.8.*"

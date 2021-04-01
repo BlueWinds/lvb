@@ -1,0 +1,354 @@
+﻿l_english:
+
+#############################
+###     Leader Traits     ###
+#############################
+
+############
+# Positive #
+############
+
+#########
+# Ruler #
+#########
+
+leader_trait_ruler_lvb_lustful_body: "Lustful Body"
+leader_trait_ruler_lvb_lustful_body_desc: "This ruler is very attractive, with a perfectly sculpted body that is at least obvious to even the most alien eyes."
+
+leader_trait_ruler_lvb_seductive: "Seductive"
+leader_trait_ruler_lvb_seductive_desc: "This ruler knows just how to string someone along, wrapping unruly xenos around their betaloned little finger."
+
+leader_trait_ruler_lvb_family_oriented: "Family Oriented"
+leader_trait_ruler_lvb_family_oriented_desc: "This leader strives to be an example for their people, with a very large family and their precious little free time being spent with their kids."
+
+leader_trait_ruler_lvb_frugal: "Frugal"
+leader_trait_ruler_lvb_frugal_desc: "This ruler is vocal in her criticism of material waste, and believes satisfaction is better sought in the arms of one's sisters."
+
+############
+# Governor #
+############
+
+leader_trait_governor_lvb_lustful_body: "Lustful Body"
+leader_trait_governor_lvb_lustful_body_desc: "This governor is very attractive, and uses their sex appeal to whittle down contractor costs."
+
+leader_trait_governor_lvb_family_planner: "Family Planner"
+leader_trait_governor_lvb_family_planner_desc: "This governor is involved with family planning and education, ensuring boys just starting their harems and established adults alike know the medical and paternal needs of all species under their roofs."
+
+leader_trait_governor_lvb_tinkerer: "Tinkerer"
+leader_trait_governor_lvb_tinkerer_desc: "This governor is an investor and tinkerer in the sexbot industry."
+
+leader_trait_governor_lvb_rancher: "Rancher"
+leader_trait_governor_lvb_rancher_desc: "This governor is always studying the new discoveries in their world's biospheres for new developments to husbandry, sapient or otherwise."
+
+#############
+# Scientist #
+#############
+
+leader_trait_scientist_lvb_sadistic: "Sadistic"
+leader_trait_scientist_lvb_sadistic_desc: "This scientist is concerned with results first and foremost, and has a blatant disregard for ethics and decency."
+
+leader_trait_scientist_lvb_sexologist: "Sexologist"
+leader_trait_scientist_lvb_sexologist_desc: "This researcher has a comprehensive understanding of sexuality."
+
+leader_trait_scientist_lvb_zoophile: "Zoophile"
+leader_trait_scientist_lvb_zoophile_desc: "This researcher has a more than purely scientific interest in animals, and can identify potential others would glance over."
+
+###########
+# Admiral #
+###########
+
+leader_trait_admiral_lvb_sadistic: "Sadistic"
+leader_trait_admiral_lvb_sadistic_desc: "This admiral scours the wreckage of space battles for survivors, and broadcasts their fates to the enemy."
+
+leader_trait_admiral_lvb_rapist: "Rapist"
+leader_trait_admiral_lvb_rapist_desc: "This admiral likes to scour the remnants of space battles for survivors."
+
+###########
+# General #
+###########
+
+leader_trait_general_lvb_sadistic: "Sadistic"
+leader_trait_general_lvb_sadistic_desc: "This general forces non-combatants to watch as they brutalize and kill both prisoners of war and trouble making civilians."
+
+leader_trait_general_lvb_rapist: "Rapist"
+leader_trait_general_lvb_rapist_desc: "This general prefers to capture both combatants and civilians alive."
+
+############
+# Negative #
+############
+
+#########
+# Ruler #
+#########
+
+leader_trait_ruler_lvb_shocking_fetish: "Shocking Fetish"
+leader_trait_ruler_lvb_shocking_fetish_desc: "This ruler has been rocked by a scandal outing their deviant interest in a societally condemned fetish."
+
+leader_trait_ruler_lvb_highly_submissive: "Highly Submissive"
+leader_trait_ruler_lvb_highly_submissive_desc: "Few respect this weak and ineffective ruler."
+
+############
+# Governor #
+############
+
+leader_trait_governor_lvb_shocking_fetish: "Shocking Fetish"
+leader_trait_governor_lvb_shocking_fetish_desc: "This governor has been rocked by a scandal outing their deviant interest in a societally condemned fetish."
+
+leader_trait_governor_lvb_highly_submissive: "Highly Submissive"
+leader_trait_governor_lvb_highly_submissive_desc: "Few respect this weak and ineffective governor."
+
+###########
+# Admiral #
+###########
+
+leader_trait_admiral_lvb_highly_submissive: "Highly Submissive"
+leader_trait_admiral_lvb_highly_submissive_desc: "This weak and cowardly admiral does everything they can to avoid the battlefield."
+
+###########
+# General #
+###########
+
+leader_trait_general_lvb_highly_submissive: "Highly Submissive"
+leader_trait_general_lvb_highly_submissive_desc: "This PoG general poses a bigger risk to their own troops than they do the enemy."
+
+##########################
+###     Bio Traits     ###
+##########################
+
+############
+# Positive #
+############
+
+trait_lvb_dominant: "Dominant"
+trait_lvb_dominant_desc: "§LThis species is commanding by nature and greatly enjoys asserting themselves over other lifeforms and their bodies.§!\n\nHaving other pops with the §BSubmissive§! trait will add an extra effect"
+
+trait_lvb_submissive: "Submissive"
+trait_lvb_submissive_desc: "§LThis species is very weak-willed socially, emotionally and especially sexually. They tend to come out on the bottom of any interaction with other races.§!\n\nHaving other pops with the §BDominant§! trait will add an extra effect"
+
+trait_lvb_sexual_pheromones: "Sexual Pheromones"
+trait_lvb_sexual_pheromones_desc: "§LThis species exudes a variety of pheromones as part of their natural communication that, to most species, are quite arousing.§!"
+
+trait_lvb_targeted_pheromones: "Targeted Pheromones"
+trait_lvb_targeted_pheromones_desc: "§LSensory dulling clouds of pheromones hang in the air anywhere this species lingers, leaving those unused to it rather susceptible to suggestion.§!"
+
+trait_lvb_elastic_orifices: "Elastic Orifices"
+trait_lvb_elastic_orifices_desc: "§LThis species has tight, stretchy orifices with excellent muscle control, not only allowing them to please any mate but to give birth with ease.§!"
+
+trait_lvb_nudist: "Nudist"
+trait_lvb_nudist_desc: "§LDue to their natural resilience towards their native environment, this species tends to wear little to no clothing that does not have a utility or cultural significance.§!"
+
+trait_lvb_exhibitionist: "Exhibitionist"
+trait_lvb_exhibitionist_desc: "§LSomething in this species' psychology gives them an inherent dislike for all but the most utilitarian clothing or coverings, as well as a general lack of modesty.§!"
+
+trait_lvb_masochistic: "Masochistic"
+trait_lvb_masochistic_desc: "§LThis species has evolved a strange enjoyment for a degree of pain. While mostly sexual, it also aids them in physically demanding fields.§!\n\nHaving other pops with the §BSadistic§! trait will add an extra effect"
+
+trait_lvb_sexually_gifted: "Sexually Gifted"
+trait_lvb_sexually_gifted_desc: "§LPassionate, feisty and fiery haired, in the bedroom and out.§!"
+
+trait_lvb_soft: "Soft"
+trait_lvb_soft_desc: "§LThis species produces soft, abundant fibers suitable for use in domestic goods and encouraging molestation.§!"
+
+trait_lvb_nutrient_extrusion: "Nutrient Extrusion"
+trait_lvb_nutrient_extrusion_desc: "§LSpecialized digestive processes in this species allow them to process excess nutrients for later consumption, appearing as sugar like crystals that form from modified pores on the surface of the anus.§!"
+
+trait_lvb_natural_anal_lube: "Natural Anal Lube"
+trait_lvb_natural_anal_lube_desc: "§LA rough, gritty diet has led to this species evolving natural anal lubrication that seeps from them at copious levels. Its abnormal efficiency leaves it marketable, and is safely consumable.§!"
+
+trait_lvb_long_tongues: "Long Tongues"
+trait_lvb_long_tongues_desc: "§LThis species possesses an extremely long, dexterous tongue. The hit at any party, and or pervy porn shoot.§!"
+
+trait_lvb_erogenous_anus: "Erogenous Anus"
+trait_lvb_erogenous_anus_desc: "§LThis species has an exceptionally sexually sensitive anus to such a degree that most members of this race consider vaginal only for reproduction.§!"
+
+trait_lvb_muscle_head: "Muscle Head"
+trait_lvb_muscle_head_desc: "§LThe members of this species are hulking muscular beings with each possessing a vast degree of physical strength. Huge, handsome and muscled up beefcakes the lot of them.§!"
+
+##########
+# Female #
+##########
+
+trait_lvb_large_breasts: "Large Breasts"
+trait_lvb_large_breasts_desc: "§LThis species has breasts proportionally larger than most lactating species of their size.§!"
+
+trait_lvb_huge_breasts: "Huge Breasts"
+trait_lvb_huge_breasts_desc: "§LThis species has breasts much larger proportionally than most lactating species of their size. Is more than twice the size of your own head a waste?§!"
+
+trait_lvb_multiple_breasts: "Multiple Breasts"
+trait_lvb_multiple_breasts_desc: "§LRather than a single udder, pair of breasts or teat row, this species possesses an excessive number of mammary glands.§!"
+
+trait_lvb_fuckable_nipples: "Fuckable Nipples"
+trait_lvb_fuckable_nipples_desc: "§LThis species possesses penetrable mammary glands.§!"
+
+trait_lvb_high_volume_lactation: "High Volume Lactation"
+trait_lvb_high_volume_lactation_desc: "§LThis species perpetually lactates, and does so in excessive volume.§!"
+
+trait_lvb_highly_nutritious_milk: "Highly Nutritious Milk"
+trait_lvb_highly_nutritious_milk_desc: "§LThe fat, protein and nutrient value of this species milk is considerably higher than the galactic norm.§!"
+
+trait_lvb_drooling_vagina: "Drooling Vagina"
+trait_lvb_drooling_vagina_desc: "§LThe females of species enjoy enormous, messy orgasms, allowing the collection of their feminine fluids.§!"
+
+trait_lvb_breeder_hips: "Breeder Hips"
+trait_lvb_breeder_hips_desc: "§LFemales of this species near universally have wide, powerful hips and perfectly toned asses that allow for prolonged sexual encounters and easy childbirth.§!"
+
+trait_lvb_litters: "Litters"
+trait_lvb_litters_desc: "§LMost pregnancies for this species results in several children.§!"
+
+trait_lvb_oviposition: "Oviposition"
+trait_lvb_oviposition_desc: "§LThis species reproduces via laying eggs.§!"
+
+########
+# Male #
+########
+
+trait_lvb_large_penis: "Large Penis"
+trait_lvb_large_penis_desc: "§LThe males of this species are well endowed compared to the galactic average.§!"
+
+trait_lvb_huge_penis: "Huge Penis"
+trait_lvb_huge_penis_desc: "§LThe males of this species are very well endowed compared to the galactic average.§!"
+
+trait_lvb_multiple_penises: "Multiple Penises"
+trait_lvb_multiple_penises_desc: "§LThe males of this species possess multiple penises and greatly enjoy using them.§!"
+
+trait_lvb_high_volume_ejaculations: "High Volume Ejaculations"
+trait_lvb_high_volume_ejaculations_desc: "§LThis species produces such an obscene amount of semen that most race's wombs are left physically bloated. Clean up is a must.§!"
+
+trait_lvb_addictive_cum: "Addictive Cum"
+trait_lvb_addictive_cum_desc: "§LThis species semen contains a number of physically addictive compounds that render their females, and the females of other species subservient. And volatile.§!"
+
+############
+# Negative #
+############
+
+trait_lvb_adorable: "Adorable"
+trait_lvb_adorable_desc: "§LSomething about this race makes them very cute in the eyes of most species. They innocently demand love and affection.§!"
+
+trait_lvb_sadistic: "Sadistic"
+trait_lvb_sadistic_desc: "§LMany members of this species derive sexual gratification from the pain of others.§!\n\nHaving other pops with the §BMasochistic§! trait will add an extra effect"
+
+trait_lvb_lewd_mind: "Lewd Mind"
+trait_lvb_lewd_mind_desc: "§LThis species has an overactive libido, and often find their thoughts drawn to sex.§!"
+
+trait_lvb_sex_crazed: "Sex Crazed"
+trait_lvb_sex_crazed_desc: "§LThis species is characterized by an excessive, even mentally debilitating psychological addiction to sex, the more extreme the better, with anyone or anything that wants it. They have great difficulty focusing on other tasks.§!"
+
+trait_lvb_seasonal_breeders: "Seasonal Breeders"
+trait_lvb_seasonal_breeders_desc: "§LThis species has a narrow reproductive window.§!"
+
+trait_lvb_sexually_inept: "Sexually Inept"
+trait_lvb_sexually_inept_desc: "§LSex for this species tends to be a brief, unromantic affair meant only to reproduce.§!"
+
+trait_lvb_sexually_repressed: "Sexually Repressed"
+trait_lvb_sexually_repressed_desc: "§LSomething in this species' nature leaves them unusually reserved in their sexuality.§!"
+
+##########
+# Female #
+##########
+
+trait_lvb_small_breasts: "Small Breasts"
+trait_lvb_small_breasts_desc: "§LThis species has breasts much proportionally smaller than most lactating species of their size.§!"
+
+trait_lvb_watery_milk: "Watery Milk"
+trait_lvb_watery_milk_desc: "§LThe fat, protein and nutrient value of this species milk is considerably lower than the galactic norm.§!"
+
+########
+# Male #
+########
+
+trait_lvb_small_penis: "Small Penis"
+trait_lvb_small_penis_desc: "§LThe males of this species are poorly endowed compared to the galactic average.§!"
+
+##############################
+###     Special Traits     ###
+##############################
+
+########################
+# Organic Interbreeder #
+########################
+
+trait_lvb_brood_parasite: "Brood Parasite"
+trait_lvb_brood_parasite_desc: "§LThis species requires a host to incubate its eggs. They are capable of implanting a very large number of these eggs into their host which may be extremely uncomfortable unless of course, you are a willing xenophile.§!\n\nWhen these §HBrood Parasites§! find any §PBrood Mothers§! to impregnate, they will get a happiness boostThe §PBrood Mothers§! themselves usually won't be too happy from being raped and pumped so full of eggs that they're visibly bulging..."
+
+trait_lvb_all_female: "All Female"
+trait_lvb_all_female_desc: "§LThis species is composed entirely of females, but have found alternative ways to reproduce. It's not perfect however...§!\n\nWhen these §BAll Females§! find any proper alternatives, they will get an extra effect"
+
+trait_lvb_all_male: "All Male"
+trait_lvb_all_male_desc: "§LThis species is composed entirely of males, but have found alternative ways to reproduce. It's not perfect however...§!\n\nWhen these §BAll Males§! find any proper alternatives, they will get an extra effect"
+
+trait_lvb_futanari: "Futanari"
+trait_lvb_futanari_desc: "§LMembers of this species appear outwardly female, but are in fact hermaphrodites, possessing a set of both male and female reproductive organs.§!"
+
+trait_lvb_opt_intercompatible_womb: "Optimized I-Compatible Womb"
+trait_lvb_opt_intercompatible_womb_desc: "§LThe ova of this species has been genetically optimized for hybridizing with the spermatozoa of completely unrelated species.§!"
+
+trait_lvb_opt_intercompatible_sperm: "Optimized I-Compatible Sperm"
+trait_lvb_opt_intercompatible_sperm_desc: "§LThe spermatozoa of this species has been genetically optimized for fertilizing the ova of completely unrelated species.§!"
+
+##############################
+###     Robotic Traits     ###
+##############################
+
+##########
+# Female #
+##########
+
+trait_lvb_sex_bots: "Sex Bots"
+trait_lvb_sex_bots_desc: "§LThese robots were built for sex, and little else.§!"
+
+trait_lvb_maternal_programming: "Maternal Programming"
+trait_lvb_maternal_programming_desc: "§LThese robots are programmed to behave in a motherly way towards those not explicitly deigned their superiors.§!"
+
+trait_lvb_breast_attachments: "Breast Attachments"
+trait_lvb_breast_attachments_desc: "§LRealistic feeling fake breasts with fuckable nipples.§!"
+
+trait_lvb_synth_breasts: "Synth Breasts"
+trait_lvb_synth_breasts_desc: "§LThese fuckable, biotech breasts are capable of synthesizing artificial milk from recycled organic matter.§!"
+
+trait_lvb_custom_fleshlight_slot: "Custom Fleshlight Slot"
+trait_lvb_custom_fleshlight_slot_desc: "§LAn interface slot allows the instillation of advanced fleshlights of all sorts.§!"
+
+trait_lvb_synth_vagina: "Synth Vagina"
+trait_lvb_synth_vagina_desc: "§LA top of the line, bio-optimized synth vagina custom grown to customer specifications.§!"
+
+########
+# Male #
+########
+
+trait_lvb_paternal_programming: "Paternal Programming"
+trait_lvb_paternal_programming_desc: "§LThese robots are programmed to behave in a fatherly way towards those not explicitly deigned their superiors.§!"
+
+trait_lvb_custom_dildo_attachment: "Custom Dildo Attachment"
+trait_lvb_custom_dildo_attachment_desc: "§LThis model has an interface port to allow it to interface with various high end sex toys.§!"
+
+trait_lvb_synth_penis: "Synth Penis"
+trait_lvb_synth_penis_desc: "§LA top of the line, bio-optimized synth penis custom grown to customer specifications.§!"
+
+#####################################
+###     Biomechanical Breeder     ###
+#####################################
+
+##########
+# Female #
+##########
+
+trait_lvb_artificial_womb: "Artificial Womb"
+trait_lvb_artificial_womb_desc: "§LThis robotic model is equipped with a mechanical womb, allowing it to gestate pre-fertilized ovum.§!"
+
+trait_lvb_advanced_artificial_womb: "Advanced Artificial Womb"
+trait_lvb_advanced_artificial_womb_desc: "§LThis robot has an artificial womb equipped with a genetic library and biomanipulation tools, allowing it to bear children with no need for an organic female.§!"
+
+trait_lvb_cybernetic_womb: "Cybernetic Womb"
+trait_lvb_cybernetic_womb_desc: "§LThis next-gen synth womb uses advanced nanites and biotech to apply fetal cybernetics that will grow with the child.§!"
+
+########
+# Male #
+########
+
+trait_lvb_biomechanical_breeder: "Biomechanical Breeder"
+trait_lvb_biomechanical_breeder_desc: "§LThis robot is capable of synthesizing artificial seed from programmed gene banks, allowing reproduction in the absence of males.§!"
+
+trait_lvb_synth_seeder: "Synth Seeder"
+trait_lvb_synth_seeder_desc: "§LThis advanced seeder's emissions include a nanite load that will carefully implant the developing fetus with biotech cybernetics capable of growing with the child.§!"
+
+###

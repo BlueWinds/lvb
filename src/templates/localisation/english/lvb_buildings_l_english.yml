@@ -18,18 +18,3 @@ building_lvb_commercial_megaplex_encouraged_desc: "These megaplexes have brothel
 
 building_lvb_slave_brothel: "Slave Brothel"
 building_lvb_slave_brothel_desc: "This edifice to carnal desire turns slaves into whores, willing or otherwise. A Slave Brothel converts all enslaved pops on the planet into Sex Slaves.\n\n$job_lvb_forced_whore_effect_desc$"
-
-building_lv_sex_market: "Removed"
-building_lv_sex_market_desc: "Removed"
-building_lv_sex_city: "Removed"
-building_lv_sex_city_desc: "Removed"
-building_lv_brothel: "Removed"
-building_lv_brothel_desc: "Removed"
-building_lv_bordello: "Removed"
-building_lv_bordello_desc: "Removed"
-building_lv_dairy_farm: "Removed"
-building_lv_dairy_farm_desc: "Removed"
-building_lv_dairy_facility: "Removed"
-building_lv_dairy_facility_desc: "Removed"
-building_lv_dairy_arcology: "Removed"
-building_lv_dairy_arcology_desc: "Removed"

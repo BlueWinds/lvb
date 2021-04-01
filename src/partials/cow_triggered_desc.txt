@@ -1,41 +1,41 @@
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_policy_flag = lv_milk_cows_policy_default }
+		owner = { has_policy_flag = lvb_milk_cows_policy_default }
 	}
-	text = lv_milk_cows_policy_default_flavor
+	text = lvb_milk_cows_policy_default_flavor
 }
 
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_policy_flag = lv_milk_cows_policy_max_milk }
+		owner = { has_policy_flag = lvb_milk_cows_policy_max_milk }
 	}
-	text = lv_milk_cows_policy_max_milk_flavor
+	text = lvb_milk_cows_policy_max_milk_flavor
 }
 
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_policy_flag = lv_milk_cows_policy_free_use }
+		owner = { has_policy_flag = lvb_milk_cows_policy_free_use }
 	}
-	text = lv_milk_cows_policy_free_use_flavor
+	text = lvb_milk_cows_policy_free_use_flavor
 }
 
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_policy_flag = lv_milk_cows_policy_paid_use }
+		owner = { has_policy_flag = lvb_milk_cows_policy_paid_use }
 	}
-	text = lv_milk_cows_policy_paid_use_flavor
+	text = lvb_milk_cows_policy_paid_use_flavor
 }
 
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_policy_flag = lv_milk_cows_policy_breeders }
+		owner = { has_policy_flag = lvb_milk_cows_policy_breeders }
 	}
-	text = lv_milk_cows_policy_breeders_flavor
+	text = lvb_milk_cows_policy_breeders_flavor
 }
 
 triggered_desc = {

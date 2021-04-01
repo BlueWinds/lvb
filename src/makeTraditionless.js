@@ -10,8 +10,8 @@ const defines = require('./defines')
 
 const nicePrint = (n) => n.toFixed(3).replace(/0+$/, '')
 
-const modFolder = path.resolve(__dirname, '../mod/!!!LVB')
-const modNoTradFolder = path.resolve(__dirname, '../mod/!!!LVB Traditionless')
+const modFolder = path.resolve(__dirname, '../mod/LVB')
+const modNoTradFolder = path.resolve(__dirname, '../mod/LVB Traditionless')
 rimraf.sync(modNoTradFolder)
 
 // Copy over dds files
@@ -26,4 +26,4 @@ rimraf.sync(path.resolve(modNoTradFolder, 'interface/lvb_traditions_icons.gfx'))
 rimraf.sync(path.resolve(modNoTradFolder, 'gfx/interface/icons/traditions'))
 rimraf.sync(path.resolve(modNoTradFolder, 'gfx/interface/traditions'))
 
-fs.copyFileSync(path.resolve('src/', '!!!LVB Traditionless.mod'), modNoTradFolder + '.mod')
+fs.copyFileSync(path.resolve('src/', 'LVB Traditionless.mod'), modNoTradFolder + '.mod')

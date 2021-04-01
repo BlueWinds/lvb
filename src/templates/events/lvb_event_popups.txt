@@ -22,9 +22,9 @@ planet_event = { # Gender Segregation
 			if = {
 				limit = {
 					NOR = {
-						pop_has_trait = trait_lv_all_female
-						pop_has_trait = trait_lv_all_male
-						pop_has_trait = trait_lv_all_futanari
+						pop_has_trait = trait_lvb_all_female
+						pop_has_trait = trait_lvb_all_male
+						pop_has_trait = trait_lvb_all_futanari
 						is_robot_pop = yes
 					}
 				}
@@ -48,16 +48,16 @@ pop_event = { # Convert to female
 
 	immediate = {
 		modify_species = {
-			add_trait = trait_lv_all_female
-			remove_trait = trait_lv_all_male
-			remove_trait = trait_lv_all_futanari
-			remove_trait = trait_lv_large_penis
-			remove_trait = trait_lv_huge_penis
-			remove_trait = trait_lv_multiple_penises
-			remove_trait = trait_lv_high_volume_ejaculations
-			remove_trait = trait_lv_addictive_cum
-			remove_trait = trait_lv_small_penis
-			remove_trait = trait_lv_opt_intercompatible_sperm
+			add_trait = trait_lvb_all_female
+			remove_trait = trait_lvb_all_male
+			remove_trait = trait_lvb_all_futanari
+			remove_trait = trait_lvb_large_penis
+			remove_trait = trait_lvb_huge_penis
+			remove_trait = trait_lvb_multiple_penises
+			remove_trait = trait_lvb_high_volume_ejaculations
+			remove_trait = trait_lvb_addictive_cum
+			remove_trait = trait_lvb_small_penis
+			remove_trait = trait_lvb_opt_intercompatible_sperm
 		}
 	}
 }
@@ -69,22 +69,22 @@ pop_event = { # Convert to male
 
 	immediate = {
 		modify_species = {
-			add_trait = trait_lv_all_male
-			remove_trait = trait_lv_all_female
-			remove_trait = trait_lv_all_futanari
-			remove_trait = trait_lv_large_breasts
-			remove_trait = trait_lv_huge_breasts
-			remove_trait = trait_lv_multiple_breasts
-			remove_trait = trait_lv_high_volume_lactation
-			remove_trait = trait_lv_highly_nutritious_milk
-			remove_trait = trait_lv_drooling_vagina
-			remove_trait = trait_lv_oviposition
-			remove_trait = trait_lv_fuckable_nipples
-			remove_trait = trait_lv_litters
-			remove_trait = trait_lv_breeder_hips
-			remove_trait = trait_lv_small_breasts
-			remove_trait = trait_lv_watery_milk
-			remove_trait = trait_lv_opt_intercompatible_womb
+			add_trait = trait_lvb_all_male
+			remove_trait = trait_lvb_all_female
+			remove_trait = trait_lvb_all_futanari
+			remove_trait = trait_lvb_large_breasts
+			remove_trait = trait_lvb_huge_breasts
+			remove_trait = trait_lvb_multiple_breasts
+			remove_trait = trait_lvb_high_volume_lactation
+			remove_trait = trait_lvb_highly_nutritious_milk
+			remove_trait = trait_lvb_drooling_vagina
+			remove_trait = trait_lvb_oviposition
+			remove_trait = trait_lvb_fuckable_nipples
+			remove_trait = trait_lvb_litters
+			remove_trait = trait_lvb_breeder_hips
+			remove_trait = trait_lvb_small_breasts
+			remove_trait = trait_lvb_watery_milk
+			remove_trait = trait_lvb_opt_intercompatible_womb
 		}
 	}
 }

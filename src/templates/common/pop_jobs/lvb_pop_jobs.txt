@@ -13,7 +13,7 @@
 lvb_milk_cow = {			# Milk Cow
 	category = worker
 	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_lv_dairy_farm
+	building_icon = building_lvb_dairy_farm
 	clothes_texture_index = 2
 
 	possible = {
@@ -21,11 +21,11 @@ lvb_milk_cow = {			# Milk Cow
 			limit = {
 				OR = {
 					is_robot_pop = no
-					pop_has_trait = trait_lv_sex_bots
-					pop_has_trait = trait_lv_synth_breasts
-					pop_has_trait = trait_lv_synth_brood_breasts
+					pop_has_trait = trait_lvb_sex_bots
+					pop_has_trait = trait_lvb_synth_breasts
+					pop_has_trait = trait_lvb_synth_brood_breasts
 				}
-				NOT = { pop_has_trait = trait_lv_all_male }
+				NOT = { pop_has_trait = trait_lvb_all_male }
 			}
 		}
 		else = { always = no }
@@ -39,13 +39,13 @@ lvb_milk_cow = {			# Milk Cow
         }
 		produces = {
 			trigger = {
-				owner = { has_policy_flag = lv_milk_cows_policy_default }
+				owner = { has_policy_flag = lvb_milk_cows_policy_default }
 			}
 			unity = 1
 		}
 		produces = {
 			trigger = {
-				owner = { has_policy_flag = lv_milk_cows_policy_max_milk }
+				owner = { has_policy_flag = lvb_milk_cows_policy_max_milk }
 			}
 			food = 1
 			consumer_goods = 1
@@ -53,14 +53,14 @@ lvb_milk_cow = {			# Milk Cow
 
 		upkeep = {
 			trigger = {
-				owner = { has_policy_flag = lv_milk_cows_policy_breeders }
+				owner = { has_policy_flag = lvb_milk_cows_policy_breeders }
 			}
 			consumer_goods = 4
 		}
 	}
 
 	triggered_planet_modifier = {
-        potential = { owner = { has_policy_flag = lv_milk_cows_policy_free_use } }
+        potential = { owner = { has_policy_flag = lvb_milk_cows_policy_free_use } }
         modifier = {
 			planet_amenities_add = 0.5
 			pop_growth_speed = 0.01
@@ -69,14 +69,14 @@ lvb_milk_cow = {			# Milk Cow
     }
 
 	triggered_planet_modifier = {
-        potential = { owner = { has_policy_flag = lv_milk_cows_policy_breeders } }
+        potential = { owner = { has_policy_flag = lvb_milk_cows_policy_breeders } }
         modifier = {
 			pop_growth_speed = 0.05
 		}
     }
 
 	triggered_planet_modifier = {
-		potential = { owner = { has_policy_flag = lv_milk_cows_policy_paid_use } }
+		potential = { owner = { has_policy_flag = lvb_milk_cows_policy_paid_use } }
 		modifier = {
 			trade_value_add = 4
 		}
@@ -99,10 +99,10 @@ lvb_milk_cow = {			# Milk Cow
 		modifier = {
 			factor = 2
 			OR = {
-				has_trait = trait_lv_sex_bots
-				has_trait = trait_lv_breast_attachments
-				has_trait = trait_lv_synth_breasts
-				has_trait = trait_lv_synth_brood_breasts
+				has_trait = trait_lvb_sex_bots
+				has_trait = trait_lvb_breast_attachments
+				has_trait = trait_lvb_synth_breasts
+				has_trait = trait_lvb_synth_brood_breasts
 			}
 		}
 		modifier = {
@@ -406,7 +406,7 @@ lvb_tentacle_breeders = {
 		IF = {
 			limit = {
 				is_robot_pop = no
-				NOT = { pop_has_trait = trait_lv_all_male }
+				NOT = { pop_has_trait = trait_lvb_all_male }
 			}
 		}
 		else = { always = no }
@@ -448,7 +448,7 @@ lvb_tentacle_breeders = {
 	}
 
 	triggered_pop_modifier = {
-		potential = { has_trait = lv_sex_crazed }
+		potential = { has_trait = lvb_sex_crazed }
 		modifier = {
 			pop_happiness = 0.25
 		}

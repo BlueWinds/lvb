@@ -172,7 +172,7 @@ fleet_event = {
 	option = {
 		name = lvb_tentacle_extinction.14.continue
 		leader = {
-			add_trait = leader_trait_scientist_lv_zoophile
+			add_trait = leader_trait_scientist_lvb_zoophile
 		}
 
 		medium_artifact_reward = yes
@@ -319,10 +319,10 @@ country_event = {
 			namelist = random
 			homeworld = event_target:lvb_tentacle_extinction_planet
 			traits = {
-				trait = trait_lv_all_female
-				trait = trait_lv_sex_crazed
-				trait = trait_lv_drooling_vagina
-				trait = trait_lv_natural_anal_lube
+				trait = trait_lvb_all_female
+				trait = trait_lvb_sex_crazed
+				trait = trait_lvb_drooling_vagina
+				trait = trait_lvb_natural_anal_lube
 				trait = trait_adaptive
 			}
 			effect = {

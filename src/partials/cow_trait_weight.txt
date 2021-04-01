@@ -12,7 +12,7 @@ modifier = {
 
 {{#each cow_bonus as |mult trait|}}
 modifier = {
-	pop_has_trait = trait_lv_{{ trait }}
+	pop_has_trait = trait_lvb_{{ trait }}
 	factor = {{ getWeight mult }}
 }
 {{/each}}

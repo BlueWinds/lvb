@@ -1,21 +1,25 @@
 const child_process = require('child_process')
-const fs = require('fs')
+const fs = require('fs-extra')
 const path = require('path')
 const glob = require('glob')
 const Handlebars = require('handlebars')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
+const os = require('os')
 
 const defines = require('./defines')
 
-const nicePrint = (n) => n.toFixed(3).replace(/0+$/, '')
+const nicePrint = (n) => n.toFixed(3).replace(/0+$/, '').replace(/\.$/, '')
 
 Handlebars.registerPartial('test_partial', "partial - {{parameter}}")
 Handlebars.registerHelper('getWeight', (mult) => nicePrint(1 + parseFloat(mult, 10)))
 Handlebars.registerHelper('multiply', (base, mult) => nicePrint(parseFloat(base, 10) * parseFloat(mult, 10)))
 
-const modFolder = path.resolve(__dirname, '../mod/!!!LVB')
+const modFolder = path.resolve(__dirname, '../mod/LVB')
+const stellarisModFolder =  path.resolve(os.homedir(), '.local/share/Paradox Interactive/Stellaris/mod/LVB')
+
 rimraf.sync(modFolder)
+rimraf.sync(stellarisModFolder)
 
 // Read partial templates
 for (const file of glob.sync('**/*.txt', {cwd: path.resolve(__dirname, 'partials')})) {
@@ -57,4 +61,7 @@ for (const file of glob.sync('**/*.png', {cwd: path.resolve(__dirname, 'template
   child_process.spawnSync('convert', [path.resolve('src/templates', file), outPath])
 }
 
-fs.copyFileSync(path.resolve('src/', '!!!LVB.mod'), modFolder + '.mod')
+fs.copyFileSync(path.resolve('src/', 'LVB.mod'), modFolder + '.mod')
+
+fs.copySync(modFolder + '.mod', stellarisModFolder + '.mod')
+fs.copySync(modFolder + '/', stellarisModFolder + '/')

@@ -14,9 +14,9 @@ decision_planet_lvb_gender_segregation = {
 		}
 		any_pop = {
 			NOR = {
-				pop_has_trait = trait_lv_all_female
-				pop_has_trait = trait_lv_all_male
-				pop_has_trait = trait_lv_all_futanari
+				pop_has_trait = trait_lvb_all_female
+				pop_has_trait = trait_lvb_all_male
+				pop_has_trait = trait_lvb_all_futanari
 				is_robot_pop = yes
 			}
 		}
@@ -126,7 +126,7 @@ decision_planet_lvb_red_light_planet = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 100
+			influence = 50
 		}
 	}
 

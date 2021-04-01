@@ -35,7 +35,7 @@ tech_lvb_sex_trade = {          # Sex Trade Policy
 			factor = 1.5
 			research_leader = {
 				area = society
-				has_trait = "leader_trait_scientist_lv_sexologist"
+				has_trait = "leader_trait_scientist_lvb_sexologist"
 			}
 		}
 	}
@@ -52,14 +52,14 @@ tech_lvb_sex_trade = {          # Sex Trade Policy
 			factor = 1.5
 			research_leader = {
 				area = society
-				has_trait = "leader_trait_scientist_lv_sexologist"
+				has_trait = "leader_trait_scientist_lvb_sexologist"
 			}
 		}
 	}
 }
 
 
-tech_lv_milk_cow_specialization = {		# Milk Cow Specialization
+tech_lvb_milk_cow_specialization = {		# Milk Cow Specialization
 	cost = 4000
 	area = society
 	tier = 2
@@ -69,7 +69,7 @@ tech_lv_milk_cow_specialization = {		# Milk Cow Specialization
 
 	modifier = {
 		planet_jobs_food_produces_mult = 0.05
-		description = tech_lv_milk_cow_specialization_modifier_desc
+		description = tech_lvb_milk_cow_specialization_modifier_desc
 	}
 
 	potential = {
@@ -103,14 +103,14 @@ tech_lv_milk_cow_specialization = {		# Milk Cow Specialization
 			factor = 1.25
 			research_leader = {
 				area = society
-				has_trait = "leader_trait_scientist_lv_sexologist"
+				has_trait = "leader_trait_scientist_lvb_sexologist"
 			}
 		}
 		modifier = {
 			factor = 1.5
 			research_leader = {
 				area = society
-				has_trait = "leader_trait_scientist_lv_zoophile"
+				has_trait = "leader_trait_scientist_lvb_zoophile"
 			}
 		}
 	}
@@ -137,7 +137,7 @@ tech_lv_milk_cow_specialization = {		# Milk Cow Specialization
 
 
 # Machine Empire Traits Unlock
-tech_lv_biological_mimicry = {		# Biological Mimicry
+tech_lvb_biological_mimicry = {		# Biological Mimicry
 	cost = 20000
 	area = engineering
 	tier = 4
@@ -182,8 +182,8 @@ tech_lv_biological_mimicry = {		# Biological Mimicry
 }
 
 
-@lv_gene_tailoring_POINTS = 2
-tech_lv_transformation_candy = {		# Transformation Candy
+@lvb_gene_tailoring_POINTS = 2
+tech_lvb_transformation_candy = {		# Transformation Candy
 	cost = 20000
 	area = society
 	tier = 4
@@ -195,11 +195,11 @@ tech_lv_transformation_candy = {		# Transformation Candy
 	modifier = {
 		pop_happiness = 0.1
 		leader_age = 5
-		description = tech_lv_transformation_candy_modifier_desc
+		description = tech_lvb_transformation_candy_modifier_desc
 		description_parameters = {
-			POINTS = @lv_gene_tailoring_POINTS
+			POINTS = @lvb_gene_tailoring_POINTS
 		}
-		BIOLOGICAL_species_trait_points_add = @lv_gene_tailoring_POINTS
+		BIOLOGICAL_species_trait_points_add = @lvb_gene_tailoring_POINTS
 	}
 
 	potential = {
@@ -247,14 +247,14 @@ tech_lv_transformation_candy = {		# Transformation Candy
 	}
 }
 
-tech_lv_transformation_candy_apple = {
+tech_lvb_transformation_candy_apple = {
 	area = society
 	cost = 50000
 	cost_per_level = 5000
 	tier = 5
 	category = { biology }
 	levels = -1
-	prerequisites = { "tech_lv_transformation_candy" }
+	prerequisites = { "tech_lvb_transformation_candy" }
 	weight = 30
 
 	weight_modifier = {
@@ -273,27 +273,27 @@ tech_lv_transformation_candy_apple = {
 	}
 
 	modifier = {
-		BIOLOGICAL_species_trait_points_add = @lv_gene_tailoring_POINTS
-		description = tech_lv_transformation_candy_apple_modifier_desc
+		BIOLOGICAL_species_trait_points_add = @lvb_gene_tailoring_POINTS
+		description = tech_lvb_transformation_candy_apple_modifier_desc
 		description_parameters = {
-			POINTS = @lv_gene_tailoring_POINTS
+			POINTS = @lvb_gene_tailoring_POINTS
 		}
 	}
 }
 
-tech_lv_transformation_candy_strawberry = {
+tech_lvb_transformation_candy_strawberry = {
 	area = society
 	tier = 5
 	potential = { always = no }
 }
 
-tech_lv_transformation_candy_blueberry = {
+tech_lvb_transformation_candy_blueberry = {
 	area = society
 	tier = 5
 	potential = { always = no }
 }
 
-tech_lv_transformation_candy_orange = {
+tech_lvb_transformation_candy_orange = {
 	area = society
 	tier = 5
 	potential = { always = no }

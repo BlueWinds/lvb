@@ -59,17 +59,17 @@ lvb_sex_trade_policy = {
 }
 
 #Milk Cows
-lv_milk_cows_policy = {			# Milk Cow Specialization
+lvb_milk_cows_policy = {			# Milk Cow Specialization
 
 	potential = {
-		has_technology = tech_lv_milk_cow_specialization
+		has_technology = tech_lvb_milk_cow_specialization
 	}
 
 	option = {			# No Specialization
-		name = "lv_milk_cows_policy_default"
+		name = "lvb_milk_cows_policy_default"
 
 		policy_flags = {
-			lv_milk_cows_policy_default
+			lvb_milk_cows_policy_default
 		}
 
 		on_enabled = {
@@ -77,7 +77,7 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 				owner = {
 					if = {
 						limit = {
-							NOT = { has_global_flag = lv_events_hidden }
+							NOT = { has_global_flag = lvb_events_hidden }
 						}
 						country_event = { id = lvb_event_popups.1000 }
 					}
@@ -91,10 +91,10 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 	}
 
 	option = {			# Maximize Production
-		name = "lv_milk_cows_policy_max_milk"
+		name = "lvb_milk_cows_policy_max_milk"
 
 		policy_flags = {
-			lv_milk_cows_policy_max_milk
+			lvb_milk_cows_policy_max_milk
 		}
 
 		on_enabled = {
@@ -102,7 +102,7 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 				owner = {
 					if = {
 						limit = {
-							NOT = { has_global_flag = lv_events_hidden }
+							NOT = { has_global_flag = lvb_events_hidden }
 						}
 						country_event = { id = lvb_event_popups.1001 }
 					}
@@ -116,10 +116,10 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 	}
 
 	option = {			# Free Use Cows
-		name = "lv_milk_cows_policy_free_use"
+		name = "lvb_milk_cows_policy_free_use"
 
 		policy_flags = {
-			lv_milk_cows_policy_free_use
+			lvb_milk_cows_policy_free_use
 		}
 
 		on_enabled = {
@@ -127,7 +127,7 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 				owner = {
 					if = {
 						limit = {
-							NOT = { has_global_flag = lv_events_hidden }
+							NOT = { has_global_flag = lvb_events_hidden }
 						}
 						country_event = { id = lvb_event_popups.1002 }
 					}
@@ -141,10 +141,10 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 	}
 
 	option = {			# Milk Cow Renting
-		name = "lv_milk_cows_policy_paid_use"
+		name = "lvb_milk_cows_policy_paid_use"
 
 		policy_flags = {
-			lv_milk_cows_policy_paid_use
+			lvb_milk_cows_policy_paid_use
 		}
 
 		on_enabled = {
@@ -152,7 +152,7 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 				owner = {
 					if = {
 						limit = {
-							NOT = { has_global_flag = lv_events_hidden }
+							NOT = { has_global_flag = lvb_events_hidden }
 						}
 						country_event = { id = lvb_event_popups.1003 }
 					}
@@ -175,10 +175,10 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 	}
 
 	option = {			# Milk Cow Breeding
-		name = "lv_milk_cows_policy_breeders"
+		name = "lvb_milk_cows_policy_breeders"
 
 		policy_flags = {
-			lv_milk_cows_policy_breeders
+			lvb_milk_cows_policy_breeders
 		}
 
 		on_enabled = {
@@ -186,7 +186,7 @@ lv_milk_cows_policy = {			# Milk Cow Specialization
 				owner = {
 					if = {
 						limit = {
-							NOT = { has_global_flag = lv_events_hidden }
+							NOT = { has_global_flag = lvb_events_hidden }
 						}
 						country_event = { id = lvb_event_popups.1004 }
 					}
