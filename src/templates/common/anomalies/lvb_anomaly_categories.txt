@@ -13,3 +13,19 @@ lvb_tentacle_extinction_cat = {
 	}
 	on_success = lvb_tentacle_extinction.1
 }
+
+lvb_living_laboratory_cat = {
+	picture = "GFX_evt_alien_ruins"
+	level = 3
+
+	spawn_chance = {
+		modifier = {
+			add = 100
+			habitable_planet = yes
+			FROM = {
+				owner = { is_ai = no }
+			}
+		}
+	}
+	on_success = lvb_living_laboratory.1
+}

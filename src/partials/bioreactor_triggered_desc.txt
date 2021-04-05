@@ -1,0 +1,9 @@
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_tradition = tr_lvb_sexualization_bioreactors
+		}
+	}
+	text = job_lvb_bioreactor_effect_desc
+}

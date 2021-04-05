@@ -6,7 +6,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_lvb_cow_no_specialization"
 		texturefile = "gfx/event_pictures/evt_lvb_cow_no_specialization.dds"
-		masking_texture = "gfx/interface/situation_log/lvb_long_event_mask.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
 		alwaystransparent = yes
 	}
 	spriteType = {
@@ -24,13 +24,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_lvb_cow_renting"
 		texturefile = "gfx/event_pictures/evt_lvb_cow_renting.dds"
-		masking_texture = "gfx/interface/situation_log/lvb_long_event_mask.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
 		alwaystransparent = yes
 	}
 	spriteType = {
 		name = "GFX_evt_lvb_cow_breeding"
 		texturefile = "gfx/event_pictures/evt_lvb_cow_breeding.dds"
-		masking_texture = "gfx/interface/situation_log/lvb_long_event_mask.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
 		alwaystransparent = yes
 	}
 
@@ -70,6 +70,64 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_lvb_living_laboratory_entrance"
+		texturefile = "gfx/event_pictures/evt_lvb_living_laboratory_entrance.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_living_laboratory_dirty_computers"
+		texturefile = "gfx/event_pictures/evt_lvb_living_laboratory_dirty_computers.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_living_laboratory_translated_texts"
+		texturefile = "gfx/event_pictures/evt_lvb_living_laboratory_translated_texts.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_living_laboratory_bio_reactors"
+		texturefile = "gfx/event_pictures/evt_lvb_living_laboratory_bio_reactors.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_bioreactor_volunteers"
+		texturefile = "gfx/event_pictures/evt_lvb_bioreactor_volunteers.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_bioreactor_life_extension"
+		texturefile = "gfx/event_pictures/evt_lvb_bioreactor_life_extension.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_bioreactor_use"
+		texturefile = "gfx/event_pictures/evt_lvb_bioreactor_use.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_traders_kidnappings"
+		texturefile = "gfx/event_pictures/evt_lvb_traders_kidnappings.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_traders_kidnapping_rulers"
+		texturefile = "gfx/event_pictures/evt_lvb_traders_kidnapping_rulers.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lvb_traders_public_use"
+		texturefile = "gfx/event_pictures/evt_lvb_traders_public_use.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
 }
-
-###

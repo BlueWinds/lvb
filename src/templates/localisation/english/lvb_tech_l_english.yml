@@ -6,7 +6,7 @@
 
 tech_lvb_sex_trade: "Sex Trade Policy"
 tech_lvb_sex_trade_desc: "With advanced understanding of the forces that drive individuals to action, we can now mold the sex trade within our society to serve our needs as part of the normal economy."
-tech_lvb_sex_trade_modifier_desc: "Unlocks: Sex Trade Policies."
+tech_lvb_sex_trade_modifier_desc: "§HUnlocks Policies:§! Sex Trade"
 
 tech_lvb_transformation_candy: "Transformation Candy"
 tech_lvb_transformation_candy_desc: "Now that gene-editing tools are commonplace, our sexologists can develop a fun and tasty new range of candy like drugs that physically transforms those that eat them."
@@ -15,3 +15,13 @@ tech_lvb_transformation_candy_modifier_desc: "$species_trait_points_add$: $POINT
 tech_lvb_transformation_candy_apple: "Sexual Biogenesis Sequencing"
 tech_lvb_transformation_candy_apple_desc: "Our explorations into genetic level transformations allow increasing control of sexual characteristics. We will be able to apply our knowledge to traditional gene therapy, transformation candies, or any other techniques we develop in the future."
 tech_lvb_transformation_candy_apple_modifier_desc: "$species_trait_points_add$: $POINTS|0=+$"
+
+tech_lvb_cows_1: "Cow Growth Enhancement"
+tech_lvb_cows_1_desc: "With more of our cow's energies focused on growing their breasts, we can increase milk production and minimize time wasted on other aspects of their physiology."
+
+tech_lvb_cows_2: "Systemic Cow Stimulation"
+tech_lvb_cows_2_desc: "As bodies approach their maximum potential, further improvements come in the mental department - happy cows are productive cows. Improving the intensity of orgasms reduces distractions and lets them fall more completely into their role as livestock."
+
+tech_lvb_milk_cow_specialization: "Milk Cow Specialization"
+tech_lvb_milk_cow_specialization_desc: "Selective breeding of livestock has been understood for millenia, but we've yet to fully explore the challenges and opportunities afforded by sentient milk animals."
+tech_lvb_milk_cow_specialization_modifier_desc: "§HUnlocks Policies:§! Milk Cow Specialization\n$FOOD_MULT|0=+%$ $mod_planet_jobs_food_produces_mult$"

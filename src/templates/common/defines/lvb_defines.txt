@@ -1,5 +1,5 @@
 	NPop = {
-		FORCED_SPECIES_PENALTY			= 0.2	# This amount of progress is lost on setting a forced species
-		NEW_POP_SPECIES_DIV				= 0.5	# The higher this is, the more planets will tend to grow species that are underrepresented on the planet
-		NEW_POP_HABITABILITY_THRESHOLD	= 0.60	# If habitability is under this, apply exponentially increasing penalties to new pop weight
+		FORCED_SPECIES_GROWTH_PENALTY	= 0.2	# This amount of progress is lost on setting a forced species
+		NEW_POP_SPECIES_DIV	= 0.4	# The higher this is, the more planets will tend to grow species that are underrepresented on the planet
+		NEW_POP_HABITABILITY_THRESHOLD = 0.60	# If habitability is under this, apply exponentially increasing penalties to new pop weight
 	}

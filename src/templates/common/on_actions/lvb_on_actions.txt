@@ -1,0 +1,30 @@
+on_monthly_pulse = {
+	events = {
+		lvb_event_on_actions.1
+	}
+}
+
+
+on_entering_system_fleet = {
+	events = {
+		lvb_traders.0
+	}
+}
+
+on_post_communications_established = {
+	events = {
+		lvb_traders.4
+	}
+}
+
+on_custom_diplomacy = {
+	events = {
+		lvb_traders.7
+		lvb_traders.106
+	}
+}
+on_entering_battle = {
+	events = {
+		lvb_traders.104
+	}
+}

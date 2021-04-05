@@ -33,16 +33,6 @@ lvb_uses_food = {
 	}
 }
 
-lvb_has_motes = {
-	exists = owner
-	owner = {
-		has_monthly_income = {
-			resource = volatile_motes
-			value >= 1
-		}
-	}
-}
-
 lvb_has_exotic_gases = {
 	exists = owner
 	owner = {
@@ -65,4 +55,56 @@ lvb_has_rare_crystals = {
 	}
 }
 
-###
+# Tells the AI not to build milk farms if it doesn't have spare food or doesn't need consumer goods
+lvb_jobs_work_food_goods = {
+	exists = owner
+	owner = {
+		is_ai = yes
+		has_monthly_income = {
+			resource = food
+			value < 30
+		}
+		OR = {
+			AND = {
+				has_resource = {
+					type = food
+					amount < 5000
+				}
+				has_resource = {
+					type = consumer_goods
+					amount > 1500
+				}
+			}
+			AND = {
+				has_resource = {
+					type = food
+					amount < 3000
+				}
+				has_resource = {
+					type = consumer_goods
+					amount > 750
+				}
+			}
+			AND = {
+				has_resource = {
+					type = food
+					amount < 501
+				}
+				has_resource = {
+					type = consumer_goods
+					amount > 500
+				}
+			}
+		}
+	}
+}
+
+lvb_traders_selling_citizens = {
+	OR = {
+		has_modifier = lvb_traders_sell_citizens_1
+		has_modifier = lvb_traders_sell_citizens_2
+		has_modifier = lvb_traders_sell_citizens_3
+		has_modifier = lvb_traders_sell_citizens_4
+		has_modifier = lvb_traders_sell_citizens_5
+	}
+}

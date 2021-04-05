@@ -1,0 +1,26 @@
+namespace = lvb_event_on_actions
+
+event = {
+	id = lvb_event_on_actions.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_planet = {
+			remove_modifier = lvb_two_gendered_planet
+		}
+		every_planet = {
+			limit = {
+				AND = {
+					any_pop = {
+						has_trait = trait_lvb_all_female
+					}
+					any_pop = {
+						has_trait = trait_lvb_all_male
+					}
+				}
+			}
+			add_modifier = { modifier = lvb_two_gendered_planet }
+		}
+	}
+}

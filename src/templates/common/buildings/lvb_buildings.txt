@@ -3,53 +3,29 @@
 #########
 
 building_lvb_dairy_farm = {
-	base_buildtime = 180
+	base_buildtime = @b1_time
 	category = resource
 
 	potential = {
 		exists = owner
-		owner = {
-			OR = {
-				NOT = { has_authority = auth_machine_intelligence }
-				has_civic = civic_machine_assimilator
-				has_civic = civic_machine_servitor
-			}
-		}
+		owner = { is_gestalt = no }
 		NOT = { has_modifier = resort_colony }
 	}
 
 	destroy_trigger = {
-		exists = owner
 		OR = {
-			owner = {
-				has_authority = auth_machine_intelligence
-				NOR = {
-					has_civic = civic_machine_assimilator
-					has_civic = civic_machine_servitor
-				}
-			}
-			planet = {
-				OR = {
-					has_modifier = resort_colony
-					owner = {
-						is_ai = yes
-						has_monthly_income = {
-							resource = food
-							value > 100
-						}
-					}
-				}
-			}
+			owner = { is_gestalt = yes }
+			planet = { has_modifier = resort_colony }
 		}
 	}
 
 	resources = {
-        category = planet_buildings
-        cost = {
-			minerals = 250
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
 		}
-        upkeep = {
-			energy = 4
+		upkeep = {
+			energy = @b1_upkeep
 		}
 	}
 
@@ -57,66 +33,55 @@ building_lvb_dairy_farm = {
 		building_lvb_dairy_facility
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		modifier = {
-			job_lvb_milk_cow_add = 2
-		}
+	planet_modifier = {
+		job_lvb_milk_cow_add = 2
+		planet_housing_add = 2
 	}
 
 	{{> cow_triggered_desc }}
 
 	ai_weight = {
-		factor = 0
+		weight = 0
 		modifier = {
-			weight = 500
-			OR = {
-				free_jobs < 3
-				lvb_unemployed = yes
-			}
-			owner = {
-				lvb_uses_food = yes
-				has_monthly_income = {
-					resource = food
-					value < 0
-				}
+			weight = 25
+			NOR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+				has_building = building_lvb_dairy_farm
+				has_building = building_lvb_dairy_facility
+				has_building = building_lvb_dairy_arcology
 			}
 		}
 		modifier = {
-			weight = 1000
-			OR = {
-				free_jobs < 3
-				lvb_unemployed = yes
-			}
-			OR = {
-				owner = {
-					lvb_uses_food = yes
+			weight = 100
+			lvb_jobs_work_food_goods = no
+			owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 30
+				}
+				OR = {
+					country_uses_food = no
 					has_monthly_income = {
 						resource = food
-						value < 125
+						value >= 0
 					}
-				}
+					has_resource = {
+						type = food
+						amount > 0
+					}
+				} #Check to see if consumer goods shortage is being caused by a food shortage.
 			}
 		}
 		modifier = {
 			factor = 0
-			owner = {
-				has_monthly_income = {
-					resource = food
-					value > 1
-				}
-			}
-		}
-		modifier = {
-			weight = 1
-			free_building_slots = 0
+			free_jobs > 3
 		}
 	}
 
 	ai_resource_production = {
-		food = 1
+		consumer_goods = 1
 		trigger = {
 			always = yes
 		}
@@ -124,61 +89,46 @@ building_lvb_dairy_farm = {
 }
 
 building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
-	base_buildtime = 360
+	base_buildtime = @b2_time
 	category = resource
 	can_build = no
 
+	prerequisites = {
+		tech_lvb_cows_1
+	}
+
 	potential = {
 		exists = owner
-		owner = {
-			OR = {
-				NOT = { has_authority = auth_machine_intelligence }
-				has_civic = civic_machine_assimilator
-				has_civic = civic_machine_servitor
-			}
-		}
+		owner = { is_gestalt = no }
 		NOT = { has_modifier = resort_colony }
 	}
 
 	destroy_trigger = {
-		exists = owner
 		OR = {
-			owner = {
-				has_authority = auth_machine_intelligence
-				NOR = {
-					has_civic = civic_machine_assimilator
-					has_civic = civic_machine_servitor
-				}
-			}
+			owner = { is_gestalt = yes }
 			planet = {
 				OR = {
 					has_modifier = resort_colony
-					owner = {
-						is_ai = yes
-						has_monthly_income = {
-							resource = food
-							value > 100
-						}
-					}
+					buildings_no_motes = yes
 				}
 			}
 		}
 	}
 
 	allow = {
-		exists = owner
 		has_upgraded_capital = yes
+		buildings_upgrade_allow = yes
 	}
 
 	resources = {
-        category = planet_buildings
-        cost = {
-			minerals = 500
-			volatile_motes = 50
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
 		}
-        upkeep = {
-			energy = 5
-			volatile_motes = 1
+		upkeep = {
+			energy = @b2_upkeep
+			volatile_motes = @b2_rare_upkeep
 		}
 	}
 
@@ -188,6 +138,7 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 
 	planet_modifier = {
 		job_lvb_milk_cow_add = 5
+		planet_housing_add = 5
 	}
 
 	triggered_planet_modifier = {
@@ -199,106 +150,76 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 		}
 		modifier = {
 			job_lvb_hot_tank_add = 1
+			planet_housing_add = 1
 		}
 	}
 
 	{{> cow_triggered_desc }}
+	{{> hot_tank_triggered_desc }}
 
 	ai_weight = {
-		weight = 1
+		weight = 0
 		modifier = {
-			factor = 0
-			lvb_has_motes = no
-		}
-		modifier = {
-			factor = 0
-			owner = { has_country_flag = buildings_new_mote_building }
+			weight = 3
+			buildings_has_motes = yes
 		}
 	}
 
 	ai_resource_production = {
-		food = 1
+		consumer_goods = 1
 		trigger = {
 			always = yes
-		}
-	}
-	on_queued = {
-		IF = {
-			limit = {
-				owner = { has_technology = tech_construction_templates }
-			}
-			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 270 } }
-		}
-		ELSE_IF = {
-			limit = {
-				owner = { has_technology = tech_assembly_pattern }
-			}
-			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 390 } }
-		}
-		else = {
-			planet = {
-				owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 510 } }
-			}
 		}
 	}
 }
 
 building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
-	base_buildtime = 540
+	base_buildtime = @b3_time
 	category = resource
 	can_build = no
 
+	prerequisites = {
+		tech_lvb_cows_2
+	}
+
 	potential = {
 		exists = owner
-		owner = {
-			OR = {
-				NOT = { has_authority = auth_machine_intelligence }
-				has_civic = civic_machine_assimilator
-				has_civic = civic_machine_servitor
-			}
-		}
+		owner = { is_gestalt = no }
 		NOT = { has_modifier = resort_colony }
 	}
 
 	destroy_trigger = {
-		exists = owner
 		OR = {
-			owner = {
-				has_authority = auth_machine_intelligence
-				NOR = {
-					has_civic = civic_machine_assimilator
-					has_civic = civic_machine_servitor
-				}
-			}
+			owner = { is_gestalt = yes }
 			planet = {
 				OR = {
 					has_modifier = resort_colony
-					owner = {
-						is_ai = yes
-						has_monthly_income = {
-							resource = food
-							value > 100
-						}
-					}
+					buildings_no_motes = yes
 				}
 			}
 		}
 	}
 
+	allow = {
+		has_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+
 	resources = {
-        category = planet_buildings
-        cost = {
-			minerals = 750
-			volatile_motes = 100
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			volatile_motes = @b3_rare_cost
 		}
-        upkeep = {
-			energy = 6
-			volatile_motes = 2
+		upkeep = {
+			energy = @b3_upkeep
+			volatile_motes = @b3_rare_upkeep
 		}
 	}
 
 	planet_modifier = {
 		job_lvb_milk_cow_add = 8
+		planet_housing_add = 8
 	}
 
 	triggered_planet_modifier = {
@@ -310,46 +231,25 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 		}
 		modifier = {
 			job_lvb_hot_tank_add = 2
+			planet_housing_add = 2
 		}
 	}
 
 	{{> cow_triggered_desc }}
+	{{> hot_tank_triggered_desc }}
 
 	ai_weight = {
-		weight = 1
+		weight = 0
 		modifier = {
-			factor = 0
-			lvb_has_motes = no
-		}
-		modifier = {
-			factor = 0
-			owner = { has_country_flag = buildings_new_mote_building }
+			weight = 3
+			buildings_has_motes = yes
 		}
 	}
 
 	ai_resource_production = {
-		food = 1
+		consumer_goods = 1
 		trigger = {
 			always = yes
-		}
-	}
-	on_queued = {
-		IF = {
-			limit = {
-				owner = { has_technology = tech_construction_templates }
-			}
-			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 270 } }
-		}
-		ELSE_IF = {
-			limit = {
-				owner = { has_technology = tech_assembly_pattern }
-			}
-			owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 390 } }
-		}
-		else = {
-			planet = {
-				owner = { set_timed_country_flag = { flag = buildings_new_mote_building days = 510 } }
-			}
 		}
 	}
 }
@@ -396,10 +296,6 @@ building_lvb_slave_brothel = {
 	}
 
 	ai_weight = {
-		weight = 5
-		modifier = {
-			factor = 0
-			NOT = { any_owned_pop = { is_domestic_servant = yes } }
-		}
+		weight = 0
 	}
 }

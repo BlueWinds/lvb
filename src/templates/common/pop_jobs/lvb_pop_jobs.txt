@@ -1,9 +1,9 @@
 ########################
-###     Pop Jobs     ###
+###	 Pop Jobs	 ###
 ########################
 
 #####################
-###     Dairy     ###
+###	 Dairy	 ###
 #####################
 
 ##########
@@ -23,7 +23,6 @@ lvb_milk_cow = {			# Milk Cow
 					is_robot_pop = no
 					pop_has_trait = trait_lvb_sex_bots
 					pop_has_trait = trait_lvb_synth_breasts
-					pop_has_trait = trait_lvb_synth_brood_breasts
 				}
 				NOT = { pop_has_trait = trait_lvb_all_male }
 			}
@@ -32,11 +31,10 @@ lvb_milk_cow = {			# Milk Cow
 	}
 
 	resources = {
-        category = planet_lvb_milk_cow
-        produces = {
-            food = 2
-			consumer_goods = 2
-        }
+		category = planet_lvb_milk_cow
+		produces = {
+			consumer_goods = 6
+		}
 		produces = {
 			trigger = {
 				owner = { has_policy_flag = lvb_milk_cows_policy_default }
@@ -47,33 +45,36 @@ lvb_milk_cow = {			# Milk Cow
 			trigger = {
 				owner = { has_policy_flag = lvb_milk_cows_policy_max_milk }
 			}
-			food = 1
-			consumer_goods = 1
+			consumer_goods = 2
+		}
+
+		upkeep = {
+			food = 5
 		}
 
 		upkeep = {
 			trigger = {
 				owner = { has_policy_flag = lvb_milk_cows_policy_breeders }
 			}
-			consumer_goods = 4
+			food = 2
 		}
 	}
 
 	triggered_planet_modifier = {
-        potential = { owner = { has_policy_flag = lvb_milk_cows_policy_free_use } }
-        modifier = {
+		potential = { owner = { has_policy_flag = lvb_milk_cows_policy_free_use } }
+		modifier = {
 			planet_amenities_add = 0.5
-			pop_growth_speed = 0.01
+			pop_growth_speed = 0.02
 			planet_crime_add = -2
 		}
-    }
+	}
 
 	triggered_planet_modifier = {
-        potential = { owner = { has_policy_flag = lvb_milk_cows_policy_breeders } }
-        modifier = {
+		potential = { owner = { has_policy_flag = lvb_milk_cows_policy_breeders } }
+		modifier = {
 			pop_growth_speed = 0.05
 		}
-    }
+	}
 
 	triggered_planet_modifier = {
 		potential = { owner = { has_policy_flag = lvb_milk_cows_policy_paid_use } }
@@ -82,19 +83,12 @@ lvb_milk_cow = {			# Milk Cow
 		}
 	}
 
-	pop_modifier = {
-		pop_housing_usage_add = -1
-	}
-
 	weight = {
-        weight = @worker_job_weight
+		weight = @worker_job_weight
+
 		modifier = {
-			factor = 2
-			has_trait = trait_agrarian
-		}
-		modifier = {
-			factor = 1.1
-			owner = { has_valid_civic = civic_agrarian_idyll }
+			factor = 5
+			has_job = lvb_milk_cow
 		}
 		modifier = {
 			factor = 2
@@ -102,7 +96,6 @@ lvb_milk_cow = {			# Milk Cow
 				has_trait = trait_lvb_sex_bots
 				has_trait = trait_lvb_breast_attachments
 				has_trait = trait_lvb_synth_breasts
-				has_trait = trait_lvb_synth_brood_breasts
 			}
 		}
 		modifier = {
@@ -117,7 +110,7 @@ lvb_milk_cow = {			# Milk Cow
 		}
 
 		{{> cow_trait_weight }}
-    }
+	}
 }
 
 lvb_bioreactor = {
@@ -130,28 +123,38 @@ lvb_bioreactor = {
 	}
 
 	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_modifier = lvb_bioreactor_volunteers }
+			}
+		}
 		pop_happiness = -0.5
 	}
 
 	resources = {
-        category = planet_lvb_bioreactor
+		category = planet_lvb_bioreactor
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 1.5
+			society_research = 3
+			engineering_research = 1.5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_modifier = lvb_bioreactor_volunteers }
+			}
+			physics_research = 0.325
+			society_research = 0.75
+			engineering_research = 0.325
 		}
 		upkeep = {
-			consumer_goods = 2
+			food = 3
 		}
 	}
 
 	weight = {
-		weight = @specialist_job_weight
-
-		modifier = {
-			factor = 10
-			is_enslaved = yes
-		}
+		weight = @worker_job_weight
 
 		{{> cow_trait_weight }}
 	}
@@ -167,15 +170,29 @@ lvb_hot_tank = {
 	}
 
 	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_modifier = lvb_bioreactor_volunteers }
+			}
+		}
 		pop_happiness = -0.5
 	}
 
 	resources = {
-        category = planet_lvb_bioreactor
+		category = planet_lvb_bioreactor
 		produces = {
 			exotic_gases = 0.4
 			rare_crystals = 0.4
 			volatile_motes = 0.4
+		}
+		produces = {
+			trigger = {
+				owner = { has_modifier = lvb_bioreactor_volunteers }
+			}
+			exotic_gases = 0.1
+			rare_crystals = 0.1
+			volatile_motes = 0.1
 		}
 		upkeep = {
 			food = 8
@@ -183,7 +200,7 @@ lvb_hot_tank = {
 	}
 
 	weight = {
-		weight = @specialist_job_weight
+		weight = @worker_job_weight
 
 		modifier = {
 			factor = 10
@@ -196,7 +213,7 @@ lvb_hot_tank = {
 
 
 ###################
-###     Sex     ###
+###	 Sex	 ###
 ###################
 
 ##########
@@ -214,20 +231,20 @@ lvb_whore = {			# Whore
 	}
 
 	resources = {
-        category = planet_lvb_sex_work
+		category = planet_lvb_sex_work
 		produces = { unity = 1 }
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 2
-		trade_value_add = 2
+		planet_amenities_add = 1
+		trade_value_add = 3
 		planet_crime_add = 3
 	}
 
-	{{> sex_work_trait_planet amenities=2 trade=2 }}
+	{{> sex_work_trait_planet amenities=1 trade=3 }}
 
 	weight = {
-        weight = @clerk_job_weight
+		weight = @clerk_job_weight
 		modifier = {
 			factor = 0.25
 			is_enslaved = yes
@@ -252,7 +269,7 @@ lvb_whore = {			# Whore
 		}
 
 		{{> sex_work_trait_weight }}
-    }
+	}
 }
 
 lvb_forced_whore = {
@@ -267,7 +284,7 @@ lvb_forced_whore = {
 	}
 
 	resources = {
-        category = planet_lvb_sex_work
+		category = planet_lvb_sex_work
 	}
 
 	triggered_pop_modifier = {
@@ -303,7 +320,7 @@ lvb_call_girl = {			# Call Girl
 	}
 
 	resources = {
-        category = planet_lvb_sex_work
+		category = planet_lvb_sex_work
 
 		upkeep = { consumer_goods = 1 }
 	}
@@ -314,11 +331,10 @@ lvb_call_girl = {			# Call Girl
 		planet_crime_add = 2
 	}
 
-	# These modifiers are doubled, because call_girl is twice as valuable as whore
 	{{> sex_work_trait_planet amenities=4 trade=4 }}
 
 	weight = {
-        weight = @specialist_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -340,7 +356,7 @@ lvb_call_girl = {			# Call Girl
 		}
 
 		{{> sex_work_trait_weight }}
-    }
+	}
 }
 
 lvb_escort = {			# Escort
@@ -354,7 +370,7 @@ lvb_escort = {			# Escort
 	}
 
 	resources = {
-        category = planet_lvb_sex_work
+		category = planet_lvb_sex_work
 		produces = {
 			unity = 2
 		}
@@ -372,7 +388,7 @@ lvb_escort = {			# Escort
 	{{> sex_work_trait_planet amenities=2 trade=5 }}
 
 	weight = {
-        weight = @specialist_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -389,11 +405,11 @@ lvb_escort = {			# Escort
 		}
 
 		{{> sex_work_trait_weight }}
-    }
+	}
 }
 
 #####################
-###     Event     ###
+###	 Event	 ###
 #####################
 
 lvb_tentacle_breeders = {
@@ -413,7 +429,7 @@ lvb_tentacle_breeders = {
 	}
 
 	resources = {
-        category = planet_lvb_forced_breeding
+		category = planet_lvb_forced_breeding
 
 		upkeep = {
 			food = 4
@@ -421,12 +437,12 @@ lvb_tentacle_breeders = {
 	}
 
 	triggered_planet_modifier = {
-        potential = { always = yes }
+		potential = { always = yes }
 		pop_housing_usage_add = -1
-        modifier = {
+		modifier = {
 			pop_growth_speed = 0.15
 		}
-    }
+	}
 
 	pop_modifier = {
 		pop_happiness = -0.5
@@ -448,15 +464,14 @@ lvb_tentacle_breeders = {
 	}
 
 	triggered_pop_modifier = {
-		potential = { has_trait = lvb_sex_crazed }
+		potential = { has_trait = trait_lvb_sex_crazed }
 		modifier = {
 			pop_happiness = 0.25
 		}
 	}
 
-
 	weight = {
-        weight = @worker_job_weight
+		weight = @worker_job_weight
 		modifier = {
 			factor = 2
 			has_trait = trait_agrarian
@@ -483,5 +498,5 @@ lvb_tentacle_breeders = {
 				}
 			}
 		}
-    }
+	}
 }

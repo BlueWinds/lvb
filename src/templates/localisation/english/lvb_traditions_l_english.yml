@@ -19,7 +19,7 @@ tr_lvb_sensuality_selective_conception_desc: "£pops£ §Y$MOD_POP_GROWTH_SPEED$
 tr_lvb_sensuality_selective_conception_delayed: "Reproduction has finally, completely and forever been brought under conscious control of the individual. No more fallible external devices or unpleasant surgery required."
 
 tr_lvb_sensuality_std_eradication: "STD Eradication"
-tr_lvb_sensuality_std_eradication_desc: "£mod_pop_amenities_usage_mult£ §Y$MOD_POP_AMENITIES_USAGE_MULT$§! reduced by §G15%§!."
+tr_lvb_sensuality_std_eradication_desc: "§Y$MOD_EMPIRE_SIZE_POPS_MULT$§! reduced by §G10%§!.\n"
 tr_lvb_sensuality_std_eradication_delayed: "All common sexually transmitted diseases have been erradicated from the populace, and we have developed cures for any that reemerge. Free love is now free of risk as well."
 
 tr_lvb_sensuality_deviancy_normalization: "Deviancy Normalization"
@@ -27,7 +27,7 @@ tr_lvb_sensuality_deviancy_normalization_desc: "§Y$MOD_POP_GOVERNMENT_ETHIC_ATT
 tr_lvb_sensuality_deviancy_normalization_delayed: "Sexual deviancy and extreme fetishes need not be a radicalizing force, if our society is suffiently tollerant of them."
 
 tr_lvb_sensuality_red_light_planet: "Red Light Planet"
-tr_lvb_sensuality_red_light_planet_desc: "§HUnlocks Decision:§! $decision_planet_lvb_red_light_planet$ once we have a $resort_colony$ (and makes the prerequisite research very likely to show up)."
+tr_lvb_sensuality_red_light_planet_desc: "§HUnlocks Decision:§! $decision_planet_lvb_red_light_planet$ once we have a $resort_colony$."
 tr_lvb_sensuality_red_light_planet_delayed: "$lvb_red_light_colony_desc$"
 
 tr_lvb_sensuality_finish: "Sexuality Traditions Finished"

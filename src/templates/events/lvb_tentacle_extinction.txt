@@ -55,7 +55,7 @@ fleet_event = {
 	}
 
 	option = {
-		name = lvb_tentacle_extinction.10.continue # This is horrible.
+		name = lvb_tentacle_extinction.10.continue
 		small_artifact_reward = yes
 	}
 }

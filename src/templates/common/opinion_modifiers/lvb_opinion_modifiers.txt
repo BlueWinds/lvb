@@ -1,0 +1,19 @@
+opinion_destroyed_lvb_traders_good = {
+	opinion = {
+		base = 30
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_destroyed_lvb_traders_bad = {
+	opinion = {
+		base = 20
+	}
+
+	decay = {
+		base = 2
+	}
+}

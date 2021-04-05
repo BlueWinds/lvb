@@ -58,18 +58,150 @@ tech_lvb_sex_trade = {          # Sex Trade Policy
 	}
 }
 
+tech_lvb_cows_1 = {
+	cost = @tier1cost3
+	area = society
+	tier = 1
+	category = { biology }
+	weight = @tier1weight3
+
+	potential = {
+		is_gestalt = no
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_volatile_motes
+				has_technology = tech_volatile_motes
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_sexologist"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_zoophile"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_sexologist"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_zoophile"
+			}
+		}
+	}
+}
+
+tech_lvb_cows_2 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { biology }
+	weight = @tier2weight3
+
+	prerequisites = { "tech_lvb_cows_1" }
+
+	potential = {
+		is_gestalt = no
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_sexologist"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_zoophile"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_sexologist"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_scientist_lvb_zoophile"
+			}
+		}
+	}
+}
 
 tech_lvb_milk_cow_specialization = {		# Milk Cow Specialization
 	cost = 4000
 	area = society
 	tier = 2
 	category = { biology }
-	prerequisites = { "tech_eco_simulation" }
+	prerequisites = { "tech_lvb_cows_1" }
 	weight = 85
 
 	modifier = {
 		planet_jobs_food_produces_mult = 0.05
 		description = tech_lvb_milk_cow_specialization_modifier_desc
+		description_parameters = {
+			FOOD_MULT = 0.05
+		}
 	}
 
 	potential = {
@@ -135,7 +267,6 @@ tech_lvb_milk_cow_specialization = {		# Milk Cow Specialization
 	}
 }
 
-
 # Machine Empire Traits Unlock
 tech_lvb_biological_mimicry = {		# Biological Mimicry
 	cost = 20000
@@ -180,7 +311,6 @@ tech_lvb_biological_mimicry = {		# Biological Mimicry
 		}
 	}
 }
-
 
 @lvb_gene_tailoring_POINTS = 2
 tech_lvb_transformation_candy = {		# Transformation Candy
@@ -279,22 +409,4 @@ tech_lvb_transformation_candy_apple = {
 			POINTS = @lvb_gene_tailoring_POINTS
 		}
 	}
-}
-
-tech_lvb_transformation_candy_strawberry = {
-	area = society
-	tier = 5
-	potential = { always = no }
-}
-
-tech_lvb_transformation_candy_blueberry = {
-	area = society
-	tier = 5
-	potential = { always = no }
-}
-
-tech_lvb_transformation_candy_orange = {
-	area = society
-	tier = 5
-	potential = { always = no }
 }

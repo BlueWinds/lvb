@@ -135,13 +135,13 @@ trait_lvb_elastic_orifices: "Elastic Orifices"
 trait_lvb_elastic_orifices_desc: "§LThis species has tight, stretchy orifices with excellent muscle control, not only allowing them to please any mate but to give birth with ease.§!"
 
 trait_lvb_nudist: "Nudist"
-trait_lvb_nudist_desc: "§LDue to their natural resilience towards their native environment, this species tends to wear little to no clothing that does not have a utility or cultural significance.§!"
+trait_lvb_nudist_desc: "§LThis species is extremely resistant to any attempts to cover their body with anything more substantial than jewelry. While this limits their ability to inhabit extreme environments, they also don't waste time and money on clothing.§!"
 
 trait_lvb_exhibitionist: "Exhibitionist"
 trait_lvb_exhibitionist_desc: "§LSomething in this species' psychology gives them an inherent dislike for all but the most utilitarian clothing or coverings, as well as a general lack of modesty.§!"
 
 trait_lvb_masochistic: "Masochistic"
-trait_lvb_masochistic_desc: "§LThis species has evolved a strange enjoyment for a degree of pain. While mostly sexual, it also aids them in physically demanding fields.§!\n\nHaving other pops with the §BSadistic§! trait will add an extra effect"
+trait_lvb_masochistic_desc: "§LThis species has evolved a strange enjoyment for a degree of pain. While mostly sexual, it also aids them in physically demanding fields.§!"
 
 trait_lvb_sexually_gifted: "Sexually Gifted"
 trait_lvb_sexually_gifted_desc: "§LPassionate, feisty and fiery haired, in the bedroom and out.§!"
@@ -153,13 +153,10 @@ trait_lvb_nutrient_extrusion: "Nutrient Extrusion"
 trait_lvb_nutrient_extrusion_desc: "§LSpecialized digestive processes in this species allow them to process excess nutrients for later consumption, appearing as sugar like crystals that form from modified pores on the surface of the anus.§!"
 
 trait_lvb_natural_anal_lube: "Natural Anal Lube"
-trait_lvb_natural_anal_lube_desc: "§LA rough, gritty diet has led to this species evolving natural anal lubrication that seeps from them at copious levels. Its abnormal efficiency leaves it marketable, and is safely consumable.§!"
+trait_lvb_natural_anal_lube_desc: "§LA rough, gritty diet has led to this species evolving natural anal lubrication that seeps from them at copious levels. Its abnormal efficiency leaves it marketable.§!"
 
-trait_lvb_long_tongues: "Long Tongues"
-trait_lvb_long_tongues_desc: "§LThis species possesses an extremely long, dexterous tongue. The hit at any party, and or pervy porn shoot.§!"
-
-trait_lvb_erogenous_anus: "Erogenous Anus"
-trait_lvb_erogenous_anus_desc: "§LThis species has an exceptionally sexually sensitive anus to such a degree that most members of this race consider vaginal only for reproduction.§!"
+trait_lvb_prehensile_tentacles: "Prehensile Tentacles"
+trait_lvb_prehensile_tentacles_desc: "§LThis species possesses multiple long, dexterous limbs. The hit at any party and/or porn shoot.§!"
 
 trait_lvb_muscle_head: "Muscle Head"
 trait_lvb_muscle_head_desc: "§LThe members of this species are hulking muscular beings with each possessing a vast degree of physical strength. Huge, handsome and muscled up beefcakes the lot of them.§!"
@@ -177,9 +174,6 @@ trait_lvb_huge_breasts_desc: "§LThis species has breasts much larger proportion
 trait_lvb_multiple_breasts: "Multiple Breasts"
 trait_lvb_multiple_breasts_desc: "§LRather than a single udder, pair of breasts or teat row, this species possesses an excessive number of mammary glands.§!"
 
-trait_lvb_fuckable_nipples: "Fuckable Nipples"
-trait_lvb_fuckable_nipples_desc: "§LThis species possesses penetrable mammary glands.§!"
-
 trait_lvb_high_volume_lactation: "High Volume Lactation"
 trait_lvb_high_volume_lactation_desc: "§LThis species perpetually lactates, and does so in excessive volume.§!"
 
@@ -188,9 +182,6 @@ trait_lvb_highly_nutritious_milk_desc: "§LThe fat, protein and nutrient value o
 
 trait_lvb_drooling_vagina: "Drooling Vagina"
 trait_lvb_drooling_vagina_desc: "§LThe females of species enjoy enormous, messy orgasms, allowing the collection of their feminine fluids.§!"
-
-trait_lvb_breeder_hips: "Breeder Hips"
-trait_lvb_breeder_hips_desc: "§LFemales of this species near universally have wide, powerful hips and perfectly toned asses that allow for prolonged sexual encounters and easy childbirth.§!"
 
 trait_lvb_litters: "Litters"
 trait_lvb_litters_desc: "§LMost pregnancies for this species results in several children.§!"
@@ -225,7 +216,7 @@ trait_lvb_adorable: "Adorable"
 trait_lvb_adorable_desc: "§LSomething about this race makes them very cute in the eyes of most species. They innocently demand love and affection.§!"
 
 trait_lvb_sadistic: "Sadistic"
-trait_lvb_sadistic_desc: "§LMany members of this species derive sexual gratification from the pain of others.§!\n\nHaving other pops with the §BMasochistic§! trait will add an extra effect"
+trait_lvb_sadistic_desc: "§LMany members of this species derive sexual gratification from the pain of others.§!"
 
 trait_lvb_lewd_mind: "Lewd Mind"
 trait_lvb_lewd_mind_desc: "§LThis species has an overactive libido, and often find their thoughts drawn to sex.§!"
@@ -267,14 +258,14 @@ trait_lvb_small_penis_desc: "§LThe males of this species are poorly endowed com
 # Organic Interbreeder #
 ########################
 
-trait_lvb_brood_parasite: "Brood Parasite"
-trait_lvb_brood_parasite_desc: "§LThis species requires a host to incubate its eggs. They are capable of implanting a very large number of these eggs into their host which may be extremely uncomfortable unless of course, you are a willing xenophile.§!\n\nWhen these §HBrood Parasites§! find any §PBrood Mothers§! to impregnate, they will get a happiness boostThe §PBrood Mothers§! themselves usually won't be too happy from being raped and pumped so full of eggs that they're visibly bulging..."
-
 trait_lvb_all_female: "All Female"
-trait_lvb_all_female_desc: "§LThis species is composed entirely of females, but have found alternative ways to reproduce. It's not perfect however...§!\n\nWhen these §BAll Females§! find any proper alternatives, they will get an extra effect"
+trait_lvb_all_female_desc: "§LThis species is composed entirely of females, but have found alternative ways to reproduce. It's not perfect however...§!\n\nIf a matching §BAll Male§! species is on the same planet, the penalties are negated."
 
 trait_lvb_all_male: "All Male"
-trait_lvb_all_male_desc: "§LThis species is composed entirely of males, but have found alternative ways to reproduce. It's not perfect however...§!\n\nWhen these §BAll Males§! find any proper alternatives, they will get an extra effect"
+trait_lvb_all_male_desc: "§LThis species is composed entirely of males, but have found alternative ways to reproduce. It's not perfect however...§!\n\nIf a matching §BAll Female§! species is on the same planet, the penalties are negated."
+
+lvb_two_gendered_planet: "Matching Species"
+lvb_two_gendered_planet_desc: "This planet has species of two matching genders, resulting in a near constant orgy in the streets."
 
 trait_lvb_futanari: "Futanari"
 trait_lvb_futanari_desc: "§LMembers of this species appear outwardly female, but are in fact hermaphrodites, possessing a set of both male and female reproductive organs.§!"
@@ -300,10 +291,10 @@ trait_lvb_maternal_programming: "Maternal Programming"
 trait_lvb_maternal_programming_desc: "§LThese robots are programmed to behave in a motherly way towards those not explicitly deigned their superiors.§!"
 
 trait_lvb_breast_attachments: "Breast Attachments"
-trait_lvb_breast_attachments_desc: "§LRealistic feeling fake breasts with fuckable nipples.§!"
+trait_lvb_breast_attachments_desc: "§LRealistic feeling fake breasts with lovely little nipples.§!"
 
 trait_lvb_synth_breasts: "Synth Breasts"
-trait_lvb_synth_breasts_desc: "§LThese fuckable, biotech breasts are capable of synthesizing artificial milk from recycled organic matter.§!"
+trait_lvb_synth_breasts_desc: "§LThese aesthetically pleasing biotech breasts are capable of synthesizing artificial milk from recycled organic matter.§!"
 
 trait_lvb_custom_fleshlight_slot: "Custom Fleshlight Slot"
 trait_lvb_custom_fleshlight_slot_desc: "§LAn interface slot allows the instillation of advanced fleshlights of all sorts.§!"
@@ -334,9 +325,6 @@ trait_lvb_synth_penis_desc: "§LA top of the line, bio-optimized synth penis cus
 
 trait_lvb_artificial_womb: "Artificial Womb"
 trait_lvb_artificial_womb_desc: "§LThis robotic model is equipped with a mechanical womb, allowing it to gestate pre-fertilized ovum.§!"
-
-trait_lvb_advanced_artificial_womb: "Advanced Artificial Womb"
-trait_lvb_advanced_artificial_womb_desc: "§LThis robot has an artificial womb equipped with a genetic library and biomanipulation tools, allowing it to bear children with no need for an organic female.§!"
 
 trait_lvb_cybernetic_womb: "Cybernetic Womb"
 trait_lvb_cybernetic_womb_desc: "§LThis next-gen synth womb uses advanced nanites and biotech to apply fetal cybernetics that will grow with the child.§!"

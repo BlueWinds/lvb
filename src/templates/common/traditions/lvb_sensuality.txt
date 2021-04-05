@@ -6,20 +6,51 @@ tr_lvb_sensuality_adopt = {
 	ai_weight = {
 		factor = 10
 		modifier = {
-			factor = 1.5
+			factor = 2
 			has_ethic = ethic_pacifist
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			has_ethic = ethic_fanatic_pacifist
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			has_ethic = ethic_xenophile
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = tr_discovery_adopt
+					NOT = { has_tradition = tr_discovery_finish }
+				}
+				AND = {
+					has_tradition = tr_domination_adopt
+					NOT = { has_tradition = tr_domination_finish }
+				}
+				AND = {
+					has_tradition = tr_expansion_adopt
+					NOT = { has_tradition = tr_expansion_finish }
+				}
+				AND = {
+					has_tradition = tr_harmony_adopt
+					NOT = { has_tradition = tr_harmony_finish }
+				}
+				AND = {
+					has_tradition = tr_prosperity_adopt
+					NOT = { has_tradition = tr_prosperity_finish }
+				}
+				AND = {
+					has_tradition = tr_supremacy_adopt
+					NOT = { has_tradition = tr_supremacy_finish }
+				}
+				is_gestalt = yes
+				is_machine_empire = yes
+			}
 		}
 	}
 }
@@ -49,7 +80,7 @@ tr_lvb_sensuality_selective_conception = {
 
 tr_lvb_sensuality_std_eradication = {
 	modifier = {
-		pop_amenities_usage_mult = -0.15
+		empire_size_pops_mult = -0.10
 	}
 	ai_weight = { factor = 4000 }
 }
@@ -71,6 +102,10 @@ tr_lvb_sensuality_deviancy_normalization = {
 tr_lvb_sensuality_red_light_planet = {
 	possible = {
 		has_tradition = tr_lvb_sensuality_deviancy_normalization
+	}
+
+	on_enabled = {
+		add_research_option = tech_resort_colonies
 	}
 
 	# Allows decision_planet_lvb_red_light_planet

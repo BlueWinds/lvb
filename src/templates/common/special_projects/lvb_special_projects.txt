@@ -109,3 +109,135 @@ special_project = {
 
 	on_fail = {}
 }
+
+special_project = {
+	key = "lvb_living_laboratory_volunteers"
+	event_chain = "living_laboratory_chain"
+	picture = GFX_evt_lvb_bioreactor_volunteers
+
+	days_to_research = 1
+	tech_department = society_technology
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	on_success = {
+		from = {
+			owner = {
+				country_event = { id = lvb_living_laboratory.20 }
+				end_event_chain = "living_laboratory_chain"
+			}
+		}
+	}
+	on_fail = {}
+}
+
+special_project = {
+	key = "lvb_living_laboratory_life_extension"
+	event_chain = "living_laboratory_chain"
+	picture = GFX_evt_lvb_bioreactor_life_extension
+
+	days_to_research = 1
+	tech_department = society_technology
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	on_success = {
+		from = {
+			owner = {
+				country_event = { id = lvb_living_laboratory.21 }
+				end_event_chain = "living_laboratory_chain"
+			}
+		}
+	}
+	on_fail = {}
+}
+
+special_project = {
+	key = "lvb_living_laboratory_use"
+	event_chain = "living_laboratory_chain"
+	picture = GFX_evt_lvb_bioreactor_use
+
+	days_to_research = 1
+	tech_department = society_technology
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	on_success = {
+		from = {
+			owner = {
+				country_event = { id = lvb_living_laboratory.22 }
+				end_event_chain = "living_laboratory_chain"
+			}
+		}
+	}
+	on_fail = {}
+}
+
+special_project = {
+	key = "lvb_living_laboratory_destroy"
+	event_chain = "living_laboratory_chain"
+	picture = GFX_evt_victorious_army
+
+	days_to_research = 1
+	tech_department = engineering_technology
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+	}
+
+	on_success = {
+		from = {
+			owner = {
+				country_event = { id = lvb_living_laboratory.23 }
+				end_event_chain = "living_laboratory_chain"
+			}
+		}
+	}
+	on_fail = {}
+}
+
+special_project = {
+	key = "LVB_INVESTIGATE_ENCLAVE"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = 500
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	sound = no
+	timelimit = -1
+	AI_wait_days = {
+		weight = 80
+	}
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+		OR = {
+			NOT = { exists = FROMFROM }
+			has_communications = FROMFROM
+		}
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = lvb_traders.1 }
+		}
+	}
+
+	on_fail = {
+	}
+}

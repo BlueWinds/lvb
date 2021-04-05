@@ -6,20 +6,51 @@ tr_lvb_sexualization_adopt = {
 	ai_weight = {
 		factor = 10
 		modifier = {
-			factor = 1.5
+			factor = 2
 			has_ethic = ethic_authoritarian
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			has_ethic = ethic_fanatic_authoritarian
 		}
 		modifier = {
-			factor = 1.25
+			factor = 2
 			has_ethic = ethic_xenophile
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3
 			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = tr_discovery_adopt
+					NOT = { has_tradition = tr_discovery_finish }
+				}
+				AND = {
+					has_tradition = tr_domination_adopt
+					NOT = { has_tradition = tr_domination_finish }
+				}
+				AND = {
+					has_tradition = tr_expansion_adopt
+					NOT = { has_tradition = tr_expansion_finish }
+				}
+				AND = {
+					has_tradition = tr_harmony_adopt
+					NOT = { has_tradition = tr_harmony_finish }
+				}
+				AND = {
+					has_tradition = tr_prosperity_adopt
+					NOT = { has_tradition = tr_prosperity_finish }
+				}
+				AND = {
+					has_tradition = tr_supremacy_adopt
+					NOT = { has_tradition = tr_supremacy_finish }
+				}
+				is_gestalt = yes
+				is_machine_empire = yes
+			}
 		}
 	}
 }
@@ -61,6 +92,9 @@ tr_lvb_sexualization_public_use_ordinance = {
 
 tr_lvb_sexualization_bioreactors = {
 	# Adds bioreactor jobs to gene clinics in lvb_override_buildings
+	on_enabled = {
+		add_research_option = tech_frontier_health
+	}
 
 	ai_weight = { factor = 5000 }
 }

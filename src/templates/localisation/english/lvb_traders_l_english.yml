@@ -1,0 +1,95 @@
+﻿l_english:
+
+LVB_INVESTIGATE_ENCLAVE: "Investigate [target_enclave.GetName]"
+LVB_INVESTIGATE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
+
+lvb_traders.3.name: "Communications Established"
+
+lvb_traders.6.name: "First Contact With the [From.GetName]"
+lvb_traders.6.desc: "Heyo, visitors! Have any tasty morsels to sell us? Looking to buy, perhaps?\n\nWe buy, sell, train, and break sex slaves from across the galaxy, all for your pleasure and convenience! It's hard work, teaching sluts how to take a cock, but we here at the Slavers Guild take pride in our abilities. We consider it the right of all upright sentients to enjoy the attention of dedicated sexual servants, and we're happy to help your empire as well. In you can pay.\n\nYou can pay, right?"
+lvb_traders.6.a: "Interesting."
+
+lvb_traders.7.a: "We wish to engage your services."
+lvb_traders.7.b: "Viewscreen off."
+
+lvb_traders.7.name: "Slavers Guild"
+lvb_traders.7a.desc: "We do not discriminate against prospective buyers here at the Slavers Guild. Who are we to judge the morals of your star nation?"
+lvb_traders.7b.desc: "Perhaps you need slaves for your tentacle monster orgy pit. Perhaps you want to... uh... free them. Here at the Slavers Guild, we make it our business not to care!"
+lvb_traders.7c.desc: "No questions asked - just quality sluts, ready to service your holes. Or put their holes at your disposal. You decide!"
+lvb_traders.7d.desc: "Can we interest you in some hot men? Hot women? A nice vibrator to get your bits tingling?"
+
+lvb_traders.7.sell: "We would like to sell our citizens"
+lvb_traders.7.sell.fail: "We are already selling our citizens to the Slavers Guild.\n"
+
+lvb_traders.7.buy: "We would like to buy sex slaves"
+lvb_traders.7.buy.trust: "Requires the §YSlavers Guild§! to have:\n£opinion£ Opinion +50\n"
+lvb_traders.7.buy.too_recently: "§RThe Slavers Guild hasn't had enough time to replentish their stock.§!"
+
+lvb_traders.10.desc: "The Slavers Guild is always looking for premium flesh. If you'd be willing to allow our crews to take their pick of your populace, we'd pay handsomely for the opportunity. New slaves have to come from somewhere, after all, and we just can't keep up with demand growing them ourselves.  Your species looks a bit weird to our eyes, but I assure you we can find buyers.\n\nWe will pick some citizens off your streets for the next ten standard years, in return for substantial energy payments. Your ruling class is exempt, of course - your leaders are far too valuable as customers to become *merchandise*."
+lvb_traders.10.a: "Your slavers are welcome on our worlds."
+lvb_traders.10.b: "We're interested in something else..."
+lvb_traders.10.c: "No way."
+
+lvb_traders.12.desc: "Dearest customers! We've had so much *fun* this last decade, exploring your cities, abducting men and women for our enjoyment before selling them off for a life of fucking at their master's whims. Honestly, it's just been great. Would you like extend the deal?"
+lvb_traders.12.a: "It's been fun to watch. We wish to extend the deal."
+lvb_traders.12.b: "It's been terrible, but necessary. We wish to extend the deal."
+lvb_traders.12.c: "No deal."
+
+lvb_traders.20.desc: "Excellent! I promise you won't be disappointed with our merchandise. They're wet and ready to serve in whatever way you choose."
+lvb_traders.20.a: "We'll take [Root.GetSpeciesName] sex slaves"
+lvb_traders.20.a.tooltip: "Adds a §Y$trait_lvb_submissive$§! [Root.GetSpeciesName] to one of our colonies"
+lvb_traders.20.b: "We'll take specially bred sex slaves"
+lvb_traders.20.b.tooltip: "Adds a §Y$trait_lvb_submissive$§!, §Y$trait_lvb_sex_crazed$§! and §Y$trait_lvb_sexually_gifted$§! [Root.GetSpeciesName] pop to one of our colonies"
+lvb_traders.20.c: "We'll take specially bred milk cows"
+lvb_traders.20.c.tooltip: "Adds an §Y$trait_lvb_all_female$§! [Root.GetSpeciesName] pop with  §Y$trait_lvb_huge_breasts$§! and §Y$trait_lvb_drooling_vagina$s§! to one of our colonies"
+
+lvb_traders.21.desc: "Dearest customers! We're pleased to inform you that we've finally managed to restore our stock of available slaves. Please stop by and examine the merchandise. Free samples!"
+lvb_traders.21.a: "We'll take a look."
+lvb_traders.21.b: "Not at this time."
+
+lvb_traders.101: "Slavers Guild Station Destroyed"
+lvb_traders.101.desc: "After disabling the slaver station in the [lvb_traders_system.GetName] system, our forces were intent on freeing the remaining slaves. It seems the were holding a great many of our people, some of them since birth and others only recently captured. We've settled them across our empire."
+
+lvb_traders.103.a.desc: "$lvb_traders.103.ab.desc.start$\n\n$lvb_traders.103.ab.desc.known$"
+lvb_traders.103.b.desc: "$lvb_traders.103.ab.desc.start$\n\n$lvb_traders.103.ab.desc.unknown$"
+lvb_traders.103.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Slaver Guild station in the [lvb_traders_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the space station has been completely destroyed."
+lvb_traders.103.ab.desc.known: "Residual ion trails suggest that forces from the [lvb_traders_destroyer.GetName] were behind this attack."
+lvb_traders.103.ab.desc.unknown: "The forces responsible for this attack remain unidentified."
+lvb_traders.103.c.desc: "$lvb_traders.103.cd.desc.start$ $lvb_traders.103.cd.desc.known$\n\n$lvb_traders.103.cd.desc.trade$"
+lvb_traders.103.d.desc: "$lvb_traders.103.cd.desc.start$ $lvb_traders.103.cd.desc.unknown$\n\n$lvb_traders.103.cd.desc.trade$"
+lvb_traders.103.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the their headquarters were destroyed"
+lvb_traders.103.cd.desc.known: "by forces loyal to the [lvb_traders_destroyer.GetName]."
+lvb_traders.103.cd.desc.unknown: "by unknown forces."
+lvb_traders.103.cd.desc.trade: "Unfortunately, this also means that they have ceased their purchase of our citizens."
+lvb_traders.103.a: "A sad end."
+lvb_traders.103.b: "This has cost us dearly!"
+
+
+lvb_traders.105.desc: "Ayy! A bit of pain is always fun, but those were starship weapons you aimed in our direction, not whips! This is a violation of our trade agreement - no more energy credits for you, now or ever again.\n\nWe are returning fire, of course. You're not the first dissatisfied customer to think they can get away with attacking us."
+
+opinion_destroyed_lvb_traders_good: "Destroyed Slavers Guild"
+opinion_destroyed_lvb_traders_bad: "Destroyed Slavers Guild"
+
+lvb_traders.201.desc: "Good evening, sluts! And you too, [Root.Ruler.GetName]. It has come to our attention that [selling_leader.GetName] is absolutely ravishing. I don't suppose you'd be willing to sell [selling_leader.GetHerHim] to us, would you? We promise to treat [selling_leader.GetHerHim] right."
+lvb_traders.201.tooltip: "§H[selling_leader.GetName]§! will be sold as a sex slave."
+
+lvb_traders.202.name: "Slaver Raids"
+lvb_traders.202.desc: "While our contract specified that the Slavers Guild could take a few citizens here or there, they've been rather... overzealous. Entire settlements on [this_planet.GetName] lie abandoned, their inhabitants hauled away in chains. The Guild has refused to take responsibility, and public outrage over this violation of our sovereignty is growing."
+
+lvb_traders.203.name: "Alien Morals"
+lvb_traders.203.desc: "While our contract specified that the Slavers Guild could take our slaves and workers, it turns out they're not particularly discriminating when an attractive individual catches their eye. This culminated in a recent incident when a popular idol was kidnapped on her way home after a concert. While the Guild apologized for the misunderstanding, she's lost her virginity, and the well-off are understandably unhappy to realize that they too might be victims."
+
+lvb_traders.204.name: "Public Use"
+lvb_traders.204.desc: "The Slavers Guild has gained some popularity on [this_planet.GetName], where they've taken to leaving their victims naked and chained up in public for a day or two before taking them back to their ships. They say it helps break in prospective sex slaves - the populace says they don't care why it's happening and that it's awesome."
+lvb_traders.204.a: "Excellent."
+
+lvb_traders.205.desc: "Hello, fell sapients. We have a deal for you! A few years back, you sold us [lvb_traders_sold_leader.GetName]. We've had a lot of fun with [lvb_traders_sold_leader.GetHerHim], but no luck finding a buyer. I don't suppose you'd like to take [lvb_traders_sold_leader.GetHerHim] back, for a modest fee?"
+
+lvb_traders_sell_citizens_1: "Slaver Kidnappings"
+lvb_traders_sell_citizens_2: "Slaver Kidnappings"
+lvb_traders_sell_citizens_3: "Slaver Kidnappings"
+lvb_traders_sell_citizens_4: "Slaver Kidnappings"
+lvb_traders_sell_citizens_5: "Slaver Kidnappings"
+lvb_traders_kidnappings: "Slaver Raids"
+lvb_traders_kidnapping_rulers: "Slavers Kidnapped Idol"
+lvb_traders_public_use: "Slaver Public Use"

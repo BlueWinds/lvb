@@ -1,6 +1,7 @@
 lvb_tentacle_covered = {
 	planet_colony_development_speed_mult = -10
 	icon = "gfx/interface/icons/planet_modifiers/lvb_tentacle_covered.dds"
+	icon_frame = 3
 }
 
 lvb_red_light_colony = {
@@ -23,4 +24,63 @@ lvb_red_light_colony_other_planets = {
 	icon = "gfx/interface/icons/planet_modifiers/lvb_red_light_colony.dds"
 	icon_frame = 1
 	pop_happiness = 0.05
+}
+
+lvb_two_gendered_planet = {
+	icon = "gfx/interface/icons/planet_modifiers/lvb_two_gendered_planet.dds"
+	icon_frame = 1
+	pop_growth_speed = 0.1
+	pop_happiness = 0.05
+}
+
+lvb_bioreactor_volunteers = {
+	icon = "gfx/interface/icons/modifiers/mod_job_lvb_bioreactor_add.dds"
+	custom_tooltip = lvb_bioreactor_volunteers_effects
+}
+
+lvb_traders_sell_citizens_1 = {
+	country_base_energy_produces_add = 25
+	pop_cat_worker_happiness = -0.1
+	pop_cat_slave_happiness = -0.1
+}
+lvb_traders_sell_citizens_2 = {
+	country_base_energy_produces_add = 50
+	pop_cat_worker_happiness = -0.1
+	pop_cat_slave_happiness = -0.1
+}
+lvb_traders_sell_citizens_3 = {
+	country_base_energy_produces_add = 75
+	pop_cat_worker_happiness = -0.1
+	pop_cat_slave_happiness = -0.1
+}
+lvb_traders_sell_citizens_4 = {
+	country_base_energy_produces_add = 100
+	pop_cat_worker_happiness = -0.1
+	pop_cat_slave_happiness = -0.1
+}
+lvb_traders_sell_citizens_5 = {
+	country_base_energy_produces_add = 125
+	pop_cat_worker_happiness = -0.1
+	pop_cat_slave_happiness = -0.1
+}
+
+lvb_traders_kidnappings = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon_frame = 3
+	pop_happiness = -0.20
+	planet_jobs_unity_produces_mult = -0.10
+}
+
+lvb_traders_kidnapping_rulers = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon_frame = 3
+	pop_cat_ruler_happiness = -0.2
+	pop_cat_specialist_happiness = -0.2
+}
+
+lvb_traders_public_use = {
+	icon = "gfx/interface/icons/planet_modifiers/lvb_traders_public_use.dds"
+	icon_frame = 1
+	pop_happiness = 0.1
+	planet_amenities_mult = 0.2
 }

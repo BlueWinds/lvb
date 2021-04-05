@@ -31,7 +31,7 @@ guiTypes = {
 
 		##### 	#####
 		#96 # 	#166#
-	    ##### 	#####
+		##### 	#####
 
 	positionType = { name = "tr_domination_colonial_viceroys"			position = { x = 61 y = 55 } }
 	positionType = { name = "tr_domination_imperious_architecture"		position = { x = 131 y = 55 } }

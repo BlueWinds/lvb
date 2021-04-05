@@ -16,7 +16,7 @@ decision_planet_lvb_gender_segregation = {
 			NOR = {
 				pop_has_trait = trait_lvb_all_female
 				pop_has_trait = trait_lvb_all_male
-				pop_has_trait = trait_lvb_all_futanari
+				pop_has_trait = trait_lvb_futanari
 				is_robot_pop = yes
 			}
 		}

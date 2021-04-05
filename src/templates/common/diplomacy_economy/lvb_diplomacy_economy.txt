@@ -25,9 +25,42 @@ per_relation = {
 		}
 	}
 
+	migration_pact = {
+		trigger = {
+			has_diplo_migration_treaty = FROM
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_perk = diplomacy_upkeep_1 }
+					federation = { any_member = { is_same_value = FROM } }
+				}
+			}
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_law = free_migration_yes }
+					federation = { any_member = { is_same_value = FROM } }
+				}
+			}
+		}
+		resources = {
+			category = migration_pacts
+			upkeep = {
+				influence = 0.25
+			}
+		}
+	}
+
 	research_agreement = {
 		trigger = {
 			has_research_agreement = FROM
+			NOT = {
+				AND = {
+					has_federation = yes
+					federation = { has_federation_perk = diplomacy_upkeep_1 }
+					federation = { any_member = { is_same_value = FROM } }
+				}
+			}
 		}
 
 		resources = {
@@ -87,6 +120,56 @@ per_relation = {
 			category = guarantees
 			upkeep = {
 				influence = 0.5
+			}
+		}
+	}
+
+	improving_relations = {
+		trigger = {
+			is_improving_relations_with = FROM
+			OR = {
+				has_policy_flag = diplo_stance_isolationist
+				has_policy_flag = diplo_stance_belligerent
+				has_policy_flag = diplo_stance_supremacist
+			}
+		}
+		resources = {
+			category = envoy_costs
+			upkeep = {
+				influence = 0.25
+			}
+		}
+	}
+
+	harming_relations = {
+		trigger = {
+			is_harming_relations_with = FROM
+			OR = {
+				has_policy_flag = diplo_stance_isolationist
+				has_policy_flag = diplo_stance_cooperative
+			}
+		}
+		resources = {
+			category = envoy_costs
+			upkeep = {
+				influence = 0.25
+			}
+		}
+	}
+
+	diplo_stance_closed_borders = {
+		trigger = {
+			has_policy_flag = diplo_stance_mercantile
+
+			has_closed_borders = FROM
+			NOT = {
+				has_rival = FROM
+			}
+		}
+		resources = {
+			category = diplo_closed_borders
+			upkeep = {
+				influence = 0.25
 			}
 		}
 	}

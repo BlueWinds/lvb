@@ -76,9 +76,6 @@ lvb_milk_cows_policy = {			# Milk Cow Specialization
 			hidden_effect = {
 				owner = {
 					if = {
-						limit = {
-							NOT = { has_global_flag = lvb_events_hidden }
-						}
 						country_event = { id = lvb_event_popups.1000 }
 					}
 				}
@@ -101,9 +98,6 @@ lvb_milk_cows_policy = {			# Milk Cow Specialization
 			hidden_effect = {
 				owner = {
 					if = {
-						limit = {
-							NOT = { has_global_flag = lvb_events_hidden }
-						}
 						country_event = { id = lvb_event_popups.1001 }
 					}
 				}
@@ -126,9 +120,6 @@ lvb_milk_cows_policy = {			# Milk Cow Specialization
 			hidden_effect = {
 				owner = {
 					if = {
-						limit = {
-							NOT = { has_global_flag = lvb_events_hidden }
-						}
 						country_event = { id = lvb_event_popups.1002 }
 					}
 				}
@@ -151,9 +142,6 @@ lvb_milk_cows_policy = {			# Milk Cow Specialization
 			hidden_effect = {
 				owner = {
 					if = {
-						limit = {
-							NOT = { has_global_flag = lvb_events_hidden }
-						}
 						country_event = { id = lvb_event_popups.1003 }
 					}
 				}
@@ -185,9 +173,6 @@ lvb_milk_cows_policy = {			# Milk Cow Specialization
 			hidden_effect = {
 				owner = {
 					if = {
-						limit = {
-							NOT = { has_global_flag = lvb_events_hidden }
-						}
 						country_event = { id = lvb_event_popups.1004 }
 					}
 				}

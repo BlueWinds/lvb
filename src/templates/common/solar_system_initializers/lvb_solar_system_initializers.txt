@@ -1,0 +1,126 @@
+# Starbase building? curator_think_tank
+
+# Sex Slavers
+lvb_trader_init = {
+	class = "rl_standard_stars"
+	usage = misc_system_init
+
+	usage_odds = {
+		base = 0
+		modifier = {
+			OR = {
+				has_leviathans = yes
+				has_distar = yes
+			}
+			add = 100
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+
+	max_instances = 1
+	spawn_chance = 100
+#	scaled_spawn_chance = 20	# scales by galaxy size (1000 stars = 10x base)
+
+	flags = { guardians_curators_system enclave }
+
+	planet = {
+		class = star
+		orbit_distance = 0
+
+		init_effect = {
+			create_species = {
+				name = random
+				class = random_non_machine
+				portrait = random
+				traits = {
+					ideal_planet_class = pc_habitat
+					trait = trait_lvb_dominant
+					trait = trait_lvb_sadistic
+					trait = random_traits
+				}
+				#homeworld = this
+			}
+			create_country = {
+				name = "NAME_lvb_sex_traders"
+				type = enclave
+				authority = "auth_dictatorial"
+				civics = {
+					civic = civic_trading_conglomerate
+				}
+				origin = "origin_default"
+				species = last_created
+				flag = {
+					icon = {
+						category = "enclaves"
+						file = "enclaves_flag_lvb_trader.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "vertical.dds"
+					}
+					colors={
+						"black"
+						"red"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_fanatic_authoritarian
+					ethic = ethic_materialist
+				}
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_country_flag = lvb_trader_enclave_country
+				set_graphical_culture = mammalian_01
+				save_global_event_target_as = lvb_trader_enclave_country
+				create_fleet = {
+					name = "NAME_lvb_trader_enclave"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Trader_Enclave_Station"
+							graphical_culture = prev
+						}
+						set_location = {
+							target = prevprev
+							angle = random
+							distance = 100
+						}
+						save_event_target_as = CustomCapital
+						prev = {
+							set_custom_capital_location = event_target:CustomCapital
+						}
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = prev
+					name = random
+					skill = 5
+				}
+				set_leader = last_created_leader
+			}
+		}
+	}
+
+	change_orbit = 60
+
+	planet = {
+		count = 3
+		orbit_distance = 25
+		class = "rl_unhabitable_planets"
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 10 max = 25 }
+	}
+}

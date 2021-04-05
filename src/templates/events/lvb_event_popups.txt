@@ -24,7 +24,7 @@ planet_event = { # Gender Segregation
 					NOR = {
 						pop_has_trait = trait_lvb_all_female
 						pop_has_trait = trait_lvb_all_male
-						pop_has_trait = trait_lvb_all_futanari
+						pop_has_trait = trait_lvb_futanari
 						is_robot_pop = yes
 					}
 				}
@@ -50,7 +50,7 @@ pop_event = { # Convert to female
 		modify_species = {
 			add_trait = trait_lvb_all_female
 			remove_trait = trait_lvb_all_male
-			remove_trait = trait_lvb_all_futanari
+			remove_trait = trait_lvb_futanari
 			remove_trait = trait_lvb_large_penis
 			remove_trait = trait_lvb_huge_penis
 			remove_trait = trait_lvb_multiple_penises
@@ -71,7 +71,7 @@ pop_event = { # Convert to male
 		modify_species = {
 			add_trait = trait_lvb_all_male
 			remove_trait = trait_lvb_all_female
-			remove_trait = trait_lvb_all_futanari
+			remove_trait = trait_lvb_futanari
 			remove_trait = trait_lvb_large_breasts
 			remove_trait = trait_lvb_huge_breasts
 			remove_trait = trait_lvb_multiple_breasts
@@ -79,9 +79,7 @@ pop_event = { # Convert to male
 			remove_trait = trait_lvb_highly_nutritious_milk
 			remove_trait = trait_lvb_drooling_vagina
 			remove_trait = trait_lvb_oviposition
-			remove_trait = trait_lvb_fuckable_nipples
 			remove_trait = trait_lvb_litters
-			remove_trait = trait_lvb_breeder_hips
 			remove_trait = trait_lvb_small_breasts
 			remove_trait = trait_lvb_watery_milk
 			remove_trait = trait_lvb_opt_intercompatible_womb
@@ -164,5 +162,3 @@ country_event = {		# Milk Cow Breeding
 		name = lvb_acknowledged
 	}
 }
-
-###

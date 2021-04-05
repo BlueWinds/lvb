@@ -1,0 +1,239 @@
+namespace = lvb_living_laboratory
+
+# Intro Anomaly - Surface Outpost
+ship_event = {
+	id = lvb_living_laboratory.1
+	title = lvb_living_laboratory.1.name
+	desc = lvb_living_laboratory.1.desc
+	picture = GFX_evt_lvb_living_laboratory_entrance
+	show_sound = event_dangerous_animals
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_living_laboratory.1.continue
+
+		from = {
+			create_archaeological_site = lvb_living_laboratory_dig
+			save_global_event_target_as = lvb_living_laboratory_planet
+		}
+
+		begin_event_chain = {
+			event_chain = "living_laboratory_chain"
+			target = ROOT
+		}
+	}
+}
+
+# Accidental Lockdown
+fleet_event = {
+	id = lvb_living_laboratory.10
+	title = lvb_living_laboratory.10.name
+	desc = lvb_living_laboratory.10.desc
+	picture = GFX_evt_lvb_living_laboratory_entrance
+	show_sound = event_dig_site
+	location = from
+
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = lvb_living_laboratory.10.continue
+		small_artifact_reward = yes
+	}
+}
+
+# Dirty Science
+fleet_event = {
+	id = lvb_living_laboratory.11
+	title = lvb_living_laboratory.11.name
+	desc = lvb_living_laboratory.11.desc
+	picture = GFX_evt_lvb_living_laboratory_dirty_computers
+	show_sound = event_dig_site
+	location = from
+
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = lvb_living_laboratory.11.continue
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+# Translated Texts
+fleet_event = {
+	id = lvb_living_laboratory.12
+	title = lvb_living_laboratory.12.name
+	desc = lvb_living_laboratory.12.desc
+	picture = GFX_evt_lvb_living_laboratory_translated_texts
+	location = from
+
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = lvb_living_laboratory.12.continue
+		small_artifact_reward = yes
+	}
+}
+
+
+# Bio-Reactors
+fleet_event = {
+	id = lvb_living_laboratory.13
+	title = lvb_living_laboratory.13.name
+	desc = lvb_living_laboratory.13.desc
+	picture = GFX_evt_lvb_living_laboratory_bio_reactors
+	location = from
+
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = lvb_living_laboratory.13.continue
+		medium_artifact_reward = yes
+		enable_special_project = {
+			name = "lvb_living_laboratory_volunteers"
+			location = from
+			owner = root
+		}
+		enable_special_project = {
+			name = "lvb_living_laboratory_life_extension"
+			location = from
+			owner = root
+		}
+		enable_special_project = {
+			name = "lvb_living_laboratory_use"
+			location = from
+			owner = root
+		}
+		enable_special_project = {
+			name = "lvb_living_laboratory_destroy"
+			location = from
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	id = lvb_living_laboratory.20
+	title = "lvb_living_laboratory_volunteers"
+	desc = "lvb_living_laboratory.20.desc"
+	picture = GFX_evt_lvb_bioreactor_volunteers
+	location = event_target:lvb_living_laboratory_planet
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = { modifier = lvb_bioreactor_volunteers }
+	}
+
+	option = {
+		name = lvb_living_laboratory.20.continue
+		custom_tooltip = lvb_bioreactor_volunteers_effects
+	}
+}
+
+country_event = {
+	id = lvb_living_laboratory.21
+	title = "lvb_living_laboratory_life_extension"
+	desc = "lvb_living_laboratory.21.desc"
+	picture = GFX_evt_lvb_bioreactor_volunteers
+	location = event_target:lvb_living_laboratory_planet
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = lvb_bioreactor_life_extension
+	}
+
+	option = {
+		name = lvb_living_laboratory.21.continue
+		custom_tooltip = lvb_living_laboratory.21.tooltip
+	}
+}
+
+country_event = {
+	id = lvb_living_laboratory.22
+	title = "lvb_living_laboratory_use"
+	desc = "lvb_living_laboratory.22.desc"
+	picture = GFX_evt_lvb_bioreactor_use
+	location = event_target:lvb_living_laboratory_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_living_laboratory.22.continue
+		event_target:lvb_living_laboratory_planet = {
+			add_deposit = d_lvb_living_laboratory
+		}
+	}
+}
+
+country_event = {
+	id = lvb_living_laboratory.23
+	title = "lvb_living_laboratory_destroy"
+	desc = "lvb_living_laboratory.23.desc"
+	picture = GFX_evt_victorious_army
+	location = event_target:lvb_living_laboratory_planet
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = lvb_bioreactor_volunteers
+	}
+
+	option = {
+		name = lvb_living_laboratory.23.continue
+		owner = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencereward
+				min = @tier2influencemin
+				max = @tier2influencemax
+			}
+		}
+	}
+}

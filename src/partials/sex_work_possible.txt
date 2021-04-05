@@ -11,7 +11,6 @@
 					pop_has_trait = trait_lvb_custom_dildo_attachment
 					pop_has_trait = trait_lvb_synth_penis
 					pop_has_trait = trait_lvb_artificial_womb
-					pop_has_trait = trait_lvb_advanced_artificial_womb
 					pop_has_trait = trait_lvb_cybernetic_womb
 					pop_has_trait = trait_lvb_biomechanical_breeder
 					pop_has_trait = trait_lvb_synth_seeder

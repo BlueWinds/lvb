@@ -20,7 +20,6 @@ leader_trait_ruler_lvb_lustful_body = {		# Lustful Body
 			from = { has_trait = "trait_lvb_large_breasts" }
 			from = { has_trait = "trait_lvb_huge_breasts" }
 			from = { has_trait = "trait_lvb_multiple_breasts" }
-			from = { has_trait = "trait_lvb_breeder_hips" }
 			from = { has_trait = "trait_lvb_large_penis" }
 			from = { has_trait = "trait_lvb_huge_penis" }
 			from = { has_trait = "trait_lvb_multiple_penises" }
@@ -46,7 +45,6 @@ leader_trait_ruler_lvb_seductive = {		# Seductive
 			from = { has_trait = "trait_lvb_large_breasts" }
 			from = { has_trait = "trait_lvb_huge_breasts" }
 			from = { has_trait = "trait_lvb_multiple_breasts" }
-			from = { has_trait = "trait_lvb_breeder_hips" }
 			from = { has_trait = "trait_lvb_large_penis" }
 			from = { has_trait = "trait_lvb_huge_penis" }
 			from = { has_trait = "trait_lvb_multiple_penises" }
@@ -111,7 +109,6 @@ leader_trait_governor_lvb_lustful_body = {		# Lustful Body
 			from = { has_trait = "trait_lvb_large_breasts" }
 			from = { has_trait = "trait_lvb_huge_breasts" }
 			from = { has_trait = "trait_lvb_multiple_breasts" }
-			from = { has_trait = "trait_lvb_breeder_hips" }
 			from = { has_trait = "trait_lvb_large_penis" }
 			from = { has_trait = "trait_lvb_huge_penis" }
 			from = { has_trait = "trait_lvb_multiple_penises" }

@@ -1,0 +1,1543 @@
+namespace = lvb_traders
+
+# On enter system
+# Removes existing INVESTIGATE_ENCLAVE special project for lvb_traders and replaces it with our own
+fleet_event = {
+	id = lvb_traders.0
+	hide_window = yes
+	location = FROM
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_country_type = default
+			exists = capital_scope
+		}
+		from = {
+			has_star_flag = enclave
+			any_ship_in_system = {
+				exists = owner
+				owner = {
+					is_country_type = enclave
+					has_country_flag = lvb_trader_enclave_country
+					NOT = { has_communications = root.owner }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			capital_scope = { save_event_target_as = pc_home }
+			from = {
+				random_fleet_in_system = {
+					limit = {
+						exists = owner
+						owner = {
+							is_country_type = enclave
+							has_country_flag = lvb_trader_enclave_country
+						}
+					}
+					owner = {
+						save_event_target_as = target_enclave
+						# leviathans.97 will also fire, but not do anything. We have to make sure this triggers first, thus 299 days
+						country_event = { id = lvb_traders.2 days = 299 }
+						root.owner = {
+							abort_special_project = {
+								type = "INVESTIGATE_ENCLAVE"
+								location = event_target:pc_home
+							}
+						}
+						enable_special_project = {
+							name = "LVB_INVESTIGATE_ENCLAVE"
+							location = event_target:pc_home
+							owner = root.owner
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Communication Established
+country_event = {
+	id = lvb_traders.1
+	title = lvb_traders.1.name
+	desc = leviathans.99.desc
+	picture = GFX_evt_throne_room
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	immediate = { establish_communications_no_message = FROMFROM }
+
+	after = {
+		log = "after"
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontactxenophile
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+		}
+		else = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontact
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					fromfrom = {
+						has_country_flag = lvb_trader_enclave_country
+					}
+				}
+				fromfrom = { country_event = { id = lvb_traders.5 } }
+				break = yes
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	option = {
+		name = TASTY
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+
+	option = {
+		name = "leviathans.98.a"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lvb_traders.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:pc_home
+		event_target:pc_home = {
+			exists = owner
+			owner = {
+				NOT = { has_communications = root }
+				has_relation_flag = {
+					flag = ongoing_enclave_investigation
+					who = root
+				}
+			}
+		}
+	}
+
+	immediate = {
+		event_target:pc_home = {
+			if = {
+				limit = {
+					exists = owner
+					owner = {
+						NOT = {
+							has_communications = root
+						}
+						has_relation_flag = {
+							flag = ongoing_enclave_investigation
+							who = root
+						}
+					}
+				}
+				owner = {
+					root = { establish_communications_no_message = prev }
+					country_event = { id = lvb_traders.3 }
+				}
+			}
+		}
+	}
+}
+
+# Enclave Establishes Communications
+country_event = {
+	id = lvb_traders.3
+	title = lvb_traders.3.name
+	desc = leviathans.98.desc
+	picture = GFX_evt_throne_room
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	after = {
+		hidden_effect = {
+			from = { country_event = { id = lvb_traders.5 } }
+			abort_special_project = {
+				type = "LVB_INVESTIGATE_ENCLAVE"
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	option = {
+		name = TASTY
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+
+	option = {
+		name = leviathans.98.a
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
+
+
+# Communication Established
+country_event = {
+	id = lvb_traders.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = day_0
+		}
+		fromfrom = {
+			NOT = {
+				has_country_flag = day_0
+			}
+			is_country_type = enclave
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				fromfrom = {
+					is_country_type = enclave
+					has_country_flag = lvb_trader_enclave_country
+				}
+			}
+			country_event = { id = lvb_traders.5 }
+		}
+	}
+}
+
+# Port
+country_event = {
+	id = lvb_traders.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = lvb_traders.6 }
+		}
+	}
+}
+
+# Trader Introduction
+country_event = {
+	id = lvb_traders.6
+	title = lvb_traders.6.name
+	desc = lvb_traders.6.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+
+	picture_event_data = {
+		portrait = from
+		room = lvb_trader_room
+	}
+
+	option = {
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		custom_gui = "enclave_trader_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+		custom_gui = "enclave_trader_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+		custom_gui = "enclave_trader_option"
+	}
+
+	option = {
+		name = lvb_traders.6.a
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		custom_gui = "enclave_trader_option"
+	}
+}
+
+# Traders Main Menu #1 (Initial)
+country_event = {
+	id = lvb_traders.7
+	title = lvb_traders.7.name
+	desc = lvb_traders.7a.desc
+	desc = lvb_traders.7b.desc
+	desc = lvb_traders.7c.desc
+	desc = lvb_traders.7d.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = lvb_trader_room
+	}
+
+	trigger = {
+		from = {
+			is_country_type = enclave
+			has_country_flag = lvb_trader_enclave_country
+		}
+		NOT = { has_country_flag = attacked_lvb_traders }
+		NOT = { has_country_flag = lvb_traders_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_diplomacy_engaged
+		FROM = { save_event_target_as = traders }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+
+	option = { # Sell Citizens
+		name = lvb_traders.7.sell
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+				is_gestalt = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = lvb_traders.7.sell.fail
+				lvb_traders_selling_citizens = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = lvb_traders.10 }
+		}
+	}
+
+	option = { # Buy Pop
+		name = lvb_traders.7.buy
+		custom_gui = "enclave_trader_option"
+		allow = {
+			custom_tooltip = {
+				text = lvb_traders.7.buy.trust
+				event_target:traders = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = lvb_traders.7.buy.too_recently
+				NOT = { has_country_flag = lvb_traders_bought_pop }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = lvb_traders.20 }
+		}
+	}
+
+	option = {
+		name = leviathans.105.d
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+}
+
+# Selling Citizens
+country_event = {
+	id = lvb_traders.10
+	title = lvb_traders.7.name
+	desc = lvb_traders.10.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = lvb_trader_room
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = lvb_traders.10.a
+		custom_gui = "enclave_trader_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			is_gestalt = no
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_lvb_traders }
+			}
+		}
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = lvb_traders_sell_citizens_1
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			country_event = { id = lvb_traders.11 days = 3600 }
+			country_event = { id = lvb_traders.200 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.a
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			is_gestalt = no
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_lvb_traders }
+			}
+		}
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = lvb_traders_sell_citizens_2
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			country_event = { id = lvb_traders.11 days = 3600 }
+			country_event = { id = lvb_traders.200 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.a
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			is_gestalt = no
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_lvb_traders }
+			}
+		}
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = lvb_traders_sell_citizens_3
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			country_event = { id = lvb_traders.11 days = 3600 }
+			country_event = { id = lvb_traders.200 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.a
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			is_gestalt = no
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_lvb_traders }
+			}
+		}
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = lvb_traders_sell_citizens_4
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			country_event = { id = lvb_traders.11 days = 3600 }
+			country_event = { id = lvb_traders.200 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.a
+		custom_gui = "enclave_trader_option"
+		trigger = { num_pops > 240 }
+		allow = {
+			is_gestalt = no
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_lvb_traders }
+			}
+		}
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = lvb_traders_sell_citizens_5
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:traders = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			country_event = { id = lvb_traders.11 days = 3600 }
+			country_event = { id = lvb_traders.200 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.b
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			country_event = { id = lvb_traders.7 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.c
+		custom_gui = "enclave_trader_option"
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+}
+
+## Remove Slavers Guild Trade Relation Flag (HIDDEN)
+country_event = {
+	id = lvb_traders.11
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = lvb_traders.12 }
+	}
+}
+
+# Continue Trade? (Slavers Guild)
+country_event = {
+	id = lvb_traders.12
+	title = lvb_traders.7.name
+	desc = lvb_traders.12.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = lvb_trader_room
+	}
+
+	trigger = {
+		NOR = {
+			has_global_flag = lvb_traders_destroyed
+			has_country_flag = attacked_lvb_traders
+		}
+	}
+
+	option = {
+		name = lvb_traders.12.a
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			country_event = { id = lvb_traders.10 }
+		}
+	}
+	option = {
+		name = lvb_traders.12.b
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			country_event = { id = lvb_traders.10 }
+		}
+	}
+	option = {
+		name = lvb_traders.12.c
+		custom_gui = "enclave_trader_option"
+	}
+}
+
+# Buy Pop Reply
+country_event = {
+	id = lvb_traders.20
+	title = lvb_traders.7.name
+	desc = lvb_traders.20.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = lvb_trader_room
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_diplomacy_engaged
+		random_owned_species = {
+			save_event_target_as = lvb_traders_sex_slave_species
+		}
+		random_owned_species = {
+			save_event_target_as = lvb_traders_milk_cow_species
+		}
+	}
+
+	option = {
+		name = lvb_traders.20.a
+		custom_gui = "enclave_trader_option"
+		custom_tooltip = "lvb_traders.20.a.tooltip"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			custom_tooltip = {
+				fail_text = lvb_traders.7.buy.too_recently
+				NOT = { has_country_flag = lvb_traders_bought_pop }
+			}
+		}
+		add_resource = { energy = -1000 }
+		hidden_effect = {
+			random_owned_planet = {
+				create_pop {
+					species = owner_main_species
+				}
+				last_created_pop = {
+					modify_species = {
+						add_trait = trait_lvb_submissive
+						remove_trait = trait_lvb_dominant
+						remove_trait = trait_deviants
+					}
+				}
+			}
+			set_country_flag = lvb_traders_bought_pop
+			country_event = { id = lvb_traders.21 days = 3600 }
+		}
+	}
+
+	option = {
+		name = lvb_traders.20.b
+		custom_gui = "enclave_trader_option"
+		custom_tooltip = "lvb_traders.20.b.tooltip"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+			custom_tooltip = {
+				fail_text = lvb_traders.7.buy.too_recently
+				NOT = { has_country_flag = lvb_traders_bought_pop }
+			}
+		}
+		add_resource = { energy = -1500 }
+		hidden_effect = {
+			random_owned_planet = {
+				create_pop {
+					species = event_target:lvb_traders_sex_slave_species
+				}
+				last_created_pop = {
+					modify_species = {
+						add_trait = trait_lvb_submissive
+						add_trait = trait_lvb_sex_crazed
+						add_trait = trait_lvb_sexually_gifted
+						remove_trait = trait_lvb_dominant
+						remove_trait = trait_deviants
+						remove_trait = trait_lvb_sexually_inept
+						remove_trait = trait_lvb_sexually_repressed
+						remove_trait = trait_lvb_lewd_mind
+						remove_trait = trait_conformists
+					}
+				}
+			}
+			set_country_flag = lvb_traders_bought_pop
+			country_event = { id = lvb_traders.21 days = 3600 }
+		}
+	}
+
+	option = {
+		name = lvb_traders.20.c
+		custom_gui = "enclave_trader_option"
+		custom_tooltip = "lvb_traders.20.c.tooltip"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			custom_tooltip = {
+				fail_text = lvb_traders.7.buy.too_recently
+				NOT = { has_country_flag = lvb_traders_bought_pop }
+			}
+		}
+		add_resource = { energy = -2000 }
+		hidden_effect = {
+			random_owned_planet = {
+				create_pop {
+					species = event_target:lvb_traders_milk_cow_species
+				}
+				last_created_pop = {
+					modify_species = {
+						add_trait = trait_lvb_all_female
+						add_trait = trait_lvb_huge_breasts
+						add_trait = trait_lvb_drooling_vagina
+						add_trait = trait_sedentary
+						remove_trait = trait_nomadic
+						remove_trait = trait_lvb_large_breasts
+						remove_trait = trait_lvb_small_breasts
+						remove_trait = trait_lvb_all_male
+						remove_trait = trait_lvb_sexually_inept
+						remove_trait = trait_lvb_futanari
+						remove_trait = trait_lvb_large_penis
+						remove_trait = trait_lvb_huge_penis
+						remove_trait = trait_lvb_multiple_penises
+						remove_trait = trait_lvb_high_volume_ejaculations
+						remove_trait = trait_lvb_addictive_cum
+						remove_trait = trait_lvb_small_penis
+						remove_trait = trait_lvb_opt_intercompatible_sperm
+					}
+				}
+			}
+			set_country_flag = lvb_traders_bought_pop
+			country_event = { id = lvb_traders.21 days = 3600 }
+		}
+	}
+
+	option = {
+		name = lvb_traders.10.b
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			country_event = { id = lvb_traders.7 }
+		}
+	}
+	option = {
+		name = lvb_traders.10.c
+		custom_gui = "enclave_trader_option"
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+}
+
+# New slaves ready (Slavers Guild)
+country_event = {
+	id = lvb_traders.21
+	title = lvb_traders.7.name
+	desc = lvb_traders.21.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+
+	picture_event_data = {
+		portrait = event_target:traders
+		room = lvb_trader_room
+	}
+
+	trigger = {
+		NOR = {
+			has_global_flag = lvb_traders_destroyed
+			has_country_flag = attacked_lvb_traders
+		}
+	}
+
+	immediate = {
+		remove_country_flag = lvb_traders_bought_pop
+	}
+
+	option = {
+		name = lvb_traders.21.a
+		custom_gui = "enclave_trader_option"
+		hidden_effect = {
+			country_event = { id = lvb_traders.20 }
+		}
+	}
+	option = {
+		name = lvb_traders.21.b
+		custom_gui = "enclave_trader_option"
+	}
+}
+
+# Slavers Destroyed (HIDDEN)
+country_event = {
+	id = lvb_traders.100
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = enclave
+		has_country_flag = lvb_trader_enclave_country
+		FROMFROM = {
+			is_ship_size = enclave_station
+		}
+	}
+
+	immediate = {
+		FROMFROM = {
+			solar_system = { save_event_target_as = lvb_traders_system }
+		}
+		FROM = {
+			country_event = { id = lvb_traders.101 }
+			save_event_target_as = lvb_traders_destroyer
+		}
+		observer_event = { id = lvb_traders.102 }
+		every_country = {
+			limit = {
+				has_communications = ROOT
+				NOT = { is_country = event_target:lvb_traders_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = lvb_traders.103 }
+		}
+	}
+}
+
+# Slavers Destroyed (Destroyer)
+country_event = {
+	id = lvb_traders.101
+	title = "lvb_traders.101"
+	desc = "lvb_traders.101.desc"
+	picture = GFX_evt_space_debris
+	location = event_target:lvb_traders_system
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_lvb_traders
+		if = {
+			limit = {
+				lvb_traders_selling_citizens = yes
+			}
+			remove_modifier = lvb_traders_sell_citizens_1
+			remove_modifier = lvb_traders_sell_citizens_2
+			remove_modifier = lvb_traders_sell_citizens_3
+			remove_modifier = lvb_traders_sell_citizens_4
+			remove_modifier = lvb_traders_sell_citizens_5
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		random_owned_planet = {
+			create_pop {
+				species = owner_main_species
+			}
+			last_created_pop = {
+				modify_species = {
+					add_trait = trait_lvb_submissive
+					remove_trait = trait_lvb_dominant
+					remove_trait = trait_deviants
+				}
+			}
+		}
+		random_owned_planet = {
+			create_pop {
+				species = owner_main_species
+			}
+			last_created_pop = {
+				modify_species = {
+					add_trait = trait_lvb_submissive
+					remove_trait = trait_lvb_dominant
+					remove_trait = trait_deviants
+				}
+			}
+		}
+		random_owned_planet = {
+			create_pop {
+				species = owner_main_species
+			}
+			last_created_pop = {
+				modify_species = {
+					add_trait = trait_lvb_submissive
+					remove_trait = trait_lvb_dominant
+					remove_trait = trait_deviants
+				}
+			}
+		}
+	}
+}
+
+# Slavers Guild Station Destroyed
+observer_event = {
+	id = lvb_traders.102
+	title = "lvb_traders.101"
+	desc = "lvb_traders.103.b.desc"
+	picture = GFX_evt_exploding_ship
+	location = event_target:lvb_traders_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+# Traders Destroyed
+country_event = {
+	id = lvb_traders.103
+	title = "lvb_traders.101"
+	desc = {
+		text = "lvb_traders.103.a.desc"
+		trigger = {
+			lvb_traders_selling_citizens = no
+			has_communications = event_target:lvb_traders_destroyer
+		}
+	}
+	desc = {
+		text = "lvb_traders.103.b.desc"
+		trigger = {
+			lvb_traders_selling_citizens = no
+			NOT = { has_communications = event_target:lvb_traders_destroyer }
+		}
+	}
+	desc = {
+		text = "lvb_traders.103.c.desc"
+		trigger = {
+			lvb_traders_selling_citizens = yes
+			has_communications = event_target:lvb_traders_destroyer
+		}
+	}
+	desc = {
+		text = "lvb_traders.103.d.desc"
+		trigger = {
+			lvb_traders_selling_citizens = yes
+			NOT = { has_communications = event_target:lvb_traders_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:lvb_traders_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				is_ai = yes
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+			add_opinion_modifier = {
+				who = event_target:lvb_traders_destroyer
+				modifier = opinion_destroyed_lvb_traders_good
+			}
+		}
+		if = {
+			limit = {
+				is_ai = yes
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+			add_opinion_modifier = {
+				who = event_target:lvb_traders_destroyer
+				modifier = opinion_destroyed_lvb_traders_bad
+			}
+		}
+	}
+
+	option = {
+		name = "lvb_traders.103.a"
+		trigger = {
+			lvb_traders_selling_citizens = no
+		}
+	}
+	option = {
+		name = "lvb_traders.103.b"
+		trigger = {
+			lvb_traders_selling_citizens = yes
+		}
+		hidden_effect = {
+			remove_modifier = lvb_traders_sell_citizens_1
+			remove_modifier = lvb_traders_sell_citizens_2
+			remove_modifier = lvb_traders_sell_citizens_3
+			remove_modifier = lvb_traders_sell_citizens_4
+			remove_modifier = lvb_traders_sell_citizens_5
+		}
+	}
+}
+
+
+# Attacked Slavers Guild (HIDDEN)
+country_event = {
+	id = lvb_traders.104
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		FROM = { has_country_flag = lvb_trader_enclave_country }
+	}
+
+	immediate = {
+		FROM = {
+			save_event_target_as = lvb_traders
+			add_trust = {
+				who = ROOT
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_lvb_traders
+		if = {
+			limit = {
+				lvb_traders_selling_citizens = yes
+			}
+			remove_modifier = lvb_traders_sell_citizens_1
+			remove_modifier = lvb_traders_sell_citizens_2
+			remove_modifier = lvb_traders_sell_citizens_3
+			remove_modifier = lvb_traders_sell_citizens_4
+			remove_modifier = lvb_traders_sell_citizens_5
+			country_event = { id = lvb_traders.105 }
+		}
+	}
+}
+
+# Attacked Slavers Guild - Agreement Terminated
+country_event = {
+	id = lvb_traders.105
+	title = lvb_traders.7.name
+	desc = lvb_traders.105.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+
+	picture_event_data = {
+		portrait = event_target:lvb_traders
+		room = lvb_trader_room
+	}
+
+	option = {
+		name = leviathans.156.a
+		custom_gui = "enclave_trader_option"
+	}
+}
+
+# Attacked Slavers - Refuses Communications
+country_event = {
+	id = lvb_traders.106
+	title = lvb_traders.7.name
+	desc = lvb_traders.105.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:lvb_traders
+		room = lvb_trader_room
+	}
+
+	trigger = {
+		FROM = {
+			is_country_type = enclave
+			has_country_flag = lvb_trader_enclave_country
+		}
+		has_country_flag = attacked_lvb_traders
+		NOT = { has_country_flag = lvb_traders_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_diplomacy_engaged
+		FROM = { save_event_target_as = lvb_traders }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = lvb_traders_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_trader_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_trader_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+		custom_gui = "enclave_trader_option"
+	}
+
+	option = {
+		name = leviathans.156.a
+		custom_gui = "enclave_trader_option"
+		trigger = { NOR = { has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_hive_devouring_swarm has_valid_civic = civic_machine_terminator } }
+		default_hide_option = yes
+	}
+}
+
+# Slavers Event Trigger
+country_event = {
+	id = lvb_traders.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:lvb_trader_enclave_country
+		lvb_traders_selling_citizens = yes
+	}
+
+	immediate = {
+		random_list = {
+			20 = {
+				modifier = {
+					factor = 0.5
+					has_country_flag = lvb_traders_selling_citizens_event_1
+				}
+				modifier = {
+					factor = 0
+					exists = event_target:lvb_traders_sold_leader
+				}
+				country_event = { id = lvb_traders.201 days = 500 random = 1000 }
+			}
+			20 = {
+				modifier = {
+					factor = 0.5
+					has_country_flag = lvb_traders_selling_citizens_event_2
+				}
+				country_event = { id = lvb_traders.202 days = 500 random = 1000 }
+			}
+			20 = {
+				modifier = {
+					factor = 0.5
+					has_country_flag = lvb_traders_selling_citizens_event_3
+				}
+				country_event = { id = lvb_traders.203 days = 500 random = 1000 }
+			}
+			20 = {
+				modifier = {
+					factor = 0.5
+					has_country_flag = lvb_traders_selling_citizens_event_4
+				}
+				country_event = { id = lvb_traders.204 days = 500 random = 1000 }
+			}
+			20 = {
+				modifier = {
+					factor = 0.5
+					has_country_flag = lvb_traders_selling_citizens_event_5
+				}
+				modifier = {
+					factor = 0
+					NOT = { exists = event_target:lvb_traders_sold_leader }
+				}
+				country_event = { id = lvb_traders.205 days = 500 random = 1000 }
+			}
+			20 = {
+				modifier = {
+					factor = 0.20
+					NOR = {
+						has_country_flag = lvb_traders_selling_citizens_event_1
+						has_country_flag = lvb_traders_selling_citizens_event_2
+						has_country_flag = lvb_traders_selling_citizens_event_3
+						has_country_flag = lvb_traders_selling_citizens_event_4
+					}
+				}
+			}
+		}
+	}
+}
+
+# Sell leader
+country_event = {
+	id = lvb_traders.201
+	title = lvb_traders.7.name
+	desc = lvb_traders.201.desc
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	custom_gui_option = "enclave_trader_option"
+
+	picture_event_data = {
+		portrait = event_target:lvb_trader_enclave_country
+		room = lvb_trader_room
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:lvb_trader_enclave_country
+		lvb_traders_selling_citizens = yes
+		NOT = { exists = event_target:lvb_traders_sold_leader }
+		any_owned_leader = {
+			NOT = {
+				leader_class = ruler
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_selling_citizens_event_1
+		random_owned_leader = {
+			limit = {
+				NOT = {
+					leader_class = ruler
+				}
+			}
+			save_event_target_as = selling_leader
+		}
+	}
+
+	option = {
+		name = DEAL
+		custom_tooltip = lvb_traders.201.tooltip
+		add_resource = { energy = 1000 }
+		hidden_effect = {
+			event_target:selling_leader = {
+				save_global_event_target_as = lvb_traders_sold_leader
+				exile_leader_as = lvb_traders_sold_leader_exiled
+			}
+		}
+	}
+	option = {
+		name = NODEAL
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = lvb_traders.200 days = 100 random = 25 }
+		}
+	}
+}
+
+country_event = {
+	id = lvb_traders.202
+	title = lvb_traders.202.name
+	desc = lvb_traders.202.desc
+	picture = GFX_evt_lvb_traders_kidnappings
+	show_sound = event_planetary_riot
+	location = event_target:this_planet
+
+	is_triggered_only = yes
+
+	trigger = {
+		lvb_traders_selling_citizens = yes
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_selling_citizens_event_2
+		random_owned_planet = {
+			save_event_target_as = this_planet
+		}
+	}
+	option = {
+		name = UNFORTUNATE
+		event_target:this_planet = {
+			add_modifier = {
+				modifier = lvb_traders_kidnappings
+				days = 720
+			}
+		}
+	}
+	option = {
+		name = leviathans.310.b
+		add_resource = { influence = -100 }
+	}
+
+	after = {
+		event_target:this_planet = {
+			random_pop = {
+				limit = {
+					NOT = { is_pop_category = ruler }
+				}
+				kill_pop = yes
+			}
+		}
+		hidden_effect = {
+			country_event = { id = lvb_traders.200 days = 100 random = 25 }
+		}
+	}
+}
+
+country_event = {
+	id = lvb_traders.203
+	title = lvb_traders.203.name
+	desc = lvb_traders.203.desc
+	picture = GFX_evt_lvb_traders_kidnapping_rulers
+	show_sound = event_planetary_riot
+	location = event_target:this_planet
+
+	is_triggered_only = yes
+
+	trigger = {
+		lvb_traders_selling_citizens = yes
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_selling_citizens_event_3
+		random_owned_planet = {
+			save_event_target_as = this_planet
+		}
+	}
+	option = {
+		name = UNFORTUNATE
+		event_target:this_planet = {
+			add_modifier = {
+				modifier = lvb_traders_kidnapping_rulers
+				days = 720
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = lvb_traders.200 days = 100 random = 25 }
+		}
+	}
+}
+
+country_event = {
+	id = lvb_traders.204
+	title = lvb_traders.204.name
+	desc = lvb_traders.204.desc
+	picture = GFX_evt_lvb_traders_public_use
+	show_sound = event_planetary_riot
+	location = event_target:this_planet
+
+	is_triggered_only = yes
+
+	trigger = {
+		lvb_traders_selling_citizens = yes
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_selling_citizens_event_4
+		random_owned_planet = {
+			save_event_target_as = this_planet
+		}
+	}
+	option = {
+		name = lvb_traders.204.a
+		add_modifier = {
+			modifier = lvb_traders_public_use
+			days = 720
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = lvb_traders.200 days = 100 random = 25 }
+		}
+	}
+}
+
+# Buy leader back
+country_event = {
+	id = lvb_traders.205
+	title = lvb_traders.7.name
+	desc = lvb_traders.205.desc
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+	custom_gui_option = "enclave_trader_option"
+
+	picture_event_data = {
+		portrait = event_target:lvb_trader_enclave_country
+		room = lvb_trader_room
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:lvb_trader_enclave_country
+		lvb_traders_selling_citizens = yes
+		exists = event_target:lvb_traders_sold_leader
+	}
+
+	immediate = {
+		set_country_flag = lvb_traders_selling_citizens_event_5
+	}
+
+	option = {
+		name = DEAL
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 400 }
+		}
+		add_resource = { energy = -400 }
+		hidden_effect = {
+			event_target:lvb_traders_sold_leader = {
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_lvb_sexologist
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_lvb_highly_submissive
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_lvb_highly_submissive
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_lvb_highly_submissive
+				}
+			}
+		}
+		clone_leader = {
+			target = event_target:lvb_traders_sold_leader
+		}
+	}
+	option = {
+		name = NODEAL
+	}
+
+	after = {
+		hidden_effect = {
+			clear_global_event_target = lvb_traders_sold_leader
+			country_event = { id = lvb_traders.200 days = 100 random = 25 }
+		}
+	}
+}

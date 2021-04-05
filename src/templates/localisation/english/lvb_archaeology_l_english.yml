@@ -16,7 +16,7 @@ tentacle_extinction_chain_title: "Tentacle Planet"
 tentacle_extinction_chain_desc: "A planet covered with tentacle monsters. Ancient ruins indicating [Root.GetName] once bore thriving civilization. A kidnapped scientist. We should attempt a rescue, and learn what's going on here at the same time."
 
 lvb_tentacle_extinction.1.name: "Kidnapped by tentacle monsters"
-lvb_tentacle_extinction.1.desc: "[lvb_tentacle_scientist.GetName] was leading an expedition to survey the seemingly idealic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_scientist.GetName]'s transponder indicates that [lvb_tentacle_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."
+lvb_tentacle_extinction.1.desc: "[lvb_tentacle_scientist.GetName] was leading an expedition to survey the seemingly idyllic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_scientist.GetName]'s transponder indicates that [lvb_tentacle_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."
 lvb_tentacle_extinction.1.continue: "This is horrible!"
 
 lvb_tentacle_extinction.10.name: "Safe(?) landing"
@@ -70,3 +70,66 @@ d_lvb_flesh_pits_desc: "Living walls of tentacles keep women constantly stimulat
 
 d_lvb_flesh_pits_research: "Flesh Pit Laboratory"
 d_lvb_flesh_pits_research_desc: "Living walls of tentacles keep women constantly stimulated and pregnant while researches experiment on them to discover how their biology is being altered."
+
+#####################
+# Living Laboratory #
+#####################
+
+lvb_living_laboratory_cat: "An Abandoned Outpost"
+lvb_living_laboratory_cat_desc: "[Root.GetName] hosts a single set of overgrown ruins on its otherwise pristine surface, easily detectable from orbit. There's no sign of the inhabitants."
+
+lvb_living_laboratory_dig: "Abandoned Outpost"
+
+living_laboratory_chain_title: "Abandoned Planet"
+living_laboratory_chain_desc: "[Root.GetName] hosts is uninhabited and undeveloped, save an abandoned outpost on the southern continent, nestled in a remote valley - it would be hard to locate from the surface, but is extremely obvious from orbit. There's no sign of the inhabitants, so some exploration seems in order."
+
+lvb_living_laboratory.1.name: "Subsurface Complex"
+lvb_living_laboratory.1.desc: "Our exploration team landed some distance away and approached the outpost on foot. Nothing barred their approach, and preliminary surveys confirmed that the area is indeed abandoned. The outpost appears to be a cluster of prefabricated buildings, showing considerable sophistication, and bearing signs of a methodical evacuation that leaving little of value - material or informational - behind. However, the buildings on the surface seem to be little more than the entrance to a much larger (and sealed) underground facility. Exploring beneath the surface will require an archaeological expedition."
+lvb_living_laboratory.1.continue: "We'll send a team later."
+
+lvb_living_laboratory.10.name: "Accidental Lockdown"
+lvb_living_laboratory.10.desc: "The doors to the underground facility proved to very well armored, and our team eventually resorted to a liberal application of explosives and heavy-duty industrial equipment. Once inside, their ears were assaulted by a warning claxon, which proved remarkably easy to disable by acknowledging the prompt on the unsecured computer terminal right in front of their still smoking entry, It does not appear to have been an extremely secure facility so much as one that accidentally entered lockdown for unknown reasons.\n\nThe team is ready to begin their examination of the computers, and venture deeper inside."
+lvb_living_laboratory.10.continue: "Proceed."
+
+lvb_living_laboratory.11.name: "Dirty Science"
+lvb_living_laboratory.11.desc: "Exploring the computer systems on [Root.GetName] has proven... interesting. They appear to contain research notes in an unknown alien language accompanying copious recordings of... well... sex. There are tens of thousands of hours of video and instrumental output concerned with sexual and reproductive matters. It seems to grow more extreme as the timestamps increase, from simple observation of sexual acts, then towards sexual experimentation upon subjects in increasingly elaborate machinery.\n\nThe team has forwarded some of the choicest bits to our homeworld for \"more detailed evaluation\" while whey continue to explore the underground facility."
+lvb_living_laboratory.11.continue: "What in the world..."
+
+lvb_living_laboratory.12.name: "Translated Texts"
+lvb_living_laboratory.12.desc: "Our archaeological team has managed to translate a portion of the alien language, confirming their initial suspicion that the lockdown of the undeground facilitiy was an accident caused by a programming error. While most of the researchers were away, one of the janitorial staff presed the wrong button, and The security system denied all attempts to lift it.\n\nMore interesting than that, however, are the researcher's notes. They were pursuing what they termed IGP - Intelligent Gestation Pods - harnessing the biological potential of their subjects to produce pharmaceuticals and industrially useful compounds. It seems they were on the cusp of what they considered success when the project abruptly ended. The logs suggest, however, that the experimental subjects were housed in a deeper level we must have missed in our initial sweep. The team is searching for it now."
+lvb_living_laboratory.12.continue: "We must find them!"
+
+lvb_living_laboratory.13.name: "Bio-Reactors"
+lvb_living_laboratory.13.desc: "Deep beneath the surface of [Root.GetName], our scientists have found the fruits, horrible as they are, of the compound's research. Rows and rows of tanks, holding thousands of aliens housed in intricate machinery keeping them fed, cleaned and drugged. The fact that they've survived nearly a thousand years in this state is testament to their captors scientific prowess, now clearly revealed as somewhat greater than our own.\n\nOur researches report that the captives shudder and moan, apparently brought to climax dozens of times per day so their secretions can be collected and analyzed - though without researches to do the analysis, there's a tank of vaginal secretions and cum deep enough to go swimming in kept in stasis."
+lvb_living_laboratory.13.continue: "What to do..."
+
+lvb_living_laboratory_volunteers: "Bioreactor Volunteers"
+lvb_living_laboratory_volunteers_DESC: "Rescue the victims and send them to the nearest hospital, then research the facility to discover exactly how they achieved such remarkable effects.\n\nPampered, blissful, with continuous orgasms *and* industrially useful? More than a few of our populace might be willing to volunteer for a 6-month stint in such a tank..."
+lvb_living_laboratory.20.desc: "Disassembling the living laboratory has revealed to us some of its secrets - namely, how to both increase the production of our own Bioreactors and make sure our citizens enjoy their stay. While decanting can be rather disorienting at first, 97% of those who spend a few months climaxing in our machinery as living fuckdolls report enjoying the experience. Approximately 73% of volunteers return for a second stint within 5 years."
+lvb_living_laboratory.20.continue: "Excellent."
+
+lvb_bioreactor_volunteers: "Bioreactor Volunteers"
+lvb_bioreactor_volunteers_desc: "Rather than being forced into the job, our citizens volunteer - and indeed occasionally even compete for - very pleasurable positions inside our bioreactors."
+lvb_bioreactor_volunteers_effects: "£job_lvb_bioreactor£ $job_lvb_bioreactor_plural$ and £job_lvb_hot_tank£ $job_lvb_hot_tank_plural$ generate §G+25%§! and suffer no happiness penalty."
+
+lvb_living_laboratory_life_extension: "Bioreactor Life Extension"
+lvb_living_laboratory_life_extension_DESC: "Rescue the victims and send them to the nearest hospital, then research the facility to discover exactly how they achieved such remarkable effects.The test subjects are still alive after more than a thousand years - perhaps this can be adapted to help extend our leader's lifespans."
+lvb_living_laboratory.21.desc: "The project to extend our leader's lifespan using the technology uncovered in the living laboratory has had mixed results. On the one hand, it's extremely effective, adding decades to the lifespan of those blessed to spend time in the modified bioreactors. On the other though, the process is... addictive. Research will continue on how to gain the benefits of this technology without turning out leaders into drooling sex addicts."
+lvb_living_laboratory.21.continue: "Excellent."
+lvb_living_laboratory.21.tooltip: "Unlocks §YBioreactor Life Extension§! $policy_leader_enhancement$ policy."
+
+lvb_living_laboratory_life_extension_policy: "Bioreactor Life Extension"
+lvb_living_laboratory_life_extension_policy_desc: "On the one hand, having our leaders spend their time orgasming in hot tanks while off duty is extremely effective, adding decades to the lifespan. On the other hand, the process is rather addictive. Wait, where's the downside?\n\n"
+
+lvb_living_laboratory_use: "Research Bioreactors"
+lvb_living_laboratory_use_DESC: "The research being conducted here was truly inspiring. We should adopt their goals and methodology as our own, using living dolls for research purposes. The occupants won't mind - they'll be too busy cumming their brains out to realize how we're using their bodies."
+lvb_living_laboratory.22.desc: "$d_lvb_living_laboratory_desc$\n\nWe've prepared the facility for use in our own ongoing research."
+lvb_living_laboratory.22.continue: "Excellent."
+
+d_lvb_living_laboratory: "Living Laboratory"
+d_lvb_living_laboratory_desc: "While it's bound to raise some concerns among our more squeamish citizens, those actually doing the hard work of cumming their brains out in the name of scientific progress haven't been complaining too much. Not that we could hear them through the glass if they were, mind you."
+
+lvb_living_laboratory_destroy: "Destroy the Facility"
+lvb_living_laboratory_destroy_DESC: "Rescue the victims and send them to the nearest hospital. Set the facility on fire. Collapse the roof, bomb the location, salt the crater and let us never speak of this abomination of science again."
+lvb_living_laboratory.23.desc: "We my have used a bit of excessive force while destroying the scientific outpost, but the results speak for themselves - a blasted crater showing that the [Root.Owner.GetName] will not stand idly by while \"scientists\" victimize innocent women. If we need to know more about fucking, we'll figure it out the old fashioned way, and enjoy it."
+lvb_living_laboratory.23.continue: "Dead and gone"

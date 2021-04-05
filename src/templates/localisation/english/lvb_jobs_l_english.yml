@@ -24,18 +24,22 @@ planet_lvb_forced_breeding: "Forced Breeding"
 job_lvb_milk_cow: "Milk Cow"
 job_lvb_milk_cow_plural: "Milk Cows"
 job_lvb_milk_cow_desc: "Milk has uses both as food and as a luxury item. Certain traits make MUCH more effective Milk Cows."
-job_lvb_milk_cow_effect_desc: "£job_lvb_milk_cow£ $job_lvb_milk_cow_plural$ turn breast milk and other fluids into fresh £food£ §Y$food$§! and usable £consumer_goods£ §Y$consumer_goods$§!"
+job_lvb_milk_cow_effect_desc: "£job_lvb_milk_cow£ $job_lvb_milk_cow_plural$ turn fresh £food£ §Y$food$§! into £consumer_goods£ §Y$consumer_goods$§!"
 mod_job_lvb_milk_cow_add: "$job_lvb_milk_cow$"
 
+lvb_bioreactor: "Bioreactor"
 job_lvb_bioreactor: "Research Bioreactor"
 job_lvb_bioreactor_plural: "Experimental Bioreactors"
+job_lvb_bioreactor_effect_desc: "£job_lvb_bioreactor£ $job_lvb_bioreactor_plural$ turn £food£ §Y$food$§! into £physics£ £engineering£ and especially £society£"
 job_lvb_bioreactor_desc: "Restrained, naked and subjected to whatever experiments our researchers deem necessary, these subjects help us explore the darkest aspects of sexual psychology and biology."
-mod_job_lvb_bioreactor_add: "$job_lvb_bioreactor$"
+mod_job_lvb_bioreactor_add: "$job_lvb_bioreactor$ Jobs"
 
+lvb_hot_tank: "Bioreactor"
 job_lvb_hot_tank: "Bioreactor"
 job_lvb_hot_tank_plural: "Production Bioreactors"
+job_lvb_hot_tank_effect_desc: "£job_lvb_hot_tank£ $job_lvb_hot_tank_plural$ turn £food£ §Y$food$§! into £volatile_motes£, £rare_crystals£ and £exotic_gases£"
 job_lvb_hot_tank_desc: "These women have had their bodies modified to serve as biological reactors, producing industrially useful fluids. They are semi-permanently installed in their stalls, fed, managed and milked by a variety of machines."
-mod_job_lvb_hot_tank_add: "$job_lvb_hot_tank$"
+mod_job_lvb_hot_tank_add: "$job_lvb_hot_tank$ Jobs"
 
 # Sex Work #
 
