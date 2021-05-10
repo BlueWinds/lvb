@@ -1,4 +1,4 @@
-name="Lustful Void Blue"
+name="Lovely Vibes in Blue"
 path="mod/LVB"
 
 tags={

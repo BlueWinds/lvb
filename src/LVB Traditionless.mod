@@ -1,4 +1,4 @@
-name="Lustful Void Blue (no Traditions)"
+name="Lovely Vibes in Blue (no Traditions)"
 path="LVB Traditionless"
 
 tags={
