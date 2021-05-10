@@ -11,7 +11,6 @@ const defines = require('./defines')
 
 const nicePrint = (n) => n.toFixed(3).replace(/0+$/, '').replace(/\.$/, '')
 
-Handlebars.registerPartial('test_partial', "partial - {{parameter}}")
 Handlebars.registerHelper('getWeight', (mult) => nicePrint(1 + parseFloat(mult, 10)))
 Handlebars.registerHelper('multiply', (base, mult) => nicePrint(parseFloat(base, 10) * parseFloat(mult, 10)))
 
@@ -29,7 +28,7 @@ for (const file of glob.sync('**/*.txt', {cwd: path.resolve(__dirname, 'partials
 
 
 // Render and copy text files
-for (const file of glob.sync('**/*.{txt,yml,gfx,gui}', {cwd: path.resolve(__dirname, 'templates')})) {
+for (const file of glob.sync('**/*.{txt,yml,gfx,gui,mod}', {cwd: path.resolve(__dirname, 'templates')})) {
   const text = fs.readFileSync(path.resolve('src/templates', file)).toString()
   const outPath = path.resolve(modFolder, file)
   mkdirp.sync(path.dirname(outPath))

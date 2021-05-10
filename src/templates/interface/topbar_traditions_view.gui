@@ -95,7 +95,7 @@ guiTypes = {
 	# ASCENSION PERKS ENTRY POSITIONS
 	################################################################
 
-	# These defines are for compatibility with mods that add additional ascenscion perk slots.
+	# These defines are for compatibility with mods that add additional ascension perk slots.
 	# LVB does not itself modify the available number.
 	positionType = { name = "ap_0"	position = { x = 0 y = 2 } }
 	positionType = { name = "ap_1"	position = { x = 58 y = 2 } }
@@ -227,15 +227,15 @@ guiTypes = {
 		########################
 		# TABS
 		########################
-		@tabHeight_1 = 0 #598
-		@tabHeight_2 = 0
-		@tabWide_1 = -10 #1251
+		@tabHeight = 0
+		@tabWide_1 = -10
 		@tabWide_2 = 119
+		@tabWide_3 = 248
 
 		buttonType = {
 			name = "tab_traditions"
 			quadTextureSprite = "GFX_tab_1_inactive"
-			position = { x = @tabWide_1 y = @tabHeight_1 } #-20
+			position = { x = @tabWide_1 y = @tabHeight } #-20
 			font = "cg_16b"
 			buttonText = "TRADITIONS"
 			buttonFont = "cg_16b"
@@ -246,7 +246,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_traditions_active"
 			quadTextureSprite = "GFX_tab_1_active"
-			position = { x = @tabWide_1 y = @tabHeight_1 } #-20
+			position = { x = @tabWide_1 y = @tabHeight } #-20
 			font = "cg_16b"
 			buttonText = "TRADITIONS"
 			buttonFont = "cg_16b"
@@ -257,7 +257,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_relics"
 			quadTextureSprite = "GFX_tab_2_inactive"
-			position = { x = @tabWide_2 y = @tabHeight_2 }
+			position = { x = @tabWide_2 y = @tabHeight }
 			font = "cg_16b"
 			buttonText = "RELICS"
 			buttonFont = "cg_16b"
@@ -268,11 +268,33 @@ guiTypes = {
 		buttonType = {
 			name = "tab_relics_active"
 			quadTextureSprite = "GFX_tab_2_active"
-			position = { x = @tabWide_2 y = @tabHeight_2 }
+			position = { x = @tabWide_2 y = @tabHeight }
 			font = "cg_16b"
 			buttonText = "RELICS"
 			buttonFont = "cg_16b"
 			shortcut = "x"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_crisis"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = @tabWide_3 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "CRISIS_TAB"
+			buttonFont = "cg_16b"
+			shortcut = "c"
+			clicksound = "tab_click"
+		}
+
+		buttonType = {
+			name = "tab_crisis_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = @tabWide_3 y = @tabHeight }
+			font = "cg_16b"
+			buttonText = "CRISIS_TAB"
+			buttonFont = "cg_16b"
+			shortcut = "c"
 			clicksound = "tab_click"
 		}
 
@@ -1570,6 +1592,343 @@ guiTypes = {
 				}
 			}
 		}
+
+		###############################
+		# CRISIS TAB
+		###############################
+
+		containerWindowType = {
+			name = "crisis_window"
+			size = { width = 1272 height = 600 }
+			moveable = no
+			orientation = upper_left
+			position = { x = 0 y = 0 }
+
+			###############################
+			# CRISIS LEVELS AND PERKS
+			###############################
+
+			@progressionWidth = 738
+			@progressionHeight = 536
+			@perksContentHeight = 470
+
+			containerWindowType = {
+				name = "progression_container"
+				size = { width = @progressionWidth height = @progressionHeight }
+				position = { x = 10 y = 50 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_crisis_bg"
+				}
+
+				containerWindowType = {
+					name = "crisis_level_progressbar_box"
+					size = { width = 62 height = 510 }
+					position = { x = 10 y = 14 }
+
+					iconType = {
+						name = "crisis_level_progressbar_box_bg"
+						position = { x = 0 y = 0 }
+						quadTextureSprite = "GFX_crisis_levels_frame"
+						#alwaysTransparent = yes
+					}
+
+					iconType = {
+						name = "crisis_level_progressbar"
+						position = { x = 29 y = 39 }
+						spriteType = "GFX_crisis_progressbar"
+						frame = 0
+					}
+
+					smoothListboxType = {
+						name = "crisis_level_icon_list"
+						position = { x = 0 y = 20 }
+						size = { x = @progressionWidth y = 536 }
+						borderSize = { x = 0 y = 0 }
+						spacing = 0
+					}
+				}
+
+				containerWindowType = {
+					name = "crisis_level_list_container"
+					size = { width = 636 height = @progressionHeight }
+					position = { x = 90 y = 20 }
+
+					smoothListboxType = {
+						name = "crisis_level_list"
+						position = { x = 0 y = 0 }
+						size = { x = 636 y = @progressionHeight }
+						scrollbarType = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+						spacing = 0
+					}
+				}
+			}
+
+
+			###############################
+			# CRISIS INFORMATION
+			###############################
+
+			@infoWidth = 502
+
+			containerWindowType = {
+				name = "information_box"
+				size = { width = @infoWidth height = 480 }
+				position = { x = 757 y = 104 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_artifacts_panel_bg"
+				}
+
+				buttonType = {
+					name = "crisis_objectives_button"
+					quadTextureSprite = "GFX_standard_button_230_34_button"
+					buttonFont = "cg_16b"
+					text = "CRISIS_OBJECTIVES"
+					position = { x = 0 y = -2 }
+					orientation = "UPPER_LEFT"
+					clicksound = confirm_click
+				}
+
+				buttonType = {
+					name = "crisis_effects_button"
+					quadTextureSprite = "GFX_standard_button_230_34_button"
+					buttonFont = "cg_16b"
+					text = "CRISIS_EFFECTS"
+					position = { x = 248 y = -2 }
+					orientation = "UPPER_LEFT"
+					clicksound = confirm_click
+				}
+
+
+				# OBJECTIVES
+				containerWindowType = {
+					name = "objectives_box"
+					size = { width = @infoWidth height = 430 }
+					position = { x = 0 y = 50 }
+
+					background = {
+						name = "crisis_objectives_bg"
+						quadTextureSprite = "GFX_framed_area_tile"
+					}
+
+					instantTextBoxType = {
+						name = "objectives_header"
+						font = "cg_16b"
+						position = { x = 20 y = 15 }
+						text = "CRISIS_OBJECTIVES"
+						format = left
+					}
+
+					instantTextBoxType = {
+						name = "objectives_desc"
+						font = "cg_16b"
+						position = { x = 304 y = 14 }
+						maxWidth = 150
+						maxHeight = 22
+						fixedSize = yes
+						format = right
+						text = "CRISIS_OBJECTIVE_GAINED"
+					}
+
+					iconType = {
+						name = "crisis_objectives_header_line"
+						quadTextureSprite = "GFX_line_crisis"
+						position = { x = 6 y = 30 }
+						alwaysTransparent = yes
+					}
+
+					smoothListboxType = {
+						name = "objectives_list"
+						position = { x = 10 y = 50 }
+						size = { x = 480 y = 368 }
+						scrollbarType = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+						spacing = 2
+					}
+				}
+
+				# EFFECTS
+				containerWindowType = {
+					name = "effects_box"
+					size = { width = @infoWidth height = 430 }
+					position = { x = 0 y = 50 }
+
+					background = {
+						name = "crisis_effects_bg"
+						quadTextureSprite = "GFX_framed_area_tile"
+					}
+
+					# DESCRIPTIONS
+					containerWindowType = {
+						name = "effects_descriptions"
+						size = { width = 462 height = 135 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "crisis_description_title"
+							font = "cg_16b"
+							maxWidth = 462
+							maxHeight = 20
+							position = { x = 20 y = 18 }
+							text = "CRISIS_DESCRIPTION_TITLE"
+							text_color_code = "H"
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "crisis_description"
+							font = "cg_16b"
+							position = { x = 20 y = 35 }
+							maxWidth = 462
+							maxHeight = 50
+							text = "CRISIS_DESCRIPTION"
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "crisis_howto_title"
+							font = "cg_16b"
+							maxWidth = 462
+							maxHeight = 20
+							position = { x = 20 y = 290 }
+							text = "CRISIS_HOWTO_TITLE"
+							text_color_code = "H"
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "crisis_howto"
+							font = "cg_16b"
+							position = { x = 20 y = 307 }
+							maxWidth = 462
+							maxHeight = 50
+							text = "CRISIS_HOWTO"
+							format = left
+						}
+					}
+
+					# TOP BAR
+					containerWindowType = {
+						name = "effects_top_bar"
+						size = { width = @infoWidth height = 45 }
+						position = { x = 0 y = 0 }
+
+						instantTextBoxType = {
+							name = "effects_header"
+							font = "cg_16b"
+							position = { x = 20 y = 168 }
+							#text = "EFFECTS_CLEAN"
+							format = left
+						}
+
+						iconType = {
+							name = "crisis_objectives_header_line"
+							quadTextureSprite = "GFX_line_crisis"
+							position = { x = 6 y = 250 }
+							alwaysTransparent = yes
+						}
+					}
+
+					# CONTENT
+					containerWindowType = {
+						name = "effects_content"
+						size = { width = 480 height = 214 }
+						position = { x = 10 y = 200 }
+						verticalScrollbar = "right_vertical_slider"
+						margin = { top = 0 bottom = 15 }
+
+						background = {
+							name = "bg"
+							quadTextureSprite = "GFX_tiled_window_transparent"
+						}
+
+						instantTextBoxType = {
+							name = "effects_desc"
+							font = "cg_16b"
+							position = { x = 10 y = 10 }
+						}
+					}
+				}
+			}
+
+
+			###############################
+			# CRISIS TITLE BOX
+			###############################
+			containerWindowType = {
+				name = "crisis_level_bar"
+				size = { width = 547 height = 82 }
+				position = { x = 757 y = 70 }
+
+				iconType = {
+					name = "crisis_title_box"
+					position = { x = 0 y = -20 }
+					quadTextureSprite = "GFX_crisis_title_box"
+					#alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "crisis_title_separate"
+					position = { x = 10 y = -4 }
+					quadTextureSprite = "GFX_crisis_title_separate"
+					#alwaysTransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "crisis_title_text"
+					font = "cg_16b"
+					position = { x = 0 y = 4 }
+					text = "CRISIS_TITLE_TXT"
+					text_color_code = "W"
+					maxHeight = 20
+					maxWidth = 120
+					format = right
+				}
+
+				instantTextBoxType={
+					name = "crisis_level_number"
+					font = "cg_16b"
+					position = { x = 125 y = 4 }
+					maxWidth = 120
+					maxHeight = 20
+					fixedSize = no
+					text = "crisis_level_1"
+					format = left
+					maxHeight = 20
+				}
+
+				# MENACE
+				containerWindowType = {
+					name = "menace_container"
+					size = { width = 100 height = 65 }
+					position = { x = 310 y = -6 }
+
+					instantTextBoxType = {
+						name = "menace_text"
+						font = "cg_16b"
+						position = { x = -50 y = 10 }
+						text = "menace_name"
+						text_color_code = "W"
+						maxHeight = 20
+						maxWidth = 120
+						format = right
+					}
+
+					instantTextBoxType = {
+						name = "menace_value"
+						font = "cg_16b"
+						position = { x = 75 y = 10 }
+						text = "MENACE_VALUE"
+						maxHeight = 20
+						maxWidth = 120
+					}
+				}
+			}
+		}
 	}
 
 	# RELIC GRID BOX ENTRY
@@ -1651,6 +2010,142 @@ guiTypes = {
 			position = { x = -1 y = -1 }
 			clicksound = "queuing_building"
 			size = { x = 484 y = 42 }
+		}
+	}
+
+	# CRISIS LEVEL ICON ENTRY
+	containerWindowType = {
+		name = "crisis_level_icon_entry"
+		size = { width = 62 height = 103 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "entry_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "level_icon"
+			position = { x = 9 y = 0 }
+			quadTextureSprite = "GFX_crisis_level_5_btn"
+			frame = 2
+			#alwaysTransparent = yes
+		}
+	}
+
+
+	# CRISIS LEVEL LIST ENTRY
+	containerWindowType = {
+		name = "level_list_entry"
+		size = { width = 636 height = 100 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "level_entry_bg"
+			quadTextureSprite = "GFX_crisis_level_boxes"
+			frame = 2
+		}
+
+		instantTextBoxType = {
+			name = "level_name"
+			font = "malgun_goth_24"
+			position = { x = 20 y = 15 }
+			maxWidth = 250
+			maxHeight = 20
+			fixedSize = no
+			text = "crisis_level_1"
+			format = left
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name = "level_description"
+			font = "cg_16b"
+			position = { x = 20 y = 40 }
+			maxWidth = 230
+			maxHeight = 40
+			fixedSize = no
+			text = "LEVEL_DESCRIPTION"
+			format = left
+			vertical_alignment = top
+		}
+
+		gridBoxType = {
+			name = "perks_grid"
+			position = { x = 100 y = 10 }
+			size = { width = 432 height = 90 }
+			slotsize = { width = 75 height = 75 }
+			max_slots_vertical = 1
+		}
+	}
+
+	# CRISIS PERK GRID ENTRY
+	containerWindowType = {
+		name = "perk_grid_entry"
+		size = { width = 75 height = 75 }
+
+		background = {
+			name = "entry_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "perk_icon"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_crisis_perks"
+			frame = 1
+			#alwaysTransparent = yes
+		}
+	}
+
+	# OBJECTIVES LIST ENTRY
+	containerWindowType = {
+		name = "objectives_list_entry"
+		size = { width =  482 height = 35 }
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 10 y = 10 }
+			text = "menace_name"
+			maxWidth = 300
+			maxHeight = 22
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x = 415 y = 8 }
+			quadTextureSprite = "GFX_resource_menace"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		iconType = {
+			name = "recurring_overlay"
+			position = { x = 406 y = 4 }
+			quadTextureSprite = "GFX_timed_overlay"
+			alwaystransparent = yes
+			scale = 1.0
+		}
+
+		instantTextBoxType = {
+			name = "reward"
+			font = "cg_16b"
+			position = { x = 437 y = 10 }
+			maxWidth = 150
+			maxHeight = 22
+			fixedSize = yes
+			format = left
+			text = "45"
+			alwaysTransparent = yes
 		}
 	}
 }

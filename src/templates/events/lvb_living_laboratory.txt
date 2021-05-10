@@ -92,6 +92,7 @@ fleet_event = {
 	title = lvb_living_laboratory.12.name
 	desc = lvb_living_laboratory.12.desc
 	picture = GFX_evt_lvb_living_laboratory_translated_texts
+	show_sound = event_laboratory_sound
 	location = from
 
 	archaeology = yes
@@ -118,6 +119,7 @@ fleet_event = {
 	title = lvb_living_laboratory.13.name
 	desc = lvb_living_laboratory.13.desc
 	picture = GFX_evt_lvb_living_laboratory_bio_reactors
+	show_sound = event_laboratory_sound
 	location = from
 
 	archaeology = yes

@@ -6,7 +6,7 @@ decision_planet_lvb_red_light_planet_desc: "Replace much of the staff on this re
 lvb_red_light_colony: "Red Light Colony"
 lvb_red_light_colony_desc: "The allure of the exotic can add additional spice to our resort world, improving its desireability as a vacation destination. Exploitaition and sexual tourism? Yes please!"
 lvb_red_light_colony_effects: "Replaces half the £job_clerk£ $job_clerk$ Resort World jobs with £job_lvb_whore£ $job_lvb_whore_plural$ and £job_lvb_escort£ $job_lvb_escort_plural$.\n\nOther Empire Colonies:\n   $MOD_POP_HAPPINESS$: §G+5%§!"
-
+lvb_red_light_colony_other_planets: "$lvb_red_light_colony$"
 
 decision_planet_lvb_gender_segregation: "Gender Separation"
 decision_planet_lvb_gender_segregation_desc: "Bureaucratically reorganize all pops on the planet into all-male and all-female subspecies, so we can change their rights or genetically modify them independently."
@@ -21,3 +21,15 @@ lvb_cow_renting.desc: "By renting out the bodies of our milk cows, we can make q
 lvb_cow_breeding.desc: "Focusing on using our milk cows as breeders will help substantially with colonization or re-population efforts!"
 
 lvb_acknowledged: "Acknowledged."
+
+lvb_anomaly_black_hole_recording: "Unusual Radiation"
+lvb_anomaly_black_hole_recording.desc: "Sensors pick up unusual readings in the vicinity of [Root.GetName] - readings that are hard to explain as a natural consequence of a black hole."
+lvb_anomalies.1.name: "A Lasting Testament"
+lvb_anomalies.1.desc: "The readings seem to come from an extremely powerful laser transmission, precisely aligned such that the light was nearly, but not completely, trapped by the black hole, bent into a circular orbit and leaking slowly back into space over the course of several hundred years. Decoding the light proved easy enough, but the result was disappointing - it appears to be little more than an alien boast over the girth of his tentacles and the number of females penetrated. Reports from the crew suggest that [Root.GetLeaderName] has been inappropriately fascinated by the recording, especially the parts where said alien shows off their \"glistening, muscular tentacles\"."
+lvb_anomalies.1.a: "Carry on."
+
+lvb_anomaly_alien_seduction: "Alien Guest"
+lvb_anomaly_alien_seduction.desc: "A small alien craft of unknown providence has pulled up alongside the [Root.GetName]. It doesn't appear hostile, and is hailing us. [Root.GetLeaderName] is attempting to decode the transmission now."
+lvb_anomalies.2.name: "Seductive Greeting"
+lvb_anomalies.2.desc: "Rather than an alien craft, the visitor turns out to have been one of our own shuttles, dressed up in a one-off hull. The pilot was none other than one of [Root.GetLeaderName]'s lovers, who decided to surprise [Root.Leader.GetHimHer] at work. They greeted each other in the airlock with a great deal of laughter from all involved, and it rapidly devolved into a gangbang when the visitor shed her clothes and told the crew to \"Come and get it.\""
+lvb_anomalies.2.a: "Where did she get a shuttle?"

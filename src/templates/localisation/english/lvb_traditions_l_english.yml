@@ -56,7 +56,7 @@ tr_lvb_sexualization_public_service_desc: "$mod_planet_pops_consumer_goods_upkee
 tr_lvb_sexualization_public_service_delayed: "Two years of part-time public use is mandatory for all citizens upon reaching the age of majority, bringing our people closer together and ending the unhappiness of sexual isolation."
 
 tr_lvb_sexualization_bioreactors: "Bioreactor Experimentation"
-tr_lvb_sexualization_bioreactors_desc: "Add §Y1§! £job_lvb_bioreactor£ §Y$job_lvb_bioreactor$ Job§! to $building_clinic$ and two to $building_hospital$.\n\n$job_lvb_bioreactor_desc$"
+tr_lvb_sexualization_bioreactors_desc: "Replace §Y1§! £job_healthcare£ §Y$job_healthcare$ Job§! with a £job_lvb_bioreactor£ §Y$job_lvb_bioreactor$ Job§! in $building_clinic$ and two in $building_hospital$.\n\n$job_lvb_bioreactor_desc$"
 tr_lvb_sexualization_bioreactors_delayed: "Our research in the realms of pleasure, pain and reproduction can seriously benefit from experimenting on sentient subjects. Most of them learn to enjoy it, after a while."
 
 tr_lvb_sexualization_hot_tanks: "Chemistry Hot Tanks"

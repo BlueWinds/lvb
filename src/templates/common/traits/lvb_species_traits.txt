@@ -13,11 +13,9 @@ trait_lvb_dominant = {		# Dominant
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_cat_ruler_happiness = 0.1
-		pop_cat_specialist_happiness = 0.05
+		planet_jobs_ruler_produces_mult = 0.1
 		planet_jobs_specialist_produces_mult = 0.05
-		planet_jobs_slave_produces_mult = -0.2
-		pop_ethic_authoritarian_attraction_mult = 0.05
+		pop_amenities_usage_mult = 0.2
 	}
 	slave_cost = {
 		energy = 25
@@ -34,7 +32,6 @@ trait_lvb_submissive = {		# Submissive
 	modifier = {
 		pop_cat_ruler_happiness = -0.1
 		pop_cat_specialist_happiness = -0.05
-		pop_cat_worker_happiness = 0.1
 		planet_jobs_worker_produces_mult = 0.05
 		planet_jobs_slave_produces_mult = 0.05
 		pop_government_ethic_attraction = 0.1
@@ -76,10 +73,7 @@ trait_lvb_targeted_pheromones = {		# Targeted Pheromones
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy_apple
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -101,10 +95,7 @@ trait_lvb_elastic_orifices = {		# Elastic Orifices
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -129,10 +120,7 @@ trait_lvb_exhibitionist = {		# Exhibitionist
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -236,10 +224,7 @@ trait_lvb_natural_anal_lube = {		# Natural Anal Lube
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -317,10 +302,7 @@ trait_lvb_huge_breasts = {		# Huge Breasts
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -343,10 +325,7 @@ trait_lvb_multiple_breasts = {		# Multiple Breasts
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy_apple
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -369,10 +348,7 @@ trait_lvb_high_volume_lactation = {		# High Volume Lactation
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -395,10 +371,7 @@ trait_lvb_highly_nutritious_milk = {		# Highly Nutritious Milk
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -420,10 +393,7 @@ trait_lvb_drooling_vagina = {		# Drooling Vagina
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -501,10 +471,7 @@ trait_lvb_huge_penis = {		# Huge Penis
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -526,10 +493,7 @@ trait_lvb_multiple_penises = {		# Multiple Penises
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy_apple
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -552,10 +516,7 @@ trait_lvb_high_volume_ejaculations = {		# High Volume Ejaculations
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -786,7 +747,8 @@ trait_lvb_small_penis = {		# Small Penis
 ########################
 
 trait_lvb_all_female = {		# All Female
-	cost = -1
+	cost = 0
+	sorting_priority = 25
 	opposites = {
 		trait_lvb_all_male
 		trait_lvb_futanari
@@ -802,10 +764,7 @@ trait_lvb_all_female = {		# All Female
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -817,7 +776,8 @@ trait_lvb_all_female = {		# All Female
 }
 
 trait_lvb_all_male = {		# All Male
-	cost = -1
+	cost = 0
+	sorting_priority = 25
 	opposites = {
 		trait_lvb_all_female
 		trait_lvb_futanari
@@ -837,10 +797,7 @@ trait_lvb_all_male = {		# All Male
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -853,6 +810,7 @@ trait_lvb_all_male = {		# All Male
 
 trait_lvb_futanari = {		# Futanari
 	cost = 2
+	sorting_priority = 25
 	opposites = {
 		trait_lvb_all_female
 		trait_lvb_all_male
@@ -861,10 +819,7 @@ trait_lvb_futanari = {		# Futanari
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy_apple
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -887,10 +842,7 @@ trait_lvb_opt_intercompatible_womb = {		# Optimized Intercompatible Womb
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy_apple
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -916,10 +868,7 @@ trait_lvb_opt_intercompatible_sperm = {		# Optimized Intercompatible Sperm
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_lvb_transformation_candy_apple
-			}
+			has_technology = tech_lvb_transformation_candy
 		}
 	}
 	modifier = {
@@ -948,10 +897,7 @@ trait_lvb_sex_bots = {		# Sex Bots
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_synthetic_workers
-			}
+			has_technology = tech_synthetic_workers
 		}
 	}
 	modifier = {
@@ -978,10 +924,7 @@ trait_lvb_maternal_programming = {		# Maternal Programming
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_synthetic_leaders
-			}
+			has_technology = tech_synthetic_leaders
 		}
 	}
 	modifier = {
@@ -1004,10 +947,7 @@ trait_lvb_breast_attachments = {		# Breast Attachments
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_robotic_workers
-			}
+			has_technology = tech_robotic_workers
 		}
 	}
 	modifier = {
@@ -1030,10 +970,7 @@ trait_lvb_synth_breasts = {		# Synth Breasts
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_synthetic_workers
-			}
+			has_technology = tech_synthetic_workers
 		}
 	}
 	modifier = {
@@ -1059,10 +996,7 @@ trait_lvb_custom_fleshlight_slot = {		# Custom Fleshlight Slot
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_droid_workers
-			}
+			has_technology = tech_droid_workers
 		}
 	}
 	modifier = {
@@ -1087,12 +1021,9 @@ trait_lvb_synth_vagina = {		# Synth Vagina
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				AND = {
-					has_technology = tech_synthetic_workers
-					has_technology = tech_gene_banks
-				}
+			AND = {
+				has_technology = tech_synthetic_workers
+				has_technology = tech_gene_banks
 			}
 		}
 	}
@@ -1120,10 +1051,7 @@ trait_lvb_paternal_programming = {		# Paternal Programming
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_synthetic_leaders
-			}
+			has_technology = tech_synthetic_leaders
 		}
 	}
 	modifier = {
@@ -1148,10 +1076,7 @@ trait_lvb_custom_dildo_attachment = {		# Custom Dildo Attachment
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_droid_workers
-			}
+			has_technology = tech_droid_workers
 		}
 	}
 	modifier = {
@@ -1176,12 +1101,9 @@ trait_lvb_synth_penis = {		# Synth Penis
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				AND = {
-					has_technology = tech_synthetic_workers
-					has_technology = tech_gene_banks
-				}
+			AND = {
+				has_technology = tech_synthetic_workers
+				has_technology = tech_gene_banks
 			}
 		}
 	}
@@ -1215,10 +1137,7 @@ trait_lvb_artificial_womb = {		# Artificial Womb
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_cloning
-			}
+			has_technology = tech_cloning
 		}
 	}
 	modifier = {
@@ -1244,12 +1163,9 @@ trait_lvb_cybernetic_womb = {		# Cybernetic Womb
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				AND = {
-					has_technology = tech_synthetic_workers
-					has_technology = tech_gene_banks
-				}
+			AND = {
+				has_technology = tech_synthetic_workers
+				has_technology = tech_gene_banks
 			}
 		}
 	}
@@ -1281,10 +1197,7 @@ trait_lvb_biomechanical_breeder = {		# Biomechanical Breeder
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_cloning
-			}
+			has_technology = tech_cloning
 		}
 	}
 	modifier = {
@@ -1308,10 +1221,7 @@ trait_lvb_synth_seeder = {		# Synth Seeder
 	species_potential_add = {
 		exists = from
 		from = {
-			OR = {
-				has_technology = tech_lvb_biological_mimicry
-				has_technology = tech_gene_banks
-			}
+			has_technology = tech_gene_banks
 		}
 	}
 	modifier = {

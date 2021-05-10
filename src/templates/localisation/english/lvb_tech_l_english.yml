@@ -10,7 +10,7 @@ tech_lvb_sex_trade_modifier_desc: "§HUnlocks Policies:§! Sex Trade"
 
 tech_lvb_transformation_candy: "Transformation Candy"
 tech_lvb_transformation_candy_desc: "Now that gene-editing tools are commonplace, our sexologists can develop a fun and tasty new range of candy like drugs that physically transforms those that eat them."
-tech_lvb_transformation_candy_modifier_desc: "$species_trait_points_add$: $POINTS|0=+$"
+tech_lvb_transformation_candy_modifier_desc: "$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$\nUnlocks additional Traits that we can add to Species when modifying them."
 
 tech_lvb_transformation_candy_apple: "Sexual Biogenesis Sequencing"
 tech_lvb_transformation_candy_apple_desc: "Our explorations into genetic level transformations allow increasing control of sexual characteristics. We will be able to apply our knowledge to traditional gene therapy, transformation candies, or any other techniques we develop in the future."

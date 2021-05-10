@@ -1,0 +1,235 @@
+Sexy = {
+	alari = {
+		name = Alari
+		plural = Alari
+		home_planet = Alaria
+		home_system = Alar
+		name_list = "HUM1"
+	}
+
+	mireesh = {
+		name = Mireesh
+		plural = Mireeshi
+		home_planet = Mirati
+		home_system = "Mireesh Mar"
+		name_list = "HUM2"
+	}
+
+	triech = {
+		name = Triech
+		plural = Triechs
+		home_planet = Triech
+		home_system = Rechio
+		name_list = "HUM3"
+	}
+
+	vrinn = {
+		name = Vrinn
+		plural = Vrinn
+		home_planet = Vrinn
+		home_system = Vrinnus
+		name_list = "HUM4"
+	}
+
+	cevanti = {
+		name = Cevanti
+		plural = Cevanti
+		home_planet = Oros
+		home_system = Cevant
+		name_list = "HUM1"
+	}
+
+	mishar = {
+		name = Mishar
+		plural = Mishars
+		home_planet = Mishri
+		home_system = Shar
+		name_list = "HUM2"
+	}
+
+	fareen = {
+		name = Fareen
+		plural = Fareens
+		home_planet = Fara
+		home_system = Enato
+		name_list = "HUM3"
+	}
+
+	yldar = {
+		name = Yldar
+		plural = Yldars
+		home_planet = Yldar
+		home_system = Yliant
+		name_list = "HUM4"
+	}
+
+	korinth = {
+		name = Korinth
+		plural = Korinths
+		home_planet = Koros
+		home_system = Korinth
+		name_list = "HUM1"
+	}
+
+	sildor = {
+		name = Sildor
+		plural = Sildors
+		home_planet = Sildoria
+		home_system = Sila
+		name_list = "HUM2"
+	}
+
+	nagyari = {
+		name = Nagyari
+		plural = Nagyari
+		home_planet = Nagyaria
+		home_system = Nagyar
+		name_list = "HUM3"
+	}
+
+	kobarian = {
+		name = Kobarian
+		plural = Kobarians
+		home_planet = Kobaria
+		home_system = Kobb
+		name_list = "HUM4"
+	}
+
+	Hesukar = {
+		name = Hesukar
+		plural = Hesukari
+		home_planet = "Hesuk Prime"
+		home_system = Hesuk
+		name_list = "HUM1"
+	}
+
+	giroid = {
+		name = Giroid
+		plural = Giroids
+		home_planet = Gir-Zana
+		home_system = Gir
+		name_list = "HUM2"
+	}
+
+	akkano = {
+		name = Akkano
+		plural = Akkanos
+		home_planet = Akkanar
+		home_system = Akk
+		name_list = "HUM3"
+	}
+
+
+	khellzen = {
+		name = Khell'Zen
+		plural = Khell'Zen
+		home_planet = Khellzakka
+		home_system = Khell
+		name_list = "HUM1"
+	}
+
+	sutharian = {
+		name = Sutharian
+		plural = Sutharians
+		home_planet = Sutharia
+		home_system = Suth-Kasa
+		name_list = "HUM2"
+	}
+
+	velutarian = {
+		name = Velutarian
+		plural = Velutarians
+		home_planet = "Velutaria Prime"
+		home_system = Velutaria
+		name_list = "HUM3"
+	}
+
+	zelvan = {
+		name = Zelvan
+		plural = Zelvans
+		home_planet = Zelvikanna
+		home_system = Zelvnak
+		name_list = "HUM4"
+	}
+
+	quenti = {
+		name = Quenti
+		plural = Quenti
+		home_planet = Bhiranna
+		home_system = Hib'nuzha
+		name_list = "HUM1"
+	}
+
+	rihinar = {
+		name = Rihi'Nar
+		plural = Rihi'Nari
+		home_planet = Rihi
+		home_system = Niri
+		name_list = "HUM2"
+	}
+
+	prossnakan = {
+		name = Prossnakan
+		plural = Prossnakans
+		home_planet = Pross
+		home_system = Prossnak
+		name_list = "HUM3"
+	}
+
+	mitron = {
+		name = Mitron
+		plural = Mitrons
+		home_planet = Mitra
+		home_system = Mituhar
+		name_list = "HUM4"
+	}
+
+	cevelli = {
+		name = Cevelli
+		plural = Cevelli
+		home_planet = Cevasia
+		home_system = Imakka
+		name_list = "HUM1"
+	}
+
+	panuri = {
+		name = Panuri
+		plural = Panuri
+		home_planet = "Panasu Prime"
+		home_system = Panasu
+		name_list = "HUM2"
+	}
+
+	ylkhahan = {
+		name = Yl'Khahan
+		plural = Yl'Khahans
+		home_planet = Kha'Zann
+		home_system = Kesada
+		name_list = "HUM3"
+	}
+
+	giranshu = {
+		name = Giranshu
+		plural = Giranshu
+		home_planet = Girridar
+		home_system = Jagirsha
+		name_list = "HUM4"
+	}
+
+	bebaki = {
+		name = Bebaki
+		plural = Bebaki
+		home_planet = Bebak
+		home_system = Babakka
+		name_list = "HUM1"
+	}
+
+	alvanian = {
+		name = Alvanian
+		plural = Alvanians
+		home_planet = "Old Alvania"
+		home_system = Alvus
+		name_list = "HUM2"
+	}
+}
+

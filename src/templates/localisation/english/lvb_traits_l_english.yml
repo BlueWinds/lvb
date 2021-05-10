@@ -125,6 +125,9 @@ trait_lvb_dominant_desc: "§LThis species is commanding by nature and greatly en
 trait_lvb_submissive: "Submissive"
 trait_lvb_submissive_desc: "§LThis species is very weak-willed socially, emotionally and especially sexually. They tend to come out on the bottom of any interaction with other races.§!\n\nHaving other pops with the §BDominant§! trait will add an extra effect"
 
+lvb_DS_planet: "Matching Species (D/S)"
+lvb_DS_planet_desc: "This planet has both a dominant and submissive species, resulting in a few more \"personal assistants\" than normal."
+
 trait_lvb_sexual_pheromones: "Sexual Pheromones"
 trait_lvb_sexual_pheromones_desc: "§LThis species exudes a variety of pheromones as part of their natural communication that, to most species, are quite arousing.§!"
 
@@ -141,7 +144,10 @@ trait_lvb_exhibitionist: "Exhibitionist"
 trait_lvb_exhibitionist_desc: "§LSomething in this species' psychology gives them an inherent dislike for all but the most utilitarian clothing or coverings, as well as a general lack of modesty.§!"
 
 trait_lvb_masochistic: "Masochistic"
-trait_lvb_masochistic_desc: "§LThis species has evolved a strange enjoyment for a degree of pain. While mostly sexual, it also aids them in physically demanding fields.§!"
+trait_lvb_masochistic_desc: "§LThis species has evolved a strange enjoyment for a degree of pain. While mostly sexual, it also aids them in physically demanding fields.§!\n\nHaving other pops with the §BSadistic§! trait will add an extra effect"
+
+lvb_SM_planet: "Matching Species (S/M)"
+lvb_SM_planet_desc: "This planet has both a sadistic and masochistic species. Those in positions of power are more productive than expected, whilo those under their heel are too busy being abused to properly focus."
 
 trait_lvb_sexually_gifted: "Sexually Gifted"
 trait_lvb_sexually_gifted_desc: "§LPassionate, feisty and fiery haired, in the bedroom and out.§!"
@@ -216,7 +222,7 @@ trait_lvb_adorable: "Adorable"
 trait_lvb_adorable_desc: "§LSomething about this race makes them very cute in the eyes of most species. They innocently demand love and affection.§!"
 
 trait_lvb_sadistic: "Sadistic"
-trait_lvb_sadistic_desc: "§LMany members of this species derive sexual gratification from the pain of others.§!"
+trait_lvb_sadistic_desc: "§LMany members of this species derive sexual gratification from the pain of others.§!\n\nHaving other pops with the §BMasochistic§! trait will add an extra effect"
 
 trait_lvb_lewd_mind: "Lewd Mind"
 trait_lvb_lewd_mind_desc: "§LThis species has an overactive libido, and often find their thoughts drawn to sex.§!"
@@ -264,7 +270,7 @@ trait_lvb_all_female_desc: "§LThis species is composed entirely of females, but
 trait_lvb_all_male: "All Male"
 trait_lvb_all_male_desc: "§LThis species is composed entirely of males, but have found alternative ways to reproduce. It's not perfect however...§!\n\nIf a matching §BAll Female§! species is on the same planet, the penalties are negated."
 
-lvb_two_gendered_planet: "Matching Species"
+lvb_two_gendered_planet: "Matching Species (M/F)"
 lvb_two_gendered_planet_desc: "This planet has species of two matching genders, resulting in a near constant orgy in the streets."
 
 trait_lvb_futanari: "Futanari"

@@ -1,0 +1,382 @@
+portraits = {
+	lvb_neko1 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko1.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko2 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko2.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko3 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko3.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko4 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko4.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko5 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko5.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko6 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko6.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko7 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko7.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko8 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko8.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko9 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko9.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko10 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko10.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko11 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko11.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko12 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko12.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko13 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko13.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko14 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko14.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko15 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko15.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko16 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko16.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko17 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko17.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko18 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko18.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko19 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko19.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko20 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko20.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko21 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko21.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko22 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko22.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_neko23 = {	texturefile = "gfx/models/portraits/lvb/lvb_neko23.dds" greeting_sound = "human_female_greetings_03"}
+
+	lvb_women1 = {	texturefile = "gfx/models/portraits/lvb/lvb_women1.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women2 = {	texturefile = "gfx/models/portraits/lvb/lvb_women2.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women3 = {	texturefile = "gfx/models/portraits/lvb/lvb_women3.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women4 = {	texturefile = "gfx/models/portraits/lvb/lvb_women4.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women5 = {	texturefile = "gfx/models/portraits/lvb/lvb_women5.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women6 = {	texturefile = "gfx/models/portraits/lvb/lvb_women6.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women7 = {	texturefile = "gfx/models/portraits/lvb/lvb_women7.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women8 = {	texturefile = "gfx/models/portraits/lvb/lvb_women8.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women9 = {	texturefile = "gfx/models/portraits/lvb/lvb_women9.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women10 = {	texturefile = "gfx/models/portraits/lvb/lvb_women10.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women11 = {	texturefile = "gfx/models/portraits/lvb/lvb_women11.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women12 = {	texturefile = "gfx/models/portraits/lvb/lvb_women12.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women13 = {	texturefile = "gfx/models/portraits/lvb/lvb_women13.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women14 = {	texturefile = "gfx/models/portraits/lvb/lvb_women14.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women15 = {	texturefile = "gfx/models/portraits/lvb/lvb_women15.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women16 = {	texturefile = "gfx/models/portraits/lvb/lvb_women16.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women17 = {	texturefile = "gfx/models/portraits/lvb/lvb_women17.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women18 = {	texturefile = "gfx/models/portraits/lvb/lvb_women18.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women19 = {	texturefile = "gfx/models/portraits/lvb/lvb_women19.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women20 = {	texturefile = "gfx/models/portraits/lvb/lvb_women20.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women21 = {	texturefile = "gfx/models/portraits/lvb/lvb_women21.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women22 = {	texturefile = "gfx/models/portraits/lvb/lvb_women22.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women23 = {	texturefile = "gfx/models/portraits/lvb/lvb_women23.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women24 = {	texturefile = "gfx/models/portraits/lvb/lvb_women24.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women25 = {	texturefile = "gfx/models/portraits/lvb/lvb_women25.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_women26 = {	texturefile = "gfx/models/portraits/lvb/lvb_women26.dds" greeting_sound = "human_female_greetings_03"}
+}
+
+portrait_groups = {
+	lvb_neko = {
+		default = lvb_neko1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					lvb_neko1
+					lvb_neko2
+					lvb_neko3
+					lvb_neko4
+					lvb_neko5
+					lvb_neko6
+					lvb_neko7
+					lvb_neko8
+					lvb_neko9
+					lvb_neko10
+					lvb_neko11
+					lvb_neko12
+					lvb_neko13
+					lvb_neko14
+					lvb_neko15
+					lvb_neko16
+					lvb_neko17
+					lvb_neko18
+					lvb_neko19
+					lvb_neko20
+					lvb_neko21
+					lvb_neko22
+					lvb_neko23
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					lvb_neko1
+					lvb_neko2
+					lvb_neko3
+					lvb_neko4
+					lvb_neko5
+					lvb_neko6
+					lvb_neko7
+					lvb_neko8
+					lvb_neko9
+					lvb_neko10
+					lvb_neko11
+					lvb_neko12
+					lvb_neko13
+					lvb_neko14
+					lvb_neko15
+					lvb_neko16
+					lvb_neko17
+					lvb_neko18
+					lvb_neko19
+					lvb_neko20
+					lvb_neko21
+					lvb_neko22
+					lvb_neko23
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					lvb_neko1
+					lvb_neko2
+					lvb_neko3
+					lvb_neko4
+					lvb_neko5
+					lvb_neko6
+					lvb_neko7
+					lvb_neko8
+					lvb_neko9
+					lvb_neko10
+					lvb_neko11
+					lvb_neko12
+					lvb_neko13
+					lvb_neko14
+					lvb_neko15
+					lvb_neko16
+					lvb_neko17
+					lvb_neko18
+					lvb_neko19
+					lvb_neko20
+					lvb_neko21
+					lvb_neko22
+					lvb_neko23
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					lvb_neko1
+					lvb_neko2
+					lvb_neko3
+					lvb_neko4
+					lvb_neko5
+					lvb_neko6
+					lvb_neko7
+					lvb_neko8
+					lvb_neko9
+					lvb_neko10
+					lvb_neko11
+					lvb_neko12
+					lvb_neko13
+					lvb_neko14
+					lvb_neko15
+					lvb_neko16
+					lvb_neko17
+					lvb_neko18
+					lvb_neko19
+					lvb_neko20
+					lvb_neko21
+					lvb_neko22
+					lvb_neko23
+				}
+			}
+		}
+
+		#leader scope
+		ruler = {
+			add = {
+				portraits = {
+					lvb_neko1
+					lvb_neko2
+					lvb_neko3
+					lvb_neko4
+					lvb_neko5
+					lvb_neko6
+					lvb_neko7
+					lvb_neko8
+					lvb_neko9
+					lvb_neko10
+					lvb_neko11
+					lvb_neko12
+					lvb_neko13
+					lvb_neko14
+					lvb_neko15
+					lvb_neko16
+					lvb_neko17
+					lvb_neko18
+					lvb_neko19
+					lvb_neko20
+					lvb_neko21
+					lvb_neko22
+					lvb_neko23
+				}
+			}
+		}
+	}
+	lvb_women = {
+		default = lvb_women1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					lvb_women1
+					lvb_women2
+					lvb_women3
+					lvb_women4
+					lvb_women5
+					lvb_women6
+					lvb_women7
+					lvb_women8
+					lvb_women9
+					lvb_women10
+					lvb_women11
+					lvb_women12
+					lvb_women13
+					lvb_women14
+					lvb_women15
+					lvb_women16
+					lvb_women17
+					lvb_women18
+					lvb_women19
+					lvb_women20
+					lvb_women21
+					lvb_women22
+					lvb_women23
+					lvb_women24
+					lvb_women25
+					lvb_women26
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					lvb_women1
+					lvb_women2
+					lvb_women3
+					lvb_women4
+					lvb_women5
+					lvb_women6
+					lvb_women7
+					lvb_women8
+					lvb_women9
+					lvb_women10
+					lvb_women11
+					lvb_women12
+					lvb_women13
+					lvb_women14
+					lvb_women15
+					lvb_women16
+					lvb_women17
+					lvb_women18
+					lvb_women19
+					lvb_women20
+					lvb_women21
+					lvb_women22
+					lvb_women23
+					lvb_women24
+					lvb_women25
+					lvb_women26
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					lvb_women1
+					lvb_women2
+					lvb_women3
+					lvb_women4
+					lvb_women5
+					lvb_women6
+					lvb_women7
+					lvb_women8
+					lvb_women9
+					lvb_women10
+					lvb_women11
+					lvb_women12
+					lvb_women13
+					lvb_women14
+					lvb_women15
+					lvb_women16
+					lvb_women17
+					lvb_women18
+					lvb_women19
+					lvb_women20
+					lvb_women21
+					lvb_women22
+					lvb_women23
+					lvb_women24
+					lvb_women25
+					lvb_women26
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					lvb_women1
+					lvb_women2
+					lvb_women3
+					lvb_women4
+					lvb_women5
+					lvb_women6
+					lvb_women7
+					lvb_women8
+					lvb_women9
+					lvb_women10
+					lvb_women11
+					lvb_women12
+					lvb_women13
+					lvb_women14
+					lvb_women15
+					lvb_women16
+					lvb_women17
+					lvb_women18
+					lvb_women19
+					lvb_women20
+					lvb_women21
+					lvb_women22
+					lvb_women23
+					lvb_women24
+					lvb_women25
+					lvb_women26
+				}
+			}
+		}
+
+		#leader scope
+		ruler = {
+			add = {
+				portraits = {
+					lvb_women1
+					lvb_women2
+					lvb_women3
+					lvb_women4
+					lvb_women5
+					lvb_women6
+					lvb_women7
+					lvb_women8
+					lvb_women9
+					lvb_women10
+					lvb_women11
+					lvb_women12
+					lvb_women13
+					lvb_women14
+					lvb_women15
+					lvb_women16
+					lvb_women17
+					lvb_women18
+					lvb_women19
+					lvb_women20
+					lvb_women21
+					lvb_women22
+					lvb_women23
+					lvb_women24
+					lvb_women25
+					lvb_women26
+				}
+			}
+		}
+	}
+}

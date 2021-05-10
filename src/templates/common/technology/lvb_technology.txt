@@ -127,7 +127,7 @@ tech_lvb_cows_1 = {
 }
 
 tech_lvb_cows_2 = {
-	cost = @tier2cost3
+	cost = @tier2cost2
 	area = society
 	tier = 2
 	category = { biology }
@@ -189,7 +189,7 @@ tech_lvb_cows_2 = {
 }
 
 tech_lvb_milk_cow_specialization = {		# Milk Cow Specialization
-	cost = 4000
+	cost = @tier2cost3
 	area = society
 	tier = 2
 	category = { biology }
@@ -267,54 +267,9 @@ tech_lvb_milk_cow_specialization = {		# Milk Cow Specialization
 	}
 }
 
-# Machine Empire Traits Unlock
-tech_lvb_biological_mimicry = {		# Biological Mimicry
-	cost = 20000
-	area = engineering
-	tier = 4
-	category = { industry }
-	is_rare = yes
-	prerequisites = { "tech_robomodding_m" "tech_binary_motivators" }
-	weight = 45
-
-	modifier = {
-		ROBOT_species_trait_points_add = 6
-		MACHINE_species_trait_points_add = 6
-	}
-
-	potential = {
-		AND = {
-			has_authority = auth_machine_intelligence
-			NOT = { has_civic = civic_machine_terminator }
-		}
-	}
-
-	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-				has_level > 2
-			}
-		}
-	}
-
-	ai_weight = {
-		weight = 2
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_industry"
-			}
-		}
-	}
-}
-
-@lvb_gene_tailoring_POINTS = 2
+@lvb_candy_cost_mult = -0.15
 tech_lvb_transformation_candy = {		# Transformation Candy
-	cost = 20000
+	cost = @tier4cost3
 	area = society
 	tier = 4
 	category = { biology }
@@ -323,13 +278,11 @@ tech_lvb_transformation_candy = {		# Transformation Candy
 	weight = 50
 
 	modifier = {
-		pop_happiness = 0.1
-		leader_age = 5
+		modify_species_cost_mult = @lvb_candy_cost_mult
 		description = tech_lvb_transformation_candy_modifier_desc
 		description_parameters = {
-			POINTS = @lvb_gene_tailoring_POINTS
+			COST_MULT = @lvb_candy_cost_mult
 		}
-		BIOLOGICAL_species_trait_points_add = @lvb_gene_tailoring_POINTS
 	}
 
 	potential = {
@@ -377,9 +330,10 @@ tech_lvb_transformation_candy = {		# Transformation Candy
 	}
 }
 
+@lvb_gene_tailoring_POINTS = 2
 tech_lvb_transformation_candy_apple = {
 	area = society
-	cost = 50000
+	cost = @tier5cost3
 	cost_per_level = 5000
 	tier = 5
 	category = { biology }

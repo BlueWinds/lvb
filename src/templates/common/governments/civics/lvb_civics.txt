@@ -1,0 +1,18 @@
+civic_lvb_mandatory_public_use = {
+	description = "civic_lvb_manadatory_public_use_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_slaver_guilds
+				value = civic_indentured_assets
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		job_lvb_public_use_per_pop = 0.15
+	}
+}

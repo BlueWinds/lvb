@@ -105,7 +105,7 @@ lvb_trader_init = {
 				}
 				create_leader = {
 					class = ruler
-					species = prev
+					species = this
 					name = random
 					skill = 5
 				}

@@ -1,6 +1,0 @@
-# Override for the base game file to give biological species another trait slot
-
-BIOLOGICAL = {
-	species_trait_points = 3
-	species_max_traits = 6
-}

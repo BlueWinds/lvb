@@ -130,4 +130,10 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_evt_lvb_alien_dick_pic"
+		texturefile = "gfx/event_pictures/evt_lvb_alien_dick_pic.dds"
+		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"
+		alwaystransparent = yes
+	}
 }

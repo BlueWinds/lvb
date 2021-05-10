@@ -21,7 +21,6 @@ leader_enhancement = {
 					OR = {
 						has_technology = tech_selected_lineages
 						has_technology = tech_capacity_boosters
-						has_country_flag = lvb_bioreactor_life_extension
 					}
 				}
 			}

@@ -12,7 +12,7 @@ decision_planet_lvb_gender_segregation = {
 			is_regular_empire = yes
 			is_egalitarian = no
 		}
-		any_pop = {
+		any_owned_pop = {
 			NOR = {
 				pop_has_trait = trait_lvb_all_female
 				pop_has_trait = trait_lvb_all_male

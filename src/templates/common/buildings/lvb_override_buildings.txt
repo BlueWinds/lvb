@@ -1,7 +1,6 @@
 # Overrides for base-game buildings
-
 building_commercial_zone = {
-	base_buildtime = 360
+	base_buildtime = @b1_time
 
 	category = trade
 
@@ -16,8 +15,9 @@ building_commercial_zone = {
 	}
 
 	destroy_trigger = {
+		exists = owner
 		OR = {
-		owner = { is_regular_empire = no }
+			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 		}
 	}
@@ -55,10 +55,10 @@ building_commercial_zone = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 300
+			minerals = @b1_minerals
 		}
 		upkeep = {
-			energy = 2
+			energy = @b1_upkeep
 		}
 	}
 
@@ -93,8 +93,10 @@ building_commercial_zone = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_policy_flag = lvb_sex_trade_policy_allowed
-				has_policy_flag = lvb_sex_trade_policy_encouraged
+				OR = {
+					has_policy_flag = lvb_sex_trade_policy_allowed
+					has_policy_flag = lvb_sex_trade_policy_encouraged
+				}
 			}
 		}
 		text = job_lvb_whore_effect_desc
@@ -104,38 +106,28 @@ building_commercial_zone = {
 		"building_commercial_megaplex"
 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 5
-			planet = {
-				OR = {
-					has_building = building_holo_theatres
-					has_building = building_hyper_entertainment_forum
-				}
-				OR = {
-					num_buildings = { type = building_research_lab_1 value = 3 } #Prevents AI falling behind on research to all but the most research dedicated players
-					has_building = building_research_lab_2
-					has_building = building_research_lab_3
-				}
-				NOR = {
-					has_building = building_commercial_zone
-					has_building = building_commercial_megaplex
-				}
-			}
-		}
-	}
-
 	ai_resource_production = {
-		energy = 1
+		energy = 2
 		trigger = {
 			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 3
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
 		}
 	}
 }
 
 building_commercial_megaplex = {
-	base_buildtime = 480
+	base_buildtime = @b2_time
 	can_build = no
 
 	category = trade
@@ -147,8 +139,17 @@ building_commercial_megaplex = {
 		has_building = building_commercial_zone
 	}
 
+	allow = {
+		buildings_upgrade_allow = yes
+	}
+
 	destroy_trigger = {
-		owner = { is_regular_empire = no }
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			buildings_no_crystals = yes
+		}
 	}
 
 	planet_modifier = {
@@ -185,12 +186,12 @@ building_commercial_megaplex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 500
-			rare_crystals = 50
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
-			energy = 2
-			rare_crystals = 1
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
 		}
 	}
 
@@ -225,23 +226,35 @@ building_commercial_megaplex = {
 		text = job_merchant_effect_desc
 	}
 
-	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0
-			owner = { has_country_flag = buildings_new_crystal_building }
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_policy_flag = lvb_sex_trade_policy_allowed
+					has_policy_flag = lvb_sex_trade_policy_encouraged
+				}
+			}
 		}
+		text = job_lvb_whore_effect_desc
 	}
 
 	ai_resource_production = {
-		energy = 1
+		energy = 4
 		trigger = {
 			always = yes
 		}
 	}
-	on_built = {
-		planet = {
-			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 480 } }
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
 		}
 	}
 }
@@ -281,6 +294,7 @@ building_clinic = {
 			}
 		}
 		modifier = {
+			job_healthcare_add = -1
 			job_lvb_bioreactor_add = 1
 		}
 	}
@@ -308,21 +322,6 @@ building_clinic = {
 	}
 
 	{{> bioreactor_triggered_desc }}
-
-	ai_weight = {
-		weight = 50
-		modifier = {
-			factor = 0
-			OR = {
-				is_planet_class = pc_habitat
-				buildings_stop_pop = yes
-			}
-		}
-		modifier = {
-			factor = 0
-			count_pops = { limit = { is_sapient = yes } count > 75 }
-		}
-	}
 }
 
 building_hospital = {
@@ -365,6 +364,7 @@ building_hospital = {
 		}
 		modifier = {
 			job_lvb_bioreactor_add = 2
+			job_healthcare_add = -2
 		}
 	}
 
@@ -393,12 +393,4 @@ building_hospital = {
 	}
 
 	{{> bioreactor_triggered_desc }}
-
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 5
-			buildings_has_exotic_gases = yes
-		}
-	}
 }

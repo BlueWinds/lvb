@@ -1,0 +1,51 @@
+namespace = lvb_anomalies
+
+ship_event = {
+	id = lvb_anomalies.1
+	title = lvb_anomalies.1.name
+	desc = {
+		text = lvb_anomalies.1.desc
+	}
+	picture = GFX_evt_evt_lvb_alien_dick_pic
+	show_sound = event_sensor_ping
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_anomalies.1.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = lvb_anomalies.2
+	title = lvb_anomalies.2.name
+	desc = {
+		text = lvb_anomalies.2.desc
+	}
+	picture = GFX_evt_lvb_traders_public_use
+	show_sound = event_airlock
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = lvb_anomalies.2.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+}

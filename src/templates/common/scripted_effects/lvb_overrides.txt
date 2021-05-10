@@ -1,0 +1,659 @@
+# Override for base game effect, adding in lvb traders
+set_first_contact_starting_stage = {
+	custom_tooltip = start_first_contact
+	hidden_effect = {
+		owner = {
+			set_timed_country_flag = {
+				flag = recent_first_contact_process_started
+				years = 20
+			}
+		}
+		if = {
+			limit = {
+				contact_country = {
+					OR = {
+						is_country_type = default
+						is_country_type = prikki
+					}
+				}
+			}
+			set_first_contact_stage = default_stage_1
+		}
+		else = { #had to leave default country type out of the switch, because "default" in switches means "fallback" :D
+			contact_country = {
+				switch = {
+					trigger = is_country_type
+
+					# lvb overrides, adding in our custom event for the sex slavers
+					enclave = {
+						setup_first_contact_path = { TYPE = enclave }
+						if = {
+							limit = {
+								has_country_flag = lvb_trader_enclave_country
+							}
+							country_event = { id = lvb_traders.2 days = 720 random = 360 }
+						}
+						else = {
+							country_event = { id = leviathans.97 days = 720 random = 360 } #they'll establish contact if you aren't quick enough
+						}
+					}
+
+					tiyanki = { setup_first_contact_path = { TYPE = tiyanki } }
+					tiyanki_garrison = { setup_first_contact_path = { TYPE = tiyanki } }
+					amoeba = { setup_first_contact_path = { TYPE = amoeba } }
+					amoeba_borderless = { setup_first_contact_path = { TYPE = amoeba } }
+					amoeba_garrison = { setup_first_contact_path = { TYPE = amoeba } }
+					amoeba_faction = { setup_first_contact_path = { TYPE = amoeba } }
+					crystal = { setup_first_contact_path = { TYPE = crystals } }
+					crystal_faction = { setup_first_contact_path = { TYPE = crystals } }
+					drone = { setup_first_contact_path = { TYPE = drones } }
+					drone_faction = { setup_first_contact_path = { TYPE = drones } }
+					dormant_marauders = { setup_first_contact_path = { TYPE = marauders } }
+					pirate = { setup_first_contact_path = { TYPE = pirates } }
+					neutral_faction = { setup_first_contact_path = { TYPE = pirates } }
+					caravaneer_fleet = {
+						setup_first_contact_path = { TYPE = caravaneers }
+						if = {
+							limit = {
+								exists = event_target:caravaneer_fleet1_country
+								is_same_value = event_target:caravaneer_fleet1_country
+							}
+							root.owner = { country_event = { id = cara.1020 days = 720 random = 360 } }
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet2_country
+								is_same_value = event_target:caravaneer_fleet2_country
+							}
+							root.owner = { country_event = { id = cara.2020 days = 720 random = 360 } }
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet3_country
+								is_same_value = event_target:caravaneer_fleet3_country
+							}
+							root.owner = { country_event = { id = cara.3020 days = 720 random = 360 } }
+						}
+					}
+					caravaneer_home = { setup_first_contact_path = { TYPE = caravaneers } }
+					cloud = { setup_first_contact_path = { TYPE = void_clouds } }
+					nomad = { setup_first_contact_path = { TYPE = nomad } }
+					default = {
+						fire_on_action = { on_action = on_first_contact_stage_1_no_path }
+					# 	root = {
+					# 		log_error = "No valid first contact path for encounter with [This.ContactCountry.GetName] (country type: [This.ContactCountry.GetCountryType])"
+					# 	}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Override for base game effect, adding in lvb traders
+finish_first_contact_effect = {
+	owner = {
+		set_country_flag = first_contact_completed@root.contact_country
+	}
+	if = {
+		limit = {
+			exists = reverse_first_contact
+		}
+		hidden_effect = {
+			contact_country = {
+				create_message = {
+					type = MESSAGE_FIRST_CONTACT_ABORTED_THEY_COMPLETED
+					localization = MESSAGE_FIRST_CONTACT_ABORTED_THEY_COMPLETED_DESC
+					days = 30
+					target = root.owner.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = root.reverse_first_contact
+					}
+				}
+			}
+			reverse_first_contact = {
+				if = {
+					limit = { is_current_first_contact_stage = default_end_stage_hostile_no_crew }
+					owner = {
+						country_event = { id = first_contact.1100 days = 30 random = 5 }
+					}
+				}
+				else_if = {
+					limit = { is_current_first_contact_stage = default_end_stage_hostile_with_vivisection }
+					owner = {
+						country_event = { id = first_contact.1105 days = 30 random = 5 }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew_easy
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew_hard
+						}
+					}
+					owner = {
+						country_event = { id = first_contact.1110 days = 30 random = 5 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			contact_country = { is_country_type = default }
+			NOT = { has_first_contact_flag = hostile_first_contact_attempted }
+		}
+		owner = {
+			if = {
+				limit = {
+					has_policy_flag = first_contact_proactive
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontactxenophile
+					min = @tier2influencecontactminxenophile
+					max = @tier2influencecontactmaxxenophile
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontact
+					min = @tier2influencecontactmin
+					max = @tier2influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			owner = { country_event = { id = tutorial.2006 } }
+			contact_country = {
+				country_event = { id = tutorial.63 }
+			}
+			if = {
+				limit = {
+					contact_country = {
+						has_policy_flag = first_contact_proactive
+					}
+					reverse_first_contact = {
+						NOT = { has_first_contact_flag = hostile_first_contact_attempted }
+					}
+				}
+				owner = { set_country_flag = we_come_in_peace_achievement }
+			}
+		}
+	}
+	else = {
+		owner = {
+			if = {
+				limit = {
+					has_policy_flag = first_contact_proactive
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontactxenophile
+					min = @tier1influencecontactminxenophile
+					max = @tier1influencecontactmaxxenophile
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+		}
+		switch = {
+			trigger = has_first_contact_flag
+			tiyanki_first_contact = {
+				owner = {
+					set_country_flag = tiyanki_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_tiyanki_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_tiyanki_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_tiyanki_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_tiyanki_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = tiyanki_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = tiyanki_encountered }
+						}
+					}
+				}
+			}
+			amoeba_first_contact = {
+				owner = {
+					set_country_flag = amoeba_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_amoeba_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_amoeba_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_amoebas_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_amoeba_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = amoeba_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = amoeba_encountered }
+						}
+					}
+				}
+			}
+			crystals_first_contact = {
+				owner = {
+					set_country_flag = crystals_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_crystal_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_crystal_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_crystals_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_crystal_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = crystals_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = crystals_encountered }
+						}
+					}
+				}
+			}
+			drones_first_contact = {
+				owner = {
+					set_country_flag = drones_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_drone_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_drone_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_drones_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_drone_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = drones_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = drones_encountered }
+						}
+					}
+				}
+			}
+			caravaneers_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2006 } }
+					if = {
+						limit = {
+							any_country = {
+								OR = {
+									is_country_type = caravaneer_fleet
+									is_country_type = caravaneer_home
+								}
+								NOT = { is_same_value = root.contact_country }
+								root.owner = {
+									NOT = { has_communications = prev }
+									has_established_contact = prev
+								}
+							}
+						}
+						every_country = {
+							limit = {
+								OR = {
+									is_country_type = caravaneer_fleet
+									is_country_type = caravaneer_home
+								}
+								NOT = { is_same_value = root.contact_country }
+								root.owner = {
+									NOT = { has_communications = prev }
+									has_established_contact = prev
+								}
+							}
+#							custom_tooltip = further_fc_caravaneers_completed
+							hidden_effect = {
+								if = {
+									limit = {
+										exists = event_target:caravaneer_fleet1_country
+										is_same_value = event_target:caravaneer_fleet1_country
+									}
+									root.owner = { country_event = { id = cara.1020 } }
+								}
+								else_if = {
+									limit = {
+										exists = event_target:caravaneer_fleet2_country
+										is_same_value = event_target:caravaneer_fleet2_country
+									}
+									root.owner = { country_event = { id = cara.2020 } }
+								}
+								else_if = {
+									limit = {
+										exists = event_target:caravaneer_fleet3_country
+										is_same_value = event_target:caravaneer_fleet3_country
+									}
+									root.owner = { country_event = { id = cara.3020 } }
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								exists = event_target:caravaneer_fleet1_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet1_country }
+							}
+							country_event = { id = cara.1020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet2_country }
+								event_target:caravaneer_fleet2_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet3_country }
+								event_target:caravaneer_fleet3_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet2_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet2_country }
+							}
+							country_event = { id = cara.2020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet1_country }
+								event_target:caravaneer_fleet1_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet3_country }
+								event_target:caravaneer_fleet3_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet3_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet3_country }
+							}
+							country_event = { id = cara.3020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet1_country }
+								event_target:caravaneer_fleet1_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet2_country }
+								event_target:caravaneer_fleet2_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						if = {
+							limit = {
+								exists = event_target:caravaneer_home_country
+								NOT = { has_communications = event_target:caravaneer_home_country }
+							}
+							establish_communications_no_message = event_target:caravaneer_home_country
+						}
+					}
+				}
+			}
+			marauders_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = {
+						country_event = { id = tutorial.2007 }
+						country_event = { id = marauder.15 }
+					}
+				}
+			}
+			enclave_first_contact = {
+				contact_country = {
+					hidden_effect = {
+						country_event = { id = tutorial.63 }
+						switch = {
+							trigger = has_country_flag
+							trader_enclave_country = { country_event = { id = leviathans.101 scopes = { from = root.owner } } }
+							artist_enclave_country = { country_event = { id = leviathans.301 scopes = { from = root.owner } } }
+							curator_enclave_country = { country_event = { id = leviathans.501 scopes = { from = root.owner } } }
+							lvb_trader_enclave_country = { country_event = { id = lvb_traders.5 scopes = { from = root.owner } } }
+							default = { log_error = "Unexpected enclave type or missing script flag" }
+						}
+					}
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2007 } }
+				}
+			}
+			pirates_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2007 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = pirate
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = pirate
+								}
+							}
+							custom_tooltip = further_fc_pirates_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_country_type = pirate
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+						}
+					}
+				}
+			}
+			void_clouds_first_contact = {
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					set_country_flag = void_clouds_encountered
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = cloud
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = cloud
+								}
+							}
+							custom_tooltip = further_fc_clouds_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_country_type = cloud
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = void_clouds_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = void_clouds_encountered }
+						}
+					}
+				}
+			}
+			nomad_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = {
+						country_event = { id = tutorial.2007 }
+						country_event = { id = nomad.10 }
+					}
+				}
+			}
+		}
+	}
+
+	finish_first_contact = yes
+
+	hidden_effect = {
+		owner = {
+			add_intel = {
+				who = root.contact_country
+				amount = 10
+			}
+		}
+	}
+
+	owner = {
+		if = {
+			limit = {
+				root.contact_country = {
+					is_country_type = default #it's harder
+				}
+			}
+			increment_first_contact_skill_2 = yes
+		}
+		else = {
+			increment_first_contact_skill_1 = yes
+		}
+	}
+}

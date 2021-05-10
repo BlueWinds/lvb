@@ -47,17 +47,16 @@ pop_event = { # Convert to female
 	hide_window = yes
 
 	immediate = {
-		modify_species = {
-			add_trait = trait_lvb_all_female
-			remove_trait = trait_lvb_all_male
-			remove_trait = trait_lvb_futanari
-			remove_trait = trait_lvb_large_penis
-			remove_trait = trait_lvb_huge_penis
-			remove_trait = trait_lvb_multiple_penises
-			remove_trait = trait_lvb_high_volume_ejaculations
-			remove_trait = trait_lvb_addictive_cum
-			remove_trait = trait_lvb_small_penis
-			remove_trait = trait_lvb_opt_intercompatible_sperm
+		modify_species = { add_trait = trait_lvb_all_female }
+		modify_species = { remove_trait = trait_lvb_all_male }
+		modify_species = { remove_trait = trait_lvb_futanari }
+		modify_species = { remove_trait = trait_lvb_large_penis }
+		modify_species = { remove_trait = trait_lvb_huge_penis }
+		modify_species = { remove_trait = trait_lvb_multiple_penises }
+		modify_species = { remove_trait = trait_lvb_high_volume_ejaculations }
+		modify_species = { remove_trait = trait_lvb_addictive_cum }
+		modify_species = { remove_trait = trait_lvb_small_penis }
+		modify_species = { remove_trait = trait_lvb_opt_intercompatible_sperm }
 		}
 	}
 }
@@ -68,21 +67,20 @@ pop_event = { # Convert to male
 	hide_window = yes
 
 	immediate = {
-		modify_species = {
-			add_trait = trait_lvb_all_male
-			remove_trait = trait_lvb_all_female
-			remove_trait = trait_lvb_futanari
-			remove_trait = trait_lvb_large_breasts
-			remove_trait = trait_lvb_huge_breasts
-			remove_trait = trait_lvb_multiple_breasts
-			remove_trait = trait_lvb_high_volume_lactation
-			remove_trait = trait_lvb_highly_nutritious_milk
-			remove_trait = trait_lvb_drooling_vagina
-			remove_trait = trait_lvb_oviposition
-			remove_trait = trait_lvb_litters
-			remove_trait = trait_lvb_small_breasts
-			remove_trait = trait_lvb_watery_milk
-			remove_trait = trait_lvb_opt_intercompatible_womb
+		modify_species = { add_trait = trait_lvb_all_male }
+		modify_species = { remove_trait = trait_lvb_all_female }
+		modify_species = { remove_trait = trait_lvb_futanari }
+		modify_species = { remove_trait = trait_lvb_large_breasts }
+		modify_species = { remove_trait = trait_lvb_huge_breasts }
+		modify_species = { remove_trait = trait_lvb_multiple_breasts }
+		modify_species = { remove_trait = trait_lvb_high_volume_lactation }
+		modify_species = { remove_trait = trait_lvb_highly_nutritious_milk }
+		modify_species = { remove_trait = trait_lvb_drooling_vagina }
+		modify_species = { remove_trait = trait_lvb_oviposition }
+		modify_species = { remove_trait = trait_lvb_litters }
+		modify_species = { remove_trait = trait_lvb_small_breasts }
+		modify_species = { remove_trait = trait_lvb_watery_milk }
+		modify_species = { remove_trait = trait_lvb_opt_intercompatible_womb }
 		}
 	}
 }
@@ -95,8 +93,8 @@ pop_event = { # Convert to male
 
 country_event = {		# No Specialization
 	id = lvb_event_popups.1000
-	title = "No Specialization"
-	desc = "lvb_cow_no_specialization.desc"
+	title = lvb_milk_cows_policy_default
+	desc = lvb_cow_no_specialization.desc
 	picture = GFX_evt_lvb_cow_no_specialization
 	show_sound = event_administrative_work
 
@@ -109,8 +107,8 @@ country_event = {		# No Specialization
 
 country_event = {		# Maximize Production
 	id = lvb_event_popups.1001
-	title = "Maximize Production"
-	desc = "lvb_cow_maximize.desc"
+	title = lvb_milk_cows_policy_max_milk
+	desc = lvb_cow_maximize.desc
 	picture = GFX_evt_lvb_cow_maximize
 	show_sound = event_administrative_work
 
@@ -123,8 +121,8 @@ country_event = {		# Maximize Production
 
 country_event = {		# Free Use Cows
 	id = lvb_event_popups.1002
-	title = "Free Use Cows"
-	desc = "lvb_cow_free_use.desc"
+	title = lvb_milk_cows_policy_free_use
+	desc = lvb_cow_free_use.desc
 	picture = GFX_evt_lvb_cow_free_use
 	show_sound = event_administrative_work
 
@@ -137,8 +135,8 @@ country_event = {		# Free Use Cows
 
 country_event = {		# Milk Cow Renting
 	id = lvb_event_popups.1003
-	title = "Milk Cow Renting"
-	desc = "lvb_cow_renting.desc"
+	title = lvb_milk_cows_policy_paid_use
+	desc = lvb_cow_renting.desc
 	picture = GFX_evt_lvb_cow_renting
 	show_sound = event_administrative_work
 
@@ -151,8 +149,8 @@ country_event = {		# Milk Cow Renting
 
 country_event = {		# Milk Cow Breeding
 	id = lvb_event_popups.1004
-	title = "Milk Cow Breeding"
-	desc = "lvb_cow_breeding.desc"
+	title = lvb_milk_cows_policy_breeders
+	desc = lvb_cow_breeding.desc
 	picture = GFX_evt_lvb_cow_breeding
 	show_sound = event_administrative_work
 

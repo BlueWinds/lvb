@@ -72,6 +72,18 @@ mod_job_lvb_escort_add: "$job_lvb_escort$"
 mod_job_lvb_escort_per_pop: "§G+1§! $job_lvb_escort$ Job per $VALUE$ Pops"
 mod_job_lvb_escort_per_pop_short: "\n§G+1§! £mod_job_lvb_escort_add£ per $VALUE$ £pop£"
 
+job_lvb_public_use: "Public Whore"
+job_lvb_public_use_plural: "Public Whores"
+job_lvb_public_use_desc: "Our newly-adult population are required to service the public sexually for several years. Fuck'em any way you like."
+mod_job_lvb_public_use_per_pop: "§G+1§! $job_lvb_public_use$ Job per $VALUE$ Pops"
+mod_job_lvb_public_use_per_pop_short: "\n§G+1§! $job_lvb_public_use_add$ per $VALUE$ £pop£"
+
+job_lvb_pet: "Pet"
+job_lvb_pet_plural: "Pets"
+job_lvb_pet_desc: "The more dominante species in our empire has gotten used to having someone ready to wait on them hand and foot. While not exactly the most productive position, our more submissive populace is happy to oblige."
+mod_job_lvb_pet_per_pop: "§G+1§! $job_lvb_pet$ Job per $VALUE$ Pops"
+mod_job_lvb_pet_per_pop_short: "\n§G+1§! $job_lvb_pet_add$ per $VALUE$ £pop£"
+
 # Forced Breeding #
 job_lvb_tentacle_breeders: "Tentacle Fodder"
 job_lvb_tentacle_breeders_plural: "Tentacle Fodder"

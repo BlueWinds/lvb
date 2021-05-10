@@ -29,3 +29,69 @@ lvb_living_laboratory_cat = {
 	}
 	on_success = lvb_living_laboratory.1
 }
+
+lvb_anomaly_black_hole_recording = {
+	desc = "lvb_anomaly_black_hole_recording.desc"
+	picture = "GFX_evt_black_hole"
+	level = 2
+
+	max_once_global = yes
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_star_class = sc_black_hole
+		}
+		modifier = {
+			factor = 1.5
+			from = {
+				leader = {
+					OR = {
+						has_trait = leader_trait_scientist_lvb_sexologist
+						has_trait = leader_trait_scientist_lvb_zoophile
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+
+	on_success = lvb_anomalies.1
+}
+
+lvb_anomaly_alien_seduction = {
+	desc = "lvb_anomaly_alien_seduction.desc"
+	picture = "GFX_evt_unidentified_ship"
+	level = 2
+
+	max_once_global = yes
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_asteroid = yes
+		}
+		modifier = {
+			factor = 1.5
+			from = {
+				leader = {
+					OR = {
+						has_trait = leader_trait_scientist_lvb_sexologist
+						has_trait = leader_trait_scientist_lvb_zoophile
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			from.owner = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+	}
+
+	on_success = lvb_anomalies.2
+}

@@ -1,0 +1,8 @@
+room_selector = {
+	default = "default_room"
+
+	game_setup = {
+		"lvb_dungeon_room" 	= { always = yes }
+		"lvb_pod_room" 	= { always = yes }
+	}
+}

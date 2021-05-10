@@ -1,0 +1,29 @@
+# Override for the base game file to give biological species another trait slot
+
+@robot_trait_points = 0
+@robot_max_traits = 4
+@machine_trait_points = 1
+@machine_max_traits = 5
+@species_trait_points = 2
+@species_max_traits = 6
+
+BIOLOGICAL = {
+	species_trait_points = @species_trait_points
+	species_max_traits = @species_max_traits
+}
+ROBOT = {
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+MACHINE = {
+	species_trait_points = @machine_trait_points
+	species_max_traits = @machine_max_traits
+}
+PRESAPIENT = {
+	species_trait_points = @species_trait_points
+	species_max_traits = @species_max_traits
+}
+LITHOID = {
+	inherit_trait_points_from = BIOLOGICAL
+}
+OTHER = {}

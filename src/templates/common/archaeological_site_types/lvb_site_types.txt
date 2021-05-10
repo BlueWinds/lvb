@@ -67,26 +67,26 @@ lvb_living_laboratory_dig = {
 	}
 
 	stage = {
-#		difficulty = 2
-		difficulty = -10
+		difficulty = 2
+#		difficulty = -10
 		icon = GFX_archaeology_runes_B1
 		event = lvb_living_laboratory.10
 	}
 	stage = {
-#		difficulty = 3
-		difficulty = -10
+		difficulty = 3
+#		difficulty = -10
 		icon = GFX_archaeology_runes_B2
 		event = lvb_living_laboratory.11
 	}
 	stage = {
-#		difficulty = 3
-		difficulty = -10
+		difficulty = 3
+#		difficulty = -10
 		icon = GFX_archaeology_runes_B3
 		event = lvb_living_laboratory.12
 	}
 	stage = {
-		difficulty = -10
-#		difficulty = 4
+		difficulty = 4
+#		difficulty = -10
 		icon = GFX_archaeology_runes_B4
 		event = lvb_living_laboratory.13
 	}
