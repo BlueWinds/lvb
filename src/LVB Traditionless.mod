@@ -8,4 +8,4 @@ tags={
 	"Bestiality"
 	"If this is on Steam it's Stolen!"
 }
-supported_version="2.8.*"
+supported_version="3.0.*"
