@@ -1,4 +1,4 @@
-version="2"
+version="3"
 tags={
 	"Consensual"
 	"Rape"
@@ -6,5 +6,5 @@ tags={
 	"Bestiality"
 	"If this is on Steam it's Stolen!"
 }
-name="Lustful Void Blue"
-supported_version="2.8.1"
+name="Lovely Vibes in Blue"
+supported_version="3.0.x"

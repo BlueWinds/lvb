@@ -1,7 +1,7 @@
 {
   "name": "lvb",
-  "version": "1.0.0",
-  "description": "This is an adult mod for Stellaris, adding all sorts of adult-themed content. It was originally based on [Lustful Void|https://www.loverslab.com/topic/119724-mod-stellaris-lustful-void-wip], but has since expanded greatly. It stil includes come content from Lithia<3 and other previous modders that she coppied from, and is designed with compatibility for Lustful Void in mind.",
+  "version": "3.0.0",
+  "description": "This is an adult mod for Stellaris, adding all sorts of adult-themed content.",
   "main": "src/fillTemplates.js",
   "scripts": {
     "start": "nodemon -e '*' -w './src'",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/BlueWinds/lvb/issues"
   },
-  "homepage": "https://github.com/BlueWinds/lvb#readme",
+  "homepage": "https://winds.blue/blog/2021/05/10/stellaris-mod---lvb-3-0/",
   "devDependencies": {
     "fs-extra": "^9.1.0",
     "glob": "^7.1.7",
