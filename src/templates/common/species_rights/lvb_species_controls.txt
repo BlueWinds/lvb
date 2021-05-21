@@ -1,0 +1,36 @@
+population_control_no = {
+	token = population_control_no
+
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			NOR = {
+				has_citizenship_type = { country = from type = citizenship_purge_machine }
+				has_citizenship_type = { country = from type = citizenship_purge }
+			}
+			fail_text = is_undesirables_tooltip
+		}
+		custom_tooltip = {
+			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
+			OR = {
+				NOT = { from = { has_authority = auth_hive_mind } }
+				has_trait = trait_hive_mind
+				from = { has_civic = civic_lvb_frenzied_brood }
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 10
+			from = {
+				has_civic = civic_lvb_frenzied_brood
+			}
+		}
+	}
+}

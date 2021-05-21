@@ -1,3 +1,4 @@
+
 per_relation = {
 	# this is applied for each such relation with another country
 	# scope: this = current country, FROM : other country in the relation

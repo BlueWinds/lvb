@@ -57,7 +57,6 @@ pop_event = { # Convert to female
 		modify_species = { remove_trait = trait_lvb_addictive_cum }
 		modify_species = { remove_trait = trait_lvb_small_penis }
 		modify_species = { remove_trait = trait_lvb_opt_intercompatible_sperm }
-		}
 	}
 }
 
@@ -81,7 +80,6 @@ pop_event = { # Convert to male
 		modify_species = { remove_trait = trait_lvb_small_breasts }
 		modify_species = { remove_trait = trait_lvb_watery_milk }
 		modify_species = { remove_trait = trait_lvb_opt_intercompatible_womb }
-		}
 	}
 }
 

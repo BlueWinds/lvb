@@ -48,15 +48,79 @@ lvb_milk_cow = {			# Milk Cow
 			consumer_goods = 2
 		}
 
+		produces = {
+			trigger = {
+				planet = { has_active_building = building_lvb_dairy_facility }
+			}
+			consumer_goods = 1
+		}
+
+		produces = {
+			trigger = {
+				planet = { has_active_building = building_lvb_dairy_arcology }
+			}
+			consumer_goods = 2
+		}
+
 		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 5
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = no
+			}
 			food = 5
 		}
 
 		upkeep = {
 			trigger = {
+				is_lithoid = no
 				owner = { has_policy_flag = lvb_milk_cows_policy_breeders }
 			}
 			food = 2
+		}
+
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+				owner = { has_policy_flag = lvb_milk_cows_policy_breeders }
+			}
+			minerals = 2
+		}
+
+		upkeep = {
+			trigger = {
+				is_lithoid = no
+				planet = { has_active_building = building_lvb_dairy_facility }
+			}
+			food = 1
+		}
+
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+				planet = { has_active_building = building_lvb_dairy_facility }
+			}
+			minerals = 1
+		}
+
+		upkeep = {
+			trigger = {
+				is_lithoid = no
+				planet = { has_active_building = building_lvb_dairy_arcology }
+			}
+			food = 2
+		}
+
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+				planet = { has_active_building = building_lvb_dairy_arcology }
+			}
+			minerals = 2
 		}
 	}
 
@@ -154,7 +218,12 @@ lvb_bioreactor = {
 			engineering_research = 0.325
 		}
 		upkeep = {
+			trigger = { is_lithoid = no }
 			food = 3
+		}
+		upkeep = {
+			trigger = { is_lithoid = yes }
+			minerals = 3
 		}
 	}
 
@@ -200,7 +269,12 @@ lvb_hot_tank = {
 			volatile_motes = 0.1
 		}
 		upkeep = {
+			trigger = { is_lithoid = no }
 			food = 8
+		}
+		upkeep = {
+			trigger = { is_lithoid = yes }
+			minerals = 8
 		}
 	}
 
@@ -242,11 +316,11 @@ lvb_whore = {			# Whore
 
 	planet_modifier = {
 		planet_amenities_add = 2
-		trade_value_add = 2
+		trade_value_add = 3
 		planet_crime_add = 3
 	}
 
-	{{> sex_work_trait_planet amenities=2 trade=2 }}
+	{{> sex_work_trait_planet amenities=2 trade=3 }}
 
 	weight = {
 		weight = @clerk_job_weight
@@ -326,10 +400,10 @@ lvb_public_use = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 2
+		planet_amenities_add = 3
 	}
 
-	{{> sex_work_trait_planet amenities=2 trade=0 }}
+	{{> sex_work_trait_planet amenities=3 trade=0 }}
 
 	weight = {
 		weight = @worker_job_weight
@@ -461,9 +535,9 @@ lvb_escort = {			# Escort
 	}
 }
 
-#####################
+################
 ###	 Event	 ###
-#####################
+################
 
 lvb_tentacle_breeders = {
 	category = worker
@@ -485,7 +559,16 @@ lvb_tentacle_breeders = {
 		category = planet_lvb_forced_breeding
 
 		upkeep = {
+			trigger = {
+				is_lithoid = no
+			}
 			food = 4
+		}
+		upkeep = {
+			trigger = {
+				is_lithoid = yes
+			}
+			minerals = 4
 		}
 	}
 
@@ -525,31 +608,5 @@ lvb_tentacle_breeders = {
 
 	weight = {
 		weight = @worker_job_weight
-		modifier = {
-			factor = 2
-			has_trait = trait_agrarian
-		}
-		modifier = {
-			factor = 1.1
-			owner = { has_valid_civic = civic_agrarian_idyll }
-		}
-		modifier = {
-			factor = 10
-			is_enslaved = yes
-		}
-		modifier = {
-			factor = 0
-			is_robot_pop = yes
-		}
-		modifier = {
-			weight = 0
-			is_pop_category = worker
-			owner = {
-				has_monthly_income = {
-					resource = food
-					value < -1
-				}
-			}
-		}
 	}
 }

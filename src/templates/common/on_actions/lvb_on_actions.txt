@@ -30,3 +30,27 @@ on_leader_spawned = {
 		lvb_event_on_actions.5 # Set leader gender for all-male species
 	}
 }
+
+empire_init_capital_planet = {
+	events = {
+		lvb_frenzied_brood.0 # spawn secondary species and add deposit
+	}
+}
+
+on_colonized = {
+	events = {
+#		lvb_frenzied_brood.10 # Spawn deposit to adjust their jobs (replacing agri_drones with milk_cows, etc.
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		lvb_frenzied_brood.1 # Add or remove frenzied brood deposit as necessary
+	}
+}
+
+on_colony_destroyed = {
+	events = {
+#		lvb_frenzied_brood.12 # Remove frenzied brood deposit
+	}
+}

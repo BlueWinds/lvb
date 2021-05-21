@@ -6,55 +6,6 @@
 # Buildings #
 #############
 
-lvb_unemployed = {
-	planet = {
-		any_owned_pop = {
-			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
-			NOR = {
-				is_pop_category = specialist
-				is_pop_category = ruler
-			}
-			OR = {
-				is_unemployed = yes
-				has_job = servant
-			}
-		}
-	}
-}
-
-lvb_uses_food = {
-	OR = {
-		NOR = {
-			has_authority = auth_machine_intelligence
-			has_ascension_perk = ap_synthetic_evolution
-		}
-		has_valid_civic = civic_machine_servitor
-		has_valid_civic = civic_machine_assimilator
-	}
-}
-
-lvb_has_exotic_gases = {
-	exists = owner
-	owner = {
-		is_ai = yes
-		has_monthly_income = {
-			resource = exotic_gases
-			value >= 1
-		}
-	}
-}
-
-lvb_has_rare_crystals = {
-	exists = owner
-	owner = {
-		is_ai = yes
-		has_monthly_income = {
-			resource = rare_crystals
-			value >= 1
-		}
-	}
-}
-
 # Tells the AI not to build milk farms if it doesn't have spare food or doesn't need consumer goods
 lvb_jobs_work_food_goods = {
 	exists = owner
@@ -107,4 +58,13 @@ lvb_traders_selling_citizens = {
 		has_modifier = lvb_traders_sell_citizens_4
 		has_modifier = lvb_traders_sell_citizens_5
 	}
+}
+
+lvb_is_livestock = {
+	has_citizenship_type = { type = citizenship_slavery }
+	has_slavery_type = { type = slavery_livestock }
+}
+
+lvb_owner_is_brood = {
+	owner = { has_civic = civic_lvb_frenzied_brood }
 }

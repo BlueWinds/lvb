@@ -4,15 +4,20 @@
 
 building_lvb_dairy_farm = {
 	base_buildtime = @b1_time
+	base_cap_amount = 1
 	category = resource
 
 	potential = {
 		exists = owner
 		owner = { is_gestalt = no }
 		NOT = { has_modifier = resort_colony }
+		NOT = { has_building = building_factory_1 }
+		NOT = { has_building = building_factory_2 }
+		NOT = { has_building = building_factory_3 }
 	}
 
 	destroy_trigger = {
+		exists = owner
 		OR = {
 			owner = { is_gestalt = yes }
 			planet = { has_modifier = resort_colony }
@@ -34,56 +39,111 @@ building_lvb_dairy_farm = {
 	}
 
 	planet_modifier = {
-		job_lvb_milk_cow_add = 2
-		planet_housing_add = 2
+		job_lvb_milk_cow_add = 1
+	}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_industrial value >= {{this}} }
+				NOT = { has_designation = col_foundry }
+			}
+			job_lvb_milk_cow_add = 1
+			job_aritsan_add = -1
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_industrial value >= {{this}} }
+				has_designation = col_factory
+			}
+			job_lvb_milk_cow_add = 2
+			job_aritsan_add = -2
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_hab_industrial value >= {{this}} }
+				NOT = { has_designation = col_habitat_foundry }
+			}
+			job_lvb_milk_cow_add = 1
+			job_aritsan_add = -1
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_hab_industrial value >= {{this}} }
+				has_designation = col_habitat_factory
+			}
+			job_lvb_milk_cow_add = 2
+			job_aritsan_add = -2
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_rw_industrial value >= {{this}} }
+			}
+			job_lvb_milk_cow_add = 5
+			job_aritsan_add = -5
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_arcology_civilian_industry value >= {{this}} }
+			}
+			job_lvb_milk_cow_add = 6
+			job_aritsan_add = -6
+		}
+	{{/each}}
+
+	triggered_desc = {
+		text = building_lvb_dairy_farm_effect_desc
 	}
 
 	{{> cow_triggered_desc }}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 25
-			NOR = {
-				has_building = building_factory_1
-				has_building = building_factory_2
-				has_building = building_factory_3
-				has_building = building_lvb_dairy_farm
-				has_building = building_lvb_dairy_facility
-				has_building = building_lvb_dairy_arcology
-			}
-		}
-		modifier = {
-			weight = 100
-			lvb_jobs_work_food_goods = no
-			owner = {
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 30
-				}
-				OR = {
-					country_uses_food = no
-					has_monthly_income = {
-						resource = food
-						value >= 0
-					}
-					has_resource = {
-						type = food
-						amount > 0
-					}
-				} #Check to see if consumer goods shortage is being caused by a food shortage.
-			}
-		}
-		modifier = {
-			factor = 0
-			free_jobs > 3
+	# Less important for most AIs than the factory building, but more important if they adopt sexualization.
+	ai_resource_production = {
+		consumer_goods = 6  # This is an important building for future upgrades
+		trigger = {
+			owner = { has_tradition = tr_lvb_sexualization_adopt }
 		}
 	}
 
 	ai_resource_production = {
-		consumer_goods = 1
+		consumer_goods = 6  # This is an important building for future upgrades
 		trigger = {
 			always = yes
+		}
+	}
+	ai_resource_production = { # Overvalue this building if this planet is a major source of consumer goods
+		consumer_goods = 6
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 6
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 32
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 6
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 48
+				type = produces
+			}
 		}
 	}
 }
@@ -104,6 +164,7 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 	}
 
 	destroy_trigger = {
+		exists = owner
 		OR = {
 			owner = { is_gestalt = yes }
 			planet = {
@@ -137,8 +198,7 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 	}
 
 	planet_modifier = {
-		job_lvb_milk_cow_add = 5
-		planet_housing_add = 5
+		job_lvb_milk_cow_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -150,25 +210,58 @@ building_lvb_dairy_facility = {		# Dairy Facility (upgrades from Dairy Farm)
 		}
 		modifier = {
 			job_lvb_hot_tank_add = 1
-			planet_housing_add = 1
 		}
+	}
+
+	triggered_desc = {
+		text = building_lvb_dairy_facility_effect_desc
 	}
 
 	{{> cow_triggered_desc }}
 	{{> hot_tank_triggered_desc }}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 3
-			buildings_has_motes = yes
+	# Less important for most AIs than the factory buildings, but more important if they adopt sexualization.
+	ai_resource_production = {
+		consumer_goods = 12  # This is an important building for future upgrades
+		trigger = {
+			owner = { has_tradition = tr_lvb_sexualization_adopt }
 		}
 	}
 
 	ai_resource_production = {
-		consumer_goods = 1
+		consumer_goods = 12
 		trigger = {
 			always = yes
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 12
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 12
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 32
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 12
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 48
+				type = produces
+			}
 		}
 	}
 }
@@ -189,6 +282,7 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 	}
 
 	destroy_trigger = {
+		exists = owner
 		OR = {
 			owner = { is_gestalt = yes }
 			planet = {
@@ -218,8 +312,7 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 	}
 
 	planet_modifier = {
-		job_lvb_milk_cow_add = 8
-		planet_housing_add = 8
+		job_lvb_milk_cow_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -231,25 +324,58 @@ building_lvb_dairy_arcology = {		# Dairy Arcology (upgrades from Dairy Facility)
 		}
 		modifier = {
 			job_lvb_hot_tank_add = 2
-			planet_housing_add = 2
 		}
+	}
+
+	triggered_desc = {
+		text = building_lvb_dairy_arcology_effect_desc
 	}
 
 	{{> cow_triggered_desc }}
 	{{> hot_tank_triggered_desc }}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 3
-			buildings_has_motes = yes
+	# Less important for most AIs than the factory buildings, but more important if they adopt sexualization.
+	ai_resource_production = {
+		consumer_goods = 18
+		trigger = {
+			owner = { has_tradition = tr_lvb_sexualization_adopt }
 		}
 	}
 
 	ai_resource_production = {
-		consumer_goods = 1
+		consumer_goods = 18
 		trigger = {
 			always = yes
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 18
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 24
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 15
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 44
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 15
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 64
+				type = produces
+			}
 		}
 	}
 }

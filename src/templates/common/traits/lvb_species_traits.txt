@@ -10,6 +10,7 @@ trait_lvb_dominant = {		# Dominant
 	cost = 1
 	opposites = {
 		trait_lvb_submissive
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -27,6 +28,7 @@ trait_lvb_submissive = {		# Submissive
 	opposites = {
 		trait_lvb_dominant
 		trait_deviants
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -99,8 +101,7 @@ trait_lvb_elastic_orifices = {		# Elastic Orifices
 		}
 	}
 	modifier = {
-		pop_happiness = 0.1
-		pop_amenities_usage_mult = -0.05
+		pop_amenities_usage_mult = -0.1
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.elastic_orifices }}
 	}
 	slave_cost = {
@@ -115,6 +116,7 @@ trait_lvb_exhibitionist = {		# Exhibitionist
 		trait_nonadaptive
 		trait_lvb_nudist
 		trait_lvb_sexually_repressed
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
@@ -138,6 +140,7 @@ trait_lvb_nudist = {		# Nudist
 	opposites = {
 		trait_nonadaptive
 		trait_lvb_exhibitionist
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -175,6 +178,7 @@ trait_lvb_sexually_gifted = {		# Sexually Gifted
 		trait_lvb_sexually_inept
 		trait_lvb_sexually_repressed
 		trait_repugnant
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -191,6 +195,7 @@ trait_lvb_soft = {		# Soft
 	cost = 3
 	opposites = {
 		trait_repugnant
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -228,8 +233,6 @@ trait_lvb_natural_anal_lube = {		# Natural Anal Lube
 		}
 	}
 	modifier = {
-		pop_happiness = 0.1
-		pop_growth_speed = -0.05
 		planet_jobs_alloys_produces_mult = 0.1
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.natural_anal_lube }}
 	}
@@ -277,11 +280,9 @@ trait_lvb_large_breasts = {		# Large Breasts
 		trait_lvb_huge_breasts
 		trait_lvb_small_breasts
 		trait_lvb_all_male
-		trait_lvb_sexually_inept
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_growth_speed = 0.05
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.large_breasts }}
 		planet_lvb_milk_cow_produces_mult = {{ cow_bonus.large_breasts }}
 	}
@@ -296,7 +297,6 @@ trait_lvb_huge_breasts = {		# Huge Breasts
 		trait_lvb_large_breasts
 		trait_lvb_small_breasts
 		trait_lvb_all_male
-		trait_lvb_sexually_inept
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
@@ -306,7 +306,6 @@ trait_lvb_huge_breasts = {		# Huge Breasts
 		}
 	}
 	modifier = {
-		pop_growth_speed = 0.15
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.huge_breasts }}
 		planet_lvb_milk_cow_produces_mult = {{ cow_bonus.huge_breasts }}
 	}
@@ -319,7 +318,6 @@ trait_lvb_multiple_breasts = {		# Multiple Breasts
 	cost = 3
 	opposites = {
 		trait_lvb_all_male
-		trait_lvb_sexually_inept
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
@@ -339,6 +337,29 @@ trait_lvb_multiple_breasts = {		# Multiple Breasts
 }
 
 trait_lvb_high_volume_lactation = {		# High Volume Lactation
+	cost = 2
+	opposites = {
+		trait_lvb_all_male
+		trait_lvb_watery_milk
+	}
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_lvb_transformation_candy
+		}
+	}
+	modifier = {
+		pop_growth_speed = 0.05
+		planet_jobs_unity_produces_mult = 0.1
+		planet_lvb_milk_cow_produces_mult = {{ cow_bonus.high_volume_lactation }}
+	}
+	slave_cost = {
+		energy = 300
+	}
+}
+
+trait_lvb_highly_nutritious_milk = {		# Highly Nutritious Milk
 	cost = 3
 	opposites = {
 		trait_lvb_all_male
@@ -353,29 +374,6 @@ trait_lvb_high_volume_lactation = {		# High Volume Lactation
 	}
 	modifier = {
 		pop_growth_speed = 0.1
-		planet_jobs_unity_produces_mult = 0.1
-		planet_lvb_milk_cow_produces_mult = {{ cow_bonus.high_volume_lactation }}
-	}
-	slave_cost = {
-		energy = 300
-	}
-}
-
-trait_lvb_highly_nutritious_milk = {		# Highly Nutritious Milk
-	cost = 4
-	opposites = {
-		trait_lvb_all_male
-		trait_lvb_watery_milk
-	}
-	allowed_archetypes = { BIOLOGICAL }
-	species_potential_add = {
-		exists = from
-		from = {
-			has_technology = tech_lvb_transformation_candy
-		}
-	}
-	modifier = {
-		pop_growth_speed = 0.2
 		planet_lvb_milk_cow_produces_mult = {{ cow_bonus.highly_nutritious_milk }}
 	}
 	slave_cost = {
@@ -384,10 +382,11 @@ trait_lvb_highly_nutritious_milk = {		# Highly Nutritious Milk
 }
 
 trait_lvb_drooling_vagina = {		# Drooling Vagina
-	cost = 3
+	cost = 2
 	opposites = {
 		trait_lvb_all_male
 		trait_lvb_sexually_inept
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
@@ -397,7 +396,7 @@ trait_lvb_drooling_vagina = {		# Drooling Vagina
 		}
 	}
 	modifier = {
-		pop_happiness = 0.25
+		pop_happiness = 0.10
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.drooling_vagina }}
 		planet_lvb_milk_cow_produces_mult = {{ cow_bonus.drooling_vagina }}
 	}
@@ -448,6 +447,7 @@ trait_lvb_large_penis = {		# Large Penis
 		trait_lvb_sexually_inept
 		trait_lvb_small_penis
 		trait_lvb_all_female
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -466,6 +466,7 @@ trait_lvb_huge_penis = {		# Huge Penis
 		trait_lvb_small_penis
 		trait_lvb_sexually_inept
 		trait_lvb_all_female
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
@@ -484,10 +485,11 @@ trait_lvb_huge_penis = {		# Huge Penis
 }
 
 trait_lvb_multiple_penises = {		# Multiple Penises
-	cost = 4
+	cost = 3
 	opposites = {
 		trait_lvb_all_female
 		trait_lvb_sexually_inept
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
@@ -520,7 +522,7 @@ trait_lvb_high_volume_ejaculations = {		# High Volume Ejaculations
 		}
 	}
 	modifier = {
-		pop_growth_speed = 0.2
+		pop_growth_speed = 0.1
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.high_volume_ejaculations }}
 		planet_lvb_bioreactor_produces_mult = {{ bioreactor_bonus.high_volume_ejaculations }}
 	}
@@ -530,17 +532,17 @@ trait_lvb_high_volume_ejaculations = {		# High Volume Ejaculations
 }
 
 trait_lvb_addictive_cum = {		# Addictive Cum
-	cost = 3
+	cost = 2
 	opposites = {
 		trait_lvb_all_female
 		trait_lvb_sexually_inept
 		trait_lvb_sexually_repressed
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	initial = no
 	modifier = {
-		pop_growth_speed = 0.1
-		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.1
 		pop_ethic_spiritualist_attraction_mult = 0.2
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.addictive_cum }}
 	}
@@ -557,6 +559,7 @@ trait_lvb_adorable = {		# Adorable
 	cost = -1
 	opposites = {
 		trait_repugnant
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -573,6 +576,7 @@ trait_lvb_sadistic = {		# Sadistic
 	opposites = {
 		trait_lvb_masochistic
 		trait_lvb_sexually_repressed
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -593,6 +597,7 @@ trait_lvb_lewd_mind = {		# Lewd Mind
 		trait_lvb_sexually_inept
 		trait_lvb_sexually_repressed
 		trait_conformists
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -605,7 +610,7 @@ trait_lvb_lewd_mind = {		# Lewd Mind
 }
 
 trait_lvb_sex_crazed = {		# Sex Crazed
-	cost = -5
+	cost = -3
 	opposites = {
 		trait_lvb_sexually_inept
 		trait_lvb_sexually_repressed
@@ -614,9 +619,8 @@ trait_lvb_sex_crazed = {		# Sex Crazed
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_growth_speed = 0.25
-		planet_jobs_produces_mult = -0.2
-		pop_government_ethic_attraction = -0.25
+		pop_growth_speed = 0.1
+		planet_jobs_produces_mult = -0.1
 		planet_lvb_sex_work_produces_mult = {{ sex_bonus.sex_crazed }}
 	}
 	slave_cost = {
@@ -646,6 +650,7 @@ trait_lvb_sexually_inept = {		# Sexually Inept
 		trait_lvb_drooling_vagina
 		trait_lvb_addictive_cum
 		trait_lvb_sex_crazed
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -661,6 +666,7 @@ trait_lvb_sexually_inept = {		# Sexually Inept
 trait_lvb_sexually_repressed = {		# Sexually Repressed
 	cost = -2
 	opposites = {
+		trait_hive_mind
 		trait_lvb_sexual_pheromones
 		trait_lvb_targeted_pheromones
 		trait_lvb_exhibitionist
@@ -670,6 +676,7 @@ trait_lvb_sexually_repressed = {		# Sexually Repressed
 		trait_lvb_lewd_mind
 		trait_lvb_addictive_cum
 		trait_lvb_sex_crazed
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -730,6 +737,7 @@ trait_lvb_small_penis = {		# Small Penis
 		trait_lvb_large_penis
 		trait_lvb_huge_penis
 		trait_lvb_all_female
+		trait_hive_mind
 	}
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
@@ -1233,5 +1241,3 @@ trait_lvb_synth_seeder = {		# Synth Seeder
 		energy = 375
 	}
 }
-
-###

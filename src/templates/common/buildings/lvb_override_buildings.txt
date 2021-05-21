@@ -294,7 +294,6 @@ building_clinic = {
 			}
 		}
 		modifier = {
-			job_healthcare_add = -1
 			job_lvb_bioreactor_add = 1
 		}
 	}
@@ -364,7 +363,6 @@ building_hospital = {
 		}
 		modifier = {
 			job_lvb_bioreactor_add = 2
-			job_healthcare_add = -2
 		}
 	}
 
@@ -374,6 +372,7 @@ building_hospital = {
 			minerals = @b2_minerals
 			exotic_gases = @b2_rare_cost
 		}
+
 		upkeep = {
 			energy = @b2_upkeep
 			exotic_gases = @b2_rare_upkeep
@@ -393,4 +392,129 @@ building_hospital = {
 	}
 
 	{{> bioreactor_triggered_desc }}
+}
+
+building_factory_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_building = building_lvb_dairy_farm }
+		NOT = { has_building = building_lvb_dairy_facility }
+		NOT = { has_building = building_lvb_dairy_archology }
+		building_relaxed_basic_income_check = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+					country_uses_consumer_goods = no
+				}
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_add = @b1_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = @b1_jobs
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_basic_industry
+	}
+
+	upgrades = {
+		building_factory_2
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	ai_resource_production = {
+		consumer_goods = 8  # This is an important building for future upgrades
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = { # Overvalue this building if this planet is a major source of consumer goods
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 32
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 48
+				type = produces
+			}
+		}
+	}
 }

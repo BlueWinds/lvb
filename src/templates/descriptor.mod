@@ -7,4 +7,4 @@ tags={
 	"If this is on Steam it's Stolen!"
 }
 name="Lovely Vibes in Blue"
-supported_version="3.0.x"
+supported_version="3.0.*"

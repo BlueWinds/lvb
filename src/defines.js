@@ -60,4 +60,5 @@ module.exports = {
     opt_intercompatible_womb: 0.3,
     opt_intercompatible_sperm: 0.2,
   },
+  max_districts: [...new Array(21).keys()].slice(1),
 }

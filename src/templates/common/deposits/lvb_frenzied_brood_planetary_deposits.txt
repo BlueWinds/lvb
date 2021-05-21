@@ -1,0 +1,196 @@
+d_lvb_frenzied_brood_flesh_pit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+
+	icon = d_lvb_flesh_pits
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_spawning_pool
+		}
+		modifier = {
+			job_spawning_drone_add = -1
+			job_lvb_broodmother_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_spawning_pool
+			OWNER = { has_tradition = tr_lvb_sexualization_bioreactors }
+		}
+		modifier = {
+			job_lvb_bioreactor_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_spawning_pool
+			OWNER = { has_tradition = tr_lvb_sexualization_hot_tanks }
+		}
+		modifier = {
+			job_lvb_hot_tank_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_hive_capital
+		}
+		modifier = {
+			job_maintenance_drone_add = -2
+			job_lvb_fuckdoll_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_hive_major_capital
+		}
+		modifier = {
+			job_maintenance_drone_add = -5
+			job_lvb_fuckdoll_add = 5
+			job_lvb_broodmother_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_imperial_hive_capital
+		}
+		modifier = {
+			job_maintenance_drone_add = -7
+			job_lvb_fuckdoll_add = 7
+			job_lvb_broodmother_add = 2
+		}
+	}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_hive value >= {{this}} }
+			}
+			job_maintenance_drone_add = -3
+			job_lvb_fuckdoll_add = 3
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_hive value >= {{this}} }
+				is_planet_class = pc_hive
+			}
+			job_maintenance_drone_add = -3
+			job_lvb_fuckdoll_add = 3
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_hive value >= {{this}} }
+				owner = { has_technology = tech_housing_2 }
+			}
+			job_maintenance_drone_add = -1
+			job_lvb_fuckdoll_add = 1
+		}
+	{{/each}}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_farming value >= {{this}} }
+			}
+			job_agri_drone_add = -3
+			job_lvb_brood_milk_cow_add = 3
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_farming value >= {{this}} }
+				has_active_building = building_food_processing_center
+			}
+			job_agri_drone_add = -1
+			job_lvb_brood_milk_cow_add = 1
+		}
+	{{/each}}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_farming_uncapped value >= {{this}} }
+			}
+			job_agri_drone_add = -3
+			job_lvb_brood_milk_cow_add = 3
+		}
+	{{/each}}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_arcology_housing value >= {{this}} }
+			}
+			job_maintenance_drone_add = -9
+			job_lvb_fuckdoll_add = 9
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_arcology_housing value >= {{this}} }
+				owner = { has_technology = tech_housing_2 }
+			}
+			job_maintenance_drone_add = -3
+			job_lvb_fuckdoll_add = 3
+		}
+	{{/each}}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_hab_housing value >= {{this}} }
+			}
+			job_maintenance_drone_add = -2
+			job_lvb_fuckdoll_add = 2
+		}
+	{{/each}}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_rw_hive value >= {{this}} }
+			}
+			job_maintenance_drone_add = -15
+			job_lvb_fuckdoll_add = 15
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_rw_hive value >= {{this}} }
+				owner = { has_technology = tech_housing_2 }
+			}
+			job_maintenance_drone_add = -5
+			job_lvb_fuckdoll_add = 5
+		}
+	{{/each}}
+
+	{{#each max_districts}}
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_rw_farming value >= {{this}} }
+			}
+			job_agri_drone_add = -15
+			job_lvb_brood_milk_cow_add = 15
+		}
+
+		triggered_planet_modifier = {
+			potential = {
+				num_districts = { type = district_rw_farming value >= {{this}} }
+				has_active_building = building_food_processing_center
+			}
+			job_agri_drone_add = -5
+			job_lvb_brood_milk_cow_add = 5
+		}
+	{{/each}}
+
+	drop_weight = {
+		weight = 0
+	}
+}
