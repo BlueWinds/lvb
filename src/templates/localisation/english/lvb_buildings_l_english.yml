@@ -5,11 +5,11 @@
 #########################
 
 building_lvb_dairy_farm: "Dairy Farm"
-building_lvb_dairy_farm_desc: "A large sector dedicated primarily to dairy farms, especially sapient cows. These farms are spacious but sparse. Dairy Farm"
+building_lvb_dairy_farm_desc: "A large sector dedicated primarily to dairy farms, especially sapient cows."
 building_lvb_dairy_farm_effect_desc: "Replaces $job_artisan$ jobs in $district_industrial_plural$ with £job_lvb_milk_cow£ §Y$job_lvb_milk_cow_plural$§!."
 building_lvb_dairy_facility: "Dairy Facility"
 building_lvb_dairy_facility_desc: "The dairies in this region enjoy highly modernized milking equipment and on-site processing facilities for products such as cheese and butter."
-building_lvb_dairy_arcology_effect_desc: "Replaces $job_artisan$ jobs in $district_industrial_plural$ with £job_lvb_milk_cow£ §Y$job_lvb_milk_cow_plural$§!.\nIncreases Milk Cow base production of £consumer_goods£ §YConsumer Goods§! by §12§!, with a corresponding increase in upkeep."
+building_lvb_dairy_facility_effect_desc: "Replaces $job_artisan$ jobs in $district_industrial_plural$ with £job_lvb_milk_cow£ §Y$job_lvb_milk_cow_plural$§!.\nIncreases Milk Cow base production of £consumer_goods£ §YConsumer Goods§! by §12§!, with a corresponding increase in upkeep."
 building_lvb_dairy_arcology: "Dairy Arcology"
 building_lvb_dairy_arcology_desc: "No space is wasted in these dairy capitals, with clean milking stalls, hanging aeroponic gardens and cutting edge fluid processing facilities."
 building_lvb_dairy_arcology_effect_desc: "Replaces $job_artisan$ jobs in $district_industrial_plural$ with £job_lvb_milk_cow£ §Y$job_lvb_milk_cow_plural$§!.\nIncreases Milk Cow base production of £consumer_goods£ §YConsumer Goods§! by §G2§!, with a corresponding increase in upkeep."

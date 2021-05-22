@@ -13,7 +13,7 @@ civic_lvb_mandatory_public_use = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		job_lvb_public_use_per_pop = 0.15
+		job_lvb_public_use_per_pop = 0.083333333
 	}
 }
 

@@ -23,7 +23,7 @@ planet_lvb_forced_breeding: "Forced Breeding"
 
 job_lvb_milk_cow: "Milk Cow"
 job_lvb_milk_cow_plural: "Milk Cows"
-job_lvb_milk_cow_desc: "Milk has uses both as food and as a luxury item. Certain traits make MUCH more effective Milk Cows."
+job_lvb_milk_cow_desc: "Milk has uses both as food and as a luxury item. Certain traits make MUCH more effective Milk Cows. Cannot be worked by §Y$trait_lvb_all_male$§! pops."
 job_lvb_milk_cow_effect_desc: "£job_lvb_milk_cow£ $job_lvb_milk_cow_plural$ turn fresh £food£ §Y$food$§! into £consumer_goods£ §Y$consumer_goods$§!"
 mod_job_lvb_milk_cow_add: "$job_lvb_milk_cow$"
 

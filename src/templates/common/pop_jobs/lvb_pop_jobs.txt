@@ -204,26 +204,26 @@ lvb_bioreactor = {
 	resources = {
 		category = planet_lvb_bioreactor
 		produces = {
-			physics_research = 1.5
-			society_research = 3
-			engineering_research = 1.5
+			physics_research = 3
+			society_research = 5
+			engineering_research = 3
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = { has_modifier = lvb_bioreactor_volunteers }
 			}
-			physics_research = 0.325
-			society_research = 0.75
-			engineering_research = 0.325
+			physics_research = 0.75
+			society_research = 1.5
+			engineering_research = 0.75
 		}
 		upkeep = {
 			trigger = { is_lithoid = no }
-			food = 3
+			food = 4
 		}
 		upkeep = {
 			trigger = { is_lithoid = yes }
-			minerals = 3
+			minerals = 4
 		}
 	}
 
@@ -256,25 +256,25 @@ lvb_hot_tank = {
 	resources = {
 		category = planet_lvb_bioreactor
 		produces = {
-			exotic_gases = 0.4
-			rare_crystals = 0.4
-			volatile_motes = 0.4
+			exotic_gases = 0.6
+			rare_crystals = 0.6
+			volatile_motes = 0.6
 		}
 		produces = {
 			trigger = {
 				owner = { has_modifier = lvb_bioreactor_volunteers }
 			}
-			exotic_gases = 0.1
-			rare_crystals = 0.1
-			volatile_motes = 0.1
+			exotic_gases = 0.15
+			rare_crystals = 0.15
+			volatile_motes = 0.15
 		}
 		upkeep = {
 			trigger = { is_lithoid = no }
-			food = 8
+			food = 10
 		}
 		upkeep = {
 			trigger = { is_lithoid = yes }
-			minerals = 8
+			minerals = 10
 		}
 	}
 
@@ -316,11 +316,11 @@ lvb_whore = {			# Whore
 
 	planet_modifier = {
 		planet_amenities_add = 2
-		trade_value_add = 3
+		trade_value_add = 5
 		planet_crime_add = 3
 	}
 
-	{{> sex_work_trait_planet amenities=2 trade=3 }}
+	{{> sex_work_trait_planet amenities=2 trade=5 }}
 
 	weight = {
 		weight = @clerk_job_weight
@@ -372,11 +372,11 @@ lvb_forced_whore = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 1
-		trade_value_add = 3
+		planet_amenities_add = 2
+		trade_value_add = 4
 	}
 
-	{{> sex_work_trait_planet amenities=1 trade=3 }}
+	{{> sex_work_trait_planet amenities=2 trade=4 }}
 
 	weight = {
 		# Equivelent to 'ruler', forces pretty much every slave on the planet into this job
@@ -400,10 +400,10 @@ lvb_public_use = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 3
+		planet_amenities_add = 6
 	}
 
-	{{> sex_work_trait_planet amenities=3 trade=0 }}
+	{{> sex_work_trait_planet amenities=6 trade=0 }}
 
 	weight = {
 		weight = @worker_job_weight
@@ -420,11 +420,11 @@ lvb_pet = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 3
-		trade_value_add = 1
+		planet_amenities_add = 4
+		trade_value_add = 2
 	}
 
-	{{> sex_work_trait_planet amenities=3 trade=1 }}
+	{{> sex_work_trait_planet amenities=4 trade=2 }}
 
 	weight = {
 		weight = @worker_job_weight

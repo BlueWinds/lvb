@@ -23,7 +23,7 @@ building_commercial_zone = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 5
+		job_clerk_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -154,7 +154,7 @@ building_commercial_megaplex = {
 
 	planet_modifier = {
 		job_merchant_add = 1
-		job_clerk_add = 10
+		job_clerk_add = 6
 	}
 
 	triggered_planet_modifier = {
@@ -178,8 +178,8 @@ building_commercial_megaplex = {
 			}
 		}
 		modifier = {
-			job_lvb_whore_add = 5
-			job_clerk_add = -5
+			job_lvb_whore_add = 3
+			job_clerk_add = -3
 		}
 	}
 
@@ -408,7 +408,7 @@ building_factory_1 = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_building = building_lvb_dairy_farm }
 		NOT = { has_building = building_lvb_dairy_facility }
-		NOT = { has_building = building_lvb_dairy_archology }
+		NOT = { has_building = building_lvb_dairy_arcology }
 		building_relaxed_basic_income_check = yes
 	}
 
