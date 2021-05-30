@@ -90,6 +90,7 @@ per_relation = {
 		trigger = {
 			has_commercial_pact = FROM
 			has_tradition = tr_lvb_sexualization_xenotourism_bureau
+			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
 
 		resources = {

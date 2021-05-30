@@ -117,6 +117,18 @@ tr_lvb_sexualization_xenotourism_bureau = {
 	# Adds influence per month to commercial pacts in lvb_diplomacy_economy.txt
 
 	tradition_swap = {
+		name = tr_lvb_sexualization_xenotourism_bureau_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		modifier = {
+			planet_livestock_unity_produces_add = 0.5
+		}
+		trigger = { is_hive_empire = yes }
+		weight = { factor = 1 }
+	}
+
+	tradition_swap = {
 		name = tr_lvb_sexualization_xenotourism_bureau_devouring_swarm
 		inherit_effects = no
 		inherit_icon = yes
@@ -125,7 +137,7 @@ tr_lvb_sexualization_xenotourism_bureau = {
 			planet_livestock_unity_produces_add = 0.5
 		}
 		trigger = { has_civic = civic_hive_devouring_swarm }
-		weight = { factor = 1 }
+		weight = { factor = 2 }
 	}
 
 	ai_weight = { factor =  2000 }

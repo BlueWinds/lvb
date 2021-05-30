@@ -4,6 +4,9 @@ civic_lvb_frenzied_brood: "Frenzied Brood"
 civic_lvb_frenzied_brood_desc: "A product of a brief decadent era from their founding species, this Hive-Mind originated from genetically engineered servants. Unable to reproduce on their own, life... found a way. The original species survive as little more than living wombs and sex toys for their former (ravenously horny) servants."
 civic_tooltip_lvb_frenzied_brood_effects: "Frenzied Broods replace Maintenance and Agricultural Drone jobs with £job_lvb_fuckdoll£ §Y$job_lvb_fuckdoll_plural$§! and £job_lvb_brood_milk_cow£ §Y$job_lvb_brood_milk_cow_plural$§! respectively, relying heavily on enslaved species.\n\nStart the game with §Y15§! §HLivestock§! £pop£ Pops of a secondary species."
 
+getlivestockdesc_normal: "This Pop is being used as livestock to feed other Pops."
+getlivestockdesc_brood: "This Pop is being used as a sexual toy by other Pops."
+
 civic_lvb_frenzied_brood_secondary_species: "Broodmothers"
 
 d_lvb_frenzied_brood_flesh_pit: "Flesh Pit"
@@ -39,3 +42,5 @@ job_lvb_brood_escort_desc: "Some of our fuckdolls have begun accepting their lot
 mod_job_lvb_brood_escort_add: "$job_lvb_brood_escort_plural$"
 mod_job_lvb_brood_escort_per_pop: "§G+1§! $job_lvb_brood_escort$ Job per $VALUE$ Pops"
 mod_job_lvb_brood_escort_per_pop_short: "\n§G+1§! £mod_job_lvb_brood_escort_add£ per $VALUE$ £pop£"
+
+triggered_opinion_lvb_brood: "Xeno Rapists"

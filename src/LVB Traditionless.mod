@@ -1,3 +1,4 @@
+version="3.0.4"
 name="Lovely Vibes in Blue (no Traditions)"
 path="LVB Traditionless"
 

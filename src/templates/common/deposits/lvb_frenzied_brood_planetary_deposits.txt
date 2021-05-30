@@ -66,6 +66,19 @@ d_lvb_frenzied_brood_flesh_pit = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_active_building = building_food_processing_facility
+				has_active_building = building_food_processing_center
+			}
+		}
+		modifier = {
+			job_agri_drone_add = -1
+			job_lvb_brood_milk_cow_add = 1
+		}
+	}
+
 	{{#each max_districts}}
 		triggered_planet_modifier = {
 			potential = {

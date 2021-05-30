@@ -58,10 +58,10 @@ tradition_lvb_sexualization_hive_desc: "Traditionally the province of drone inst
 
 tr_lvb_sexualization_adopt: "Sexualization Traditions"
 tr_lvb_sexualization_adopt_desc: "$tradition_lvb_sexualization_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_effect$"
-tr_lvb_sexualization_adopt_effect: "$MOD_POP_AMENITIES_USAGE_MULT$: §G-10%§!"
+tr_lvb_sexualization_adopt_effect: "§E$TRADITIONS_ADOPT$:§!\n§Y$MOD_POP_AMENITIES_USAGE_MULT$§! decreased by §G10%§!."
 
 tr_lvb_sexualization_adopt_hive: "Sexualization Traditions"
-tr_lvb_sexualization_adopt_desc_hive: "$tradition_lvb_sexualization_hive_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_hive_effect$"
+tr_lvb_sexualization_adopt_hive_desc: "$tradition_lvb_sexualization_hive_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_hive_effect$"
 
 tr_lvb_sexualization_public_use_ordinance: "Public Use Ordinance"
 tr_lvb_sexualization_public_use_ordinance_desc: "Adds §Y1§! £job_lvb_whore£ §Y$job_lvb_whore$ Job§! per §Y25§! £pop£ Pops and §Y1§! £job_lvb_call_girl£ §Y$job_lvb_call_girl$ Job§! per §Y50§! £pop£ Pops."
@@ -69,7 +69,7 @@ tr_lvb_sexualization_public_use_ordinance_delayed: "We can allow, or require, ou
 
 tr_lvb_sexualization_public_use_ordinance_brood: "Devoted Servants"
 tr_lvb_sexualization_public_use_ordinance_brood_desc: "Adds §Y1§! £job_lvb_brood_escort£ §Y$job_lvb_brood_escort$ Job§! per §Y25§! £pop£ Pops."
-tr_lvb_sexualization_public_use_ordinance__brood_delayed: "Some of our fuckdolls have begun accepting their lot in life, embracing their role as our hive's playthings. While we'd hate to give up struggle-fucks completely, willing partners are a novel and interesting experience for the hive."
+tr_lvb_sexualization_public_use_ordinance_brood_delayed: "Some of our fuckdolls have begun accepting their lot in life, embracing their role as our hive's playthings. While we'd hate to give up struggle-fucks completely, willing partners are a novel and interesting experience for the hive."
 
 tr_lvb_sexualization_public_use_ordinance_hive: "Rapid Expansion"
 tr_lvb_sexualization_public_use_ordinance_hive_desc: "Increase our £influence£ §Y$mod_country_influence_produces_add$§! by §Y0.25§!."
@@ -78,6 +78,10 @@ tr_lvb_sexualization_public_use_ordinance__hive_delayed: "With the rapid spawnin
 tr_lvb_sexualization_xenotourism_bureau: "Xeno Tourism Bureau"
 tr_lvb_sexualization_xenotourism_bureau_desc: "Each §YCommercial Pact§! will increase our £influence£ §Y$mod_country_influence_produces_add$§! by §Y0.125§!."
 tr_lvb_sexualization_xenotourism_bureau_delayed: "'Tourism' is a euphemism for those empires less open about sexuality than our own. By whoring out our citizens to those of foreign powers, we can gain great advantages on the galactic stage."
+
+tr_lvb_sexualization_xenotourism_bureau_hive: "Xeno Tourism Bureau"
+tr_lvb_sexualization_xenotourism_bureau_hive_desc: "Allows us to form §YCommercial Pact§! with other empires."
+tr_lvb_sexualization_xenotourism_bureau_hive_delayed: "Though it's rather confusing for the drones, we can open our borders to individuals from other empires - apparently they find our kind fascinating to watch."
 
 tr_lvb_sexualization_xenotourism_bureau_devouring_swarm: "Xeno Farming"
 tr_lvb_sexualization_xenotourism_bureau_devouring_swarm_desc: "§HLivestock§! Pops produce 0.5 £unity£ §YUnity§! in addition to Food."
@@ -88,7 +92,7 @@ tr_lvb_sexualization_public_service_desc: "$mod_planet_pops_consumer_goods_upkee
 tr_lvb_sexualization_public_service_delayed: "Two years of part-time public use is mandatory for all citizens upon reaching the age of majority, bringing our people closer together and ending the unhappiness of sexual isolation."
 
 tr_lvb_sexualization_public_service_hive: "Public Spawning"
-tr_lvb_sexualization_public_service_hive_desc: "$pop_housing_usage_mult$ §G-10%§!"
+tr_lvb_sexualization_public_service_hive_desc: "$MOD_POP_HOUSING_USAGE_MULT$ §G-10%§!"
 tr_lvb_sexualization_public_service_hive_delayed: "By reducing our drones' animalistic desire for privacy during copulation and birth, we can shrink the amount of space that must be dedicated to these biological necessities."
 
 tr_lvb_sexualization_bioreactors: "Bioreactor Experimentation"
@@ -117,4 +121,4 @@ tr_lvb_sexualization_hot_tanks_hive_delayed: "Our children shall inherit the sta
 
 tr_lvb_sexualization_finish: "Sexuality Traditions Finished"
 tr_lvb_sexualization_finish_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sexualization_adopt$ will increase $mod_planet_lvb_sex_work_produces_mult$ by §G+{{ multiply 100 sex_bonus_sexualization_finish }}%§!."
-tr_lvb_sexualization_finish_hive_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sexualization_adopt$ will increase $planet_pop_assembly_organic_mult$ by §G10%§!."
+tr_lvb_sexualization_finish_hive_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sexualization_adopt$ will increase $MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$ by §G10%§!."

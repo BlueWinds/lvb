@@ -7,11 +7,20 @@ event = {
 
 	immediate = {
 		every_galaxy_planet = {
+			limit = {
+				exists = owner
+				has_modifier = lvb_two_gendered_planet
+				NOT = {
+					any_owned_pop = { has_trait = trait_lvb_all_female }
+					any_owned_pop = { has_trait = trait_lvb_all_male }
+				}
+			}
 			remove_modifier = lvb_two_gendered_planet
 		}
 		every_galaxy_planet = {
 			limit = {
 				exists = owner
+				NOT = { has_modifier = lvb_two_gendered_planet }
 				AND = {
 					any_owned_pop = { has_trait = trait_lvb_all_female }
 					any_owned_pop = { has_trait = trait_lvb_all_male }
@@ -29,11 +38,20 @@ event = {
 
 	immediate = {
 		every_galaxy_planet = {
+			limit = {
+				exists = owner
+				has_modifier = lvb_SM_planet
+				NOT = {
+					any_owned_pop = { has_trait = trait_lvb_sadistic }
+					any_owned_pop = { has_trait = trait_lvb_masochistic }
+				}
+			}
 			remove_modifier = lvb_SM_planet
 		}
 		every_galaxy_planet = {
 			limit = {
 				exists = owner
+				NOT = { has_modifier = lvb_SM_planet }
 				AND = {
 					any_owned_pop = { has_trait = trait_lvb_sadistic }
 					any_owned_pop = { has_trait = trait_lvb_masochistic }
@@ -51,11 +69,20 @@ event = {
 
 	immediate = {
 		every_galaxy_planet = {
+			limit = {
+				exists = owner
+				has_modifier = lvb_DS_planet
+				NOT = {
+					any_owned_pop = { has_trait = trait_lvb_dominant }
+					any_owned_pop = { has_trait = trait_lvb_submissive }
+				}
+			}
 			remove_modifier = lvb_DS_planet
 		}
 		every_galaxy_planet = {
 			limit = {
 				exists = owner
+				NOT = { has_modifier = lvb_DS_planet }
 				AND = {
 					any_owned_pop = { has_trait = trait_lvb_dominant }
 					any_owned_pop = { has_trait = trait_lvb_submissive }
@@ -102,4 +129,3 @@ country_event = {
 		from = { set_is_female = no }
 	}
 }
-

@@ -13,7 +13,7 @@ lvb_tentacle_covered_desc: "Extremely aggressive and horny creatures infest this
 lvb_tentacle_extinction_dig: "Kidnapped Scientist"
 
 tentacle_extinction_chain_title: "Tentacle Planet"
-tentacle_extinction_chain_desc: "A planet covered with tentacle monsters. Ancient ruins indicating [Root.GetName] once bore thriving civilization. A kidnapped scientist. We should attempt a rescue, and learn what's going on here at the same time."
+tentacle_extinction_chain_desc: "A planet covered with tentacle monsters. Ancient ruins indicating [Root.GetName] once bore thriving civilization. A kidnapped [Root.GetScientist]. We should attempt a rescue, and learn what's going on here at the same time."
 
 lvb_tentacle_extinction.1.name: "Kidnapped by tentacle monsters"
 lvb_tentacle_extinction.1.desc: "[lvb_tentacle_scientist.GetName] was leading an expedition to survey the seemingly idyllic world when the expedition was attacked by the local wildlife, which turns out to be exceedingly strong and very horny. The shuttle cameras recorded the away team's capture and rape before the pilot had to take off lest she too be taken. [lvb_tentacle_scientist.GetName]'s transponder indicates that [lvb_tentacle_scientist.GetSheHe] is still alive, but we'll need to learn more about the wildlife before mounting a rescue attempt."

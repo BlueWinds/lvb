@@ -1,3 +1,4 @@
+version="3.0.4"
 name="Lovely Vibes in Blue"
 path="mod/LVB"
 

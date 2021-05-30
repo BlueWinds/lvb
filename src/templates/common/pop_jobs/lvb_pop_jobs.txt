@@ -256,25 +256,27 @@ lvb_hot_tank = {
 	resources = {
 		category = planet_lvb_bioreactor
 		produces = {
-			exotic_gases = 0.6
-			rare_crystals = 0.6
-			volatile_motes = 0.6
+			exotic_gases = 0.2
+			rare_crystals = 0.2
+			volatile_motes = 0.2
+			energy = 6
 		}
 		produces = {
 			trigger = {
 				owner = { has_modifier = lvb_bioreactor_volunteers }
 			}
-			exotic_gases = 0.15
-			rare_crystals = 0.15
-			volatile_motes = 0.15
+			exotic_gases = 0.05
+			rare_crystals = 0.05
+			volatile_motes = 0.05
+			energy = 1.5
 		}
 		upkeep = {
 			trigger = { is_lithoid = no }
-			food = 10
+			food = 5
 		}
 		upkeep = {
 			trigger = { is_lithoid = yes }
-			minerals = 10
+			minerals = 5
 		}
 	}
 
