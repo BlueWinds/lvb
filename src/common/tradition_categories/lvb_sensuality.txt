@@ -1,0 +1,40 @@
+tradition_lvb_sensuality = {
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_lvb_sensuality_adopt"
+	finish_bonus = "tr_lvb_sensuality_finish"
+	traditions = {
+		"tr_lvb_sensuality_deviancy_normalization"
+		"tr_lvb_sensuality_red_light_planet"
+		"tr_lvb_sensuality_hormonal_rebalancing"
+		"tr_lvb_sensuality_selective_conception"
+		"tr_lvb_sensuality_std_eradication"
+	}
+
+	potential = {
+		is_machine_empire = no
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_civic = civic_lvb_frenzied_brood
+		}
+	}
+}

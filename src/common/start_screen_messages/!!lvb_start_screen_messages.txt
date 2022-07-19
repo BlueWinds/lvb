@@ -1,0 +1,8 @@
+part = {
+	location = 1
+	localization = "START_SCREEN_LVB_FRENZIED_BROOD"
+
+	trigger = {
+		has_civic = civic_lvb_frenzied_brood
+	}
+}

@@ -1,0 +1,99 @@
+# Farmer / Farming Drone / Milk Cow
+defined_text = {
+	name = GetFarmer
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_regular_empire = yes
+			is_anglers_empire = no
+		}
+		localization_key = job_farmer
+	}
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_gestalt = yes
+			has_civic = civic_lvb_frenzied_brood
+		}
+		localization_key = job_lvb_brood_milk_cow
+	}
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_gestalt = yes
+			NOT = { has_civic = civic_lvb_frenzied_brood }
+		}
+		localization_key = job_agri_drone
+	}
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_regular_empire = yes
+			is_gestalt = no
+			is_anglers_empire = yes
+		}
+		localization_key = job_farmer_and_angler
+	}
+	default = job_farmer
+}
+
+# Farmers / Farming Drones / Milk Cows
+defined_text = {
+	name = GetFarmerPlural
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_regular_empire = yes
+			is_anglers_empire = no
+		}
+		localization_key = job_farmer_plural
+	}
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_gestalt = yes
+			has_civic = civic_lvb_frenzied_brood
+		}
+		localization_key = job_lvb_brood_milk_cow_plural
+	}
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_gestalt = yes
+			NOT = { has_civic = civic_lvb_frenzied_brood }
+		}
+		localization_key = job_agri_drone_plural
+	}
+	text = {
+		trigger = {
+			is_scope_valid = yes
+			is_regular_empire = yes
+			is_gestalt = no
+			is_anglers_empire = yes
+		}
+		localization_key = job_farmers_and_anglers
+	}
+	default = job_farmer_plural
+}
+
+defined_text = {
+	name = GetAgriDroneName
+	text = {
+		trigger = {
+			has_civic = civic_lvb_frenzied_brood
+		}
+		localization_key = job_lvb_brood_milk_cow
+	}
+	default = job_lvb_agri_drone_original
+}
+
+defined_text = {
+	name = GetMaintenanceDroneName
+	text = {
+		trigger = {
+			has_civic = civic_lvb_frenzied_brood
+		}
+		localization_key = job_lvb_fuckdoll
+	}
+	default = job_lvb_maintenance_drone_original
+}

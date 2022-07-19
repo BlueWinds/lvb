@@ -1,0 +1,6 @@
+pop_job_lvb_sexwork_mult = {
+	icon = mod_trade_value_mult
+	percentage = yes
+	good = yes
+	category = pop
+}

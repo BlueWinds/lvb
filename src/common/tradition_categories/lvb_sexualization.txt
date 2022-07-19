@@ -1,0 +1,36 @@
+tradition_lvb_sexualization = {
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_lvb_sexualization_adopt"
+	finish_bonus = "tr_lvb_sexualization_finish"
+	traditions = {
+		"tr_lvb_sexualization_public_service"
+		"tr_lvb_sexualization_xenotourism_bureau"
+		"tr_lvb_sexualization_public_use_ordinance"
+		"tr_lvb_sexualization_bioreactors"
+		"tr_lvb_sexualization_hot_tanks"
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_civic = civic_lvb_frenzied_brood
+		}
+	}
+}

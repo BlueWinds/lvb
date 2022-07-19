@@ -1,0 +1,128 @@
+
+leader_enhancement = {
+	potential = {
+		OR = {
+			has_technology = tech_selected_lineages
+			has_country_flag = lvb_bioreactor_life_extension
+		}
+	}
+
+	option = {
+		name = "leader_enhancement_natural_selection"
+
+		policy_flags = {
+			leader_enhancement_natural_selection
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_ethical_guideline_refactoring
+				trigger = {
+					OR = {
+						has_technology = tech_selected_lineages
+						has_technology = tech_capacity_boosters
+					}
+				}
+			}
+		}
+
+		on_enabled = {
+			# custom_tooltip = "policy_allow_slavery_effect_disable"
+		}
+
+		modifier = {}
+
+	}
+
+	option = {
+		name = "leader_enhancement_selected_lineages"
+
+		policy_flags = {
+			leader_enhancement_selected_lineages
+		}
+		modifier = {
+			leader_skill_levels = 1
+			leader_age = 10
+			leaders_cost_mult = 0.5
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_ethical_guideline_refactoring
+				trigger = {
+					has_technology = tech_capacity_boosters
+				}
+			}
+		}
+
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+
+		AI_weight = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_egalitarian"
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+				NOT = {
+					has_valid_ai_personality = yes
+					is_ai = yes
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+		}
+
+		prerequisites = { tech_selected_lineages }
+	}
+
+	option = {
+		name = "leader_enhancement_capacity_boosters"
+
+		policy_flags = {
+			leader_enhancement_capacity_boosters
+		}
+		modifier = {
+			leader_skill_levels = 2
+			leader_age = 20
+			leaders_cost_mult = 1
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_egalitarian"
+				has_ethic = "ethic_fanatic_egalitarian"
+			}
+		}
+
+		prerequisites = { tech_capacity_boosters }
+
+		AI_weight = {
+			factor = 3
+		}
+	}
+
+
+	option = {
+		name = "lvb_living_laboratory_life_extension_policy"
+
+		modifier = {
+			leader_age = 30
+			species_leader_exp_gain = -0.1
+		}
+
+		valid = {
+			has_country_flag = lvb_bioreactor_life_extension
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+}

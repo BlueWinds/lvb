@@ -1,16 +1,14 @@
 {
   "name": "lvb",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "This is an adult mod for Stellaris, adding all sorts of adult-themed content.",
-  "main": "src/fillTemplates.js",
+  "main": "build.js",
   "scripts": {
     "start": "nodemon -e '*' -w './src'",
-    "build": "node src/fillTemplates.js",
-    "buildNoTrad": "node src/makeTraditionless.js",
-    "clean": "rm 'mod/LVB.zip' 'mod/LVB Traditionless.zip' || true",
-    "zip": "cd mod && zip -r 'LVB.zip' 'LVB' 'LVB.mod'",
-    "zipNoTrad": "cd mod && zip -r 'LVB Traditionless.zip' 'LVB Traditionless' 'LVB Traditionless.mod'",
-    "release": "npm run build && npm run buildNoTrad && npm run clean && npm run zip && npm run zipNoTrad"
+    "build": "node build.js",
+    "clean": "rm 'LVB/LVB.zip' || true",
+    "zip": "zip -r 'LVB.zip' 'LVB'",
+    "release": "npm run build && npm run clean && npm run zip"
   },
   "repository": {
     "type": "git",
@@ -25,7 +23,6 @@
   "devDependencies": {
     "fs-extra": "^9.1.0",
     "glob": "^7.1.7",
-    "handlebars": "^4.7.7",
     "imagemagick": "^0.1.3",
     "mkdirp": "^0.5.5",
     "nodemon": "^1.19.4",

@@ -1,0 +1,47 @@
+civic_lvb_mandatory_public_use = {
+	description = "civic_lvb_manadatory_public_use_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_slaver_guilds
+				value = civic_indentured_assets
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		job_lvb_public_use_per_pop = 0.083333333
+	}
+}
+
+civic_lvb_frenzied_brood = {
+	potential = { authority = { value = auth_hive_mind } }
+	possible = {
+		civics = {
+			NOT = { value = civic_hive_devouring_swarm }
+		}
+	}
+
+	flags = { custom_start_screen }
+
+	modification = no
+	random_weight = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = civic_tooltip_lvb_frenzied_brood_effects
+	has_secondary_species = {
+		title = civic_lvb_frenzied_brood_secondary_species
+	}
+}

@@ -1,0 +1,91 @@
+namespace = lvb_frenzied_brood
+
+# empire_init_capital_planet
+planet_event = {
+	id = lvb_frenzied_brood.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { lvb_owner_is_brood = yes }
+
+			while = {
+				count = 15
+				random_owned_pop = { kill_pop = yes }
+			}
+
+			while = {
+				count = 15
+				create_pop = { species = last_created_species }
+			}
+
+			add_deposit = d_lvb_frenzied_brood_flesh_pit
+			remove_district = district_hive
+			add_district = district_mining
+		}
+	}
+}
+
+# on_planet_transfer
+planet_event = {
+	id = lvb_frenzied_brood.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_deposit = d_lvb_frenzied_brood_flesh_pit }
+			remove_deposit = d_lvb_frenzied_brood_flesh_pit
+		}
+		if = {
+			limit = { lvb_owner_is_brood = yes }
+			add_deposit = d_lvb_frenzied_brood_flesh_pit
+		}
+	}
+}
+
+country_event = {
+	id = lvb_frenzied_brood.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = tech_eco_simulation
+		has_civic = civic_lvb_frenzied_brood
+	}
+
+	immediate = {
+		add_modifier = { modifier = lvb_researched_tech_eco_simulation_as_brood days = -1 }
+	}
+}
+
+country_event = {
+	id = lvb_frenzied_brood.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = tech_gene_crops
+		has_civic = civic_lvb_frenzied_brood
+	}
+
+	immediate = {
+		add_modifier = { modifier = lvb_researched_tech_gene_crops_as_brood days = -1 }
+	}
+}
+
+country_event = {
+	id = lvb_frenzied_brood.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = tech_nano_vitality_crops
+		has_civic = civic_lvb_frenzied_brood
+	}
+
+	immediate = {
+		add_modifier = { modifier = lvb_researched_tech_nano_vitality_crops_as_brood days = -1 }
+	}
+}

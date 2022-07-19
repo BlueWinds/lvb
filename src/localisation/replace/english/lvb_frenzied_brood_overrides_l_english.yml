@@ -1,0 +1,9 @@
+﻿l_english:
+
+slavery_livestock_tooltip: ""
+slavery_livestock_tooltip_delayed: ""
+
+LIVESTOCK_DESC: "This pop is being used by others as livestock"
+
+job_agri_drone: "[GetAgriDroneName]"
+job_maintenance_drone: "[GetMaintenanceDroneName]"

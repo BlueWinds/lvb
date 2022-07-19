@@ -1,0 +1,46 @@
+#################################
+###     Scripted Triggers     ###
+#################################
+
+#############
+# Buildings #
+#############
+
+lvb_traders_selling_citizens = {
+	OR = {
+		has_modifier = lvb_traders_sell_citizens_1
+		has_modifier = lvb_traders_sell_citizens_2
+		has_modifier = lvb_traders_sell_citizens_3
+		has_modifier = lvb_traders_sell_citizens_4
+		has_modifier = lvb_traders_sell_citizens_5
+	}
+}
+
+lvb_is_livestock = {
+	has_citizenship_type = { type = citizenship_slavery }
+	has_slavery_type = { type = slavery_livestock }
+}
+
+lvb_owner_is_brood = {
+	owner = { has_civic = civic_lvb_frenzied_brood }
+}
+
+lvb_can_do_sex_work = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+	is_being_purged = no
+	OR = {
+		is_robot_pop = no
+		pop_has_trait = trait_lvb_sex_bots
+		pop_has_trait = trait_lvb_breast_attachments
+		pop_has_trait = trait_lvb_synth_breasts
+		pop_has_trait = trait_lvb_custom_fleshlight_slot
+		pop_has_trait = trait_lvb_synth_vagina
+		pop_has_trait = trait_lvb_custom_dildo_attachment
+		pop_has_trait = trait_lvb_synth_penis
+		pop_has_trait = trait_lvb_artificial_womb
+		pop_has_trait = trait_lvb_cybernetic_womb
+		pop_has_trait = trait_lvb_biomechanical_breeder
+		pop_has_trait = trait_lvb_synth_seeder
+	}
+}

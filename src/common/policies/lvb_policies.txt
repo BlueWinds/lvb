@@ -1,0 +1,170 @@
+########################
+###	 Policies	 ###
+########################
+
+########
+# Jobs #
+########
+
+#Sex Trade
+lvb_sex_trade_policy = {
+	potential = {
+		has_technology = tech_lvb_sex_trade
+	}
+
+	option = { # No Specialization
+		name = "lvb_sex_trade_default"
+
+		policy_flags = {
+			lvb_sex_trade_policy_default
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {					  # Allowed
+		name = "lvb_sex_trade_allowed"
+
+		policy_flags = {
+			lvb_sex_trade_policy_allowed
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+
+	option = {					  # Encouraged
+		name = "lvb_sex_trade_encouraged"
+
+		policy_flags = {
+			lvb_sex_trade_policy_encouraged
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+}
+
+#Milk Cows
+lvb_milk_cows_policy = {			# Milk Cow Specialization
+
+	potential = {
+		has_technology = tech_lvb_milk_cow_specialization
+	}
+
+	option = {			# No Specialization
+		name = "lvb_milk_cows_policy_default"
+
+		policy_flags = {
+			lvb_milk_cows_policy_default
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						country_event = { id = lvb_event_popups.1000 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {			# Maximize Production
+		name = "lvb_milk_cows_policy_max_milk"
+
+		policy_flags = {
+			lvb_milk_cows_policy_max_milk
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						country_event = { id = lvb_event_popups.1001 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 2
+		}
+	}
+
+	option = {			# Free Use Cows
+		name = "lvb_milk_cows_policy_free_use"
+
+		policy_flags = {
+			lvb_milk_cows_policy_free_use
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						country_event = { id = lvb_event_popups.1002 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {			# Milk Cow Renting
+		name = "lvb_milk_cows_policy_paid_use"
+
+		policy_flags = {
+			lvb_milk_cows_policy_paid_use
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						country_event = { id = lvb_event_popups.1003 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {			# Milk Cow Breeding
+		name = "lvb_milk_cows_policy_breeders"
+
+		policy_flags = {
+			lvb_milk_cows_policy_breeders
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				owner = {
+					if = {
+						country_event = { id = lvb_event_popups.1004 }
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+###

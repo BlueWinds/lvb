@@ -1,9 +1,0 @@
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			has_tradition = tr_lvb_sexualization_hot_tanks
-		}
-	}
-	text = job_lvb_hot_tank_effect_desc
-}

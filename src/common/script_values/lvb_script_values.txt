@@ -1,0 +1,329 @@
+lvb_job_weights_triple_resources_modifier = {
+	complex_trigger_modifier = {
+		trigger = check_economic_production_modifier_for_job
+		parameters = {
+			job = $JOB$
+			resource = {
+				$RESOURCE1$ = $WEIGHT1$
+				$RESOURCE2$ = $WEIGHT2$
+				$RESOURCE3$ = $WEIGHT3$
+			}
+		}
+		mode = add
+	}
+	add = 1
+	min = 0
+	pow = 3 #we need it to have a bit more impact
+
+	modifier = {
+		owner = {
+			has_deficit = $RESOURCE1$
+		}
+		mult = @\[ 10 * $WEIGHT1$ ]
+	}
+	modifier = {
+		owner = {
+			has_deficit = $RESOURCE2$
+		}
+		mult = @\[ 10 * $WEIGHT2$ ]
+	}
+	modifier = {
+		owner = {
+			has_deficit = $RESOURCE3$
+		}
+		mult = @\[ 10 * $WEIGHT3$ ]
+	}
+}
+
+lvb_industrial_jobs_value = {
+	## District: Industrial
+	complex_trigger_modifier = {
+		potential = { NOT = { has_designation = col_foundry } }
+		trigger = num_districts
+		parameters = {
+			type = district_industrial
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { has_designation = col_factory }
+		trigger = num_districts
+		parameters = {
+			type = district_industrial
+		}
+		mode = add
+	}
+
+	## District: Hab Industrial
+	complex_trigger_modifier = {
+		potential = { NOT = { has_designation = col_habitat_foundry } }
+		trigger = num_districts
+		parameters = {
+			type = district_hab_industrial
+		}
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		potential = { has_designation = col_habitat_factory }
+		trigger = num_districts
+		parameters = {
+			type = district_hab_industrial
+		}
+		mode = add
+	}
+
+	## District: Ringworld Industrial
+	complex_trigger_modifier = {
+		trigger = num_districts
+		potential = { NOT = { has_designation = col_foundry } }
+		parameters = {
+			type = district_rw_industrial
+		}
+		multiplier = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_districts
+		potential = { has_designation = col_factory }
+		parameters = {
+			type = district_rw_industrial
+		}
+		multiplier = 5
+		mode = add
+	}
+
+	## District: Shattered Ring World Commercial
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_srw_commercial
+		}
+		mode = add
+	}
+
+	## District: Arcology Industrial
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_arcology_civilian_industry
+		}
+		multiplier = 6
+		mode = add
+	}
+}
+
+lvb_maintenence_drone_jobs_value = {
+	## Buildings: Capitals
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_hive_capital
+			disabled = no
+		}
+		multiplier = 2
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_hive_major_capital
+			disabled = no
+		}
+		multiplier = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_imperial_hive_capital
+			disabled = no
+		}
+		multiplier = 7
+		mode = add
+	}
+
+	## Buildings: Unity
+	complex_trigger_modifier = {
+		potential = { owner = { has_edict = synaptic_reinforcement } }
+		trigger = num_buildings
+		parameters = {
+			type = building_hive_node
+			disabled = no
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_edict = synaptic_reinforcement } }
+		trigger = num_buildings
+		parameters = {
+			type = building_hive_cluster
+			disabled = no
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_edict = synaptic_reinforcement } }
+		trigger = num_buildings
+		parameters = {
+			type = building_hive_confluence
+			disabled = no
+		}
+		mode = add
+	}
+
+	## Buildings: Misc
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_maintenance_depot
+			disabled = no
+		}
+		multiplier = 5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_resource_silo
+			disabled = no
+		}
+		mode = add
+	}
+
+  ## District: Hive
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_hive
+		}
+		multiplier = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { is_planet_class = pc_hive }
+		trigger = num_districts
+		parameters = {
+			type = district_hive
+		}
+		multiplier = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_technology = tech_housing_2 } }
+		trigger = num_districts
+		parameters = {
+			type = district_hive
+		}
+		mode = add
+	}
+
+	## District: Arcology Hive
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_arcology_housing
+		}
+		multiplier = 9
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_technology = tech_housing_2 } }
+		trigger = num_districts
+		parameters = {
+			type = district_hive
+		}
+		multiplier = 3
+		mode = add
+	}
+
+	## District: Hab Housing
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_hab_housing
+		}
+		multiplier = 2
+		mode = add
+	}
+
+	## District: Arcology Housing
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_arcology_housing
+		}
+		multiplier = 15
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_technology = tech_housing_2 } }
+		trigger = num_districts
+		parameters = {
+			type = district_hive
+		}
+		multiplier = 5
+		mode = add
+	}
+}
+
+lvb_agri_drone_jobs_value = {
+	## Building: Food processing facility / center
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_food_processing_facility
+			disabled = no
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_food_processing_center
+			disabled = no
+		}
+		multiplier = 2
+		mode = add
+	}
+
+	## Building: Hydroponic Farms
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_hydroponics_farm
+			disabled = no
+		}
+		multiplier = 2
+		mode = add
+	}
+
+	## District: Farming
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_farming
+		}
+		multiplier = 3
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_farming_uncapped
+		}
+		multiplier = 3
+		mode = add
+	}
+
+	## District: Ringworld Farming
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_rw_farming
+		}
+		multiplier = 15
+		mode = add
+	}
+}
+
