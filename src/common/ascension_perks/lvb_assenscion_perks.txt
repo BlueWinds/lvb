@@ -1,0 +1,29 @@
+ap_lvb_mono_gender_compatibility = {
+	potential = {
+		NOT = { has_ascension_perk = ap_lvb_mono_gender_compatibility }
+		is_regular_empire = yes
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+		empire_size_pops_mult = -0.15
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_lvb_mono_gendered_main_species"
+			OR = {
+				owner_main_species = { has_trait = trait_lvb_all_female }
+				owner_main_species = { has_trait = trait_lvb_all_male }
+			}
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = "negate_lvb_monogender_penalty"
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+}

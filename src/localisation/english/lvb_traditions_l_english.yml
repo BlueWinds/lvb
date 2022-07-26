@@ -7,14 +7,13 @@
 tradition_lvb_sensuality: "Sensuality"
 tradition_lvb_sensuality_desc: "We must understand and direct the powerful forces granting our species meaning and joy - love and lust."
 tr_lvb_sensuality_adopt: "Sensuality Traditions"
-tr_lvb_sensuality_adopt_desc: "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_effect$"
-tr_lvb_sensuality_adopt_effect: "§E$TRADITIONS_ADOPT$:§!\n£pops£ §Y$MOD_POP_GROWTH_SPEED$§! increased by §G+10%§!."
+#tr_lvb_sensuality_adopt_desc: "£pops£ §Y$MOD_POP_GROWTH_SPEED$§! increased by §G+10%§!."
 
 tr_lvb_sensuality_adopt_hive: "Sensuality Traditions"
-tr_lvb_sensuality_adopt_hive_desc: "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_hive_effect$"
+#tr_lvb_sensuality_adopt_hive_desc: "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_hive_effect$"
 
 tr_lvb_sensuality_adopt_purifiers: "Sensuality Traditions"
-tr_lvb_sensuality_adopt_purifiers_desc: "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_purifiers_effect$"
+#tr_lvb_sensuality_adopt_purifiers_desc: "$tradition_lvb_sensuality_desc$\n\n$tr_lvb_sensuality_adopt_effect$\n\n$tr_lvb_sensuality_finish_purifiers_effect$"
 
 tr_lvb_sensuality_hormonal_rebalancing: "Hormonal Rebalancing"
 tr_lvb_sensuality_hormonal_rebalancing_desc: "§Y$MOD_PLANET_STABILITY_ADD$§! is increased by §G5%§! on all our planets."
@@ -31,7 +30,7 @@ tr_lvb_sensuality_std_eradication_desc: "§Y$MOD_EMPIRE_SIZE_POPS_MULT$§! reduc
 tr_lvb_sensuality_std_eradication_delayed: "All common sexually transmitted diseases have been erradicated from the populace, and we have developed cures for any that reemerge. Free love is now free of risk as well."
 
 tr_lvb_sensuality_deviancy_normalization: "Deviancy Normalization"
-tr_lvb_sensuality_deviancy_normalization_desc: "§Y$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$§! increased by §G+15%§! and §Y$MOD_PLANET_CRIME_ADD$§! is reduced by §G15§! on all our planets."
+tr_lvb_sensuality_deviancy_normalization_desc: "§Y$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$§! increased by §G+15%§! and §YCrime§! is reduced by §G15§! on all our planets."
 tr_lvb_sensuality_deviancy_normalization_delayed: "Sexual deviancy and extreme fetishes need not be a radicalizing force, if our society is sufficiently tolerant of them."
 
 tr_lvb_sensuality_red_light_planet: "Red Light Planet"
@@ -42,11 +41,6 @@ tr_lvb_sensuality_red_light_planet_frenzied_brood: "Joyful submission"
 tr_lvb_sensuality_red_light_planet_frenzied_brood_delayed: "Our broodmothers and fuckdolls spend their time free from our embrace unhappily. With improvements in empathy, they can learn to enjoy their situation."
 
 tr_lvb_sensuality_finish: "Sensuality Traditions Finished"
-tr_lvb_sensuality_finish_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sensuality_adopt$ will increase §Y$MOD_PLANET_IMMIGRATION_PULL_MULT$§! by §G25%§! and §Y$MOD_POP_GROWTH_FROM_IMMIGRATION$§! by §G10%§! on all planets."
-
-tr_lvb_sensuality_finish_hive_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sensuality_adopt$ will increase §Y$MOD_COUNTRY_ENVOYS_ADD$§! by §G1§!. Our envoys will §Y$improve_relations$§! §G20%§! faster."
-
-tr_lvb_sensuality_finish_purifiers_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sensuality_adopt$ will reduce our §Y$MOD_POP_AMENITIES_USAGE_MULT$§! by §G10%§!."
 
 #################
 # SEXUALIZATION #
@@ -57,11 +51,10 @@ tradition_lvb_sexualization_desc: "Traditionally the province of individuals, ma
 tradition_lvb_sexualization_hive_desc: "Traditionally the province of drone instinct, making sexuality the concern of the hive mind can bring enormous benefits."
 
 tr_lvb_sexualization_adopt: "Sexualization Traditions"
-tr_lvb_sexualization_adopt_desc: "$tradition_lvb_sexualization_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_effect$"
-tr_lvb_sexualization_adopt_effect: "§E$TRADITIONS_ADOPT$:§!\n§Y$MOD_POP_AMENITIES_USAGE_MULT$§! decreased by §G10%§!."
+#tr_lvb_sexualization_adopt_desc: "§Y$MOD_POP_AMENITIES_USAGE_MULT$§! decreased by §G10%§!."
 
 tr_lvb_sexualization_adopt_hive: "Sexualization Traditions"
-tr_lvb_sexualization_adopt_hive_desc: "$tradition_lvb_sexualization_hive_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_hive_effect$"
+#tr_lvb_sexualization_adopt_hive_desc: "$tradition_lvb_sexualization_hive_desc$\n\n$tr_lvb_sexualization_adopt_effect$\n\n$tr_lvb_sexualization_finish_hive_effect$"
 
 tr_lvb_sexualization_public_use_ordinance: "Public Use Ordinance"
 tr_lvb_sexualization_public_use_ordinance_desc: "Adds §Y1§! £job_lvb_whore£ §Y$job_lvb_whore$ Job§! per §Y25§! £pop£ Pops and §Y1§! £job_lvb_call_girl£ §Y$job_lvb_call_girl$ Job§! per §Y50§! £pop£ Pops."
@@ -76,12 +69,15 @@ tr_lvb_sexualization_public_use_ordinance_hive_desc: "Increase our £influence£
 tr_lvb_sexualization_public_use_ordinance__hive_delayed: "With the rapid spawning of ever more drones, we're ready to extend our grasp to the stars. A birthing pod for every asteroid, a drone in every ecological niche."
 
 tr_lvb_sexualization_xenotourism_bureau: "Xeno Tourism Bureau"
-tr_lvb_sexualization_xenotourism_bureau_desc: "Each §YCommercial Pact§! will increase our £influence£ §Y$mod_country_influence_produces_add$§! by §Y0.125§!."
+#tr_lvb_sexualization_xenotourism_bureau_desc: "Each §YCommercial Pact§! will increase our £influence£ §Y$mod_country_influence_produces_add$§! by §Y0.25§!."
+mod_commercial_pacts_influence_produces_add: "$commercial_pacts$ Monthly £influence£ Influence"
 tr_lvb_sexualization_xenotourism_bureau_delayed: "'Tourism' is a euphemism for those empires less open about sexuality than our own. By whoring out our citizens to those of foreign powers, we can gain great advantages on the galactic stage."
 
 tr_lvb_sexualization_xenotourism_bureau_hive: "Xeno Tourism Bureau"
-tr_lvb_sexualization_xenotourism_bureau_hive_desc: "Allows us to form §YCommercial Pact§! with other empires."
+tr_lvb_sexualization_xenotourism_bureau_hive_desc: "Non-gestalt empires gain the §Y+20§! §Y$triggered_opinion_tr_lvb_sexualization_xenotourism_bureau_hive$§! modifier"
 tr_lvb_sexualization_xenotourism_bureau_hive_delayed: "Though it's rather confusing for the drones, we can open our borders to individuals from other empires - apparently they find our kind fascinating to watch."
+
+triggered_opinion_tr_lvb_sexualization_xenotourism_bureau_hive: "Strange but fascinating"
 
 tr_lvb_sexualization_xenotourism_bureau_devouring_swarm: "Xeno Farming"
 tr_lvb_sexualization_xenotourism_bureau_devouring_swarm_desc: "§HLivestock§! Pops produce 0.5 £unity£ §YUnity§! in addition to Food."
@@ -120,5 +116,3 @@ tr_lvb_sexualization_hot_tanks_hive_desc: "$species_trait_points_add$: +2"
 tr_lvb_sexualization_hot_tanks_hive_delayed: "Our children shall inherit the stars. Let us make them the best children that we can."
 
 tr_lvb_sexualization_finish: "Sexuality Traditions Finished"
-tr_lvb_sexualization_finish_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sexualization_adopt$ will increase $mod_planet_lvb_sex_work_produces_mult$ by §G+20%§!."
-tr_lvb_sexualization_finish_hive_effect: "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_lvb_sexualization_adopt$ will increase $MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$ by §G10%§!."

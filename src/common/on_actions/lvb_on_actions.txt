@@ -1,6 +1,5 @@
 on_monthly_pulse = {
 	events = {
-		lvb_event_on_actions.1 # All-male/all-female species sharing a world
 		lvb_event_on_actions.2 # Sadistic / Masochistic species sharing a world
 		lvb_event_on_actions.3 # Dominate / Submissive species sharing a world
 	}
@@ -39,20 +38,22 @@ empire_init_capital_planet = {
 
 on_planet_transfer = {
 	events = {
+		lvb_event_on_actions.6 # Add or remove sex trade deposit as necessary
 		lvb_frenzied_brood.1 # Add or remove frenzied brood deposit as necessary
 	}
 }
 
 on_colony_destroyed = {
 	events = {
-		lvb_frenzied_brood.12 # Remove frenzied brood deposit
+		lvb_event_on_actions.7 # Remove sex trade deposit
+		lvb_frenzied_brood.2 # Remove frenzied brood deposit
 	}
 }
 
 on_tech_increased = {
 	events = {
-		lvb_frenzied_brood.2 # Researched eco simulation - add +food modifier to cows
-		lvb_frenzied_brood.3 # Researched gene crops
-		lvb_frenzied_brood.4 # Researched nano vitality crops
+		lvb_frenzied_brood.10 # Researched eco simulation - add +food modifier to cows
+		lvb_frenzied_brood.11 # Researched gene crops
+		lvb_frenzied_brood.12 # Researched nano vitality crops
 	}
 }

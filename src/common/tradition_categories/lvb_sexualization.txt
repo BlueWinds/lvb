@@ -5,8 +5,8 @@ tradition_lvb_sexualization = {
 	traditions = {
 		"tr_lvb_sexualization_public_service"
 		"tr_lvb_sexualization_xenotourism_bureau"
-		"tr_lvb_sexualization_public_use_ordinance"
 		"tr_lvb_sexualization_bioreactors"
+		"tr_lvb_sexualization_public_use_ordinance"
 		"tr_lvb_sexualization_hot_tanks"
 	}
 

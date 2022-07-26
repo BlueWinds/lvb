@@ -26,13 +26,6 @@ lvb_red_light_colony_other_planets = {
 	pop_happiness = 0.05
 }
 
-lvb_two_gendered_planet = {
-	icon = "gfx/interface/icons/planet_modifiers/lvb_two_gendered_planet.dds"
-	icon_frame = 1
-	pop_growth_speed = 0.1
-	pop_happiness = 0.05
-}
-
 lvb_SM_planet = {
 	icon = "gfx/interface/icons/planet_modifiers/lvb_SM_planet.dds"
 	icon_frame = 1

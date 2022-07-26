@@ -1,0 +1,282 @@
+# Override to add milk cow production bonuses
+
+situation_food_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	abort_trigger = {
+		owner = { country_uses_food = no }
+	}
+	on_abort = {
+		owner = {
+			if = {
+				limit = { country_uses_food = yes }
+				add_resource = {
+					food = @bailout_basic_base_amount
+					mult = value:bailout_scaling_factor
+				}
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = BIOLOGICAL
+						}
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.1
+					biological_pop_growth_speed_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.1
+				}
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = BIOLOGICAL
+						}
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.15
+					biological_pop_growth_speed_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.2
+				}
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = BIOLOGICAL
+						}
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.2
+					biological_pop_growth_speed_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.33
+				}
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = deficit.140 }
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.25
+					biological_pop_growth_speed_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.5
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.145 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|food|
+			desc = string_expenditures_greater_than_income_food
+			owner = { has_actual_deficit = { RESOURCE = food } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_food
+			owner = {
+				resource_income_compare = {
+					resource = food
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_food
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = food }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_farmers
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				country_uses_food = yes
+				NOT = { has_civic = civic_lvb_frenzied_brood }
+			}
+		}
+		modifier = {
+			planet_farmers_food_produces_add = 0.5
+			planet_farmers_energy_upkeep_add = 0.5
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_farmers_lvb
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = {
+				has_civic = civic_lvb_frenzied_brood
+			}
+		}
+		modifier = {
+			planet_lvb_milk_cow_food_produces_add = 0.5
+			planet_lvb_milk_cow_energy_upkeep_add = 0.5
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}

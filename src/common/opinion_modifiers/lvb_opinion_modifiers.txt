@@ -18,88 +18,44 @@ opinion_destroyed_lvb_traders_bad = {
 	}
 }
 
-# It's people!
-# Overriding because frenzied broods don't actually eat people.
-triggered_opinion_xenophage = {
-	trigger = {
-		NOT = { is_country_type = fallen_empire }
-		is_xenophobe = no
-		from = {
-			NOT = { has_civic = civic_lvb_frenzied_brood }
-			OR = {
-				allows_slavery = yes
-				allows_purge = yes
-			}
-			any_owned_species = {
-				is_sapient = yes
-				OR = {
-					AND = {
-						OR = {
-							has_citizenship_type = { country = from type = citizenship_purge_machine }
-							has_citizenship_type = { country = from type = citizenship_purge }
-						}
-						OR = {
-							has_purge_type = { country = from type = purge_processing }
-							has_purge_type = { country = from type = purge_matrix }
-						}
-					}
-					AND = {
-						has_citizenship_type = { country = from type = citizenship_slavery }
-						OR = {
-							has_slavery_type = { country = from type = slavery_livestock }
-							has_slavery_type = { country = from type = slavery_matrix }
-						}
-					}
-				}
-			}
-		}
-	}
-
-	opinion = {
-		base = 0
-		modifier = {
-			add = -25
-			NOR = {
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-			}
-		}
-		modifier = {
-			add = -25
-			OR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
-		}
-	}
-}
-
 # Everyone is kind of horrified, egalitarians especially so. Except xenophiles, they think its kinda hot.
 triggered_opinion_lvb_brood = {
 	trigger = {
 		is_country_type = default
 		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { is_country_type = fallen_empire }
-		FROM = {
-			has_civic = civic_lvb_frenzied_brood
-		}
+		FROM = { has_valid_civic = civic_lvb_frenzied_brood }
 	}
 
 	opinion = {
-		base = 0
+		base = 5
 		modifier = {
-			add = -25
-			NOR = {
+			add = 50
+			OR = {
 				has_ethic = "ethic_xenophile"
 				has_ethic = "ethic_fanatic_xenophile"
 			}
 		}
 		modifier = {
-			add = -25
+			add = -15
 			OR = {
 				has_ethic = "ethic_egalitarian"
 				has_ethic = "ethic_fanatic_egalitarian"
 			}
 		}
+	}
+}
+
+triggered_opinion_tr_lvb_sexualization_xenotourism_bureau_hive = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		FROM = {
+			is_hive_empire = yes
+			has_tradition = tr_lvb_sexualization_xenotourism_bureau
+		}
+	}
+
+	opinion = {
+		base = 20
 	}
 }

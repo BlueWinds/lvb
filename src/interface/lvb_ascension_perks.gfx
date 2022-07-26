@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_lvb_mono_gender_compatibility"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_lvb_mono_gender_compatibility.dds"
+		alwaystransparent = yes
+	}
+}

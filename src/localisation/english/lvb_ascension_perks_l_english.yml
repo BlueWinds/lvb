@@ -1,0 +1,6 @@
+﻿l_english:
+
+ap_lvb_mono_gender_compatibility: "Parthenogenic Optimization"
+ap_lvb_mono_gender_compatibility_desc: "No longer is reproduction tied to sex. The two may be engaged in - as desired and as needed - separately."
+requires_lvb_mono_gendered_main_species: "$TRIGGER_FAIL$Primary species must be §Y$trait_lvb_all_female$§! or §Y$trait_lvb_all_male$§!."
+negate_lvb_monogender_penalty: "§Y$trait_lvb_all_female$§! and §Y$trait_lvb_all_male$§! species no longer require additional £amenities£ Amenities."

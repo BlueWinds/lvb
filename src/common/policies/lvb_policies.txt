@@ -12,11 +12,22 @@ lvb_sex_trade_policy = {
 		has_technology = tech_lvb_sex_trade
 	}
 
-	option = { # No Specialization
+	option = {
 		name = "lvb_sex_trade_default"
 
 		policy_flags = {
 			lvb_sex_trade_policy_default
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_planet = {
+					if = {
+						limit = { has_deposit = d_lvb_sex_trade }
+						remove_deposit = d_lvb_sex_trade
+					}
+				}
+			}
 		}
 
 		AI_weight = {
@@ -24,11 +35,22 @@ lvb_sex_trade_policy = {
 		}
 	}
 
-	option = {					  # Allowed
+	option = {
 		name = "lvb_sex_trade_allowed"
 
 		policy_flags = {
 			lvb_sex_trade_policy_allowed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_planet = {
+					if = {
+						limit = { NOT = { has_deposit = d_lvb_sex_trade } }
+						add_deposit = d_lvb_sex_trade
+					}
+				}
+			}
 		}
 
 		AI_weight = {
@@ -36,11 +58,22 @@ lvb_sex_trade_policy = {
 		}
 	}
 
-	option = {					  # Encouraged
+	option = {
 		name = "lvb_sex_trade_encouraged"
 
 		policy_flags = {
 			lvb_sex_trade_policy_encouraged
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_planet = {
+					if = {
+						limit = { NOT = { has_deposit = d_lvb_sex_trade } }
+						add_deposit = d_lvb_sex_trade
+					}
+				}
+			}
 		}
 
 		AI_weight = {

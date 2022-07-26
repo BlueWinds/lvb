@@ -1,37 +1,6 @@
 namespace = lvb_event_on_actions
 
 event = {
-	id = lvb_event_on_actions.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_galaxy_planet = {
-			limit = {
-				exists = owner
-				has_modifier = lvb_two_gendered_planet
-				NOT = {
-					any_owned_pop = { has_trait = trait_lvb_all_female }
-					any_owned_pop = { has_trait = trait_lvb_all_male }
-				}
-			}
-			remove_modifier = lvb_two_gendered_planet
-		}
-		every_galaxy_planet = {
-			limit = {
-				exists = owner
-				NOT = { has_modifier = lvb_two_gendered_planet }
-				AND = {
-					any_owned_pop = { has_trait = trait_lvb_all_female }
-					any_owned_pop = { has_trait = trait_lvb_all_male }
-				}
-			}
-			add_modifier = { modifier = lvb_two_gendered_planet }
-		}
-	}
-}
-
-event = {
 	id = lvb_event_on_actions.2
 	hide_window = yes
 	is_triggered_only = yes
@@ -127,5 +96,42 @@ country_event = {
 
 	immediate = {
 		from = { set_is_female = no }
+	}
+}
+
+# on_planet_transfer
+planet_event = {
+	id = lvb_event_on_actions.6
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = { has_deposit = d_lvb_sex_trade }
+			remove_deposit = d_lvb_sex_trade
+		}
+		if = {
+			limit = {
+				OR = {
+					owner = { has_policy_flag = lvb_sex_trade_policy_allowed }
+					owner = { has_policy_flag = lvb_sex_trade_policy_encouraged }
+				}
+			}
+			add_deposit = d_lvb_sex_trade
+		}
+	}
+}
+
+# on_colony_destroyed
+planet_event = {
+	id = lvb_event_on_actions.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_deposit = d_lvb_sex_trade }
+			remove_deposit = d_lvb_sex_trade
+		}
 	}
 }

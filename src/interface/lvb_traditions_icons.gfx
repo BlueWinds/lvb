@@ -1,27 +1,20 @@
 spriteTypes = {
 
-	spriteType = {
-		name = "GFX_arrow_right"
-		textureFile = "gfx/interface/traditions/arrow_right.dds"
-	}
-
 # Sensuality tradition
 
 	spriteType = {
-		name = "GFX_adopted_tradition_category_bg_lvb_sensuality"
-		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_lvb_sensuality.dds"
+		name = "GFX_tradition_category_bg_tradition_lvb_sensuality"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_lvb_sensuality.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tradition_hex_bg_lvb_sensuality"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_lvb_sensuality.dds"
+		name = "GFX_tradition_category_icon_tradition_lvb_sensuality"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_lvb_sensuality.dds"
 	}
 
-	corneredTileSpriteType = {
-		name = "GFX_tradition_category_tile_lvb_sensuality"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_lvb_sensuality.dds"
-		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_lvb_sensuality"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_lvb_sensuality.dds"
 	}
 
 	spriteType = {
@@ -52,20 +45,18 @@ spriteTypes = {
 # Sexualization tradition
 
 	spriteType = {
-		name = "GFX_adopted_tradition_category_bg_lvb_sexualization"
-		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_lvb_sexualization.dds"
+		name = "GFX_tradition_category_bg_tradition_lvb_sexualization"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_lvb_sexualization.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tradition_hex_bg_lvb_sexualization"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_lvb_sexualization.dds"
+		name = "GFX_tradition_category_icon_tradition_lvb_sexualization"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_lvb_sexualization.dds"
 	}
 
-	corneredTileSpriteType = {
-		name = "GFX_tradition_category_tile_lvb_sexualization"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_lvb_sexualization.dds"
-		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_lvb_sexualization"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_lvb_sexualization.dds"
 	}
 
 	spriteType = {

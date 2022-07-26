@@ -5,21 +5,24 @@ LVB_INVESTIGATE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens
 
 lvb_traders.3.name: "Communications Established"
 
+NAME_lvb_sex_traders: "Slavers Guild"
+
 lvb_traders.6.name: "First Contact With the [From.GetName]"
-lvb_traders.6.desc: "Heyo, visitors! Have any tasty morsels to sell us? Looking to buy, perhaps?\n\nWe buy, sell, train, and break sex slaves from across the galaxy, all for your pleasure and convenience! It's hard work, teaching sluts how to take a cock, but we here at the Slavers Guild take pride in our abilities. We consider it the right of all upright sentients to enjoy the attention of dedicated sexual servants, and we're happy to help your empire as well. In you can pay.\n\nYou can pay, right?"
+lvb_traders.6.desc: "Heyo, visitors! Have any tasty morsels to sell us? Looking to buy, perhaps?\n\nWe buy, sell, train, and break sex slaves from across the galaxy, all for your pleasure and convenience! It's hard work, teaching sluts how to take a cock, but we here at the Slavers Guild take pride in our abilities. We consider it the right of all upright sentients to enjoy the attention of dedicated sexual servants, and we're happy to help your empire as well. If you can pay.\n\nYou can pay, right?"
 lvb_traders.6.a: "Interesting."
 
 lvb_traders.7.a: "We wish to engage your services."
 lvb_traders.7.b: "Viewscreen off."
 
-lvb_traders.7.name: "Slavers Guild"
 lvb_traders.7a.desc: "We do not discriminate against prospective buyers here at the Slavers Guild. Who are we to judge the morals of your star nation?"
 lvb_traders.7b.desc: "Perhaps you need slaves for your tentacle monster orgy pit. Perhaps you want to... uh... free them. Here at the Slavers Guild, we make it our business not to care!"
 lvb_traders.7c.desc: "No questions asked - just quality sluts, ready to service your holes. Or put their holes at your disposal. You decide!"
 lvb_traders.7d.desc: "Can we interest you in some hot men? Hot women? A nice vibrator to get your bits tingling?"
 
 lvb_traders.7.sell: "We would like to sell our citizens"
+lvb_traders.7.sell_brood: "We have a surplus of fuckdolls"
 lvb_traders.7.sell.fail: "We are already selling our citizens to the Slavers Guild.\n"
+lvb_traders.7.sell.fail_brood: "We are already selling our fuckdolls to the Slavers Guild.\n"
 
 lvb_traders.7.buy: "We would like to buy sex slaves"
 lvb_traders.7.buy.trust: "Requires the §YSlavers Guild§! to have:\n£opinion£ Opinion +50\n"

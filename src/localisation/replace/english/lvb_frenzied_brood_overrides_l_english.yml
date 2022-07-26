@@ -7,3 +7,5 @@ LIVESTOCK_DESC: "This pop is being used by others as livestock"
 
 job_agri_drone: "[GetAgriDroneName]"
 job_maintenance_drone: "[GetMaintenanceDroneName]"
+
+triggered_opinion_xenophage: "[From.GetXenophageLabel]"

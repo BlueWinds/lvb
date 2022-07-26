@@ -97,3 +97,14 @@ defined_text = {
 	}
 	default = job_lvb_maintenance_drone_original
 }
+
+defined_text = {
+	name = GetXenophageLabel
+	text = {
+		trigger = {
+			has_civic = civic_lvb_frenzied_brood
+		}
+		localization_key = triggered_opinion_xenophage_brood
+	}
+	default = triggered_opinion_xenophage_base
+}

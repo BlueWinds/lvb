@@ -265,13 +265,12 @@ trait_lvb_small_penis_desc: "§LThe males of this species are poorly endowed com
 ########################
 
 trait_lvb_all_female: "All Female"
-trait_lvb_all_female_desc: "§LThis species is composed entirely of females, but have found alternative ways to reproduce. It's not perfect however...§!\n\nIf a matching §BAll Male§! species is on the same planet, the penalties are negated."
+trait_lvb_all_female_desc: "§LThis species is composed entirely of females, but have found alternative ways to reproduce. It's not perfect however...§!"
+trait_lvb_all_female_tooltip: "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.3§! unless all an §Y$trait_lvb_all_male$§! or §Y$trait_lvb_futanari$§! species is also present on the planet.\n\nThe §H$ap_lvb_mono_gender_compatibility$§! Ascension Perk negates this trait's effects (and has additional bonuses)."
 
 trait_lvb_all_male: "All Male"
 trait_lvb_all_male_desc: "§LThis species is composed entirely of males, but have found alternative ways to reproduce. It's not perfect however...§!\n\nIf a matching §BAll Female§! species is on the same planet, the penalties are negated."
-
-lvb_two_gendered_planet: "Matching Species (M/F)"
-lvb_two_gendered_planet_desc: "This planet has species of two matching genders, resulting in a near constant orgy in the streets."
+trait_lvb_all_male_tooltip: "$MOD_POP_AMENITIES_USAGE_ADD$: §R+0.3§! unless all an §Y$trait_lvb_all_female$§! or §Y$trait_lvb_futanari$§! species is also present on the planet.\n\nThe §H$ap_lvb_mono_gender_compatibility$§! negates this trait's effects (and has additional bonuses)."
 
 trait_lvb_futanari: "Futanari"
 trait_lvb_futanari_desc: "§LMembers of this species appear outwardly female, but are in fact hermaphrodites, possessing a set of both male and female reproductive organs.§!"

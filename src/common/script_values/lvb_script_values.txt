@@ -231,7 +231,7 @@ lvb_maintenence_drone_jobs_value = {
 		potential = { owner = { has_technology = tech_housing_2 } }
 		trigger = num_districts
 		parameters = {
-			type = district_hive
+			type = district_arcology_housing
 		}
 		multiplier = 3
 		mode = add
@@ -251,7 +251,7 @@ lvb_maintenence_drone_jobs_value = {
 	complex_trigger_modifier = {
 		trigger = num_districts
 		parameters = {
-			type = district_arcology_housing
+			type = district_rw_city
 		}
 		multiplier = 15
 		mode = add
@@ -260,7 +260,7 @@ lvb_maintenence_drone_jobs_value = {
 		potential = { owner = { has_technology = tech_housing_2 } }
 		trigger = num_districts
 		parameters = {
-			type = district_hive
+			type = district_rw_city
 		}
 		multiplier = 5
 		mode = add
@@ -327,3 +327,125 @@ lvb_agri_drone_jobs_value = {
 	}
 }
 
+lvb_half_clerk_job_count = {
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_commercial_zone
+			disabled = no
+		}
+		multiplier = 1.5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_commercial_megaplex
+			disabled = no
+		}
+		multiplier = 3
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		parameters = {
+			type = building_resource_silo
+			disabled = no
+		}
+		multiplier = 0.5
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_city
+		}
+		multiplier = 0.5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_active_tradition = tr_prosperity_interstellar_franchising } }
+		trigger = num_districts
+		parameters = {
+			type = district_city
+		}
+		multiplier = 0.5
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_srw_commercial
+		}
+		multiplier = 0.5
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_arcology_housing
+		}
+		multiplier = 1.5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_active_tradition = tr_prosperity_interstellar_franchising } }
+		trigger = num_districts
+		parameters = {
+			type = district_arcology_housing
+		}
+		multiplier = 1.5
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_hab_commercial
+		}
+		multiplier = 1.5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_active_tradition = tr_prosperity_interstellar_franchising } }
+		trigger = num_districts
+		parameters = {
+			type = district_hab_commercial
+		}
+		multiplier = 0.5
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_rw_city
+		}
+		multiplier = 1.5
+		mode = add
+	}
+	complex_trigger_modifier = {
+		potential = { owner = { has_active_tradition = tr_prosperity_interstellar_franchising } }
+		trigger = num_districts
+		parameters = {
+			type = district_rw_city
+		}
+		multiplier = 1.5
+		mode = add
+	}
+
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_rw_commercial
+		}
+		multiplier = 3
+		mode = add
+	}
+
+	floor = yes
+}

@@ -11,10 +11,13 @@ lvb_sex_trade_default: "Discouraged"
 lvb_sex_trade_default_desc: "No jobs available for sex work."
 lvb_sex_trade_policy_allowed_name: "Allowed"
 lvb_sex_trade_allowed: "Allowed"
-lvb_sex_trade_allowed_desc: "Replaces a £job_clerk£ §Y$job_clerk$§! with an £job_lvb_whore£ §Y$job_lvb_whore$§! in Commercial Zones and two to Commercial Megaplexes.\n$job_lvb_whore_effect_desc$"
+lvb_sex_trade_allowed_desc: "Replaces half of all £job_clerk£ §Y$job_clerk_plural$§! with £job_lvb_whore£ §Y$job_lvb_whore_plural$§!.\n\n$job_lvb_whore_effect_desc$"
 lvb_sex_trade_policy_encouraged_name: "Encouraged"
 lvb_sex_trade_encouraged: "Encouraged"
-lvb_sex_trade_encouraged_desc: "Replaces two £job_clerk£ §Y$job_clerk$§! jobs with two £job_lvb_whore£ §Y$job_lvb_whore$§! in Commercial Zones and five to Commercial Megaplexes.\n$job_lvb_whore_effect_desc$"
+lvb_sex_trade_encouraged_desc: "Replaces half of all £job_clerk£ §Y$job_clerk_plural$§! with £job_lvb_whore£ §Y$job_lvb_whore_plural$§!. Increases production (including Crime).\n\n$job_lvb_whore_effect_desc$"
+
+d_lvb_sex_trade: "Sex Trade Policy Effects"
+d_lvb_sex_trade_desc: "Administration is overrated. Sluts peddling their wares is where it's at."
 
 # Milk Cow Specialization #
 
@@ -33,7 +36,7 @@ lvb_milk_cows_policy_max_milk_flavor: "The cows are strapped in place, constantl
 
 lvb_milk_cows_policy_free_use_name: "Free Use Cows"
 lvb_milk_cows_policy_free_use: "Free Use Cows"
-lvb_milk_cows_policy_free_use_desc: "£job_lvb_milk_cow£ Milk Cow Jobs produce §Y0.5§! £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and §Y2%§! £mod_pop_growth_speed£ §Y$MOD_POP_GROWTH_SPEED$§!. Crimes will also fall slightly."
+lvb_milk_cows_policy_free_use_desc: "£job_lvb_milk_cow£ Milk Cow Jobs produce §Y0.5§! £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and §Y2%§! £mod_pop_growth_speed£ §Y$MOD_POP_GROWTH_SPEED$§!. $type_crime$ will also fall slightly."
 lvb_milk_cows_policy_free_use_flavor: "The cows here are available for public use, whether they like it or not. Moans and screams both fill the air.\n\n"
 
 lvb_milk_cows_policy_paid_use_name: "Milk Cow Renting"

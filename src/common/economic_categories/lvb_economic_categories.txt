@@ -23,3 +23,11 @@ planet_lvb_sex_work = {
 planet_lvb_forced_breeding = {
 	parent = planet_jobs
 }
+
+commercial_pacts = {
+	parent = diplomacy
+
+	generate_add_modifiers = {
+		produces
+	}
+}

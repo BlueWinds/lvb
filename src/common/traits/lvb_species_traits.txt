@@ -773,8 +773,19 @@ trait_lvb_all_female = {		# All Female
 			has_technology = tech_lvb_transformation_candy
 		}
 	}
-	modifier = {
-		pop_growth_speed = -0.1
+	custom_tooltip_with_modifiers = trait_lvb_all_female_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOR = {
+					any_owned_pop = { has_trait = trait_lvb_all_male }
+					any_owned_pop = { has_trait = trait_lvb_futanari }
+					owner = { has_ascension_perk = ap_lvb_mono_gender_compatibility }
+				}
+			}
+		}
+		pop_amenities_usage_add = 0.3
 	}
 	ai_weight = {
 		weight = 0.2
@@ -806,8 +817,19 @@ trait_lvb_all_male = {		# All Male
 			has_technology = tech_lvb_transformation_candy
 		}
 	}
-	modifier = {
-		pop_growth_speed = -0.1
+	custom_tooltip_with_modifiers = trait_lvb_all_male_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOR = {
+					any_owned_pop = { has_trait = trait_lvb_all_female }
+					any_owned_pop = { has_trait = trait_lvb_futanari }
+					owner = { has_ascension_perk = ap_lvb_mono_gender_compatibility }
+				}
+			}
+		}
+		pop_amenities_usage_add = 0.3
 	}
 	ai_weight = {
 		weight = 0.2

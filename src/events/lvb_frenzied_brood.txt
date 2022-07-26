@@ -45,8 +45,22 @@ planet_event = {
 	}
 }
 
-country_event = {
+# on_colony_destroyed
+planet_event = {
 	id = lvb_frenzied_brood.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_deposit = d_lvb_frenzied_brood_flesh_pit }
+			remove_deposit = d_lvb_frenzied_brood_flesh_pit
+		}
+	}
+}
+
+country_event = {
+	id = lvb_frenzied_brood.10
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -61,7 +75,7 @@ country_event = {
 }
 
 country_event = {
-	id = lvb_frenzied_brood.3
+	id = lvb_frenzied_brood.11
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -76,7 +90,7 @@ country_event = {
 }
 
 country_event = {
-	id = lvb_frenzied_brood.4
+	id = lvb_frenzied_brood.12
 	is_triggered_only = yes
 	hide_window = yes
 

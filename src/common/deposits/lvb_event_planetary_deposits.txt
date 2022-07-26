@@ -136,3 +136,22 @@ d_lvb_living_laboratory = {
 		weight = 0
 	}
 }
+
+d_lvb_sex_trade = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_lvb_sex_trade
+
+	triggered_planet_modifier = {
+		modifier = {
+			job_clerk_add = -1
+			job_lvb_whore_add = 1
+		}
+		mult = value:lvb_half_clerk_job_count
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

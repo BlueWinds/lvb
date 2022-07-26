@@ -115,7 +115,7 @@ country_event = {
 	custom_gui = "enclave_trader_window"
 
 	picture_event_data = {
-		portrait = from
+		portrait = fromfrom
 		room = lvb_trader_room
 	}
 
@@ -159,7 +159,7 @@ country_event = {
 # Traders Main Menu #1 (Initial)
 country_event = {
 	id = lvb_traders.7
-	title = lvb_traders.7.name
+	title = NAME_lvb_sex_traders
 	desc = lvb_traders.7a.desc
 	desc = lvb_traders.7b.desc
 	desc = lvb_traders.7c.desc
@@ -250,6 +250,23 @@ country_event = {
 		}
 	}
 
+	option = { # Sell Citizens - Brood
+		name = lvb_traders.7.sell_brood
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			has_valid_civic = civic_lvb_frenzied_brood
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = lvb_traders.7.sell.fail_brood
+				lvb_traders_selling_citizens = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = lvb_traders.10 }
+		}
+	}
+
 	option = { # Buy Pop
 		name = lvb_traders.7.buy
 		custom_gui = "enclave_trader_option"
@@ -321,7 +338,6 @@ country_event = {
 		custom_gui = "enclave_trader_option"
 		trigger = { num_pops < 61 }
 		allow = {
-			is_gestalt = no
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_lvb_traders }
 			}
@@ -350,7 +366,6 @@ country_event = {
 			num_pops < 121
 		}
 		allow = {
-			is_gestalt = no
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_lvb_traders }
 			}
@@ -379,7 +394,6 @@ country_event = {
 			num_pops < 181
 		}
 		allow = {
-			is_gestalt = no
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_lvb_traders }
 			}
@@ -408,7 +422,6 @@ country_event = {
 			num_pops < 241
 		}
 		allow = {
-			is_gestalt = no
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_lvb_traders }
 			}
@@ -434,7 +447,6 @@ country_event = {
 		custom_gui = "enclave_trader_option"
 		trigger = { num_pops > 240 }
 		allow = {
-			is_gestalt = no
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_lvb_traders }
 			}
@@ -1060,6 +1072,10 @@ country_event = {
 				modifier = {
 					factor = 0.5
 					has_country_flag = lvb_traders_selling_citizens_event_3
+				}
+				modifier = {
+					factor = 0
+					has_valid_civic = civic_lvb_frenzied_brood
 				}
 				set_country_flag = lvb_traders_selling_citizens_event_3
 				country_event = { id = lvb_traders.203 days = 500 random = 1000 }

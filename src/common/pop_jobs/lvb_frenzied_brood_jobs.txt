@@ -13,7 +13,7 @@ lvb_fuckdoll = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 4
+		planet_amenities_no_happiness_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_lvb_sexwork_mult|
 	}
 
