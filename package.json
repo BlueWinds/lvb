@@ -6,8 +6,8 @@
   "scripts": {
     "start": "nodemon -e '*' -w './src'",
     "build": "node build.js",
-    "clean": "rm 'LVB/LVB.zip' || true",
-    "zip": "zip -r 'LVB.zip' 'LVB'",
+    "clean": "rm 'LVB.zip' || true",
+    "zip": "zip -r 'LVB.zip' 'LVB' LVB.mod",
     "release": "npm run build && npm run clean && npm run zip"
   },
   "repository": {
