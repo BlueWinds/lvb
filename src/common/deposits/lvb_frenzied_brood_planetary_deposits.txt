@@ -68,7 +68,5 @@ d_lvb_frenzied_brood_flesh_pit = {
 		mult = value:lvb_agri_drone_jobs_value
 	}
 
-	drop_weight = {
-		weight = 0
-	}
+	drop_weight = { weight = 0 }
 }

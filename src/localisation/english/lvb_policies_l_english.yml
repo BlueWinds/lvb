@@ -16,7 +16,7 @@ lvb_sex_trade_policy_encouraged_name: "Encouraged"
 lvb_sex_trade_encouraged: "Encouraged"
 lvb_sex_trade_encouraged_desc: "Replaces half of all £job_clerk£ §Y$job_clerk_plural$§! with £job_lvb_whore£ §Y$job_lvb_whore_plural$§!. Increases production (including Crime).\n\n$job_lvb_whore_effect_desc$"
 
-d_lvb_sex_trade: "Sex Trade Policy Effects"
+d_lvb_sex_trade: "Sex Trade Policy"
 d_lvb_sex_trade_desc: "Administration is overrated. Sluts peddling their wares is where it's at."
 
 # Milk Cow Specialization #
