@@ -1,5 +1,39 @@
 namespace = lvb_event_on_actions
 
+planet_event = {
+	id = lvb_event_on_actions.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_origin = origin_lvb_gender_divergence
+				}
+			}
+
+			last_created_species = {
+				set_species_flag = syncretic_species@root.owner
+			}
+
+			while = {
+				count = 14
+				random_owned_pop = {
+					kill_pop = yes
+				}
+			}
+			while = {
+				count = 14
+				create_pop = {
+					species = last_created_species
+					ethos = random
+				}
+			}
+		}
+	}
+}
+
 event = {
 	id = lvb_event_on_actions.2
 	hide_window = yes

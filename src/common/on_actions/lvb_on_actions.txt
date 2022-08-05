@@ -32,6 +32,7 @@ on_leader_spawned = {
 
 empire_init_capital_planet = {
 	events = {
+		lvb_event_on_actions.1 # spawn gender-divided secondary species
 		lvb_frenzied_brood.0 # spawn secondary species and add deposit
 	}
 }

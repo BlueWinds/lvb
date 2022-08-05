@@ -4,6 +4,11 @@
 
 spriteTypes = {
 	spriteType = {
+		name = "GFX_origin_lvb_gender_divergence"
+		texturefile = "gfx/event_pictures/origins/origin_lvb_gender_divergence.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
 		name = "GFX_evt_lvb_cow_no_specialization"
 		texturefile = "gfx/event_pictures/evt_lvb_cow_no_specialization.dds"
 		masking_texture = "gfx/interface/situation_log/lvb_event_mask.dds"

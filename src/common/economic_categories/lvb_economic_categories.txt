@@ -2,6 +2,7 @@ planet_lvb_milk_cow = {
 	parent = planet_jobs
 	generate_mult_modifiers = {
 		produces
+		upkeep
 	}
 	generate_add_modifiers = {
 		produces

@@ -49,6 +49,30 @@ portraits = {
 	lvb_women24 = {	texturefile = "gfx/models/portraits/lvb/lvb_women24.dds" greeting_sound = "human_female_greetings_03"}
 	lvb_women25 = {	texturefile = "gfx/models/portraits/lvb/lvb_women25.dds" greeting_sound = "human_female_greetings_03"}
 	lvb_women26 = {	texturefile = "gfx/models/portraits/lvb/lvb_women26.dds" greeting_sound = "human_female_greetings_03"}
+
+	lvb_bun1 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun1.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun2 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun2.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun3 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun3.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun4 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun4.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun5 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun5.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun6 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun6.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun7 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun7.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun8 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun8.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun9 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun9.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun10 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun10.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun11 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun11.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun12 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun12.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun13 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun13.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun14 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun14.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun15 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun15.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun16 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun16.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun17 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun17.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun18 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun18.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun19 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun19.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun20 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun20.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun21 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun21.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun22 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun22.dds" greeting_sound = "human_female_greetings_03"}
+	lvb_bun23 = {	texturefile = "gfx/models/portraits/lvb/lvb_bun23.dds" greeting_sound = "human_female_greetings_03"}
 }
 
 portrait_groups = {
@@ -209,7 +233,7 @@ portrait_groups = {
 		}
 	}
 	lvb_women = {
-		default = lvb_women1
+		default = lvb_women3
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
 				portraits = {
@@ -375,6 +399,162 @@ portrait_groups = {
 					lvb_women24
 					lvb_women25
 					lvb_women26
+				}
+			}
+		}
+	}
+	lvb_bun = {
+		default = lvb_bun2
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					lvb_bun1
+					lvb_bun2
+					lvb_bun3
+					lvb_bun4
+					lvb_bun5
+					lvb_bun6
+					lvb_bun7
+					lvb_bun8
+					lvb_bun9
+					lvb_bun10
+					lvb_bun11
+					lvb_bun12
+					lvb_bun13
+					lvb_bun14
+					lvb_bun15
+					lvb_bun16
+					lvb_bun17
+					lvb_bun18
+					lvb_bun19
+					lvb_bun20
+					lvb_bun21
+					lvb_bun22
+					lvb_bun23
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					lvb_bun1
+					lvb_bun2
+					lvb_bun3
+					lvb_bun4
+					lvb_bun5
+					lvb_bun6
+					lvb_bun7
+					lvb_bun8
+					lvb_bun9
+					lvb_bun10
+					lvb_bun11
+					lvb_bun12
+					lvb_bun13
+					lvb_bun14
+					lvb_bun15
+					lvb_bun16
+					lvb_bun17
+					lvb_bun18
+					lvb_bun19
+					lvb_bun20
+					lvb_bun21
+					lvb_bun22
+					lvb_bun23
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					lvb_bun1
+					lvb_bun2
+					lvb_bun3
+					lvb_bun4
+					lvb_bun5
+					lvb_bun6
+					lvb_bun7
+					lvb_bun8
+					lvb_bun9
+					lvb_bun10
+					lvb_bun11
+					lvb_bun12
+					lvb_bun13
+					lvb_bun14
+					lvb_bun15
+					lvb_bun16
+					lvb_bun17
+					lvb_bun18
+					lvb_bun19
+					lvb_bun20
+					lvb_bun21
+					lvb_bun22
+					lvb_bun23
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					lvb_bun1
+					lvb_bun2
+					lvb_bun3
+					lvb_bun4
+					lvb_bun5
+					lvb_bun6
+					lvb_bun7
+					lvb_bun8
+					lvb_bun9
+					lvb_bun10
+					lvb_bun11
+					lvb_bun12
+					lvb_bun13
+					lvb_bun14
+					lvb_bun15
+					lvb_bun16
+					lvb_bun17
+					lvb_bun18
+					lvb_bun19
+					lvb_bun20
+					lvb_bun21
+					lvb_bun22
+					lvb_bun23
+				}
+			}
+		}
+
+		#leader scope
+		ruler = {
+			add = {
+				portraits = {
+					lvb_bun1
+					lvb_bun2
+					lvb_bun3
+					lvb_bun4
+					lvb_bun5
+					lvb_bun6
+					lvb_bun7
+					lvb_bun8
+					lvb_bun9
+					lvb_bun10
+					lvb_bun11
+					lvb_bun12
+					lvb_bun13
+					lvb_bun14
+					lvb_bun15
+					lvb_bun16
+					lvb_bun17
+					lvb_bun18
+					lvb_bun19
+					lvb_bun20
+					lvb_bun21
+					lvb_bun22
+					lvb_bun23
 				}
 			}
 		}

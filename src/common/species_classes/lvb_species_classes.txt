@@ -6,6 +6,7 @@ Sexy = {
 	portraits = {
 		"lvb_neko"
 		"lvb_women"
+		"lvb_bun"
 	}
 
 	graphical_culture = humanoid_01

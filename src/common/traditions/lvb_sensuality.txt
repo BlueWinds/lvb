@@ -44,11 +44,11 @@ tr_lvb_sensuality_finish = {
 		inherit_effects = no
 		inherit_icon = yes
 		inherit_name = yes
-		trigger = { always = yes }
+		trigger = { is_hive_empire = yes }
 		modifier = {
 			ascension_perks_add = 1
 			envoys_add = 1
-			envoy_improve_relations_mult = 1.1
+			envoy_improve_relations_mult = 0.1
 		}
 		weight = { factor = 1000 }
 	}

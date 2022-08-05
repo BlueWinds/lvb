@@ -45,3 +45,32 @@ civic_lvb_frenzied_brood = {
 		title = civic_lvb_frenzied_brood_secondary_species
 	}
 }
+
+origin_lvb_gender_divergence = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_lvb_gender_divergence.dds"
+	picture = GFX_origin_lvb_gender_divergence
+
+	playable = {
+		always = yes
+	}
+
+	description = origin_tooltip_lvb_gender_divergence_effects
+
+	traits = {
+		trait = trait_lvb_all_female
+	}
+
+	has_secondary_species = {
+		title = origin_lvb_gender_divergence_secondary_species
+		traits = {
+			trait = trait_lvb_all_male
+		}
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 10
+	}
+}

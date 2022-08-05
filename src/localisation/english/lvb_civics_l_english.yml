@@ -3,3 +3,8 @@
 civic_lvb_mandatory_public_use: "Mandatory Public Use"
 civic_lvb_mandatory_public_use_desc: "A variant on universal public service, our society mandates that members spend two years making themselves sexually available to all upon reaching their age of majority."
 civic_lvb_manadatory_public_use_effects: "£job_lvb_public_use£ $job_lvb_public_use_plural$ produce £unity£ §Y$unity$§! and £amenities£ §YAmenities§!."
+
+origin_lvb_gender_divergence: "Divergent Genders"
+origin_lvb_gender_divergence_desc: "Whether through genetic tampering, natural evolution or selective breeding, this society's population has diverged along gendered lines to the extent that most outsiders would consider them entirely separate, if symbiotic, species."
+origin_lvb_gender_divergence_secondary_species: "Males"
+origin_tooltip_lvb_gender_divergence_effects: "Start the game with §Y14§! £pop£ Pops each of separate §Y$trait_lvb_all_female$§! and §Y$trait_lvb_all_male$§! species"

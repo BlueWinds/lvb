@@ -6,7 +6,7 @@ ap_lvb_mono_gender_compatibility = {
 
 	modifier = {
 		pop_growth_speed = 0.10
-		empire_size_pops_mult = -0.15
+		empire_size_pops_mult = -0.20
 	}
 
 	possible = {
